@@ -1,0 +1,16 @@
+.settings
+.vs
+.vscode
+cmake
+Core/*
+!Core/Src
+Core/Src/*
+!Core/Src/main.c
+Debug
+Drivers
+.mxproject
+CMakeLists.txt
+CmakePresets.json
+*.launch
+*.ld
+vcpkg-configuration.json
