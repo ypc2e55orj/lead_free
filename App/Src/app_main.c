@@ -33,5 +33,7 @@ void app_main(void)
     {
       HAL_GPIO_TogglePin(Led_GPIO_Port, Led_Pin);
     }
+    const ODOMETRY *odom = ODOMETRY_GetCurrent();
+    printf("%03d, %03d, %03d, %03d, %03d, %03d\r\n", (int)(odom->velocity * 1000), (int)(odom->angular_velocity * 1000), (int)(odom->length * 1000), (int)(odom->angle * 1000), (int)(odom->x * 1000), (int)(odom->y * 1000));
   }
 }

@@ -10,19 +10,19 @@ static uint8_t parameter_index = 0;
  */
 void PARAMETER_Init()
 {
-#define SET_PARAMETER(num)                                                               \
-  do                                                                                     \
-  {                                                                                      \
-    parameters[num].velocity = PARAMETER_##num##_VELOCITY;                               \
-    parameters[num].acceleration = PARAMETER_##num##_ACCELERATION;                       \
-    parameters[num].velocity_pid.kp = PARAMETER_##num##_VELOCITY_PID_KP;                 \
-    parameters[num].velocity_pid.ki = PARAMETER_##num##_VELOCITY_PID_KI;                 \
-    parameters[num].velocity_pid.kd = PARAMETER_##num##_VELOCITY_PID_KD;                 \
-    parameters[num].angular_velocity = PARAMETER_##num##_ANGULAR_VELOCITY;               \
-    parameters[num].angular_acceleration = PARAMETER_##num##_ANGULAR_ACCELERATION;       \
-    parameters[num].angular_velocity_pid.kp = PARAMETER_##num##_ANGULAR_VELOCITY_PID_KP; \
-    parameters[num].angular_velocity_pid.ki = PARAMETER_##num##_ANGULAR_VELOCITY_PID_KI; \
-    parameters[num].angular_velocity_pid.kd = PARAMETER_##num##_ANGULAR_VELOCITY_PID_KD; \
+#define SET_PARAMETER(num)                                                                 \
+  do                                                                                       \
+  {                                                                                        \
+    parameters[num].max_velocity = PARAMETER_##num##_MAX_VELOCITY;                         \
+    parameters[num].max_acceleration = PARAMETER_##num##_MAX_ACCELERATION;                 \
+    parameters[num].velocity_pid.kp = PARAMETER_##num##_VELOCITY_PID_KP;                   \
+    parameters[num].velocity_pid.ki = PARAMETER_##num##_VELOCITY_PID_KI;                   \
+    parameters[num].velocity_pid.kd = PARAMETER_##num##_VELOCITY_PID_KD;                   \
+    parameters[num].max_angular_velocity = PARAMETER_##num##_MAX_ANGULAR_VELOCITY;         \
+    parameters[num].max_angular_acceleration = PARAMETER_##num##_MAX_ANGULAR_ACCELERATION; \
+    parameters[num].angular_velocity_pid.kp = PARAMETER_##num##_ANGULAR_VELOCITY_PID_KP;   \
+    parameters[num].angular_velocity_pid.ki = PARAMETER_##num##_ANGULAR_VELOCITY_PID_KI;   \
+    parameters[num].angular_velocity_pid.kd = PARAMETER_##num##_ANGULAR_VELOCITY_PID_KD;   \
   } while (0)
 
   SET_PARAMETER(0);
