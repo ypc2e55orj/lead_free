@@ -1,20 +1,20 @@
 /* USER CODE BEGIN Header */
 /**
-  ******************************************************************************
-  * @file           : main.c
-  * @brief          : Main program body
-  ******************************************************************************
-  * @attention
-  *
-  * Copyright (c) 2024 STMicroelectronics.
-  * All rights reserved.
-  *
-  * This software is licensed under terms that can be found in the LICENSE file
-  * in the root directory of this software component.
-  * If no LICENSE file comes with this software, it is provided AS-IS.
-  *
-  ******************************************************************************
-  */
+ ******************************************************************************
+ * @file           : main.c
+ * @brief          : Main program body
+ ******************************************************************************
+ * @attention
+ *
+ * Copyright (c) 2024 STMicroelectronics.
+ * All rights reserved.
+ *
+ * This software is licensed under terms that can be found in the LICENSE file
+ * in the root directory of this software component.
+ * If no LICENSE file comes with this software, it is provided AS-IS.
+ *
+ ******************************************************************************
+ */
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
@@ -22,45 +22,14 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "app_main.h"
-#include <stdio.h>
-#include <stdint.h>
-#include <stdbool.h>
-#include <math.h>
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
 /* USER CODE BEGIN PTD */
-//! ADC1 sensors
-enum {
-  ADC1_LINE_SENSOR_RIGHT_OUT,
-  ADC1_MARKER_SENSOR_RIGHT,
-  ADC1_MARKER_SENSOR_LEFT,
-  NUM_ADC1,
-};
-//! ADC2 sensors
-enum {
-  ADC2_LINE_SENSOR_RIGHT_IN,
-  ADC2_LINE_SENSOR_LEFT_IN,
-  ADC2_LINE_SENSOR_LEFT_OUT,
-  ADC2_BATTERY_VOLTAGE,
-  NUM_ADC2,
-};
-//! Odometry
-typedef struct
-{
-  float velocity; //!< [m/s]
-  float angular_velocity; //!< [rad/s]
-  float length; //!< [mm]
-  float angle; //!< [rad]
-} ODOMETRY;
 /* USER CODE END PTD */
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-#define ODOMETRY_ENCODER_PPR 135.5f //! [Pulses per Revolution]
-#define ODOMETRY_TIRE_DIAMETER 20.9f //! [mm]
-#define ODOMETRY_TIRE_RADIUS ((ODOMETRY_TIRE_DIAMETER) / 2.0f)
-#define ODOMETRY_MM_PER_PULSE (((ODOMETRY_TIRE_RADIUS) * M_PI) / ODOMETRY_ENCODER_PPR)
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -87,18 +56,6 @@ TIM_HandleTypeDef htim17;
 UART_HandleTypeDef huart2;
 
 /* USER CODE BEGIN PV */
-//! ADC1 buffer
-uint16_t dmaBufferAdc1[NUM_ADC1] = {0};
-//! ADC2 buffer
-uint16_t dmaBufferAdc2[NUM_ADC2] = {0};
-//! left encoder count value
-uint16_t encoderLeftCount;
-//! i2c1 dma tx buffer
-uint8_t dmaBufferI2c1Tx[2] = {0};
-//! i2c1 dma rx buffer
-uint8_t dmaBufferI2c1Rx[2] = {0};
-//! odometry
-ODOMETRY odometry = {0};
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -115,12 +72,10 @@ static void MX_TIM17_Init(void);
 static void MX_TIM3_Init(void);
 static void MX_TIM6_Init(void);
 /* USER CODE BEGIN PFP */
-
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-
 /* UART ----------------------------------------------------------------------*/
 /**
  * @brief put a char with UART2.
@@ -129,198 +84,6 @@ int __io_putchar(int ch)
 {
   HAL_UART_Transmit(&huart2, (uint8_t *)&ch, 1, 0xFFFF);
   return ch;
-}
-
-/* Line sensor ---------------------------------------------------------------*/
-/**
- * @brief Initialize sensors(line, marker, battery check).
- */
-void SENSOR_Init()
-{
-  HAL_ADC_Start_DMA(&hadc1, (uint32_t *)dmaBufferAdc1, NUM_ADC1);
-  HAL_ADC_Start_DMA(&hadc2, (uint32_t *)dmaBufferAdc2, NUM_ADC2);
-  HAL_TIM_Base_Start(&htim3);
-  HAL_TIM_Encoder_Start(&htim2, TIM_CHANNEL_ALL);
-}
-
-/* Encoder -------------------------------------------------------------------*/
-/**
- * @brief Initialize encoders.
- */
-void ENCODER_Init()
-{
-  HAL_TIM_Encoder_Start(&htim2, TIM_CHANNEL_ALL);
-}
-/**
- * @brief GPIO external interrupt (left encoder)
- */
-void HAL_GPIO_EXTI_Callback(uint16_t pin)
-{
-  GPIO_PinState a = HAL_GPIO_ReadPin(EncoderLeftA_GPIO_Port, EncoderLeftA_Pin);
-  GPIO_PinState b = HAL_GPIO_ReadPin(EncoderLeftB_GPIO_Port, EncoderLeftB_Pin);
-  switch (pin)
-  {
-    case EncoderLeftA_Pin:
-      if (a != b)
-        encoderLeftCount++;
-      else
-        encoderLeftCount--;
-      break;
-    case EncoderLeftB_Pin:
-      if (a == b)
-        encoderLeftCount++;
-      else
-        encoderLeftCount--;
-      break;
-    default:
-      break;
-  }
-}
-/**
- * @brief Get a value of right encoder.
- */
-uint16_t ENCODER_GetCountRight() { return TIM2->CNT; }
-/**
- * @brief Get a value of left encoder.
- */
-uint16_t ENCODER_GetCountLeft() { return encoderLeftCount; }
-/**
-  * @brief Reset encoder values.
-  */
-void ENCODER_ResetCount()
-{
-  // Right
-  TIM2->CNT = 0;
-  // Left
-  encoderLeftCount = 0;
-}
-
-/* Motor ---------------------------------------------------------------------*/
-/**
- * @brief Initialize motors.
- */
-void MOTOR_Init()
-{
-  TIM17->CCR1 = 0;
-  TIM1->CCR4 = 0;
-  HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_4);
-  HAL_TIM_PWM_Start(&htim17, TIM_CHANNEL_1);
-}
-/**
- * @brief Set a duty of right motor.
- */
-void MOTOR_SetDutyRight(uint16_t duty, bool cw)
-{
-  TIM17->CCR1 = duty;
-  HAL_GPIO_WritePin(MotorRightPhase_GPIO_Port, MotorRightPhase_Pin, cw ? GPIO_PIN_RESET : GPIO_PIN_SET);
-}
-/**
- * @brief Set a duty of left motor
- */
-void MOTOR_SetDutyLeft(uint16_t duty, bool cw)
-{
-  TIM1->CCR4 = duty;
-  HAL_GPIO_WritePin(MotorLeftPhase_GPIO_Port, MotorLeftPhase_Pin, cw ? GPIO_PIN_RESET : GPIO_PIN_SET);
-}
-
-/* Gyro ---------------------------------------------------------------------*/
-#define BMX055_GYRO_I2C_ADDR 0x69
-#define BMX055_GYRO_REG_RANGE 0x0f
-#define BMX055_GYRO_REG_BW 0x10
-#define BMX055_GYRO_REG_LPM1 0x11
-#define BMX055_GYRO_REG_RATE_Z_LSB 0x06
-/**
- * @brief I2C DMA completed interrupt
-*/
-void HAL_I2C_MasterTxCpltCallback(I2C_HandleTypeDef *hi2c)
-{
-  if (hi2c == &hi2c1)
-  {
-    // read 2 bytes
-    HAL_I2C_Master_Receive_DMA(hi2c, (BMX055_GYRO_I2C_ADDR << 1), dmaBufferI2c1Rx, 2);
-  }
-}
-/**
- * @brief Initialize the gyro.
- */
-void GYRO_Init()
-{
-  // Set measurement ranges of angular rate.
-  dmaBufferI2c1Tx[0] = BMX055_GYRO_REG_RANGE;
-  dmaBufferI2c1Tx[1] = 0; // 2000dps
-  HAL_I2C_Master_Transmit(&hi2c1, (BMX055_GYRO_I2C_ADDR << 1), dmaBufferI2c1Tx, 2, UINT32_MAX);
-  // Set ODR and filter bandwidth.
-  dmaBufferI2c1Tx[0] = BMX055_GYRO_REG_BW;
-  dmaBufferI2c1Tx[1] = 1; // ODR: 2000Hz, Filter Bandwidth: 230Hz
-  HAL_I2C_Master_Transmit(&hi2c1, (BMX055_GYRO_I2C_ADDR << 1), dmaBufferI2c1Tx, 2, UINT32_MAX);
-  // Set power mode.
-  dmaBufferI2c1Tx[0] = BMX055_GYRO_REG_LPM1;
-  dmaBufferI2c1Tx[1] = 0; // NORMAL mode
-  HAL_I2C_Master_Transmit(&hi2c1, (BMX055_GYRO_I2C_ADDR << 1), dmaBufferI2c1Tx, 2, UINT32_MAX);
-}
-/**
- * @brief Update an angular rate.
- */
-void GYRO_UpdateYaw()
-{
-  dmaBufferI2c1Tx[0] = BMX055_GYRO_REG_RATE_Z_LSB;
-  HAL_I2C_Master_Transmit_DMA(&hi2c1, (BMX055_GYRO_I2C_ADDR << 1), dmaBufferI2c1Tx, 1);
-}
-/**
- * @brief Get current angular rate.
- */
-float GYRO_GetYaw()
-{
-  float z = (dmaBufferI2c1Rx[1] << 8) | dmaBufferI2c1Rx[0];
-  if (z > 32767) z -= 65536;
-  return z * 0.061037f; // 2000 / 32767
-}
-
-/* Sense/Odometry ------------------------------------------------------------*/
-/**
- * @brief Calculate odometry
- */
-void ODOMETRY_Calculate()
-{
-  float distRight = ENCODER_GetCountRight() * ODOMETRY_MM_PER_PULSE;
-  float distLeft = ENCODER_GetCountLeft() * ODOMETRY_MM_PER_PULSE;
-  float veloRight = distRight / 1000.0f;
-  float veloLeft = distLeft / 1000.0f;
-  odometry.velocity = (veloRight + veloLeft) / 2.0f;
-  odometry.length += (distRight + distLeft) / 2.0f;
-  float yaw = GYRO_GetYaw();
-  odometry.angular_velocity = yaw * (M_PI / 180.0f);
-  odometry.angle += yaw / 1000.0f;
-}
-
-/* Interval Process ----------------------------------------------------------*/
-/**
- * @brief timer interrupt
- * TIM6: 2kHz
- */
-void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
-{
-  static enum {
-    UPDATE_STATE_GYRO,
-    UPDATE_STATE_CALC,
-  } updateState = UPDATE_STATE_GYRO;
-
-  if (htim == &htim6)
-  {
-    HAL_GPIO_TogglePin(Buzzer_GPIO_Port, Buzzer_Pin);
-    switch (updateState)
-    {
-    default:
-    case UPDATE_STATE_GYRO:
-      GYRO_UpdateYaw();
-      updateState = UPDATE_STATE_CALC;
-      break;
-    case UPDATE_STATE_CALC:
-      ODOMETRY_Calculate();
-      updateState = UPDATE_STATE_GYRO;
-      break;
-    }
-  }
 }
 /* USER CODE END 0 */
 
@@ -363,37 +126,14 @@ int main(void)
   MX_TIM3_Init();
   MX_TIM6_Init();
   /* USER CODE BEGIN 2 */
-  SENSOR_Init();
-  ENCODER_Init();
-  MOTOR_Init();
-  GYRO_Init();
-
-  MOTOR_SetDutyLeft(512, true);
-  MOTOR_SetDutyRight(512, true);
-
-  HAL_TIM_Base_Start_IT(&htim6);
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  while (1)
-  {
+  app_main();
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-    HAL_GPIO_TogglePin(Led_GPIO_Port, Led_Pin);
-    printf("%04d, %04d, %04d, %04d, %04d, %04d, %04d, %04d, %04d, %04d\r\n",
-      dmaBufferAdc1[ADC1_MARKER_SENSOR_LEFT],
-      dmaBufferAdc2[ADC2_LINE_SENSOR_LEFT_OUT],
-      dmaBufferAdc2[ADC2_LINE_SENSOR_LEFT_IN],
-      dmaBufferAdc2[ADC2_LINE_SENSOR_RIGHT_IN],
-      dmaBufferAdc1[ADC1_LINE_SENSOR_RIGHT_OUT],
-      dmaBufferAdc1[ADC1_MARKER_SENSOR_RIGHT],
-      dmaBufferAdc2[ADC2_BATTERY_VOLTAGE],
-      ENCODER_GetCountLeft(),
-      ENCODER_GetCountRight(),
-      (int)(odometry.angle * 1000));
-  }
   /* USER CODE END 3 */
 }
 
@@ -685,7 +425,7 @@ static void MX_TIM1_Init(void)
   htim1.Instance = TIM1;
   htim1.Init.Prescaler = 0;
   htim1.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim1.Init.Period = 3200-1;
+  htim1.Init.Period = 3200 - 1;
   htim1.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   htim1.Init.RepetitionCounter = 0;
   htim1.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_ENABLE;
@@ -809,9 +549,9 @@ static void MX_TIM3_Init(void)
 
   /* USER CODE END TIM3_Init 1 */
   htim3.Instance = TIM3;
-  htim3.Init.Prescaler = 0;
+  htim3.Init.Prescaler = 64 - 1;
   htim3.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim3.Init.Period = 64000-1;
+  htim3.Init.Period = 1000 - 1;
   htim3.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   htim3.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_ENABLE;
   if (HAL_TIM_Base_Init(&htim3) != HAL_OK)
@@ -853,9 +593,9 @@ static void MX_TIM6_Init(void)
 
   /* USER CODE END TIM6_Init 1 */
   htim6.Instance = TIM6;
-  htim6.Init.Prescaler = 64-1;
+  htim6.Init.Prescaler = 64 - 1;
   htim6.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim6.Init.Period = 500-1;
+  htim6.Init.Period = 500 - 1;
   htim6.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_ENABLE;
   if (HAL_TIM_Base_Init(&htim6) != HAL_OK)
   {
@@ -894,7 +634,7 @@ static void MX_TIM17_Init(void)
   htim17.Instance = TIM17;
   htim17.Init.Prescaler = 0;
   htim17.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim17.Init.Period = 3200-1;
+  htim17.Init.Period = 3200 - 1;
   htim17.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   htim17.Init.RepetitionCounter = 0;
   htim17.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_ENABLE;
