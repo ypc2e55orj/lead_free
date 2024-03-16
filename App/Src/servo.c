@@ -3,6 +3,7 @@
 // libc
 #include <stdio.h>
 #include <math.h>
+#include <stdbool.h>
 
 // STM32CubeMX
 #include <main.h>
@@ -20,14 +21,24 @@ extern TIM_HandleTypeDef htim1;
 //! TIM17 Handler extern
 extern TIM_HandleTypeDef htim17;
 /**
- * @brief Initialize motors.
+ * @brief Start motors.
  */
-static void MOTOR_Init()
+static void MOTOR_Start()
 {
   TIM17->CCR1 = 0;
   TIM1->CCR4 = 0;
   HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_4);
   HAL_TIM_PWM_Start(&htim17, TIM_CHANNEL_1);
+}
+/**
+ * @brief Stop motors
+ */
+static void MOTOR_Stop()
+{
+  TIM17->CCR1 = 0;
+  TIM1->CCR4 = 0;
+  HAL_TIM_PWM_Stop(&htim1, TIM_CHANNEL_4);
+  HAL_TIM_PWM_Stop(&htim17, TIM_CHANNEL_1);
 }
 /**
  * @brief Set a duty of right motor.
@@ -47,42 +58,66 @@ static void MOTOR_SetDutyLeft(float duty)
 }
 
 /* Servo ---------------------------------------------------------------------*/
+#define SERVO_LIMIT_VOTAGE 4.5f
+//! Servo enable flag
+static volatile bool servo_running = false;
+//! Target velocity
 static float servo_target_velocity;
+//! Target angular velocity
 static float servo_target_angular_velocity;
 /**
- * @brief Initialize servos
+ * @brief Start servos
  */
-void SERVO_Init()
+void SERVO_Start()
 {
-  MOTOR_Init();
+  servo_running = true;
+  MOTOR_Start();
 }
 /**
- * @brief Set target velocity
+ * @brief Stop servos
  */
-void SERVO_SetTarget(float velo, float ang_velo)
+void SERVO_Stop()
 {
-  servo_target_velocity = velo;
-  servo_target_angular_velocity = ang_velo;
+  PARAMETER *param = PARAMETER_Get();
+
+  servo_running = false;
+  MOTOR_Stop();
+
+  PID_Reset(&param->velocity_pid);
+  PID_Reset(&param->angular_velocity_pid);
 }
 /**
- * @brief Update servos
+ * @brief Update servos (1kHz)
  */
 void SERVO_Update()
 {
+  if (!servo_running)
+    return;
+
   PARAMETER *param = PARAMETER_Get();
   const ODOMETRY *odom = ODOMETRY_GetCurrent();
   float bat_vol = (float)ADC_GetBatteryVoltage() / 1000.0f;
 
+  // Generate target velocity
+
+  // Feedback
   float velo_err = PID_Update(&param->velocity_pid, servo_target_velocity, odom->velocity, 1.0f);
   float ang_velo_err = PID_Update(&param->angular_velocity_pid, servo_target_angular_velocity, odom->angular_velocity, 1.0f);
 
   float vol_r = velo_err + ang_velo_err;
   float vol_l = velo_err - ang_velo_err;
 
+  if (vol_r < -SERVO_LIMIT_VOTAGE)
+    vol_r = -SERVO_LIMIT_VOTAGE;
+  else if (SERVO_LIMIT_VOTAGE < vol_r)
+    vol_r = SERVO_LIMIT_VOTAGE;
+  if (vol_l < -SERVO_LIMIT_VOTAGE)
+    vol_l = -SERVO_LIMIT_VOTAGE;
+  else if (SERVO_LIMIT_VOTAGE < vol_l)
+    vol_l = SERVO_LIMIT_VOTAGE;
+
   float duty_r = vol_r / bat_vol;
   float duty_l = vol_l / bat_vol;
-
-  printf("%04d, %04d\r\n", (int)(duty_r), (int)(duty_l));
 
   MOTOR_SetDutyRight(duty_r);
   MOTOR_SetDutyLeft(duty_l);
