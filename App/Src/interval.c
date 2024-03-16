@@ -1,7 +1,10 @@
 // STM32CubeMX
 #include <main.h>
+
 // Project
-#include <sensor.h>
+#include "sensor.h"
+#include "servo.h"
+#include "odometry.h"
 
 /* Variables ------------------------------------------------------------------*/
 //! TIM6 Handler extern
@@ -29,6 +32,7 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
       break;
     case UPDATE_STATE_CALC:
       ODOMETRY_Calculate();
+      SERVO_Update();
       updateState = UPDATE_STATE_GYRO;
       break;
     }

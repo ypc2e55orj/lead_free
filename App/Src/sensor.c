@@ -55,7 +55,7 @@ static void ADC_Init()
  */
 int ADC_GetBatteryVoltage()
 {
-  return dmaBufferAdc2[ADC2_BATTERY_VOLTAGE];
+  return (3 * dmaBufferAdc2[ADC2_BATTERY_VOLTAGE] * 3300) / 4095;
 }
 /**
  * @brief Get line sensor value
@@ -110,8 +110,8 @@ void GYRO_UpdateYaw()
 float GYRO_GetYaw()
 {
   float z = (dmaBufferI2c1Rx[1] << 8) | dmaBufferI2c1Rx[0];
-  if (z > 32767)
-    z -= 65536;
+  if (z > INT16_MAX)
+    z -= (UINT16_MAX + 1);
   return z * 0.061037f; // 2000 / 32767
 }
 /**
@@ -130,7 +130,7 @@ void HAL_I2C_MasterTxCpltCallback(I2C_HandleTypeDef *hi2c)
 //! TIM2 Handler extern
 extern TIM_HandleTypeDef htim2;
 //! left encoder count value
-static uint16_t encoderLeftCount;
+static int encoderLeftCount;
 /**
  * @brief Initialize encoders.
  */
@@ -166,11 +166,19 @@ void HAL_GPIO_EXTI_Callback(uint16_t pin)
 /**
  * @brief Get a value of right encoder.
  */
-uint16_t ENCODER_GetCountRight() { return TIM2->CNT; }
+int ENCODER_GetCountRight()
+{
+  uint16_t count = (UINT16_MAX + 1) - TIM2->CNT;
+  if (count > INT16_MAX)
+  {
+    return count - (UINT16_MAX + 1);
+  }
+  return count;
+}
 /**
  * @brief Get a value of left encoder.
  */
-uint16_t ENCODER_GetCountLeft() { return encoderLeftCount; }
+int ENCODER_GetCountLeft() { return encoderLeftCount; }
 /**
  * @brief Reset encoder values.
  */

@@ -4,12 +4,11 @@
 #include <math.h>
 
 // project
-#include <sensor.h>
+#include "sensor.h"
 
-#define ODOMETRY_ENCODER_PPR 135.5f  //! [Pulses per Revolution]
-#define ODOMETRY_TIRE_DIAMETER 20.9f //! [mm]
-#define ODOMETRY_TIRE_RADIUS ((ODOMETRY_TIRE_DIAMETER) / 2.0f)
-#define ODOMETRY_MM_PER_PULSE (((ODOMETRY_TIRE_RADIUS) * M_PI) / ODOMETRY_ENCODER_PPR)
+#define ODOMETRY_ENCODER_PPR 119.538f //! [Pulses per Revolution]
+#define ODOMETRY_TIRE_DIAMETER 20.9f  //! [mm]
+#define ODOMETRY_MM_PER_PULSE (((ODOMETRY_TIRE_DIAMETER) * M_PI) / ODOMETRY_ENCODER_PPR)
 
 static ODOMETRY odometry = {0};
 
@@ -27,6 +26,16 @@ void ODOMETRY_Calculate()
   float yaw = GYRO_GetYaw();
   odometry.angular_velocity = yaw * (M_PI / 180.0f);
   odometry.angle += yaw / 1000.0f;
+  ENCODER_ResetCount();
+}
+
+/**
+ * @brief Reset sums
+ */
+void ODOMETRY_Reset()
+{
+  odometry.angle = 0.0f;
+  odometry.length = 0.0f;
 }
 
 /**
