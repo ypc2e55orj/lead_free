@@ -63,10 +63,14 @@ static void MOTOR_SetDutyLeft(float duty)
 static volatile bool servo_running = false;
 //! Target velocity
 static float servo_target_velocity = 0;
+//! Velocity PID
+static PID servo_velocity_pid = {0};
 //! Acceleration
 static float servo_acceleration = 0;
 //! Target angular velocity
 static float servo_target_angular_velocity = 0;
+//! Angular velocity PID
+static PID servo_angular_velocity_pid = {0};
 //! Angular acceleration
 static float servo_angular_acceleration = 0;
 /**
@@ -74,6 +78,7 @@ static float servo_angular_acceleration = 0;
  */
 void SERVO_Start()
 {
+  SERVO_Reset();
   servo_running = true;
   MOTOR_Start();
 }
@@ -84,9 +89,17 @@ void SERVO_Reset()
 {
   PARAMETER *param = PARAMETER_Get();
 
+  servo_velocity_pid.kp = param->velocity_pid[0];
+  servo_velocity_pid.ki = param->velocity_pid[1];
+  servo_velocity_pid.kd = param->velocity_pid[2];
+
+  servo_angular_velocity_pid.kp = param->angular_velocity_pid[0];
+  servo_angular_velocity_pid.ki = param->angular_velocity_pid[1];
+  servo_angular_velocity_pid.kd = param->angular_velocity_pid[2];
+
   ODOMETRY_Reset();
-  PID_Reset(&param->velocity_pid);
-  PID_Reset(&param->angular_velocity_pid);
+  PID_Reset(&servo_velocity_pid);
+  PID_Reset(&servo_angular_velocity_pid);
 }
 /**
  * @brief Stop servos
@@ -123,8 +136,8 @@ void SERVO_Update()
     servo_target_angular_velocity = param->max_angular_velocity;
 
   // Feedback
-  float velo_err = PID_Update(&param->velocity_pid, servo_target_velocity, odom->velocity, 1.0f);
-  float ang_velo_err = PID_Update(&param->angular_velocity_pid, servo_target_angular_velocity, odom->angular_velocity, 1.0f);
+  float velo_err = PID_Update(&servo_velocity_pid, servo_target_velocity, odom->velocity, 1.0f);
+  float ang_velo_err = PID_Update(&servo_angular_velocity_pid, servo_target_angular_velocity, odom->angular_velocity, 1.0f);
 
   float vol_r = velo_err + ang_velo_err;
   float vol_l = velo_err - ang_velo_err;
@@ -150,10 +163,10 @@ void SERVO_Update()
 void SERVO_TargetVelocity(float velo, float accel)
 {
   const PARAMETER *param = PARAMETER_Get();
-  if (accel < -1.0f * param->max_acceleration)
-    accel = -1.0f * param->max_acceleration;
-  else if (param->max_acceleration < accel)
-    accel = param->max_acceleration;
+  if (accel < -1.0f * param->acceleration)
+    accel = -1.0f * param->acceleration;
+  else if (param->acceleration < accel)
+    accel = param->acceleration;
 
   servo_target_velocity = velo;
   servo_acceleration = accel;
@@ -164,10 +177,10 @@ void SERVO_TargetVelocity(float velo, float accel)
 void SERVO_TargetAngularVelocity(float ang_velo, float ang_accel)
 {
   const PARAMETER *param = PARAMETER_Get();
-  if (ang_accel < -1.0f * param->max_angular_acceleration)
-    ang_accel = -1.0f * param->max_angular_acceleration;
-  else if (param->max_angular_acceleration < ang_accel)
-    ang_accel = param->max_angular_acceleration;
+  if (ang_accel < -1.0f * param->angular_acceleration)
+    ang_accel = -1.0f * param->angular_acceleration;
+  else if (param->angular_acceleration < ang_accel)
+    ang_accel = param->angular_acceleration;
 
   servo_target_angular_velocity = ang_velo;
   servo_angular_acceleration = ang_accel;
