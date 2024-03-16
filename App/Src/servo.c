@@ -78,6 +78,15 @@ static float servo_angular_acceleration = 0;
  */
 void SERVO_Start()
 {
+  PARAMETER *param = PARAMETER_Get();
+
+  servo_velocity_pid.kp = param->velocity_pid[0];
+  servo_velocity_pid.ki = param->velocity_pid[1];
+  servo_velocity_pid.kd = param->velocity_pid[2];
+  servo_angular_velocity_pid.kp = param->angular_velocity_pid[0];
+  servo_angular_velocity_pid.ki = param->angular_velocity_pid[1];
+  servo_angular_velocity_pid.kd = param->angular_velocity_pid[2];
+
   SERVO_Reset();
   servo_running = true;
   MOTOR_Start();
@@ -87,17 +96,6 @@ void SERVO_Start()
  */
 void SERVO_Reset()
 {
-  PARAMETER *param = PARAMETER_Get();
-
-  servo_velocity_pid.kp = param->velocity_pid[0];
-  servo_velocity_pid.ki = param->velocity_pid[1];
-  servo_velocity_pid.kd = param->velocity_pid[2];
-
-  servo_angular_velocity_pid.kp = param->angular_velocity_pid[0];
-  servo_angular_velocity_pid.ki = param->angular_velocity_pid[1];
-  servo_angular_velocity_pid.kd = param->angular_velocity_pid[2];
-
-  ODOMETRY_Reset();
   PID_Reset(&servo_velocity_pid);
   PID_Reset(&servo_angular_velocity_pid);
 }
@@ -109,6 +107,11 @@ void SERVO_Stop()
   servo_running = false;
   MOTOR_Stop();
   SERVO_Reset();
+
+  servo_target_velocity = 0.0f;
+  servo_acceleration = 0.0f;
+  servo_target_angular_velocity = 0.0f;
+  servo_angular_acceleration = 0.0f;
 }
 /**
  * @brief Update servos (1kHz)
@@ -158,9 +161,16 @@ void SERVO_Update()
   MOTOR_SetDutyLeft(duty_l);
 }
 /**
- *  @brief Servo target velocity
+ *  @brief Set target velocity
  */
-void SERVO_TargetVelocity(float velo, float accel)
+void SERVO_SetTargetVelocity(float velo)
+{
+  servo_target_velocity = velo;
+}
+/**
+ *  @brief Set acceleration
+ */
+void SERVO_SetAcceleration(float accel)
 {
   const PARAMETER *param = PARAMETER_Get();
   if (accel < -1.0f * param->acceleration)
@@ -168,13 +178,19 @@ void SERVO_TargetVelocity(float velo, float accel)
   else if (param->acceleration < accel)
     accel = param->acceleration;
 
-  servo_target_velocity = velo;
   servo_acceleration = accel;
 }
 /**
- *  @brief Servo target angular velocity
+ *  @brief Set target angular velocity
  */
-void SERVO_TargetAngularVelocity(float ang_velo, float ang_accel)
+void SERVO_SetTargetAngularVelocity(float ang_velo)
+{
+  servo_target_angular_velocity = ang_velo;
+}
+/**
+ * @brief Set angular acceleration
+ */
+void SERVO_SetAngularAcceleration(float ang_accel)
 {
   const PARAMETER *param = PARAMETER_Get();
   if (ang_accel < -1.0f * param->angular_acceleration)
@@ -182,6 +198,19 @@ void SERVO_TargetAngularVelocity(float ang_velo, float ang_accel)
   else if (param->angular_acceleration < ang_accel)
     ang_accel = param->angular_acceleration;
 
-  servo_target_angular_velocity = ang_velo;
   servo_angular_acceleration = ang_accel;
+}
+/**
+ *  @brief Get target velocity
+ */
+const float *SERVO_GetTargetVelocity()
+{
+  return &servo_target_velocity;
+}
+/**
+ *  @brief Get target angular velocity
+ */
+const float *SERVO_GetTargetAngularVelocity()
+{
+  return &servo_target_angular_velocity;
 }

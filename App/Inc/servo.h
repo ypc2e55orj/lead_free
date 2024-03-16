@@ -14,12 +14,28 @@ void SERVO_Reset();
  */
 void SERVO_Update();
 /**
- *  @brief Servo target velocity
+ *  @brief Set target velocity
  */
-void SERVO_TargetVelocity(float velo, float accel);
+void SERVO_SetTargetVelocity(float velo);
 /**
- *  @brief Servo target angular velocity
+ *  @brief Set acceleration
  */
-void SERVO_TargetAngularVelocity(float ang_velo, float ang_accel);
+void SERVO_SetAcceleration(float accel);
+/**
+ *  @brief Set target angular velocity
+ */
+void SERVO_SetTargetAngularVelocity(float ang_velo);
+/**
+ *  @brief Set angular acceleration
+ */
+void SERVO_SetAngularAcceleration(float ang_accel);
+/**
+ *  @brief Get target velocity
+ */
+const float *SERVO_GetTargetVelocity();
+/**
+ *  @brief Get target angular velocity
+ */
+const float *SERVO_GetTargetAngularVelocity();
 
 #endif // SERVO_H
