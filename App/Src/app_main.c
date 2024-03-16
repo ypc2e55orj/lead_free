@@ -14,6 +14,7 @@
 #include "servo.h"
 #include "parameter.h"
 #include "button.h"
+#include "logger.h"
 
 void RUN_Straight(float length, float accel, float max_velo, float end_velo)
 {
@@ -24,11 +25,19 @@ void RUN_Straight(float length, float accel, float max_velo, float end_velo)
   const ODOMETRY *odom = ODOMETRY_GetCurrent();
   const float *tar_velo = SERVO_GetTargetVelocity();
 
-  while (length > odom->length)
-    ;
+  float accel_length = (max_velo * max_velo - *tar_velo * *tar_velo) / (2.0f * accel);
+  float decel_length = (max_velo * max_velo - end_velo * end_velo) / (2.0f * accel);
 
+  SERVO_SetAcceleration(accel);
+  while (accel_length < odom->length)
+    ;
+  while (length - decel_length > odom->length)
+    ;
+  SERVO_SetAcceleration(-1.0f * accel);
+  while (length > odom->length && *tar_velo > end_velo)
+    ;
   SERVO_SetAcceleration(0.0f);
-  SERVO_SetTargetVelocity(0.0f);
+  SERVO_SetTargetVelocity(end_velo);
 }
 
 void app_main(void)
@@ -40,7 +49,16 @@ void app_main(void)
 
   SERVO_Start();
 
+  while (!BUTTON_GetSw2())
+  {
+  }
+  while (BUTTON_GetSw2())
+  {
+    INTERVAL_Buzzer(10);
+  }
+
   const PARAMETER *param = PARAMETER_Get();
+  LOGGER_SetFrequency(1000);
   RUN_Straight(0.1, param->acceleration, param->max_velocity, 0.0f);
 
   while (1)
@@ -48,12 +66,9 @@ void app_main(void)
     if (BUTTON_GetSw1())
     {
       INTERVAL_Buzzer(10);
+      HAL_GPIO_WritePin(Led_GPIO_Port, Led_Pin, GPIO_PIN_SET);
+      LOGGER_Print();
+      HAL_GPIO_WritePin(Led_GPIO_Port, Led_Pin, GPIO_PIN_RESET);
     }
-    if (BUTTON_GetSw2())
-    {
-      HAL_GPIO_TogglePin(Led_GPIO_Port, Led_Pin);
-    }
-    const ODOMETRY *odom = ODOMETRY_GetCurrent();
-    printf("%03d, %03d, %03d, %03d, %03d, %03d\r\n", (int)(odom->velocity * 1000), (int)(odom->angular_velocity * 1000), (int)(odom->length * 1000), (int)(odom->angle * 1000), (int)(odom->x * 1000), (int)(odom->y * 1000));
   }
 }

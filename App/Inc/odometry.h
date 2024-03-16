@@ -26,13 +26,5 @@ void ODOMETRY_Reset();
  * @brief Get current
  */
 const ODOMETRY *ODOMETRY_GetCurrent();
-/**
- * @brief Set log frequency
- */
-void ODOMETRY_SetLogFrequency(uint16_t log_freq);
-/**
- * @brief Print log
- */
-void ODOMETRY_PrintLog();
 
 #endif // ODOMETRY_H
