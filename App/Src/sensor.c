@@ -166,7 +166,7 @@ void HAL_GPIO_EXTI_Callback(uint16_t pin)
 /**
  * @brief Get a value of right encoder.
  */
-int ENCODER_GetCountRight()
+int16_t ENCODER_GetCountRight()
 {
   uint16_t count = (UINT16_MAX + 1) - TIM2->CNT;
   if (count > INT16_MAX)
@@ -178,7 +178,14 @@ int ENCODER_GetCountRight()
 /**
  * @brief Get a value of left encoder.
  */
-int ENCODER_GetCountLeft() { return encoderLeftCount; }
+int16_t ENCODER_GetCountLeft()
+{
+  if (encoderLeftCount > INT16_MAX)
+  {
+    return encoderLeftCount - (UINT16_MAX + 1);
+  }
+  return encoderLeftCount;
+}
 /**
  * @brief Reset encoder values.
  */

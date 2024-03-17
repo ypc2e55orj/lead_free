@@ -62,29 +62,15 @@ void app_main(void)
       LOGGER_Stop();
       SERVO_Stop();
       HAL_GPIO_WritePin(Led_GPIO_Port, Led_Pin, GPIO_PIN_RESET);
-      while (1)
-      {
-        if (BUTTON_GetSw2())
-        {
-          while (BUTTON_GetSw2())
-            ;
-          INTERVAL_Buzzer(50);
-          HAL_GPIO_WritePin(Led_GPIO_Port, Led_Pin, GPIO_PIN_SET);
-          LOGGER_Print();
-          HAL_GPIO_WritePin(Led_GPIO_Port, Led_Pin, GPIO_PIN_RESET);
-        }
-      }
     }
     if (BUTTON_GetSw2())
     {
       while (BUTTON_GetSw2())
         ;
       INTERVAL_Buzzer(50);
-      SERVO_Stop();
-      while (1)
-      {
-        printf("%d, %d\r\n", ENCODER_GetCountLeft(), ENCODER_GetCountRight());
-      }
+      HAL_GPIO_WritePin(Led_GPIO_Port, Led_Pin, GPIO_PIN_SET);
+      LOGGER_Print();
+      HAL_GPIO_WritePin(Led_GPIO_Port, Led_Pin, GPIO_PIN_RESET);
     }
   }
 }

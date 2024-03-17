@@ -39,11 +39,11 @@ float GYRO_GetYaw();
 /**
  * @brief Get a value of right encoder.
  */
-int ENCODER_GetCountRight();
+int16_t ENCODER_GetCountRight();
 /**
  * @brief Get a value of left encoder.
  */
-int ENCODER_GetCountLeft();
+int16_t ENCODER_GetCountLeft();
 /**
  * @brief Reset encoder values.
  */
