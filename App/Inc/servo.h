@@ -10,6 +10,10 @@ void SERVO_Start();
  */
 void SERVO_Reset();
 /**
+ * @brief Stop servos
+ */
+void SERVO_Stop();
+/**
  * @brief Update servos
  */
 void SERVO_Update();

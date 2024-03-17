@@ -1,38 +1,51 @@
 #include "logger.h"
 
+// libc
+#include <string.h>
+
 // project
 #include "odometry.h"
 #include "servo.h"
 
+#ifdef LOGGER_ENABLED
 #define LOGGER_BUFFER_SIZE 500
+#define LOGGER_ELEM_SIZE 8
 //! log buffer
-static int16_t logger_buffer[LOGGER_BUFFER_SIZE][8] = {};
+static int16_t logger_buffer[LOGGER_BUFFER_SIZE][LOGGER_ELEM_SIZE] = {};
 //! log index
 static uint16_t logger_buffer_index = 0;
 //! log interval count max
 static uint16_t logger_freq_count_max = 0;
+#endif
+
 /**
  * @brief Clear log
  */
 void LOGGER_Clear()
 {
+#ifdef LOGGER_ENABLED
+  memset(logger_buffer, 0, sizeof(int16_t) * LOGGER_BUFFER_SIZE * LOGGER_ELEM_SIZE);
+#endif
 }
 /**
  * @brief Set log frequency
  */
 void LOGGER_SetFrequency(uint16_t freq)
 {
+#ifdef LOGGER_ENABLED
   if (freq > 1000)
   {
     freq = 1000;
   }
   logger_freq_count_max = freq == 0 ? 0 : 1000 / freq;
+#endif
 }
 /**
  * @brief Collect log
  */
 void LOGGER_Update()
 {
+#ifdef LOGGER_ENABLED
   static uint16_t logger_freq_count = 0;
 
   const ODOMETRY *odom = ODOMETRY_GetCurrent();
@@ -53,18 +66,21 @@ void LOGGER_Update()
       logger_freq_count_max = 0;
     }
   }
+#endif
 }
 /**
  * @brief Pring log
  */
 void LOGGER_Print()
 {
+#ifdef LOGGER_ENABLED
   for (uint16_t i = 0; i < logger_buffer_index; i++)
   {
-    for (uint16_t j = 0; j < 8; j++)
+    for (uint16_t j = 0; j < LOGGER_ELEM_SIZE; j++)
     {
       printf("%d,", logger_buffer[i][j]);
     }
     printf("\r\n");
   }
+#endif
 }
