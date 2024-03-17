@@ -78,7 +78,7 @@ static float servo_angular_acceleration = 0;
  */
 void SERVO_Start()
 {
-  PARAMETER *param = PARAMETER_Get();
+  const PARAMETER *param = PARAMETER_Get();
 
   servo_velocity_pid.kp = param->velocity_pid[0];
   servo_velocity_pid.ki = param->velocity_pid[1];
@@ -121,7 +121,7 @@ void SERVO_Update()
   if (!servo_running)
     return;
 
-  PARAMETER *param = PARAMETER_Get();
+  const PARAMETER *param = PARAMETER_Get();
   const ODOMETRY *odom = ODOMETRY_GetCurrent();
   float bat_vol = (float)ADC_GetBatteryVoltage() / 1000.0f;
 

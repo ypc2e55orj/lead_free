@@ -4,14 +4,28 @@
 // libc
 #include <stdint.h>
 
+typedef enum
+{
+  LOGGER_MODE_TARGET,
+  LOGGER_MODE_ODOMETRY,
+} LOGGER_MODE;
+
 /**
  * @brief Clear log
  */
 void LOGGER_Clear();
 /**
- * @brief Set log frequency
+ * @brief Start logger (Set log frequency)
  */
-void LOGGER_SetFrequency(uint16_t freq);
+void LOGGER_Start(uint16_t freq);
+/**
+ * @brief Stop logger
+ */
+void LOGGER_Stop();
+/**
+ * @brief Set logger mode
+ */
+void LOGGER_SetMode(LOGGER_MODE mode);
 /**
  * @brief Collect log
  */

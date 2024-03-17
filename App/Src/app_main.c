@@ -54,11 +54,26 @@ void app_main(void)
       while (BUTTON_GetSw1())
         ;
       INTERVAL_Buzzer(50);
-      SERVO_Start();
       const PARAMETER *param = PARAMETER_Get();
-      LOGGER_SetFrequency(1000);
       HAL_GPIO_WritePin(Led_GPIO_Port, Led_Pin, GPIO_PIN_SET);
-      RUN_Straight(0.1, param->acceleration, param->max_velocity, 0.0f);
+      SERVO_Start();
+      LOGGER_Start(500);
+      RUN_Straight(0.5f, param->acceleration, param->max_velocity, 0.0f);
+      LOGGER_Stop();
+      SERVO_Stop();
+      HAL_GPIO_WritePin(Led_GPIO_Port, Led_Pin, GPIO_PIN_RESET);
+      while (1)
+      {
+        if (BUTTON_GetSw2())
+        {
+          while (BUTTON_GetSw2())
+            ;
+          INTERVAL_Buzzer(50);
+          HAL_GPIO_WritePin(Led_GPIO_Port, Led_Pin, GPIO_PIN_SET);
+          LOGGER_Print();
+          HAL_GPIO_WritePin(Led_GPIO_Port, Led_Pin, GPIO_PIN_RESET);
+        }
+      }
     }
     if (BUTTON_GetSw2())
     {
@@ -66,8 +81,10 @@ void app_main(void)
         ;
       INTERVAL_Buzzer(50);
       SERVO_Stop();
-      HAL_GPIO_WritePin(Led_GPIO_Port, Led_Pin, GPIO_PIN_RESET);
-      LOGGER_Print();
+      while (1)
+      {
+        printf("%d, %d\r\n", ENCODER_GetCountLeft(), ENCODER_GetCountRight());
+      }
     }
   }
 }

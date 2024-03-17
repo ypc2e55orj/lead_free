@@ -66,6 +66,6 @@ void PARAMETER_SetIndex(uint8_t index);
 /**
  * @brief Get current parameter
  */
-PARAMETER *PARAMETER_Get();
+const PARAMETER *PARAMETER_Get();
 
 #endif // PARAMETER_H
