@@ -8,12 +8,13 @@ typedef struct
   float kd;
 
   float prev_error;
+  float error_sums;
 } PID;
 
 /**
  * @brief Reset PID
  */
-float PID_Reset(PID *pid);
+void PID_Reset(PID *pid);
 /**
  * @brief Update PID
  */

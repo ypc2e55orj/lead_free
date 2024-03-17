@@ -17,8 +17,6 @@ static ODOMETRY odometry = {0};
  */
 void ODOMETRY_Calculate()
 {
-  static uint16_t odometry_log_count = 0;
-
   float veloRight = (float)ENCODER_GetCountRight() * ODOMETRY_MM_PER_PULSE;
   float veloLeft = (float)ENCODER_GetCountLeft() * ODOMETRY_MM_PER_PULSE;
   ENCODER_ResetCount();
