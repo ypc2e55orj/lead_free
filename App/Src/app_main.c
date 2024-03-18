@@ -16,7 +16,7 @@
 #include "button.h"
 #include "logger.h"
 
-void RUN_Straight(float length, float accel, float max_velo, float end_velo)
+void RUN_Straight(float length, float accel, float min_velo, float max_velo, float end_velo)
 {
   ODOMETRY_Reset();
   SERVO_Reset();
@@ -34,8 +34,14 @@ void RUN_Straight(float length, float accel, float max_velo, float end_velo)
   while (length - decel_length > odom->length)
     ;
   SERVO_SetAcceleration(-1.0f * accel);
-  while (length > odom->length && *tar_velo > end_velo)
-    ;
+  while (length > odom->length)
+  {
+    if (*tar_velo < min_velo)
+    {
+      SERVO_SetAcceleration(0.0f);
+      SERVO_SetTargetVelocity(min_velo);
+    }
+  }
   SERVO_SetAcceleration(0.0f);
   SERVO_SetTargetVelocity(end_velo);
 }
@@ -58,8 +64,10 @@ void app_main(void)
       HAL_GPIO_WritePin(Led_GPIO_Port, Led_Pin, GPIO_PIN_SET);
       SERVO_Start();
       LOGGER_Start(500);
-      RUN_Straight(0.5f, param->acceleration, param->max_velocity, 0.0f);
+      RUN_Straight(0.5f, param->acceleration, param->min_velocity, param->max_velocity, 0);
       LOGGER_Stop();
+      SERVO_SetTargetVelocity(0.0f);
+      HAL_Delay(4000);
       SERVO_Stop();
       HAL_GPIO_WritePin(Led_GPIO_Port, Led_Pin, GPIO_PIN_RESET);
     }
