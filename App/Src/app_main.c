@@ -16,17 +16,17 @@
 #include "button.h"
 #include "logger.h"
 
-void RUN_Straight(float length, float accel, float min_velo, float max_velo, float end_velo)
+void RUN_Straight(float length, float accel, float minVelo, float maxVelo, float endVelo)
 {
   ODOMETRY_Reset();
   SERVO_Reset();
   SERVO_SetAcceleration(accel);
 
   const ODOMETRY *odom = ODOMETRY_GetCurrent();
-  const float *tar_velo = SERVO_GetTargetVelocity();
+  const float *tarVelo = SERVO_GetTargetVelocity();
 
-  float accel_length = (max_velo * max_velo - *tar_velo * *tar_velo) / (2.0f * accel);
-  float decel_length = (max_velo * max_velo - end_velo * end_velo) / (2.0f * accel);
+  float accel_length = (maxVelo * maxVelo - *tarVelo * *tarVelo) / (2.0f * accel);
+  float decel_length = (maxVelo * maxVelo - endVelo * endVelo) / (2.0f * accel);
 
   SERVO_SetAcceleration(accel);
   while (accel_length < odom->length)
@@ -36,14 +36,14 @@ void RUN_Straight(float length, float accel, float min_velo, float max_velo, flo
   SERVO_SetAcceleration(-1.0f * accel);
   while (length > odom->length)
   {
-    if (*tar_velo < min_velo)
+    if (*tarVelo < minVelo)
     {
       SERVO_SetAcceleration(0.0f);
-      SERVO_SetTargetVelocity(min_velo);
+      SERVO_SetTargetVelocity(minVelo);
     }
   }
   SERVO_SetAcceleration(0.0f);
-  SERVO_SetTargetVelocity(end_velo);
+  SERVO_SetTargetVelocity(endVelo);
 }
 
 void app_main(void)
@@ -64,7 +64,7 @@ void app_main(void)
       HAL_GPIO_WritePin(Led_GPIO_Port, Led_Pin, GPIO_PIN_SET);
       SERVO_Start();
       LOGGER_Start(500);
-      RUN_Straight(0.5f, param->acceleration, param->min_velocity, param->max_velocity, 0);
+      RUN_Straight(0.5f, param->acceleration, param->minVelocity, param->maxVelocity, 0);
       LOGGER_Stop();
       SERVO_SetTargetVelocity(0.0f);
       HAL_Delay(4000);

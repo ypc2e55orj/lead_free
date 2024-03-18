@@ -53,14 +53,14 @@
 
 typedef struct
 {
-  float min_velocity;
-  float max_velocity;
+  float minVelocity;
+  float maxVelocity;
   float acceleration;
-  float velocity_pid[3];
-  float min_angular_velocity;
-  float max_angular_velocity;
-  float angular_acceleration;
-  float angular_velocity_pid[3];
+  float velocityPid[3];
+  float minAngularVelocity;
+  float maxAngularVelocity;
+  float angularAcceleration;
+  float angularVelocityPid[3];
 } PARAMETER;
 
 /**

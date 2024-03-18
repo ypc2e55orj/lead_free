@@ -60,19 +60,19 @@ static void MOTOR_SetDutyLeft(float duty)
 /* Servo ---------------------------------------------------------------------*/
 #define SERVO_LIMIT_VOTAGE 4.5f
 //! Servo enable flag
-static volatile bool servo_running = false;
+static volatile bool servoRunning = false;
 //! Target velocity
-static float servo_target_velocity = 0;
+static float servoTargetVelocity = 0;
 //! Velocity PID
-static PID servo_velocity_pid = {0};
+static PID servoVelocityPid = {0};
 //! Acceleration
-static float servo_acceleration = 0;
+static float servoAcceleration = 0;
 //! Target angular velocity
-static float servo_target_angular_velocity = 0;
+static float servoTargetAngularVelocity = 0;
 //! Angular velocity PID
-static PID servo_angular_velocity_pid = {0};
+static PID servoAngularVelocityPid = {0};
 //! Angular acceleration
-static float servo_angular_acceleration = 0;
+static float servoAngularAcceleration = 0;
 /**
  * @brief Start servos
  */
@@ -80,15 +80,15 @@ void SERVO_Start()
 {
   const PARAMETER *param = PARAMETER_Get();
 
-  servo_velocity_pid.kp = param->velocity_pid[0];
-  servo_velocity_pid.ki = param->velocity_pid[1];
-  servo_velocity_pid.kd = param->velocity_pid[2];
-  servo_angular_velocity_pid.kp = param->angular_velocity_pid[0];
-  servo_angular_velocity_pid.ki = param->angular_velocity_pid[1];
-  servo_angular_velocity_pid.kd = param->angular_velocity_pid[2];
+  servoVelocityPid.kp = param->velocityPid[0];
+  servoVelocityPid.ki = param->velocityPid[1];
+  servoVelocityPid.kd = param->velocityPid[2];
+  servoAngularVelocityPid.kp = param->angularVelocityPid[0];
+  servoAngularVelocityPid.ki = param->angularVelocityPid[1];
+  servoAngularVelocityPid.kd = param->angularVelocityPid[2];
 
   SERVO_Reset();
-  servo_running = true;
+  servoRunning = true;
   MOTOR_Start();
 }
 /**
@@ -96,76 +96,76 @@ void SERVO_Start()
  */
 void SERVO_Reset()
 {
-  PID_Reset(&servo_velocity_pid);
-  PID_Reset(&servo_angular_velocity_pid);
+  PID_Reset(&servoVelocityPid);
+  PID_Reset(&servoAngularVelocityPid);
 }
 /**
  * @brief Stop servos
  */
 void SERVO_Stop()
 {
-  servo_running = false;
+  servoRunning = false;
   MOTOR_Stop();
   SERVO_Reset();
 
-  servo_target_velocity = 0.0f;
-  servo_acceleration = 0.0f;
-  servo_target_angular_velocity = 0.0f;
-  servo_angular_acceleration = 0.0f;
+  servoTargetVelocity = 0.0f;
+  servoAcceleration = 0.0f;
+  servoTargetAngularVelocity = 0.0f;
+  servoAngularAcceleration = 0.0f;
 }
 /**
  * @brief Update servos (1kHz)
  */
 void SERVO_Update()
 {
-  if (!servo_running)
+  if (!servoRunning)
     return;
 
   const PARAMETER *param = PARAMETER_Get();
   const ODOMETRY *odom = ODOMETRY_GetCurrent();
-  float bat_vol = (float)ADC_GetBatteryVoltage() / 1000.0f;
+  float batVol = (float)ADC_GetBatteryVoltage() / 1000.0f;
 
   // Generate target velocity
-  servo_target_velocity += servo_acceleration / 1000.0f;
-  if (servo_target_velocity < -1.0f * param->max_velocity)
-    servo_target_velocity = -1.0f * param->max_velocity;
-  else if (param->max_velocity < servo_target_velocity)
-    servo_target_velocity = param->max_velocity;
+  servoTargetVelocity += servoAcceleration / 1000.0f;
+  if (servoTargetVelocity < -1.0f * param->maxVelocity)
+    servoTargetVelocity = -1.0f * param->maxVelocity;
+  else if (param->maxVelocity < servoTargetVelocity)
+    servoTargetVelocity = param->maxVelocity;
 
-  servo_target_angular_velocity = servo_angular_acceleration / 1000.0f;
-  if (servo_target_angular_velocity < -1.0f * param->max_angular_velocity)
-    servo_target_angular_velocity = -1.0f * param->max_angular_velocity;
-  else if (param->max_angular_velocity < servo_target_angular_velocity)
-    servo_target_angular_velocity = param->max_angular_velocity;
+  servoTargetAngularVelocity = servoAngularAcceleration / 1000.0f;
+  if (servoTargetAngularVelocity < -1.0f * param->maxAngularVelocity)
+    servoTargetAngularVelocity = -1.0f * param->maxAngularVelocity;
+  else if (param->maxAngularVelocity < servoTargetAngularVelocity)
+    servoTargetAngularVelocity = param->maxAngularVelocity;
 
   // Feedback
-  float velo_err = PID_Update(&servo_velocity_pid, servo_target_velocity, odom->velocity, 1.0f);
-  float ang_velo_err = PID_Update(&servo_angular_velocity_pid, servo_target_angular_velocity, odom->angular_velocity, 1.0f);
+  float veloError = PID_Update(&servoVelocityPid, servoTargetVelocity, odom->velocity, 1.0f);
+  float angVeloError = PID_Update(&servoAngularVelocityPid, servoTargetAngularVelocity, odom->angularVelocity, 1.0f);
 
-  float vol_r = velo_err + ang_velo_err;
-  float vol_l = velo_err - ang_velo_err;
+  float volRight = veloError + angVeloError;
+  float volLeft = veloError - angVeloError;
 
-  if (vol_r < -SERVO_LIMIT_VOTAGE)
-    vol_r = -SERVO_LIMIT_VOTAGE;
-  else if (SERVO_LIMIT_VOTAGE < vol_r)
-    vol_r = SERVO_LIMIT_VOTAGE;
-  if (vol_l < -SERVO_LIMIT_VOTAGE)
-    vol_l = -SERVO_LIMIT_VOTAGE;
-  else if (SERVO_LIMIT_VOTAGE < vol_l)
-    vol_l = SERVO_LIMIT_VOTAGE;
+  if (volRight < -SERVO_LIMIT_VOTAGE)
+    volRight = -SERVO_LIMIT_VOTAGE;
+  else if (SERVO_LIMIT_VOTAGE < volRight)
+    volRight = SERVO_LIMIT_VOTAGE;
+  if (volLeft < -SERVO_LIMIT_VOTAGE)
+    volLeft = -SERVO_LIMIT_VOTAGE;
+  else if (SERVO_LIMIT_VOTAGE < volLeft)
+    volLeft = SERVO_LIMIT_VOTAGE;
 
-  float duty_r = vol_r / bat_vol;
-  float duty_l = vol_l / bat_vol;
+  float dutyRight = volRight / batVol;
+  float dutyLeft = volLeft / batVol;
 
-  MOTOR_SetDutyRight(duty_r);
-  MOTOR_SetDutyLeft(duty_l);
+  MOTOR_SetDutyRight(dutyRight);
+  MOTOR_SetDutyLeft(dutyLeft);
 }
 /**
  *  @brief Set target velocity
  */
 void SERVO_SetTargetVelocity(float velo)
 {
-  servo_target_velocity = velo;
+  servoTargetVelocity = velo;
 }
 /**
  *  @brief Set acceleration
@@ -178,39 +178,39 @@ void SERVO_SetAcceleration(float accel)
   else if (param->acceleration < accel)
     accel = param->acceleration;
 
-  servo_acceleration = accel;
+  servoAcceleration = accel;
 }
 /**
  *  @brief Set target angular velocity
  */
-void SERVO_SetTargetAngularVelocity(float ang_velo)
+void SERVO_SetTargetAngularVelocity(float angVelo)
 {
-  servo_target_angular_velocity = ang_velo;
+  servoTargetAngularVelocity = angVelo;
 }
 /**
  * @brief Set angular acceleration
  */
-void SERVO_SetAngularAcceleration(float ang_accel)
+void SERVO_SetAngularAcceleration(float angAccel)
 {
   const PARAMETER *param = PARAMETER_Get();
-  if (ang_accel < -1.0f * param->angular_acceleration)
-    ang_accel = -1.0f * param->angular_acceleration;
-  else if (param->angular_acceleration < ang_accel)
-    ang_accel = param->angular_acceleration;
+  if (angAccel < -1.0f * param->angularAcceleration)
+    angAccel = -1.0f * param->angularAcceleration;
+  else if (param->angularAcceleration < angAccel)
+    angAccel = param->angularAcceleration;
 
-  servo_angular_acceleration = ang_accel;
+  servoAngularAcceleration = angAccel;
 }
 /**
  *  @brief Get target velocity
  */
 const float *SERVO_GetTargetVelocity()
 {
-  return &servo_target_velocity;
+  return &servoTargetVelocity;
 }
 /**
  *  @brief Get target angular velocity
  */
 const float *SERVO_GetTargetAngularVelocity()
 {
-  return &servo_target_angular_velocity;
+  return &servoTargetAngularVelocity;
 }

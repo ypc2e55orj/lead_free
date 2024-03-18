@@ -12,7 +12,7 @@
 //! TIM6 Handler extern
 extern TIM_HandleTypeDef htim6;
 //! Buzzer count
-static int16_t interval_buzzer_count = 0;
+static int16_t intervalBuzzerCount = 0;
 /**
  * @brief timer interrupt
  * TIM6: 2kHz
@@ -26,9 +26,9 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 
   if (htim == &htim6)
   {
-    if (interval_buzzer_count > 0)
+    if (intervalBuzzerCount > 0)
     {
-      interval_buzzer_count--;
+      intervalBuzzerCount--;
       HAL_GPIO_TogglePin(Buzzer_GPIO_Port, Buzzer_Pin);
     }
     else
@@ -64,5 +64,5 @@ void INTERVAL_Start()
  */
 void INTERVAL_Buzzer(int16_t ms)
 {
-  interval_buzzer_count = ms * 2;
+  intervalBuzzerCount = ms * 2;
 }

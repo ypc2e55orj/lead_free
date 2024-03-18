@@ -7,8 +7,8 @@ typedef struct
   float ki;
   float kd;
 
-  float prev_error;
-  float error_sums;
+  float prevError;
+  float errorSums;
 } PID;
 
 /**

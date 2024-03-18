@@ -23,10 +23,10 @@ void ODOMETRY_Calculate()
 
   odometry.velocity = (veloRight + veloLeft) / 2.0f;
   odometry.length += odometry.velocity / 1000.0f;
-  odometry.angular_velocity = GYRO_GetYaw() * (M_PI / 180.0f);
-  float angle = odometry.angle + odometry.angular_velocity / 1000.0f;
+  odometry.angularVelocity = GYRO_GetYaw() * (M_PI / 180.0f);
+  float angle = odometry.angle + odometry.angularVelocity / 1000.0f;
 
-  if (fabsf(odometry.angular_velocity) <= FLT_EPSILON)
+  if (fabsf(odometry.angularVelocity) <= FLT_EPSILON)
   {
     float a = odometry.velocity / 1000.0f;
     odometry.x += a * cosf(angle);
@@ -35,7 +35,7 @@ void ODOMETRY_Calculate()
   else
   {
     float delta = (angle - odometry.angle) / 2.0f;
-    float a = 2.0f * odometry.velocity / odometry.angular_velocity * sinf(delta);
+    float a = 2.0f * odometry.velocity / odometry.angularVelocity * sinf(delta);
     float b = angle + delta;
     odometry.x += a * cosf(b);
     odometry.y += a * sinf(b);

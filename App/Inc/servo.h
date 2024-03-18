@@ -28,11 +28,11 @@ void SERVO_SetAcceleration(float accel);
 /**
  *  @brief Set target angular velocity
  */
-void SERVO_SetTargetAngularVelocity(float ang_velo);
+void SERVO_SetTargetAngularVelocity(float angVelo);
 /**
  *  @brief Set angular acceleration
  */
-void SERVO_SetAngularAcceleration(float ang_accel);
+void SERVO_SetAngularAcceleration(float angAccel);
 /**
  *  @brief Get target velocity
  */

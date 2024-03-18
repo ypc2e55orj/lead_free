@@ -13,13 +13,13 @@
 #define LOGGER_BUFFER_SIZE 500
 #define LOGGER_ELEM_SIZE 8
 //! log buffer
-static int16_t logger_buffer[LOGGER_BUFFER_SIZE * LOGGER_ELEM_SIZE] = {};
+static int16_t loggerBuffer[LOGGER_BUFFER_SIZE * LOGGER_ELEM_SIZE] = {};
 //! log index
-static uint16_t logger_buffer_index = 0;
+static uint16_t loggerBufferIndex = 0;
 //! log interval count max
-static uint16_t logger_freq_count_max = 0;
+static uint16_t loggerFreqCountMax = 0;
 //! log mode
-static LOGGER_MODE logger_mode = 0;
+static LOGGER_MODE loggerMode = 0;
 #endif
 
 /**
@@ -30,14 +30,14 @@ static void LOGGER_UpdateTarget()
 #ifdef LOGGER_ENABLED
   const ODOMETRY *odom = ODOMETRY_GetCurrent();
 
-  logger_buffer[logger_buffer_index * LOGGER_ELEM_SIZE + 0] = (int16_t)(*SERVO_GetTargetVelocity() * 1000.0f);
-  logger_buffer[logger_buffer_index * LOGGER_ELEM_SIZE + 1] = (int16_t)(*SERVO_GetTargetAngularVelocity() * 1000.0f);
-  logger_buffer[logger_buffer_index * LOGGER_ELEM_SIZE + 2] = (int16_t)(odom->velocity * 1000.0f);
-  logger_buffer[logger_buffer_index * LOGGER_ELEM_SIZE + 3] = (int16_t)(odom->length * 1000.0f);
-  logger_buffer[logger_buffer_index * LOGGER_ELEM_SIZE + 4] = (int16_t)(odom->angular_velocity * 1000.0f);
-  logger_buffer[logger_buffer_index * LOGGER_ELEM_SIZE + 5] = (int16_t)(odom->angle * 1000.0f);
-  logger_buffer[logger_buffer_index * LOGGER_ELEM_SIZE + 6] = (int16_t)(odom->x * 1000.0f);
-  logger_buffer[logger_buffer_index * LOGGER_ELEM_SIZE + 7] = (int16_t)(odom->y * 1000.0f);
+  loggerBuffer[loggerBufferIndex * LOGGER_ELEM_SIZE + 0] = (int16_t)(*SERVO_GetTargetVelocity() * 1000.0f);
+  loggerBuffer[loggerBufferIndex * LOGGER_ELEM_SIZE + 1] = (int16_t)(*SERVO_GetTargetAngularVelocity() * 1000.0f);
+  loggerBuffer[loggerBufferIndex * LOGGER_ELEM_SIZE + 2] = (int16_t)(odom->velocity * 1000.0f);
+  loggerBuffer[loggerBufferIndex * LOGGER_ELEM_SIZE + 3] = (int16_t)(odom->length * 1000.0f);
+  loggerBuffer[loggerBufferIndex * LOGGER_ELEM_SIZE + 4] = (int16_t)(odom->angularVelocity * 1000.0f);
+  loggerBuffer[loggerBufferIndex * LOGGER_ELEM_SIZE + 5] = (int16_t)(odom->angle * 1000.0f);
+  loggerBuffer[loggerBufferIndex * LOGGER_ELEM_SIZE + 6] = (int16_t)(odom->x * 1000.0f);
+  loggerBuffer[loggerBufferIndex * LOGGER_ELEM_SIZE + 7] = (int16_t)(odom->y * 1000.0f);
 #endif
 }
 /**
@@ -57,12 +57,12 @@ static void LOGGER_PrintTarget()
       "x[1000*m],"
       "y[1000*m],"
       "\r\n");
-  for (uint16_t i = 0; i < logger_buffer_index; i++)
+  for (uint16_t i = 0; i < loggerBufferIndex; i++)
   {
     printf("%d,", i);
     for (uint16_t j = 0; j < LOGGER_ELEM_SIZE; j++)
     {
-      printf("%d,", logger_buffer[i * LOGGER_ELEM_SIZE + j]);
+      printf("%d,", loggerBuffer[i * LOGGER_ELEM_SIZE + j]);
     }
     printf("\r\n");
   }
@@ -74,7 +74,7 @@ static void LOGGER_PrintTarget()
 void LOGGER_Clear()
 {
 #ifdef LOGGER_ENABLED
-  memset(logger_buffer, 0, sizeof(int16_t) * LOGGER_BUFFER_SIZE * LOGGER_ELEM_SIZE);
+  memset(loggerBuffer, 0, sizeof(int16_t) * LOGGER_BUFFER_SIZE * LOGGER_ELEM_SIZE);
 #endif
 }
 /**
@@ -87,7 +87,7 @@ void LOGGER_Start(uint16_t freq)
   {
     freq = 1000;
   }
-  logger_freq_count_max = freq == 0 ? 0 : 1000 / freq;
+  loggerFreqCountMax = freq == 0 ? 0 : 1000 / freq;
 #endif
 }
 /**
@@ -96,7 +96,7 @@ void LOGGER_Start(uint16_t freq)
 void LOGGER_Stop()
 {
 #ifdef LOGGER_ENABLED
-  logger_freq_count_max = 0;
+  loggerFreqCountMax = 0;
 #endif
 }
 /**
@@ -114,18 +114,18 @@ void LOGGER_SetMode(LOGGER_MODE mode)
 void LOGGER_Update()
 {
 #ifdef LOGGER_ENABLED
-  static uint16_t logger_freq_count = 0;
+  static uint16_t loggerFreqCount = 0;
 
-  if (logger_freq_count_max != 0 && ++logger_freq_count >= logger_freq_count_max)
+  if (loggerFreqCountMax != 0 && ++loggerFreqCount >= loggerFreqCountMax)
   {
-    logger_freq_count = 0;
+    loggerFreqCount = 0;
 
     // TODO: logger mode
     LOGGER_UpdateTarget();
 
-    if (++logger_buffer_index >= LOGGER_BUFFER_SIZE)
+    if (++loggerBufferIndex >= LOGGER_BUFFER_SIZE)
     {
-      logger_freq_count_max = 0;
+      loggerFreqCountMax = 0;
     }
   }
 #endif

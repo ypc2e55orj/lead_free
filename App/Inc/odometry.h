@@ -7,7 +7,7 @@
 typedef struct
 {
   float velocity;         //!< [m/s]
-  float angular_velocity; //!< [rad/s]
+  float angularVelocity; //!< [rad/s]
   float length;           //!< [m]
   float angle;            //!< [rad]
   float x;                //!< [m]
