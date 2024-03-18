@@ -10,9 +10,9 @@
 #define NUM_PARAMETERS 3
 
 /* Parameter 0 ---------------------------------------------------------------*/
-#define PARAMETER_0_MIN_VELOCITY 0.3 // [m/s]
-#define PARAMETER_0_MAX_VELOCITY 1.0 // [m/s]
-#define PARAMETER_0_ACCELERATION 1.5 // [m/ss]
+#define PARAMETER_0_MIN_VELOCITY 0.1 // [m/s]
+#define PARAMETER_0_MAX_VELOCITY 0.5 // [m/s]
+#define PARAMETER_0_ACCELERATION 1.0 // [m/ss]
 #define PARAMETER_0_VELOCITY_PID_KP 10.0
 #define PARAMETER_0_VELOCITY_PID_KI 0.5
 #define PARAMETER_0_VELOCITY_PID_KD 0.0
