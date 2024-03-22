@@ -11,10 +11,10 @@ typedef enum
 /**
  * @brief Straight
  */
-void RUN_Straight(float length, float accel, float minVelo, float maxVelo, float endVelo);
+void RUN_Straight(RUN_DIRECTION dir, float length, float accel, float minVelo, float maxVelo, float endVelo);
 /**
  * @brief Turn
  */
-void RUN_Turn(float degree, float angAccel, float minAngVelo, float maxAngVelo, float endAngVelo);
+void RUN_Turn(RUN_DIRECTION dir, float degree, float angAccel, float minAngVelo, float maxAngVelo, float endAngVelo);
 
 #endif // RUN_H

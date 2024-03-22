@@ -37,10 +37,13 @@ void app_main(void)
       HAL_GPIO_WritePin(Led_GPIO_Port, Led_Pin, GPIO_PIN_SET);
       SERVO_Start();
       LOGGER_Start(250);
-      RUN_Straight(0.18f, param->acceleration, param->minVelocity, param->maxVelocity, 0);
-      RUN_Turn(180.0f, param->angularAcceleration, param->minAngularVelocity, param->maxAngularVelocity, 0);
-      RUN_Straight(0.18f, param->acceleration, param->minVelocity, param->maxVelocity, 0);
-      HAL_Delay(1000);
+      while (true)
+      {
+        RUN_Straight(RUN_DIRECTION_BACK, 0.18f, param->acceleration, param->minVelocity, param->maxVelocity, 0);
+        RUN_Straight(RUN_DIRECTION_FORWARD, 0.18f, param->acceleration, param->minVelocity, param->maxVelocity, 0);
+        RUN_Turn(RUN_DIRECTION_LEFT, 90.0f, param->angularAcceleration, param->minAngularVelocity, param->maxAngularVelocity, 0);
+        RUN_Turn(RUN_DIRECTION_RIGHT, 90.0f, param->angularAcceleration, param->minAngularVelocity, param->maxAngularVelocity, 0);
+      }
       LOGGER_Stop();
       INTERVAL_Buzzer(50);
       SERVO_Stop();
