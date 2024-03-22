@@ -3,7 +3,7 @@
 
 // libc
 #include <stdint.h>
-
+#include <math.h>
 // project
 #include "pid.h"
 
@@ -16,9 +16,9 @@
 #define PARAMETER_0_VELOCITY_PID_KP 10.0
 #define PARAMETER_0_VELOCITY_PID_KI 0.5
 #define PARAMETER_0_VELOCITY_PID_KD 0.0
-#define PARAMETER_0_MIN_ANGULAR_VELOCITY 10.0 // [rad/s]
-#define PARAMETER_0_MAX_ANGULAR_VELOCITY 10.0 // [rad/s]
-#define PARAMETER_0_ANGULAR_ACCELERATION 20.0 // [rad/ss]
+#define PARAMETER_0_MIN_ANGULAR_VELOCITY (0.1 * M_PI)  // [rad/s]
+#define PARAMETER_0_MAX_ANGULAR_VELOCITY (2.5 * M_PI)  // [rad/s]
+#define PARAMETER_0_ANGULAR_ACCELERATION (40.0 * M_PI) // [rad/ss]
 #define PARAMETER_0_ANGULAR_VELOCITY_PID_KP 0.6
 #define PARAMETER_0_ANGULAR_VELOCITY_PID_KI 0.05
 #define PARAMETER_0_ANGULAR_VELOCITY_PID_KD 0.0

@@ -132,7 +132,7 @@ void SERVO_Update()
   else if (param->maxVelocity < servoTargetVelocity)
     servoTargetVelocity = param->maxVelocity;
 
-  servoTargetAngularVelocity = servoAngularAcceleration / 1000.0f;
+  servoTargetAngularVelocity += servoAngularAcceleration / 1000.0f;
   if (servoTargetAngularVelocity < -1.0f * param->maxAngularVelocity)
     servoTargetAngularVelocity = -1.0f * param->maxAngularVelocity;
   else if (param->maxAngularVelocity < servoTargetAngularVelocity)

@@ -8,7 +8,7 @@
 #include "odometry.h"
 #include "servo.h"
 
-#define LOGGER_ENABLED
+// #define LOGGER_ENABLED
 #ifdef LOGGER_ENABLED
 #define LOGGER_BUFFER_SIZE 500
 #define LOGGER_ELEM_SIZE 8

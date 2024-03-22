@@ -16,36 +16,8 @@
 #include "parameter.h"
 #include "button.h"
 #include "logger.h"
-
-void RUN_Straight(float length, float accel, float maxVelo, float endVelo)
-{
-  ODOMETRY_Reset();
-  SERVO_Reset();
-  SERVO_SetAcceleration(accel);
-
-  const ODOMETRY *odom = ODOMETRY_GetCurrent();
-  const float *tarVelo = SERVO_GetTargetVelocity();
-
-  float accel_length = (maxVelo * maxVelo - *tarVelo * *tarVelo) / (2.0f * accel);
-  float decel_length = (maxVelo * maxVelo - endVelo * endVelo) / (2.0f * accel);
-
-  SERVO_SetAcceleration(accel);
-  while (accel_length > odom->length)
-    ;
-  while (length - decel_length > odom->length)
-    ;
-  SERVO_SetAcceleration(-1.0f * accel);
-  while (length > odom->length)
-  {
-    if (*tarVelo < 0.0f)
-    {
-      SERVO_SetAcceleration(0.0f);
-      SERVO_SetTargetVelocity(0.0f);
-    }
-  }
-  SERVO_SetAcceleration(0.0f);
-  SERVO_SetTargetVelocity(endVelo);
-}
+#include "run.h"
+#include "line.h"
 
 void app_main(void)
 {
@@ -65,7 +37,7 @@ void app_main(void)
       HAL_GPIO_WritePin(Led_GPIO_Port, Led_Pin, GPIO_PIN_SET);
       SERVO_Start();
       LOGGER_Start(250);
-      RUN_Straight(0.5f, param->acceleration, param->maxVelocity, 0);
+      RUN_Turn(90.0f, param->angularAcceleration, param->maxAngularVelocity, 0);
       HAL_Delay(1000);
       LOGGER_Stop();
       INTERVAL_Buzzer(50);
@@ -81,5 +53,6 @@ void app_main(void)
       LOGGER_Print();
       HAL_GPIO_WritePin(Led_GPIO_Port, Led_Pin, GPIO_PIN_RESET);
     }
+    // LINE_Print();
   }
 }
