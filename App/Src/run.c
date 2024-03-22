@@ -10,7 +10,7 @@
 /**
  * @brief Straight
  */
-void RUN_Straight(float length, float accel, float maxVelo, float endVelo)
+void RUN_Straight(float length, float accel, float minVelo, float maxVelo, float endVelo)
 {
   ODOMETRY_Reset();
   SERVO_Reset();
@@ -30,10 +30,10 @@ void RUN_Straight(float length, float accel, float maxVelo, float endVelo)
   SERVO_SetAcceleration(-1.0f * accel);
   while (length > odom->length)
   {
-    if (*tarVelo < 0.01f)
+    if (*tarVelo < minVelo)
     {
       SERVO_SetAcceleration(0.0f);
-      SERVO_SetTargetVelocity(0.01f);
+      SERVO_SetTargetVelocity(minVelo);
     }
   }
   SERVO_SetAcceleration(0.0f);
@@ -43,7 +43,7 @@ void RUN_Straight(float length, float accel, float maxVelo, float endVelo)
 /**
  * @brief Turn
  */
-void RUN_Turn(float degree, float angAccel, float maxAngVelo, float endAngVelo)
+void RUN_Turn(float degree, float angAccel, float minAngVelo, float maxAngVelo, float endAngVelo)
 {
   ODOMETRY_Reset();
   SERVO_Reset();
@@ -57,21 +57,16 @@ void RUN_Turn(float degree, float angAccel, float maxAngVelo, float endAngVelo)
 
   SERVO_SetAngularAcceleration(angAccel);
   while (accelAngle > odom->angle)
-  {
-    printf("1, %d > %d\r\n", (int)(accelAngle * 1000), (int)(odom->angle * 1000));
-  };
+    ;
   while (angle - decelAngle > odom->angle)
-  {
-    printf("2, %d - %d > %d\r\n", (int)(angle * 1000), (int)(decelAngle * 1000), (int)(odom->angle * 1000));
-  };
+    ;
   SERVO_SetAngularAcceleration(-1.0f * angAccel);
   while (angle > odom->angle)
   {
-    printf("3, %d > %d\r\n", (int)(angle * 1000), (int)(odom->angle * 1000));
-    if (*tarAngVelo < 0.01f)
+    if (*tarAngVelo < minAngVelo)
     {
       SERVO_SetAngularAcceleration(0.0f);
-      SERVO_SetTargetAngularVelocity(0.01f);
+      SERVO_SetTargetAngularVelocity(minAngVelo);
     }
   }
   SERVO_SetAngularAcceleration(0.0f);
