@@ -27,11 +27,22 @@ typedef enum
   CURVATURE_MARKER_PASSED,   //!< passed
 } CURVATURE_MARKER;
 
-//! Sensor min max
+//! Sensor calibrate data (min, max)
 typedef struct
 {
   uint16_t min, max;
-} LINE_MINMAX;
+} LINE_CALIBRATE_MINMAX;
+
+//! Sensor threshold
+typedef struct
+{
+  LINE_CALIBRATE_MINMAX calibrateTemp[NUM_SENSOR_POS];
+  LINE_CALIBRATE_MINMAX calibrateAverage[NUM_SENSOR_POS];
+  uint16_t lineOffsetOut;
+  uint16_t lineOffsetIn;
+  uint16_t markerThreshStart;
+  uint16_t markerThreshGoal;
+} LINE_CALIBRATE;
 
 /**
  * @brief Update marker state
@@ -58,13 +69,9 @@ void LINE_StartCalibrateBack();
  */
 void LINE_StopCalibrate();
 /**
- * @brief Get calibration value (forward)
+ * @brief Get calibration value
  */
-const LINE_MINMAX *LINE_GetCalibrateForward(LINE_SENSOR_POS pos);
-/**
- * @brief Get calibration value (back)
- */
-const LINE_MINMAX *LINE_GetCalibrateBack(LINE_SENSOR_POS pos);
+const LINE_CALIBRATE *LINE_GetCalibrate();
 /**
  * @brief Print line sensor
  */

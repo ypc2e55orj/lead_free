@@ -11,9 +11,8 @@ static CURVATURE_MARKER lineMarkerCurvature = CURVATURE_MARKER_WAITING;
 //<! calibrating flag
 static bool lineMarkerCalibrating = false;
 //<! calibrate value
-static LINE_MINMAX lineMarkerCalibrateValueForward[NUM_SENSOR_POS] = {0};
-static LINE_MINMAX lineMarkerCalibrateValueBack[NUM_SENSOR_POS] = {0};
-static LINE_MINMAX *lineMarkerCalibrateValuePtr = NULL;
+static LINE_CALIBRATE lineMarkerCalibrateValue = {NULL};
+static LINE_CALIBRATE_MINMAX *lineMarkerCalibrateValuePtr = NULL;
 
 /**
  * @brief Update marker state
@@ -25,15 +24,18 @@ void LINE_UpdateMarkerState()
     for (LINE_SENSOR_POS i = 0; i < NUM_SENSOR_POS; i++)
     {
       uint16_t value = ADC_GetLineSensorValue(i);
-      if (lineMarkerCalibrateValuePtr[i].min > value)
+      if (lineMarkerCalibrateValue.calibrateTemp[i].min > value)
       {
-        lineMarkerCalibrateValuePtr[i].min = value;
+        lineMarkerCalibrateValue.calibrateTemp[i].min = value;
       }
-      if (lineMarkerCalibrateValuePtr[i].max < value)
+      if (lineMarkerCalibrateValue.calibrateTemp[i].max < value)
       {
-        lineMarkerCalibrateValuePtr[i].max = value;
+        lineMarkerCalibrateValue.calibrateTemp[i].max = value;
       }
     }
+  }
+  else
+  {
   }
 }
 /**
@@ -51,32 +53,52 @@ CURVATURE_MARKER LINE_GetCurvatureState()
   return 0;
 }
 /**
- * @brief Start sensor calibration
+ * @brief Clear temporary
  */
-static void LINE_StartCalibrate(LINE_MINMAX *ptr)
+static void LINE_ClearCalibrationTemporary()
 {
-  lineMarkerCalibrating = false;
-  lineMarkerCalibrateValuePtr = ptr;
   for (LINE_SENSOR_POS i = 0; i < NUM_SENSOR_POS; i++)
   {
-    lineMarkerCalibrateValuePtr[i].min = UINT16_MAX;
-    lineMarkerCalibrateValuePtr[i].max = 0;
+    lineMarkerCalibrateValue.calibrateTemp[i].min = UINT16_MAX;
+    lineMarkerCalibrateValue.calibrateTemp[i].max = 0;
   }
-  lineMarkerCalibrating = true;
+}
+/**
+ * @brief Calculate sensor average
+ */
+static void LINE_CalculateCalibrationAverage()
+{
+  for (LINE_SENSOR_POS i = 0; i < NUM_SENSOR_POS; i++)
+  {
+    lineMarkerCalibrateValue.calibrateAverage[i].min += lineMarkerCalibrateValue.calibrateTemp[i].min;
+    lineMarkerCalibrateValue.calibrateAverage[i].min /= 2;
+    lineMarkerCalibrateValue.calibrateAverage[i].max += lineMarkerCalibrateValue.calibrateTemp[i].max;
+    lineMarkerCalibrateValue.calibrateAverage[i].max /= 2;
+  }
 }
 /**
  * @brief Start sensor calibration (forward)
  */
 void LINE_StartCalibrateForward()
 {
-  LINE_StartCalibrate(lineMarkerCalibrateValueForward);
+  lineMarkerCalibrating = false;
+  for (LINE_SENSOR_POS i = 0; i < NUM_SENSOR_POS; i++)
+  {
+    lineMarkerCalibrateValue.calibrateAverage[i].min = 0;
+    lineMarkerCalibrateValue.calibrateAverage[i].max = 0;
+  }
+  LINE_ClearCalibrationTemporary();
+  lineMarkerCalibrating = true;
 }
 /**
  * @brief Start sensor calibration (back)
  */
 void LINE_StartCalibrateBack()
 {
-  LINE_StartCalibrate(lineMarkerCalibrateValueBack);
+  lineMarkerCalibrating = false;
+  LINE_CalculateCalibrationAverage();
+  LINE_ClearCalibrationTemporary();
+  lineMarkerCalibrating = true;
 }
 /**
  * @brief Stop sensor calibration
@@ -84,20 +106,16 @@ void LINE_StartCalibrateBack()
 void LINE_StopCalibrate()
 {
   lineMarkerCalibrating = false;
+  LINE_CalculateCalibrationAverage();
+  LINE_ClearCalibrationTemporary();
+  lineMarkerCalibrating = true;
 }
 /**
  * @brief Get calibration value
  */
-const LINE_MINMAX *LINE_GetCalibrateForward(LINE_SENSOR_POS pos)
+const LINE_CALIBRATE *LINE_GetCalibrate()
 {
-  return &lineMarkerCalibrateValueForward[pos];
-}
-/**
- * @brief Get calibration value (back)
- */
-const LINE_MINMAX *LINE_GetCalibrateBack(LINE_SENSOR_POS pos)
-{
-  return &lineMarkerCalibrateValueBack[pos];
+  return &lineMarkerCalibrateValue;
 }
 /**
  * @brief Print line sensor
