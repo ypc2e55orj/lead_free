@@ -13,6 +13,7 @@ typedef enum
   LINE_SENSOR_LEFT_IN,
   LINE_SENSOR_LEFT_OUT,
   MARKER_SENSOR_LEFT,
+  NUM_SENSOR_POS,
 } LINE_SENSOR_POS;
 /**
  * @brief Get battery voltage

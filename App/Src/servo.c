@@ -12,7 +12,6 @@
 #include "sensor.h"
 #include "odometry.h"
 #include "pid.h"
-#include "parameter.h"
 
 /* Motor ---------------------------------------------------------------------*/
 #define MOTOR_MAX_DUTY 3199
@@ -63,12 +62,16 @@ static void MOTOR_SetDutyLeft(float duty)
 static volatile bool servoRunning = false;
 //! Target velocity
 static float servoTargetVelocity = 0;
+//! Max velocity
+static float servoMaxVelocity = 0;
 //! Velocity PID
 static PID servoVelocityPid = {0};
 //! Acceleration
 static float servoAcceleration = 0;
 //! Target angular velocity
 static float servoTargetAngularVelocity = 0;
+//! Max angular velocity
+static float servoMaxAngularVelocity = 0;
 //! Angular velocity PID
 static PID servoAngularVelocityPid = {0};
 //! Angular acceleration
@@ -76,16 +79,14 @@ static float servoAngularAcceleration = 0;
 /**
  * @brief Start servos
  */
-void SERVO_Start()
+void SERVO_Start(float *veloPidGain, float *angPidGain)
 {
-  const PARAMETER *param = PARAMETER_Get();
-
-  servoVelocityPid.kp = param->velocityPid[0];
-  servoVelocityPid.ki = param->velocityPid[1];
-  servoVelocityPid.kd = param->velocityPid[2];
-  servoAngularVelocityPid.kp = param->angularVelocityPid[0];
-  servoAngularVelocityPid.ki = param->angularVelocityPid[1];
-  servoAngularVelocityPid.kd = param->angularVelocityPid[2];
+  servoVelocityPid.kp = veloPidGain[0];
+  servoVelocityPid.ki = veloPidGain[1];
+  servoVelocityPid.kd = veloPidGain[2];
+  servoAngularVelocityPid.kp = angPidGain[0];
+  servoAngularVelocityPid.ki = angPidGain[1];
+  servoAngularVelocityPid.kd = angPidGain[2];
 
   SERVO_Reset();
   servoRunning = true;
@@ -121,22 +122,21 @@ void SERVO_Update()
   if (!servoRunning)
     return;
 
-  const PARAMETER *param = PARAMETER_Get();
   const ODOMETRY *odom = ODOMETRY_GetCurrent();
   float batVol = (float)ADC_GetBatteryVoltage() / 1000.0f;
 
   // Generate target velocity
   servoTargetVelocity += servoAcceleration / 1000.0f;
-  if (servoTargetVelocity < -1.0f * param->maxVelocity)
-    servoTargetVelocity = -1.0f * param->maxVelocity;
-  else if (param->maxVelocity < servoTargetVelocity)
-    servoTargetVelocity = param->maxVelocity;
+  if (servoTargetVelocity < -1.0f * servoMaxVelocity)
+    servoTargetVelocity = -1.0f * servoMaxVelocity;
+  else if (servoMaxVelocity < servoTargetVelocity)
+    servoTargetVelocity = servoMaxVelocity;
 
   servoTargetAngularVelocity += servoAngularAcceleration / 1000.0f;
-  if (servoTargetAngularVelocity < -1.0f * param->maxAngularVelocity)
-    servoTargetAngularVelocity = -1.0f * param->maxAngularVelocity;
-  else if (param->maxAngularVelocity < servoTargetAngularVelocity)
-    servoTargetAngularVelocity = param->maxAngularVelocity;
+  if (servoTargetAngularVelocity < -1.0f * servoMaxAngularVelocity)
+    servoTargetAngularVelocity = -1.0f * servoMaxAngularVelocity;
+  else if (servoMaxAngularVelocity < servoTargetAngularVelocity)
+    servoTargetAngularVelocity = servoMaxAngularVelocity;
 
   // Feedback
   float veloError = PID_Update(&servoVelocityPid, servoTargetVelocity, odom->velocity, 1.0f);
@@ -172,12 +172,6 @@ void SERVO_SetTargetVelocity(float velo)
  */
 void SERVO_SetAcceleration(float accel)
 {
-  const PARAMETER *param = PARAMETER_Get();
-  if (accel < -1.0f * param->acceleration)
-    accel = -1.0f * param->acceleration;
-  else if (param->acceleration < accel)
-    accel = param->acceleration;
-
   servoAcceleration = accel;
 }
 /**
@@ -192,12 +186,6 @@ void SERVO_SetTargetAngularVelocity(float angVelo)
  */
 void SERVO_SetAngularAcceleration(float angAccel)
 {
-  const PARAMETER *param = PARAMETER_Get();
-  if (angAccel < -1.0f * param->angularAcceleration)
-    angAccel = -1.0f * param->angularAcceleration;
-  else if (param->angularAcceleration < angAccel)
-    angAccel = param->angularAcceleration;
-
   servoAngularAcceleration = angAccel;
 }
 /**
@@ -208,9 +196,23 @@ const float *SERVO_GetTargetVelocity()
   return &servoTargetVelocity;
 }
 /**
+ *  @brief Set target velocity
+ */
+void SERVO_SetMaxVelocity(float velo)
+{
+  servoMaxVelocity = velo;
+}
+/**
  *  @brief Get target angular velocity
  */
 const float *SERVO_GetTargetAngularVelocity()
 {
   return &servoTargetAngularVelocity;
+}
+/**
+ *  @brief Set target angular velocity
+ */
+void SERVO_SetMaxAngularVelocity(float angVelo)
+{
+  servoMaxAngularVelocity = angVelo;
 }

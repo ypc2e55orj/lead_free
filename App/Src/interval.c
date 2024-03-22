@@ -7,6 +7,7 @@
 #include "odometry.h"
 #include "button.h"
 #include "logger.h"
+#include "line.h"
 
 /* Variables ------------------------------------------------------------------*/
 //! TIM6 Handler extern
@@ -44,6 +45,7 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
       updateState = UPDATE_STATE_CALC;
       break;
     case UPDATE_STATE_CALC:
+      LINE_UpdateMarkerState();
       ODOMETRY_Calculate();
       SERVO_Update();
       LOGGER_Update();

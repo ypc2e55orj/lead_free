@@ -4,7 +4,7 @@
 /**
  * @brief Start servos
  */
-void SERVO_Start();
+void SERVO_Start(float *veloPidGain, float *angPidGain);
 /**
  * @brief Reset servos
  */
@@ -22,6 +22,10 @@ void SERVO_Update();
  */
 void SERVO_SetTargetVelocity(float velo);
 /**
+ *  @brief Set target velocity
+ */
+void SERVO_SetMaxVelocity(float velo);
+/**
  *  @brief Set acceleration
  */
 void SERVO_SetAcceleration(float accel);
@@ -29,6 +33,10 @@ void SERVO_SetAcceleration(float accel);
  *  @brief Set target angular velocity
  */
 void SERVO_SetTargetAngularVelocity(float angVelo);
+/**
+ *  @brief Set target angular velocity
+ */
+void SERVO_SetMaxAngularVelocity(float angVelo);
 /**
  *  @brief Set angular acceleration
  */

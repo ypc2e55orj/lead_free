@@ -1,5 +1,11 @@
 #ifndef LINE_H
 
+// libc
+#include <stdint.h>
+
+// project
+#include "sensor.h"
+
 //! Goal and start marker state
 typedef enum
 {
@@ -21,6 +27,12 @@ typedef enum
   CURVATURE_MARKER_PASSED,   //!< passed
 } CURVATURE_MARKER;
 
+//! Sensor min max
+typedef struct
+{
+  uint16_t min, max;
+} LINE_MINMAX;
+
 /**
  * @brief Update marker state
  */
@@ -33,6 +45,26 @@ STARTGOAL_MARKER LINE_GetStartGoalState();
  * @brief Get curvature marker state
  */
 CURVATURE_MARKER LINE_GetCurvatureState();
+/**
+ * @brief Start sensor calibration (forward)
+ */
+void LINE_StartCalibrateForward();
+/**
+ * @brief Start sensor calibration (back)
+ */
+void LINE_StartCalibrateBack();
+/**
+ * @brief Stop sensor calibration
+ */
+void LINE_StopCalibrate();
+/**
+ * @brief Get calibration value (forward)
+ */
+const LINE_MINMAX *LINE_GetCalibrateForward(LINE_SENSOR_POS pos);
+/**
+ * @brief Get calibration value (back)
+ */
+const LINE_MINMAX *LINE_GetCalibrateBack(LINE_SENSOR_POS pos);
 /**
  * @brief Print line sensor
  */

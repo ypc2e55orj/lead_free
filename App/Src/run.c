@@ -22,6 +22,7 @@ void RUN_Straight(RUN_DIRECTION dir, float length, float accel, float minVelo, f
   float accelLength = (maxVelo * maxVelo - *tarVelo * *tarVelo) / (2.0f * accel);
   float decelLength = (maxVelo * maxVelo - endVelo * endVelo) / (2.0f * accel);
 
+  SERVO_SetMaxVelocity(maxVelo);
   SERVO_SetAcceleration(sign * accel);
   while (accelLength > sign * odom->length)
     ;
@@ -56,6 +57,7 @@ void RUN_Turn(RUN_DIRECTION dir, float degree, float angAccel, float minAngVelo,
   float accelAngle = (maxAngVelo * maxAngVelo - *tarAngVelo * *tarAngVelo) / (2.0f * angAccel);
   float decelAngle = (maxAngVelo * maxAngVelo - endAngVelo * endAngVelo) / (2.0f * angAccel);
 
+  SERVO_SetMaxAngularVelocity(maxAngVelo);
   SERVO_SetAngularAcceleration(sign * angAccel);
   while (accelAngle > sign * odom->angle)
     ;
