@@ -1,4 +1,4 @@
 <map id="SERVO_Reset" name="SERVO_Reset">
-<area shape="rect" id="node1" title="Reset servos." alt="" coords="5,5,116,32"/>
-<area shape="rect" id="node2" href="$pid_8h.html#ad6d10faa2923f3e15e1af2473337b271" title="Reset PID." alt="" coords="164,5,252,32"/>
+<area shape="rect" id="node1" title="Reset servos" alt="" coords="5,5,116,32"/>
+<area shape="rect" id="node2" href="$pid_8h.html#ad6d10faa2923f3e15e1af2473337b271" title="Reset PID" alt="" coords="164,5,252,32"/>
 </map>

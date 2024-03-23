@@ -1,5 +1,5 @@
 <map id="ADC_GetBatteryVoltage" name="ADC_GetBatteryVoltage">
-<area shape="rect" id="node1" title="Get battery voltage." alt="" coords="456,5,633,32"/>
-<area shape="rect" id="node2" href="$servo_8h.html#a96ad3be346e6bf55a2d1673ce8675367" title="Update servos." alt="" coords="288,5,408,32"/>
+<area shape="rect" id="node1" title="Get battery voltage" alt="" coords="456,5,633,32"/>
+<area shape="rect" id="node2" href="$servo_8h.html#a96ad3be346e6bf55a2d1673ce8675367" title="Update servos" alt="" coords="288,5,408,32"/>
 <area shape="rect" id="node3" href="$interval_8c.html#a8a3b0ad512a6e6c6157440b68d395eac" title="timer interrupt TIM6: 2kHz" alt="" coords="5,5,240,32"/>
 </map>

@@ -1,11 +1,11 @@
 <map id="RUN_Straight" name="RUN_Straight">
-<area shape="rect" id="node1" title="Straight." alt="" coords="5,157,115,184"/>
-<area shape="rect" id="node2" href="$odometry_8h.html#a458ba16e05623612c350b22cea48ffc3" title="Get current." alt="" coords="169,5,344,32"/>
-<area shape="rect" id="node3" href="$odometry_8h.html#a439ddae1dc13251f0ff183d7f967bb1f" title="Reset sums." alt="" coords="187,56,327,83"/>
-<area shape="rect" id="node4" href="$servo_8h.html#a1af12b4477ce75c5b8c5216a376d1aca" title="Get target velocity." alt="" coords="163,107,351,133"/>
-<area shape="rect" id="node5" href="$servo_8h.html#a8ee665f3ffbf3ff14a76584908892e2c" title="Reset servos." alt="" coords="201,157,312,184"/>
-<area shape="rect" id="node7" href="$servo_8h.html#ab9e6ac3e8dfa09cb2403c3092122ba3d" title="Set acceleration." alt="" coords="169,208,344,235"/>
-<area shape="rect" id="node8" href="$servo_8h.html#a7403dd9b206ea8feddb4e37efe76f7c2" title="Set target velocity." alt="" coords="169,259,344,285"/>
-<area shape="rect" id="node9" href="$servo_8h.html#a9f3f93599e5621878d49edbaf3547bd3" title="Set target velocity." alt="" coords="163,309,350,336"/>
-<area shape="rect" id="node6" href="$pid_8h.html#ad6d10faa2923f3e15e1af2473337b271" title="Reset PID." alt="" coords="399,157,487,184"/>
+<area shape="rect" id="node1" title="Straight" alt="" coords="5,157,115,184"/>
+<area shape="rect" id="node2" href="$odometry_8h.html#a458ba16e05623612c350b22cea48ffc3" title="Get current" alt="" coords="169,5,344,32"/>
+<area shape="rect" id="node3" href="$odometry_8h.html#a439ddae1dc13251f0ff183d7f967bb1f" title="Reset sums" alt="" coords="187,56,327,83"/>
+<area shape="rect" id="node4" href="$servo_8h.html#a1af12b4477ce75c5b8c5216a376d1aca" title="Get target velocity" alt="" coords="163,107,351,133"/>
+<area shape="rect" id="node5" href="$servo_8h.html#a8ee665f3ffbf3ff14a76584908892e2c" title="Reset servos" alt="" coords="201,157,312,184"/>
+<area shape="rect" id="node7" href="$servo_8h.html#ab9e6ac3e8dfa09cb2403c3092122ba3d" title="Set acceleration" alt="" coords="169,208,344,235"/>
+<area shape="rect" id="node8" href="$servo_8h.html#a7403dd9b206ea8feddb4e37efe76f7c2" title="Set target velocity" alt="" coords="169,259,344,285"/>
+<area shape="rect" id="node9" href="$servo_8h.html#a9f3f93599e5621878d49edbaf3547bd3" title="Set target velocity" alt="" coords="163,309,350,336"/>
+<area shape="rect" id="node6" href="$pid_8h.html#ad6d10faa2923f3e15e1af2473337b271" title="Reset PID" alt="" coords="399,157,487,184"/>
 </map>

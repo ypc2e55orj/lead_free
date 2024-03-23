@@ -1,7 +1,7 @@
 <map id="SERVO_GetTargetAngularVelocity" name="SERVO_GetTargetAngularVelocity">
-<area shape="rect" id="node1" title="Get target angular velocity." alt="" coords="685,31,924,57"/>
+<area shape="rect" id="node1" title="Get target angular velocity" alt="" coords="685,31,924,57"/>
 <area shape="rect" id="node2" href="$logger_8c.html#ab8bf05edb97b9869366578c6e6b09052" title="Collect log (target mode)" alt="" coords="467,5,637,32"/>
-<area shape="rect" id="node5" href="$run_8h.html#aa99cd7e043851ce08f3fbd58ba75a945" title="Turn." alt="" coords="509,56,595,83"/>
-<area shape="rect" id="node3" href="$logger_8h.html#a618b83ee39826975a831eec2e21355b0" title="Collect log." alt="" coords="288,5,419,32"/>
+<area shape="rect" id="node5" href="$run_8h.html#aa99cd7e043851ce08f3fbd58ba75a945" title="Turn" alt="" coords="509,56,595,83"/>
+<area shape="rect" id="node3" href="$logger_8h.html#a618b83ee39826975a831eec2e21355b0" title="Collect log" alt="" coords="288,5,419,32"/>
 <area shape="rect" id="node4" href="$interval_8c.html#a8a3b0ad512a6e6c6157440b68d395eac" title="timer interrupt TIM6: 2kHz" alt="" coords="5,5,240,32"/>
 </map>

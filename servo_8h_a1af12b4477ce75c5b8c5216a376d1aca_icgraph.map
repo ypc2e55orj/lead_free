@@ -1,8 +1,8 @@
 <map id="SERVO_GetTargetVelocity" name="SERVO_GetTargetVelocity">
-<area shape="rect" id="node1" title="Get target velocity." alt="" coords="685,31,873,57"/>
+<area shape="rect" id="node1" title="Get target velocity" alt="" coords="685,31,873,57"/>
 <area shape="rect" id="node2" href="$logger_8c.html#ab8bf05edb97b9869366578c6e6b09052" title="Collect log (target mode)" alt="" coords="467,5,637,32"/>
-<area shape="rect" id="node5" href="$run_8h.html#ab51f5d38046671744984ff764c8949b9" title="Straight." alt="" coords="497,56,607,83"/>
-<area shape="rect" id="node3" href="$logger_8h.html#a618b83ee39826975a831eec2e21355b0" title="Collect log." alt="" coords="288,5,419,32"/>
+<area shape="rect" id="node5" href="$run_8h.html#ab51f5d38046671744984ff764c8949b9" title="Straight" alt="" coords="497,56,607,83"/>
+<area shape="rect" id="node3" href="$logger_8h.html#a618b83ee39826975a831eec2e21355b0" title="Collect log" alt="" coords="288,5,419,32"/>
 <area shape="rect" id="node4" href="$interval_8c.html#a8a3b0ad512a6e6c6157440b68d395eac" title="timer interrupt TIM6: 2kHz" alt="" coords="5,5,240,32"/>
 <area shape="rect" id="node6" href="$app__main_8h.html#a630544a7f0a2cc40d8a7fefab7e2fe70" title=" " alt="" coords="310,56,397,83"/>
 <area shape="rect" id="node7" href="$main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="95,56,150,83"/>

@@ -1,5 +1,5 @@
 <map id="LINE_StartCalibrateBack" name="LINE_StartCalibrateBack">
 <area shape="rect" id="node1" title="Start sensor calibration (back)" alt="" coords="5,42,185,69"/>
-<area shape="rect" id="node2" href="$line_8c.html#a2fac48ee55eb99dbd94bdafb5fdb158a" title="Calculate sensor average." alt="" coords="254,5,445,47"/>
-<area shape="rect" id="node3" href="$line_8c.html#ab3af472291852b280b100925f5b9aa7a" title="Clear temporary." alt="" coords="233,71,465,98"/>
+<area shape="rect" id="node2" href="$line_8c.html#a2fac48ee55eb99dbd94bdafb5fdb158a" title="Calculate sensor average" alt="" coords="254,5,445,47"/>
+<area shape="rect" id="node3" href="$line_8c.html#ab3af472291852b280b100925f5b9aa7a" title="Clear temporary" alt="" coords="233,71,465,98"/>
 </map>

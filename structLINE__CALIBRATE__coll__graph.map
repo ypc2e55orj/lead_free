@@ -1,4 +1,4 @@
 <map id="LINE_CALIBRATE" name="LINE_CALIBRATE">
-<area shape="rect" id="node1" title="Sensor threshold." alt="" coords="22,175,181,296"/>
+<area shape="rect" id="node1" title="Sensor threshold" alt="" coords="22,175,181,296"/>
 <area shape="rect" id="node2" href="$structLINE__CALIBRATE__MINMAX.html" title="Sensor calibrate data (min, max)" alt="" coords="5,5,197,97"/>
 </map>

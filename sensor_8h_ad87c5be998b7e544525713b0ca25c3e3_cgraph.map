@@ -1,6 +1,6 @@
 <map id="SENSOR_Init" name="SENSOR_Init">
-<area shape="rect" id="node1" title="Initialize sensors." alt="" coords="5,56,108,83"/>
-<area shape="rect" id="node2" href="$sensor_8c.html#ab3f7e3afc0b46ed3410f806805b2328e" title="Initialize ADC." alt="" coords="174,5,253,32"/>
+<area shape="rect" id="node1" title="Initialize sensors" alt="" coords="5,56,108,83"/>
+<area shape="rect" id="node2" href="$sensor_8c.html#ab3f7e3afc0b46ed3410f806805b2328e" title="Initialize ADC" alt="" coords="174,5,253,32"/>
 <area shape="rect" id="node3" href="$sensor_8c.html#a0d5bbefe4e42fe2bf21a65184f63dbd8" title="Initialize encoders." alt="" coords="156,56,271,83"/>
 <area shape="rect" id="node4" href="$sensor_8c.html#a30661b3385e75411ed11f8318ac90e46" title="Initialize the gyro." alt="" coords="170,107,257,133"/>
 </map>

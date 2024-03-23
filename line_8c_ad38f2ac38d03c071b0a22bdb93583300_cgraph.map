@@ -1,4 +1,4 @@
 <map id="LINE_StartCalibrateForward" name="LINE_StartCalibrateForward">
 <area shape="rect" id="node1" title="Start sensor calibration (forward)" alt="" coords="5,5,205,32"/>
-<area shape="rect" id="node2" href="$line_8c.html#ab3af472291852b280b100925f5b9aa7a" title="Clear temporary." alt="" coords="253,5,485,32"/>
+<area shape="rect" id="node2" href="$line_8c.html#ab3af472291852b280b100925f5b9aa7a" title="Clear temporary" alt="" coords="253,5,485,32"/>
 </map>

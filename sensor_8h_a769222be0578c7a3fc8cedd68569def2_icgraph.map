@@ -1,5 +1,5 @@
 <map id="ENCODER_GetCountRight" name="ENCODER_GetCountRight">
 <area shape="rect" id="node1" title="Get a value of right encoder." alt="" coords="500,5,688,32"/>
-<area shape="rect" id="node2" href="$odometry_8h.html#ab1fe8d01fb7c54e7233dc14ba19bf542" title="Calculate odometry." alt="" coords="288,5,452,32"/>
+<area shape="rect" id="node2" href="$odometry_8h.html#ab1fe8d01fb7c54e7233dc14ba19bf542" title="Calculate odometry" alt="" coords="288,5,452,32"/>
 <area shape="rect" id="node3" href="$interval_8c.html#a8a3b0ad512a6e6c6157440b68d395eac" title="timer interrupt TIM6: 2kHz" alt="" coords="5,5,240,32"/>
 </map>
