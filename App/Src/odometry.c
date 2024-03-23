@@ -25,7 +25,7 @@ static float odometryVelocitySums = 0.0f;
 /**
  * @brief Calculate odometry
  */
-void ODOMETRY_Calculate()
+void ODOMETRY_CalculateInterval()
 {
   float veloRight = (float)ENCODER_GetCountRight() * ODOMETRY_MM_PER_PULSE;
   float veloLeft = (float)ENCODER_GetCountLeft() * ODOMETRY_MM_PER_PULSE;

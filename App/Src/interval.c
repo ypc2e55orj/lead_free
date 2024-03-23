@@ -45,9 +45,9 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
       updateState = UPDATE_STATE_CALC;
       break;
     case UPDATE_STATE_CALC:
-      LINE_UpdateMarkerState();
-      ODOMETRY_Calculate();
-      SERVO_Update();
+      LINE_UpdateInterval();
+      ODOMETRY_CalculateInterval();
+      SERVO_UpdateInterval();
       LOGGER_Update();
       updateState = UPDATE_STATE_GYRO;
       break;

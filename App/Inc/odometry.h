@@ -17,7 +17,7 @@ typedef struct
 /**
  * @brief Calculate odometry
  */
-void ODOMETRY_Calculate();
+void ODOMETRY_CalculateInterval();
 /**
  * @brief Reset sums
  */

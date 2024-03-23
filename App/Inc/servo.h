@@ -16,7 +16,7 @@ void SERVO_Stop();
 /**
  * @brief Update servos
  */
-void SERVO_Update();
+void SERVO_UpdateInterval();
 /**
  *  @brief Set target velocity
  */

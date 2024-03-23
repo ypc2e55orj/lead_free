@@ -117,7 +117,7 @@ void SERVO_Stop()
 /**
  * @brief Update servos (1kHz)
  */
-void SERVO_Update()
+void SERVO_UpdateInterval()
 {
   if (!servoRunning)
     return;
