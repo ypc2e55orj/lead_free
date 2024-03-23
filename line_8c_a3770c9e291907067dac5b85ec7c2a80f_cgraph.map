@@ -1,0 +1,4 @@
+<map id="LINE_UpdateCalibration" name="LINE_UpdateCalibration">
+<area shape="rect" id="node1" title="Update calibration data" alt="" coords="5,5,181,32"/>
+<area shape="rect" id="node2" href="$sensor_8h.html#ad857373214395cc052b09499ac88b2dc" title="Get line sensor value" alt="" coords="229,5,416,32"/>
+</map>

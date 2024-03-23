@@ -1,0 +1,5 @@
+<map id="LINE_UpdateMarkerState" name="LINE_UpdateMarkerState">
+<area shape="rect" id="node1" title="Update marker sensor state" alt="" coords="491,5,675,32"/>
+<area shape="rect" id="node2" href="$line_8h.html#aa662923661686d64790042b7cc783607" title="Update line sensor and marker sensor state" alt="" coords="288,5,443,32"/>
+<area shape="rect" id="node3" href="$interval_8c.html#a8a3b0ad512a6e6c6157440b68d395eac" title="timer interrupt TIM6: 2kHz" alt="" coords="5,5,240,32"/>
+</map>

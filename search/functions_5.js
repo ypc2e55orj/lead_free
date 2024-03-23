@@ -1,6 +1,8 @@
 var searchData=
 [
-  ['hal_5fgpio_5fexti_5fcallback_309',['HAL_GPIO_EXTI_Callback',['../sensor_8c.html#af02d5f52d29caba0ba168f5c53539c8f',1,'sensor.c']]],
-  ['hal_5fi2c_5fmastertxcpltcallback_310',['HAL_I2C_MasterTxCpltCallback',['../sensor_8c.html#aa258e0eb52bbc34002a46dc2db89a84b',1,'sensor.c']]],
-  ['hal_5ftim_5fperiodelapsedcallback_311',['HAL_TIM_PeriodElapsedCallback',['../interval_8c.html#a8a3b0ad512a6e6c6157440b68d395eac',1,'interval.c']]]
+  ['encoder_5fgetcountleft_311',['ENCODER_GetCountLeft',['../sensor_8h.html#adfbc35238a4e4b710a62233159d0cfc3',1,'ENCODER_GetCountLeft():&#160;sensor.c'],['../sensor_8c.html#adfbc35238a4e4b710a62233159d0cfc3',1,'ENCODER_GetCountLeft():&#160;sensor.c']]],
+  ['encoder_5fgetcountright_312',['ENCODER_GetCountRight',['../sensor_8h.html#a769222be0578c7a3fc8cedd68569def2',1,'ENCODER_GetCountRight():&#160;sensor.c'],['../sensor_8c.html#a769222be0578c7a3fc8cedd68569def2',1,'ENCODER_GetCountRight():&#160;sensor.c']]],
+  ['encoder_5finit_313',['ENCODER_Init',['../sensor_8c.html#a0d5bbefe4e42fe2bf21a65184f63dbd8',1,'sensor.c']]],
+  ['encoder_5fresetcount_314',['ENCODER_ResetCount',['../sensor_8h.html#a7c44fd8863432b70379474c9cc274ea8',1,'ENCODER_ResetCount():&#160;sensor.c'],['../sensor_8c.html#a7c44fd8863432b70379474c9cc274ea8',1,'ENCODER_ResetCount():&#160;sensor.c']]],
+  ['error_5fhandler_315',['Error_Handler',['../main_8c.html#a1730ffe1e560465665eb47d9264826f9',1,'main.c']]]
 ];

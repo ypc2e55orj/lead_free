@@ -73,6 +73,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="line_8h_source.html">line.h</a>&quot;</code><br />
+<code>#include &lt;main.h&gt;</code><br />
 <code>#include &lt;stdio.h&gt;</code><br />
 <code>#include &lt;stdbool.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
@@ -80,10 +81,11 @@ line.c の依存先関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="line_8c__incl.png" border="0" usemap="#aApp_2Src_2line_8c" alt=""/></div>
 <map name="aApp_2Src_2line_8c" id="aApp_2Src_2line_8c">
-<area shape="rect" title=" " alt="" coords="72,5,183,32"/>
+<area shape="rect" title=" " alt="" coords="117,5,228,32"/>
 <area shape="rect" href="line_8h.html" title=" " alt="" coords="11,80,70,107"/>
 <area shape="rect" title=" " alt="" coords="94,80,161,107"/>
-<area shape="rect" title=" " alt="" coords="185,80,267,107"/>
+<area shape="rect" title=" " alt="" coords="185,80,251,107"/>
+<area shape="rect" title=" " alt="" coords="275,80,358,107"/>
 <area shape="rect" title=" " alt="" coords="5,229,76,256"/>
 <area shape="rect" href="sensor_8h.html" title=" " alt="" coords="41,155,117,181"/>
 </map>
@@ -93,15 +95,30 @@ line.c の依存先関係図:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 関数</h2></td></tr>
-<tr class="memitem:a9e4aa850bd358088bd2b337680422352"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="line_8c.html#a9e4aa850bd358088bd2b337680422352">LINE_UpdateMarkerState</a> ()</td></tr>
-<tr class="memdesc:a9e4aa850bd358088bd2b337680422352"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update marker state  <a href="line_8c.html#a9e4aa850bd358088bd2b337680422352">[詳解]</a><br /></td></tr>
-<tr class="separator:a9e4aa850bd358088bd2b337680422352"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3770c9e291907067dac5b85ec7c2a80f"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="line_8c.html#a3770c9e291907067dac5b85ec7c2a80f">LINE_UpdateCalibration</a> ()</td></tr>
+<tr class="memdesc:a3770c9e291907067dac5b85ec7c2a80f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update calibration data  <a href="line_8c.html#a3770c9e291907067dac5b85ec7c2a80f">[詳解]</a><br /></td></tr>
+<tr class="separator:a3770c9e291907067dac5b85ec7c2a80f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35826ab7a6f7e9ae20a2be11a0f06461"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="line_8c.html#a35826ab7a6f7e9ae20a2be11a0f06461">LINE_UpdateMarkerState</a> ()</td></tr>
+<tr class="memdesc:a35826ab7a6f7e9ae20a2be11a0f06461"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update marker sensor state  <a href="line_8c.html#a35826ab7a6f7e9ae20a2be11a0f06461">[詳解]</a><br /></td></tr>
+<tr class="separator:a35826ab7a6f7e9ae20a2be11a0f06461"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e2fb5bcc667c34f45ecc396b6d52560"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="line_8c.html#a9e2fb5bcc667c34f45ecc396b6d52560">LINE_GenerateAngularVelocity</a> ()</td></tr>
+<tr class="memdesc:a9e2fb5bcc667c34f45ecc396b6d52560"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate angular velocity  <a href="line_8c.html#a9e2fb5bcc667c34f45ecc396b6d52560">[詳解]</a><br /></td></tr>
+<tr class="separator:a9e2fb5bcc667c34f45ecc396b6d52560"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa662923661686d64790042b7cc783607"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="line_8c.html#aa662923661686d64790042b7cc783607">LINE_UpdateInterval</a> ()</td></tr>
+<tr class="memdesc:aa662923661686d64790042b7cc783607"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update marker state  <a href="line_8c.html#aa662923661686d64790042b7cc783607">[詳解]</a><br /></td></tr>
+<tr class="separator:aa662923661686d64790042b7cc783607"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abbf4ea80eb020721bbbac59fd33d3e54"><td class="memItemLeft" align="right" valign="top"><a class="el" href="line_8h.html#ac51b6463d6fa4444b4052b607f96da9f">STARTGOAL_MARKER</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="line_8c.html#abbf4ea80eb020721bbbac59fd33d3e54">LINE_GetStartGoalState</a> ()</td></tr>
 <tr class="memdesc:abbf4ea80eb020721bbbac59fd33d3e54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get start and goal marker state  <a href="line_8c.html#abbf4ea80eb020721bbbac59fd33d3e54">[詳解]</a><br /></td></tr>
 <tr class="separator:abbf4ea80eb020721bbbac59fd33d3e54"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0cdd105cb1dbc360065b5b2f10b297f1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="line_8h.html#a83b0a96d09170e93b0c518b915c760aa">CURVATURE_MARKER</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="line_8c.html#a0cdd105cb1dbc360065b5b2f10b297f1">LINE_GetCurvatureState</a> ()</td></tr>
 <tr class="memdesc:a0cdd105cb1dbc360065b5b2f10b297f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get curvature marker state  <a href="line_8c.html#a0cdd105cb1dbc360065b5b2f10b297f1">[詳解]</a><br /></td></tr>
 <tr class="separator:a0cdd105cb1dbc360065b5b2f10b297f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a712fb1a714b857c47b57beedd16957d5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="line_8h.html#ac51b6463d6fa4444b4052b607f96da9f">STARTGOAL_MARKER</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="line_8c.html#a712fb1a714b857c47b57beedd16957d5">LINE_ResetStartGoalState</a> ()</td></tr>
+<tr class="memdesc:a712fb1a714b857c47b57beedd16957d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset start and goal marker state  <a href="line_8c.html#a712fb1a714b857c47b57beedd16957d5">[詳解]</a><br /></td></tr>
+<tr class="separator:a712fb1a714b857c47b57beedd16957d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2723ef9983877b5a5125006a0a746c2d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="line_8h.html#a83b0a96d09170e93b0c518b915c760aa">CURVATURE_MARKER</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="line_8c.html#a2723ef9983877b5a5125006a0a746c2d">LINE_ResetCurvatureState</a> ()</td></tr>
+<tr class="memdesc:a2723ef9983877b5a5125006a0a746c2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset curvature marker state  <a href="line_8c.html#a2723ef9983877b5a5125006a0a746c2d">[詳解]</a><br /></td></tr>
+<tr class="separator:a2723ef9983877b5a5125006a0a746c2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab3af472291852b280b100925f5b9aa7a"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="line_8c.html#ab3af472291852b280b100925f5b9aa7a">LINE_ClearCalibrationTemporary</a> ()</td></tr>
 <tr class="memdesc:ab3af472291852b280b100925f5b9aa7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear temporary  <a href="line_8c.html#ab3af472291852b280b100925f5b9aa7a">[詳解]</a><br /></td></tr>
 <tr class="separator:ab3af472291852b280b100925f5b9aa7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -120,6 +137,9 @@ line.c の依存先関係図:</div>
 <tr class="memitem:a9b4a00b81ce1cb20833130786318e85e"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structLINE__CALIBRATE.html">LINE_CALIBRATE</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="line_8c.html#a9b4a00b81ce1cb20833130786318e85e">LINE_GetCalibrate</a> ()</td></tr>
 <tr class="memdesc:a9b4a00b81ce1cb20833130786318e85e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get calibration value  <a href="line_8c.html#a9b4a00b81ce1cb20833130786318e85e">[詳解]</a><br /></td></tr>
 <tr class="separator:a9b4a00b81ce1cb20833130786318e85e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1746c8257aa80aea4456d0e1e3058fcc"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="line_8c.html#a1746c8257aa80aea4456d0e1e3058fcc">LINE_GetAngularVelocity</a> ()</td></tr>
+<tr class="memdesc:a1746c8257aa80aea4456d0e1e3058fcc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get generated angular velocity  <a href="line_8c.html#a1746c8257aa80aea4456d0e1e3058fcc">[詳解]</a><br /></td></tr>
+<tr class="separator:a1746c8257aa80aea4456d0e1e3058fcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9292a22c8a6f2fd537fcbf424b6fc089"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="line_8c.html#a9292a22c8a6f2fd537fcbf424b6fc089">LINE_Print</a> ()</td></tr>
 <tr class="memdesc:a9292a22c8a6f2fd537fcbf424b6fc089"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print line sensor  <a href="line_8c.html#a9292a22c8a6f2fd537fcbf424b6fc089">[詳解]</a><br /></td></tr>
 <tr class="separator:a9292a22c8a6f2fd537fcbf424b6fc089"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -163,17 +183,18 @@ line.c の依存先関係図:</div>
 
 <p>Calculate sensor average </p>
 
-<p class="definition"> <a class="el" href="line_8c_source.html">line.c</a> の <a class="el" href="line_8c_source.html#l00069">69</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="line_8c_source.html">line.c</a> の <a class="el" href="line_8c_source.html#l00187">187</a> 行目に定義があります。</p>
 
-<p class="reference">参照元 <a class="el" href="line_8c_source.html#l00096">LINE_StartCalibrateBack()</a>, <a class="el" href="line_8c_source.html#l00106">LINE_StopCalibrate()</a>.</p>
+<p class="reference">参照元 <a class="el" href="line_8c_source.html#l00214">LINE_StartCalibrateBack()</a>, <a class="el" href="line_8c_source.html#l00224">LINE_StopCalibrate()</a>.</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="line_8c_a2fac48ee55eb99dbd94bdafb5fdb158a_icgraph.png" border="0" usemap="#aline_8c_a2fac48ee55eb99dbd94bdafb5fdb158a_icgraph" alt=""/></div>
 <map name="aline_8c_a2fac48ee55eb99dbd94bdafb5fdb158a_icgraph" id="aline_8c_a2fac48ee55eb99dbd94bdafb5fdb158a_icgraph">
-<area shape="rect" title="Calculate sensor average" alt="" coords="471,23,661,65"/>
-<area shape="rect" href="line_8h.html#a8b86f6a9eab7b902eabfffdb81ce0ffb" title="Start sensor calibration (back)" alt="" coords="243,5,423,32"/>
-<area shape="rect" href="line_8h.html#ac2241ed9289106ee413b2a84faa7c1b0" title="Stop sensor calibration" alt="" coords="259,56,406,83"/>
+<area shape="rect" title="Calculate sensor average" alt="" coords="600,23,791,65"/>
+<area shape="rect" href="line_8h.html#a8b86f6a9eab7b902eabfffdb81ce0ffb" title="Start sensor calibration (back)" alt="" coords="372,5,552,32"/>
+<area shape="rect" href="line_8h.html#ac2241ed9289106ee413b2a84faa7c1b0" title="Stop sensor calibration" alt="" coords="389,56,535,83"/>
+<area shape="rect" href="app__main_8c.html#ac8ec403b244267ecd7c29fd6620076e3" title=" " alt="" coords="243,31,324,57"/>
 <area shape="rect" href="app__main_8h.html#a630544a7f0a2cc40d8a7fefab7e2fe70" title=" " alt="" coords="108,31,195,57"/>
 <area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,31,60,57"/>
 </map>
@@ -206,22 +227,85 @@ line.c の依存先関係図:</div>
 
 <p>Clear temporary </p>
 
-<p class="definition"> <a class="el" href="line_8c_source.html">line.c</a> の <a class="el" href="line_8c_source.html#l00058">58</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="line_8c_source.html">line.c</a> の <a class="el" href="line_8c_source.html#l00176">176</a> 行目に定義があります。</p>
 
-<p class="reference">参照元 <a class="el" href="line_8c_source.html#l00096">LINE_StartCalibrateBack()</a>, <a class="el" href="line_8c_source.html#l00082">LINE_StartCalibrateForward()</a>, <a class="el" href="line_8c_source.html#l00106">LINE_StopCalibrate()</a>.</p>
+<p class="reference">参照元 <a class="el" href="line_8c_source.html#l00214">LINE_StartCalibrateBack()</a>, <a class="el" href="line_8c_source.html#l00200">LINE_StartCalibrateForward()</a>, <a class="el" href="line_8c_source.html#l00224">LINE_StopCalibrate()</a>.</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="line_8c_ab3af472291852b280b100925f5b9aa7a_icgraph.png" border="0" usemap="#aline_8c_ab3af472291852b280b100925f5b9aa7a_icgraph" alt=""/></div>
 <map name="aline_8c_ab3af472291852b280b100925f5b9aa7a_icgraph" id="aline_8c_ab3af472291852b280b100925f5b9aa7a_icgraph">
-<area shape="rect" title="Clear temporary" alt="" coords="491,56,723,83"/>
-<area shape="rect" href="line_8h.html#a8b86f6a9eab7b902eabfffdb81ce0ffb" title="Start sensor calibration (back)" alt="" coords="253,5,433,32"/>
-<area shape="rect" href="line_8h.html#ad38f2ac38d03c071b0a22bdb93583300" title="Start sensor calibration (forward)" alt="" coords="243,56,443,83"/>
-<area shape="rect" href="line_8h.html#ac2241ed9289106ee413b2a84faa7c1b0" title="Stop sensor calibration" alt="" coords="269,107,416,133"/>
+<area shape="rect" title="Clear temporary" alt="" coords="620,56,852,83"/>
+<area shape="rect" href="line_8h.html#a8b86f6a9eab7b902eabfffdb81ce0ffb" title="Start sensor calibration (back)" alt="" coords="382,5,562,32"/>
+<area shape="rect" href="line_8h.html#ad38f2ac38d03c071b0a22bdb93583300" title="Start sensor calibration (forward)" alt="" coords="372,56,572,83"/>
+<area shape="rect" href="line_8h.html#ac2241ed9289106ee413b2a84faa7c1b0" title="Stop sensor calibration" alt="" coords="399,107,545,133"/>
+<area shape="rect" href="app__main_8c.html#ac8ec403b244267ecd7c29fd6620076e3" title=" " alt="" coords="243,56,324,83"/>
 <area shape="rect" href="app__main_8h.html#a630544a7f0a2cc40d8a7fefab7e2fe70" title=" " alt="" coords="108,56,195,83"/>
 <area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,56,60,83"/>
 </map>
 </div>
+
+</div>
+</div>
+<a id="a9e2fb5bcc667c34f45ecc396b6d52560"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e2fb5bcc667c34f45ecc396b6d52560">&#9670;&nbsp;</a></span>LINE_GenerateAngularVelocity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void LINE_GenerateAngularVelocity </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Generate angular velocity </p>
+
+<p class="definition"> <a class="el" href="line_8c_source.html">line.c</a> の <a class="el" href="line_8c_source.html#l00126">126</a> 行目に定義があります。</p>
+
+<p class="reference">参照元 <a class="el" href="line_8c_source.html#l00132">LINE_UpdateInterval()</a>.</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="line_8c_a9e2fb5bcc667c34f45ecc396b6d52560_icgraph.png" border="0" usemap="#aline_8c_a9e2fb5bcc667c34f45ecc396b6d52560_icgraph" alt=""/></div>
+<map name="aline_8c_a9e2fb5bcc667c34f45ecc396b6d52560_icgraph" id="aline_8c_a9e2fb5bcc667c34f45ecc396b6d52560_icgraph">
+<area shape="rect" title="Generate angular velocity" alt="" coords="491,5,711,32"/>
+<area shape="rect" href="line_8h.html#aa662923661686d64790042b7cc783607" title="Update line sensor and marker sensor state" alt="" coords="288,5,443,32"/>
+<area shape="rect" href="interval_8c.html#a8a3b0ad512a6e6c6157440b68d395eac" title="timer interrupt TIM6: 2kHz" alt="" coords="5,5,240,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a1746c8257aa80aea4456d0e1e3058fcc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1746c8257aa80aea4456d0e1e3058fcc">&#9670;&nbsp;</a></span>LINE_GetAngularVelocity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float LINE_GetAngularVelocity </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get generated angular velocity </p>
+
+<p class="definition"> <a class="el" href="line_8c_source.html">line.c</a> の <a class="el" href="line_8c_source.html#l00250">250</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -242,15 +326,16 @@ line.c の依存先関係図:</div>
 
 <p>Get calibration value </p>
 
-<p class="definition"> <a class="el" href="line_8c_source.html">line.c</a> の <a class="el" href="line_8c_source.html#l00116">116</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="line_8c_source.html">line.c</a> の <a class="el" href="line_8c_source.html#l00243">243</a> 行目に定義があります。</p>
 
-<p class="reference">参照元 <a class="el" href="app__main_8c_source.html#l00022">app_main()</a>.</p>
+<p class="reference">参照元 <a class="el" href="app__main_8c_source.html#l00030">Calibrate()</a>.</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="line_8c_a9b4a00b81ce1cb20833130786318e85e_icgraph.png" border="0" usemap="#aline_8c_a9b4a00b81ce1cb20833130786318e85e_icgraph" alt=""/></div>
 <map name="aline_8c_a9b4a00b81ce1cb20833130786318e85e_icgraph" id="aline_8c_a9b4a00b81ce1cb20833130786318e85e_icgraph">
-<area shape="rect" title="Get calibration value" alt="" coords="243,5,383,32"/>
+<area shape="rect" title="Get calibration value" alt="" coords="372,5,512,32"/>
+<area shape="rect" href="app__main_8c.html#ac8ec403b244267ecd7c29fd6620076e3" title=" " alt="" coords="243,5,324,32"/>
 <area shape="rect" href="app__main_8h.html#a630544a7f0a2cc40d8a7fefab7e2fe70" title=" " alt="" coords="108,5,195,32"/>
 <area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,5,60,32"/>
 </map>
@@ -275,7 +360,19 @@ line.c の依存先関係図:</div>
 
 <p>Get curvature marker state </p>
 
-<p class="definition"> <a class="el" href="line_8c_source.html">line.c</a> の <a class="el" href="line_8c_source.html#l00051">51</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="line_8c_source.html">line.c</a> の <a class="el" href="line_8c_source.html#l00155">155</a> 行目に定義があります。</p>
+
+<p class="reference">参照元 <a class="el" href="app__main_8c_source.html#l00064">app_main()</a>.</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="line_8c_a0cdd105cb1dbc360065b5b2f10b297f1_icgraph.png" border="0" usemap="#aline_8c_a0cdd105cb1dbc360065b5b2f10b297f1_icgraph" alt=""/></div>
+<map name="aline_8c_a0cdd105cb1dbc360065b5b2f10b297f1_icgraph" id="aline_8c_a0cdd105cb1dbc360065b5b2f10b297f1_icgraph">
+<area shape="rect" title="Get curvature marker state" alt="" coords="243,5,421,32"/>
+<area shape="rect" href="app__main_8h.html#a630544a7f0a2cc40d8a7fefab7e2fe70" title=" " alt="" coords="108,5,195,32"/>
+<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,5,60,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -296,7 +393,19 @@ line.c の依存先関係図:</div>
 
 <p>Get start and goal marker state </p>
 
-<p class="definition"> <a class="el" href="line_8c_source.html">line.c</a> の <a class="el" href="line_8c_source.html#l00044">44</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="line_8c_source.html">line.c</a> の <a class="el" href="line_8c_source.html#l00148">148</a> 行目に定義があります。</p>
+
+<p class="reference">参照元 <a class="el" href="app__main_8c_source.html#l00064">app_main()</a>.</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="line_8c_abbf4ea80eb020721bbbac59fd33d3e54_icgraph.png" border="0" usemap="#aline_8c_abbf4ea80eb020721bbbac59fd33d3e54_icgraph" alt=""/></div>
+<map name="aline_8c_abbf4ea80eb020721bbbac59fd33d3e54_icgraph" id="aline_8c_abbf4ea80eb020721bbbac59fd33d3e54_icgraph">
+<area shape="rect" title="Get start and goal marker state" alt="" coords="243,5,419,32"/>
+<area shape="rect" href="app__main_8h.html#a630544a7f0a2cc40d8a7fefab7e2fe70" title=" " alt="" coords="108,5,195,32"/>
+<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,5,60,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -317,7 +426,7 @@ line.c の依存先関係図:</div>
 
 <p>Print line sensor </p>
 
-<p class="definition"> <a class="el" href="line_8c_source.html">line.c</a> の <a class="el" href="line_8c_source.html#l00123">123</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="line_8c_source.html">line.c</a> の <a class="el" href="line_8c_source.html#l00257">257</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -325,6 +434,72 @@ line.c の依存先関係図:</div>
 <map name="aline_8c_a9292a22c8a6f2fd537fcbf424b6fc089_cgraph" id="aline_8c_a9292a22c8a6f2fd537fcbf424b6fc089_cgraph">
 <area shape="rect" title="Print line sensor" alt="" coords="5,5,93,32"/>
 <area shape="rect" href="sensor_8h.html#ad857373214395cc052b09499ac88b2dc" title="Get line sensor value" alt="" coords="141,5,328,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a2723ef9983877b5a5125006a0a746c2d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2723ef9983877b5a5125006a0a746c2d">&#9670;&nbsp;</a></span>LINE_ResetCurvatureState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="line_8h.html#a83b0a96d09170e93b0c518b915c760aa">CURVATURE_MARKER</a> LINE_ResetCurvatureState </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reset curvature marker state </p>
+
+<p class="definition"> <a class="el" href="line_8c_source.html">line.c</a> の <a class="el" href="line_8c_source.html#l00169">169</a> 行目に定義があります。</p>
+
+<p class="reference">参照元 <a class="el" href="app__main_8c_source.html#l00064">app_main()</a>.</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="line_8c_a2723ef9983877b5a5125006a0a746c2d_icgraph.png" border="0" usemap="#aline_8c_a2723ef9983877b5a5125006a0a746c2d_icgraph" alt=""/></div>
+<map name="aline_8c_a2723ef9983877b5a5125006a0a746c2d_icgraph" id="aline_8c_a2723ef9983877b5a5125006a0a746c2d_icgraph">
+<area shape="rect" title="Reset curvature marker state" alt="" coords="243,5,436,32"/>
+<area shape="rect" href="app__main_8h.html#a630544a7f0a2cc40d8a7fefab7e2fe70" title=" " alt="" coords="108,5,195,32"/>
+<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,5,60,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a712fb1a714b857c47b57beedd16957d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a712fb1a714b857c47b57beedd16957d5">&#9670;&nbsp;</a></span>LINE_ResetStartGoalState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="line_8h.html#ac51b6463d6fa4444b4052b607f96da9f">STARTGOAL_MARKER</a> LINE_ResetStartGoalState </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reset start and goal marker state </p>
+
+<p class="definition"> <a class="el" href="line_8c_source.html">line.c</a> の <a class="el" href="line_8c_source.html#l00162">162</a> 行目に定義があります。</p>
+
+<p class="reference">参照元 <a class="el" href="app__main_8c_source.html#l00064">app_main()</a>.</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="line_8c_a712fb1a714b857c47b57beedd16957d5_icgraph.png" border="0" usemap="#aline_8c_a712fb1a714b857c47b57beedd16957d5_icgraph" alt=""/></div>
+<map name="aline_8c_a712fb1a714b857c47b57beedd16957d5_icgraph" id="aline_8c_a712fb1a714b857c47b57beedd16957d5_icgraph">
+<area shape="rect" title="Reset start and goal marker state" alt="" coords="243,5,433,32"/>
+<area shape="rect" href="app__main_8h.html#a630544a7f0a2cc40d8a7fefab7e2fe70" title=" " alt="" coords="108,5,195,32"/>
+<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,5,60,32"/>
 </map>
 </div>
 
@@ -347,9 +522,9 @@ line.c の依存先関係図:</div>
 
 <p>Start sensor calibration (back) </p>
 
-<p class="definition"> <a class="el" href="line_8c_source.html">line.c</a> の <a class="el" href="line_8c_source.html#l00096">96</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="line_8c_source.html">line.c</a> の <a class="el" href="line_8c_source.html#l00214">214</a> 行目に定義があります。</p>
 
-<p class="reference">参照元 <a class="el" href="app__main_8c_source.html#l00022">app_main()</a>.</p>
+<p class="reference">参照元 <a class="el" href="app__main_8c_source.html#l00030">Calibrate()</a>.</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -365,7 +540,8 @@ line.c の依存先関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="line_8c_a8b86f6a9eab7b902eabfffdb81ce0ffb_icgraph.png" border="0" usemap="#aline_8c_a8b86f6a9eab7b902eabfffdb81ce0ffb_icgraph" alt=""/></div>
 <map name="aline_8c_a8b86f6a9eab7b902eabfffdb81ce0ffb_icgraph" id="aline_8c_a8b86f6a9eab7b902eabfffdb81ce0ffb_icgraph">
-<area shape="rect" title="Start sensor calibration (back)" alt="" coords="243,5,423,32"/>
+<area shape="rect" title="Start sensor calibration (back)" alt="" coords="372,5,552,32"/>
+<area shape="rect" href="app__main_8c.html#ac8ec403b244267ecd7c29fd6620076e3" title=" " alt="" coords="243,5,324,32"/>
 <area shape="rect" href="app__main_8h.html#a630544a7f0a2cc40d8a7fefab7e2fe70" title=" " alt="" coords="108,5,195,32"/>
 <area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,5,60,32"/>
 </map>
@@ -390,9 +566,9 @@ line.c の依存先関係図:</div>
 
 <p>Start sensor calibration (forward) </p>
 
-<p class="definition"> <a class="el" href="line_8c_source.html">line.c</a> の <a class="el" href="line_8c_source.html#l00082">82</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="line_8c_source.html">line.c</a> の <a class="el" href="line_8c_source.html#l00200">200</a> 行目に定義があります。</p>
 
-<p class="reference">参照元 <a class="el" href="app__main_8c_source.html#l00022">app_main()</a>.</p>
+<p class="reference">参照元 <a class="el" href="app__main_8c_source.html#l00030">Calibrate()</a>.</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -407,7 +583,8 @@ line.c の依存先関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="line_8c_ad38f2ac38d03c071b0a22bdb93583300_icgraph.png" border="0" usemap="#aline_8c_ad38f2ac38d03c071b0a22bdb93583300_icgraph" alt=""/></div>
 <map name="aline_8c_ad38f2ac38d03c071b0a22bdb93583300_icgraph" id="aline_8c_ad38f2ac38d03c071b0a22bdb93583300_icgraph">
-<area shape="rect" title="Start sensor calibration (forward)" alt="" coords="243,5,443,32"/>
+<area shape="rect" title="Start sensor calibration (forward)" alt="" coords="372,5,572,32"/>
+<area shape="rect" href="app__main_8c.html#ac8ec403b244267ecd7c29fd6620076e3" title=" " alt="" coords="243,5,324,32"/>
 <area shape="rect" href="app__main_8h.html#a630544a7f0a2cc40d8a7fefab7e2fe70" title=" " alt="" coords="108,5,195,32"/>
 <area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,5,60,32"/>
 </map>
@@ -432,9 +609,9 @@ line.c の依存先関係図:</div>
 
 <p>Stop sensor calibration </p>
 
-<p class="definition"> <a class="el" href="line_8c_source.html">line.c</a> の <a class="el" href="line_8c_source.html#l00106">106</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="line_8c_source.html">line.c</a> の <a class="el" href="line_8c_source.html#l00224">224</a> 行目に定義があります。</p>
 
-<p class="reference">参照元 <a class="el" href="app__main_8c_source.html#l00022">app_main()</a>.</p>
+<p class="reference">参照元 <a class="el" href="app__main_8c_source.html#l00030">Calibrate()</a>.</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -450,7 +627,8 @@ line.c の依存先関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="line_8c_ac2241ed9289106ee413b2a84faa7c1b0_icgraph.png" border="0" usemap="#aline_8c_ac2241ed9289106ee413b2a84faa7c1b0_icgraph" alt=""/></div>
 <map name="aline_8c_ac2241ed9289106ee413b2a84faa7c1b0_icgraph" id="aline_8c_ac2241ed9289106ee413b2a84faa7c1b0_icgraph">
-<area shape="rect" title="Stop sensor calibration" alt="" coords="243,5,389,32"/>
+<area shape="rect" title="Stop sensor calibration" alt="" coords="372,5,519,32"/>
+<area shape="rect" href="app__main_8c.html#ac8ec403b244267ecd7c29fd6620076e3" title=" " alt="" coords="243,5,324,32"/>
 <area shape="rect" href="app__main_8h.html#a630544a7f0a2cc40d8a7fefab7e2fe70" title=" " alt="" coords="108,5,195,32"/>
 <area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,5,60,32"/>
 </map>
@@ -458,14 +636,64 @@ line.c の依存先関係図:</div>
 
 </div>
 </div>
-<a id="a9e4aa850bd358088bd2b337680422352"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9e4aa850bd358088bd2b337680422352">&#9670;&nbsp;</a></span>LINE_UpdateMarkerState()</h2>
+<a id="a3770c9e291907067dac5b85ec7c2a80f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3770c9e291907067dac5b85ec7c2a80f">&#9670;&nbsp;</a></span>LINE_UpdateCalibration()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void LINE_UpdateCalibration </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Update calibration data </p>
+
+<p class="definition"> <a class="el" href="line_8c_source.html">line.c</a> の <a class="el" href="line_8c_source.html#l00024">24</a> 行目に定義があります。</p>
+
+<p class="reference">参照元 <a class="el" href="line_8c_source.html#l00132">LINE_UpdateInterval()</a>.</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="line_8c_a3770c9e291907067dac5b85ec7c2a80f_cgraph.png" border="0" usemap="#aline_8c_a3770c9e291907067dac5b85ec7c2a80f_cgraph" alt=""/></div>
+<map name="aline_8c_a3770c9e291907067dac5b85ec7c2a80f_cgraph" id="aline_8c_a3770c9e291907067dac5b85ec7c2a80f_cgraph">
+<area shape="rect" title="Update calibration data" alt="" coords="5,5,181,32"/>
+<area shape="rect" href="sensor_8h.html#ad857373214395cc052b09499ac88b2dc" title="Get line sensor value" alt="" coords="229,5,416,32"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="line_8c_a3770c9e291907067dac5b85ec7c2a80f_icgraph.png" border="0" usemap="#aline_8c_a3770c9e291907067dac5b85ec7c2a80f_icgraph" alt=""/></div>
+<map name="aline_8c_a3770c9e291907067dac5b85ec7c2a80f_icgraph" id="aline_8c_a3770c9e291907067dac5b85ec7c2a80f_icgraph">
+<area shape="rect" title="Update calibration data" alt="" coords="491,5,667,32"/>
+<area shape="rect" href="line_8h.html#aa662923661686d64790042b7cc783607" title="Update line sensor and marker sensor state" alt="" coords="288,5,443,32"/>
+<area shape="rect" href="interval_8c.html#a8a3b0ad512a6e6c6157440b68d395eac" title="timer interrupt TIM6: 2kHz" alt="" coords="5,5,240,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aa662923661686d64790042b7cc783607"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa662923661686d64790042b7cc783607">&#9670;&nbsp;</a></span>LINE_UpdateInterval()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void LINE_UpdateMarkerState </td>
+          <td class="memname">void LINE_UpdateInterval </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -474,25 +702,89 @@ line.c の依存先関係図:</div>
 </div><div class="memdoc">
 
 <p>Update marker state </p>
+<p>Update line sensor and marker sensor state </p>
 
-<p class="definition"> <a class="el" href="line_8c_source.html">line.c</a> の <a class="el" href="line_8c_source.html#l00020">20</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="line_8c_source.html">line.c</a> の <a class="el" href="line_8c_source.html#l00132">132</a> 行目に定義があります。</p>
 
 <p class="reference">参照元 <a class="el" href="interval_8c_source.html#l00021">HAL_TIM_PeriodElapsedCallback()</a>.</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><img src="line_8c_a9e4aa850bd358088bd2b337680422352_cgraph.png" border="0" usemap="#aline_8c_a9e4aa850bd358088bd2b337680422352_cgraph" alt=""/></div>
-<map name="aline_8c_a9e4aa850bd358088bd2b337680422352_cgraph" id="aline_8c_a9e4aa850bd358088bd2b337680422352_cgraph">
-<area shape="rect" title="Update marker state" alt="" coords="5,5,189,32"/>
+<div class="center"><img src="line_8c_aa662923661686d64790042b7cc783607_cgraph.png" border="0" usemap="#aline_8c_aa662923661686d64790042b7cc783607_cgraph" alt=""/></div>
+<map name="aline_8c_aa662923661686d64790042b7cc783607_cgraph" id="aline_8c_aa662923661686d64790042b7cc783607_cgraph">
+<area shape="rect" title="Update marker state" alt="" coords="5,56,160,83"/>
+<area shape="rect" href="line_8c.html#a9e2fb5bcc667c34f45ecc396b6d52560" title="Generate angular velocity" alt="" coords="208,5,428,32"/>
+<area shape="rect" href="line_8c.html#a3770c9e291907067dac5b85ec7c2a80f" title="Update calibration data" alt="" coords="230,56,406,83"/>
+<area shape="rect" href="line_8c.html#a35826ab7a6f7e9ae20a2be11a0f06461" title="Update marker sensor state" alt="" coords="226,107,410,133"/>
+<area shape="rect" href="sensor_8h.html#ad857373214395cc052b09499ac88b2dc" title="Get line sensor value" alt="" coords="476,81,663,108"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="line_8c_aa662923661686d64790042b7cc783607_icgraph.png" border="0" usemap="#aline_8c_aa662923661686d64790042b7cc783607_icgraph" alt=""/></div>
+<map name="aline_8c_aa662923661686d64790042b7cc783607_icgraph" id="aline_8c_aa662923661686d64790042b7cc783607_icgraph">
+<area shape="rect" title="Update marker state" alt="" coords="288,5,443,32"/>
+<area shape="rect" href="interval_8c.html#a8a3b0ad512a6e6c6157440b68d395eac" title="timer interrupt TIM6: 2kHz" alt="" coords="5,5,240,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a35826ab7a6f7e9ae20a2be11a0f06461"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35826ab7a6f7e9ae20a2be11a0f06461">&#9670;&nbsp;</a></span>LINE_UpdateMarkerState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void LINE_UpdateMarkerState </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Update marker sensor state </p>
+<p>&lt; wait start marker</p>
+<p>&lt; on the start marker</p>
+<p>&lt; started</p>
+<p>&lt; wait goal marker</p>
+<p>&lt; on the goal marker</p>
+<p>&lt; goaled</p>
+<p>&lt; on the cross line</p>
+<p>&lt; wait curvature marker</p>
+<p>&lt; on the curvature marker</p>
+<p>&lt; on the cross line</p>
+
+<p class="definition"> <a class="el" href="line_8c_source.html">line.c</a> の <a class="el" href="line_8c_source.html#l00042">42</a> 行目に定義があります。</p>
+
+<p class="reference">参照元 <a class="el" href="line_8c_source.html#l00132">LINE_UpdateInterval()</a>.</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="line_8c_a35826ab7a6f7e9ae20a2be11a0f06461_cgraph.png" border="0" usemap="#aline_8c_a35826ab7a6f7e9ae20a2be11a0f06461_cgraph" alt=""/></div>
+<map name="aline_8c_a35826ab7a6f7e9ae20a2be11a0f06461_cgraph" id="aline_8c_a35826ab7a6f7e9ae20a2be11a0f06461_cgraph">
+<area shape="rect" title="Update marker sensor state" alt="" coords="5,5,189,32"/>
 <area shape="rect" href="sensor_8h.html#ad857373214395cc052b09499ac88b2dc" title="Get line sensor value" alt="" coords="237,5,424,32"/>
 </map>
 </div>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><img src="line_8c_a9e4aa850bd358088bd2b337680422352_icgraph.png" border="0" usemap="#aline_8c_a9e4aa850bd358088bd2b337680422352_icgraph" alt=""/></div>
-<map name="aline_8c_a9e4aa850bd358088bd2b337680422352_icgraph" id="aline_8c_a9e4aa850bd358088bd2b337680422352_icgraph">
-<area shape="rect" title="Update marker state" alt="" coords="288,5,472,32"/>
+<div class="center"><img src="line_8c_a35826ab7a6f7e9ae20a2be11a0f06461_icgraph.png" border="0" usemap="#aline_8c_a35826ab7a6f7e9ae20a2be11a0f06461_icgraph" alt=""/></div>
+<map name="aline_8c_a35826ab7a6f7e9ae20a2be11a0f06461_icgraph" id="aline_8c_a35826ab7a6f7e9ae20a2be11a0f06461_icgraph">
+<area shape="rect" title="Update marker sensor state" alt="" coords="491,5,675,32"/>
+<area shape="rect" href="line_8h.html#aa662923661686d64790042b7cc783607" title="Update line sensor and marker sensor state" alt="" coords="288,5,443,32"/>
 <area shape="rect" href="interval_8c.html#a8a3b0ad512a6e6c6157440b68d395eac" title="timer interrupt TIM6: 2kHz" alt="" coords="5,5,240,32"/>
 </map>
 </div>
@@ -520,9 +812,9 @@ line.c の依存先関係図:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="line_8c_source.html">line.c</a> の <a class="el" href="line_8c_source.html#l00014">14</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="line_8c_source.html">line.c</a> の <a class="el" href="line_8c_source.html#l00017">17</a> 行目に定義があります。</p>
 
-<p class="reference">参照元 <a class="el" href="line_8c_source.html#l00069">LINE_CalculateCalibrationAverage()</a>, <a class="el" href="line_8c_source.html#l00058">LINE_ClearCalibrationTemporary()</a>, <a class="el" href="line_8c_source.html#l00116">LINE_GetCalibrate()</a>, <a class="el" href="line_8c_source.html#l00082">LINE_StartCalibrateForward()</a>, <a class="el" href="line_8c_source.html#l00020">LINE_UpdateMarkerState()</a>.</p>
+<p class="reference">参照元 <a class="el" href="line_8c_source.html#l00187">LINE_CalculateCalibrationAverage()</a>, <a class="el" href="line_8c_source.html#l00176">LINE_ClearCalibrationTemporary()</a>, <a class="el" href="line_8c_source.html#l00243">LINE_GetCalibrate()</a>, <a class="el" href="line_8c_source.html#l00200">LINE_StartCalibrateForward()</a>, <a class="el" href="line_8c_source.html#l00224">LINE_StopCalibrate()</a>, <a class="el" href="line_8c_source.html#l00024">LINE_UpdateCalibration()</a>, <a class="el" href="line_8c_source.html#l00042">LINE_UpdateMarkerState()</a>.</p>
 
 </div>
 </div>
@@ -546,7 +838,7 @@ line.c の依存先関係図:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="line_8c_source.html">line.c</a> の <a class="el" href="line_8c_source.html#l00015">15</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="line_8c_source.html">line.c</a> の <a class="el" href="line_8c_source.html#l00018">18</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -570,9 +862,9 @@ line.c の依存先関係図:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="line_8c_source.html">line.c</a> の <a class="el" href="line_8c_source.html#l00012">12</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="line_8c_source.html">line.c</a> の <a class="el" href="line_8c_source.html#l00015">15</a> 行目に定義があります。</p>
 
-<p class="reference">参照元 <a class="el" href="line_8c_source.html#l00096">LINE_StartCalibrateBack()</a>, <a class="el" href="line_8c_source.html#l00082">LINE_StartCalibrateForward()</a>, <a class="el" href="line_8c_source.html#l00106">LINE_StopCalibrate()</a>, <a class="el" href="line_8c_source.html#l00020">LINE_UpdateMarkerState()</a>.</p>
+<p class="reference">参照元 <a class="el" href="line_8c_source.html#l00214">LINE_StartCalibrateBack()</a>, <a class="el" href="line_8c_source.html#l00200">LINE_StartCalibrateForward()</a>, <a class="el" href="line_8c_source.html#l00224">LINE_StopCalibrate()</a>, <a class="el" href="line_8c_source.html#l00132">LINE_UpdateInterval()</a>.</p>
 
 </div>
 </div>
@@ -596,7 +888,9 @@ line.c の依存先関係図:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="line_8c_source.html">line.c</a> の <a class="el" href="line_8c_source.html#l00010">10</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="line_8c_source.html">line.c</a> の <a class="el" href="line_8c_source.html#l00013">13</a> 行目に定義があります。</p>
+
+<p class="reference">参照元 <a class="el" href="line_8c_source.html#l00155">LINE_GetCurvatureState()</a>, <a class="el" href="line_8c_source.html#l00169">LINE_ResetCurvatureState()</a>, <a class="el" href="line_8c_source.html#l00042">LINE_UpdateMarkerState()</a>.</p>
 
 </div>
 </div>
@@ -620,7 +914,9 @@ line.c の依存先関係図:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="line_8c_source.html">line.c</a> の <a class="el" href="line_8c_source.html#l00008">8</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="line_8c_source.html">line.c</a> の <a class="el" href="line_8c_source.html#l00011">11</a> 行目に定義があります。</p>
+
+<p class="reference">参照元 <a class="el" href="line_8c_source.html#l00148">LINE_GetStartGoalState()</a>, <a class="el" href="line_8c_source.html#l00162">LINE_ResetStartGoalState()</a>, <a class="el" href="line_8c_source.html#l00042">LINE_UpdateMarkerState()</a>.</p>
 
 </div>
 </div>

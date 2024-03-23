@@ -1,6 +1,27 @@
 var searchData=
 [
-  ['odometry_5fcalculate_348',['ODOMETRY_Calculate',['../odometry_8h.html#ab1fe8d01fb7c54e7233dc14ba19bf542',1,'ODOMETRY_Calculate():&#160;odometry.c'],['../odometry_8c.html#ab1fe8d01fb7c54e7233dc14ba19bf542',1,'ODOMETRY_Calculate():&#160;odometry.c']]],
-  ['odometry_5fgetcurrent_349',['ODOMETRY_GetCurrent',['../odometry_8h.html#a458ba16e05623612c350b22cea48ffc3',1,'ODOMETRY_GetCurrent():&#160;odometry.c'],['../odometry_8c.html#a458ba16e05623612c350b22cea48ffc3',1,'ODOMETRY_GetCurrent():&#160;odometry.c']]],
-  ['odometry_5freset_350',['ODOMETRY_Reset',['../odometry_8h.html#a439ddae1dc13251f0ff183d7f967bb1f',1,'ODOMETRY_Reset():&#160;odometry.c'],['../odometry_8c.html#a439ddae1dc13251f0ff183d7f967bb1f',1,'ODOMETRY_Reset():&#160;odometry.c']]]
+  ['line_5fcalculatecalibrationaverage_324',['LINE_CalculateCalibrationAverage',['../line_8c.html#a2fac48ee55eb99dbd94bdafb5fdb158a',1,'line.c']]],
+  ['line_5fclearcalibrationtemporary_325',['LINE_ClearCalibrationTemporary',['../line_8c.html#ab3af472291852b280b100925f5b9aa7a',1,'line.c']]],
+  ['line_5fgenerateangularvelocity_326',['LINE_GenerateAngularVelocity',['../line_8c.html#a9e2fb5bcc667c34f45ecc396b6d52560',1,'line.c']]],
+  ['line_5fgetangularvelocity_327',['LINE_GetAngularVelocity',['../line_8h.html#a1746c8257aa80aea4456d0e1e3058fcc',1,'LINE_GetAngularVelocity():&#160;line.c'],['../line_8c.html#a1746c8257aa80aea4456d0e1e3058fcc',1,'LINE_GetAngularVelocity():&#160;line.c']]],
+  ['line_5fgetcalibrate_328',['LINE_GetCalibrate',['../line_8h.html#a9b4a00b81ce1cb20833130786318e85e',1,'LINE_GetCalibrate():&#160;line.c'],['../line_8c.html#a9b4a00b81ce1cb20833130786318e85e',1,'LINE_GetCalibrate():&#160;line.c']]],
+  ['line_5fgetcurvaturestate_329',['LINE_GetCurvatureState',['../line_8h.html#a0cdd105cb1dbc360065b5b2f10b297f1',1,'LINE_GetCurvatureState():&#160;line.c'],['../line_8c.html#a0cdd105cb1dbc360065b5b2f10b297f1',1,'LINE_GetCurvatureState():&#160;line.c']]],
+  ['line_5fgetstartgoalstate_330',['LINE_GetStartGoalState',['../line_8h.html#abbf4ea80eb020721bbbac59fd33d3e54',1,'LINE_GetStartGoalState():&#160;line.c'],['../line_8c.html#abbf4ea80eb020721bbbac59fd33d3e54',1,'LINE_GetStartGoalState():&#160;line.c']]],
+  ['line_5fprint_331',['LINE_Print',['../line_8h.html#a9292a22c8a6f2fd537fcbf424b6fc089',1,'LINE_Print():&#160;line.c'],['../line_8c.html#a9292a22c8a6f2fd537fcbf424b6fc089',1,'LINE_Print():&#160;line.c']]],
+  ['line_5fresetcurvaturestate_332',['LINE_ResetCurvatureState',['../line_8h.html#a2723ef9983877b5a5125006a0a746c2d',1,'LINE_ResetCurvatureState():&#160;line.c'],['../line_8c.html#a2723ef9983877b5a5125006a0a746c2d',1,'LINE_ResetCurvatureState():&#160;line.c']]],
+  ['line_5fresetstartgoalstate_333',['LINE_ResetStartGoalState',['../line_8h.html#a712fb1a714b857c47b57beedd16957d5',1,'LINE_ResetStartGoalState():&#160;line.c'],['../line_8c.html#a712fb1a714b857c47b57beedd16957d5',1,'LINE_ResetStartGoalState():&#160;line.c']]],
+  ['line_5fstartcalibrateback_334',['LINE_StartCalibrateBack',['../line_8h.html#a8b86f6a9eab7b902eabfffdb81ce0ffb',1,'LINE_StartCalibrateBack():&#160;line.c'],['../line_8c.html#a8b86f6a9eab7b902eabfffdb81ce0ffb',1,'LINE_StartCalibrateBack():&#160;line.c']]],
+  ['line_5fstartcalibrateforward_335',['LINE_StartCalibrateForward',['../line_8c.html#ad38f2ac38d03c071b0a22bdb93583300',1,'LINE_StartCalibrateForward():&#160;line.c'],['../line_8h.html#ad38f2ac38d03c071b0a22bdb93583300',1,'LINE_StartCalibrateForward():&#160;line.c']]],
+  ['line_5fstopcalibrate_336',['LINE_StopCalibrate',['../line_8h.html#ac2241ed9289106ee413b2a84faa7c1b0',1,'LINE_StopCalibrate():&#160;line.c'],['../line_8c.html#ac2241ed9289106ee413b2a84faa7c1b0',1,'LINE_StopCalibrate():&#160;line.c']]],
+  ['line_5fupdatecalibration_337',['LINE_UpdateCalibration',['../line_8c.html#a3770c9e291907067dac5b85ec7c2a80f',1,'line.c']]],
+  ['line_5fupdateinterval_338',['LINE_UpdateInterval',['../line_8h.html#aa662923661686d64790042b7cc783607',1,'LINE_UpdateInterval():&#160;line.c'],['../line_8c.html#aa662923661686d64790042b7cc783607',1,'LINE_UpdateInterval():&#160;line.c']]],
+  ['line_5fupdatemarkerstate_339',['LINE_UpdateMarkerState',['../line_8c.html#a35826ab7a6f7e9ae20a2be11a0f06461',1,'line.c']]],
+  ['logger_5fclear_340',['LOGGER_Clear',['../logger_8h.html#a5c31839f1b962339daaeb999d5caba50',1,'LOGGER_Clear():&#160;logger.c'],['../logger_8c.html#a5c31839f1b962339daaeb999d5caba50',1,'LOGGER_Clear():&#160;logger.c']]],
+  ['logger_5fprint_341',['LOGGER_Print',['../logger_8c.html#a7e1f6cceddb55ae4a35e23537e089d70',1,'LOGGER_Print():&#160;logger.c'],['../logger_8h.html#a7e1f6cceddb55ae4a35e23537e089d70',1,'LOGGER_Print():&#160;logger.c']]],
+  ['logger_5fprinttarget_342',['LOGGER_PrintTarget',['../logger_8c.html#a406833414579e96617bcf751be0f34bd',1,'logger.c']]],
+  ['logger_5fsetmode_343',['LOGGER_SetMode',['../logger_8h.html#a61e3dd9a86f60d48fa173874783c21e7',1,'LOGGER_SetMode(LOGGER_MODE mode):&#160;logger.c'],['../logger_8c.html#a61e3dd9a86f60d48fa173874783c21e7',1,'LOGGER_SetMode(LOGGER_MODE mode):&#160;logger.c']]],
+  ['logger_5fstart_344',['LOGGER_Start',['../logger_8h.html#ac4ca8d13d67a1ea91843038349036a37',1,'LOGGER_Start(uint16_t freq):&#160;logger.c'],['../logger_8c.html#ac4ca8d13d67a1ea91843038349036a37',1,'LOGGER_Start(uint16_t freq):&#160;logger.c']]],
+  ['logger_5fstop_345',['LOGGER_Stop',['../logger_8h.html#a0d4f8f61d58f134b09406cd04afcc4db',1,'LOGGER_Stop():&#160;logger.c'],['../logger_8c.html#a0d4f8f61d58f134b09406cd04afcc4db',1,'LOGGER_Stop():&#160;logger.c']]],
+  ['logger_5fupdate_346',['LOGGER_Update',['../logger_8h.html#a618b83ee39826975a831eec2e21355b0',1,'LOGGER_Update():&#160;logger.c'],['../logger_8c.html#a618b83ee39826975a831eec2e21355b0',1,'LOGGER_Update():&#160;logger.c']]],
+  ['logger_5fupdatetarget_347',['LOGGER_UpdateTarget',['../logger_8c.html#ab8bf05edb97b9869366578c6e6b09052',1,'logger.c']]]
 ];

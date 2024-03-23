@@ -1,10 +1,11 @@
 <map id="PID_Reset" name="PID_Reset">
-<area shape="rect" id="node1" title="Reset PID" alt="" coords="559,81,647,108"/>
-<area shape="rect" id="node2" href="$servo_8h.html#a8ee665f3ffbf3ff14a76584908892e2c" title="Reset servos" alt="" coords="400,81,511,108"/>
-<area shape="rect" id="node3" href="$run_8h.html#ab51f5d38046671744984ff764c8949b9" title="Straight" alt="" coords="243,5,352,32"/>
-<area shape="rect" id="node6" href="$run_8h.html#aa99cd7e043851ce08f3fbd58ba75a945" title="Turn" alt="" coords="255,56,340,83"/>
-<area shape="rect" id="node7" href="$servo_8h.html#a5ec56bf803908db98468c2325ade3a71" title="Start servos" alt="" coords="245,107,349,133"/>
-<area shape="rect" id="node8" href="$servo_8h.html#ad06676986fb4c97c7d94680f7bb059a2" title="Stop servos" alt="" coords="246,157,349,184"/>
-<area shape="rect" id="node4" href="$app__main_8h.html#a630544a7f0a2cc40d8a7fefab7e2fe70" title=" " alt="" coords="108,107,195,133"/>
-<area shape="rect" id="node5" href="$main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,107,60,133"/>
+<area shape="rect" id="node1" title="Reset PID" alt="" coords="688,81,776,108"/>
+<area shape="rect" id="node2" href="$servo_8h.html#a8ee665f3ffbf3ff14a76584908892e2c" title="Reset servos" alt="" coords="529,81,640,108"/>
+<area shape="rect" id="node3" href="$run_8h.html#ab51f5d38046671744984ff764c8949b9" title="Straight" alt="" coords="372,5,481,32"/>
+<area shape="rect" id="node7" href="$run_8h.html#aa99cd7e043851ce08f3fbd58ba75a945" title="Turn" alt="" coords="384,56,469,83"/>
+<area shape="rect" id="node8" href="$servo_8h.html#a5ec56bf803908db98468c2325ade3a71" title="Start servos" alt="" coords="375,107,479,133"/>
+<area shape="rect" id="node9" href="$servo_8h.html#ad06676986fb4c97c7d94680f7bb059a2" title="Stop servos" alt="" coords="375,157,478,184"/>
+<area shape="rect" id="node4" href="$app__main_8c.html#ac8ec403b244267ecd7c29fd6620076e3" title=" " alt="" coords="243,107,324,133"/>
+<area shape="rect" id="node5" href="$app__main_8h.html#a630544a7f0a2cc40d8a7fefab7e2fe70" title=" " alt="" coords="108,107,195,133"/>
+<area shape="rect" id="node6" href="$main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,107,60,133"/>
 </map>

@@ -108,9 +108,9 @@ odometry.c の依存先関係図:</div>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 関数</h2></td></tr>
-<tr class="memitem:ab1fe8d01fb7c54e7233dc14ba19bf542"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="odometry_8c.html#ab1fe8d01fb7c54e7233dc14ba19bf542">ODOMETRY_Calculate</a> ()</td></tr>
-<tr class="memdesc:ab1fe8d01fb7c54e7233dc14ba19bf542"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate odometry  <a href="odometry_8c.html#ab1fe8d01fb7c54e7233dc14ba19bf542">[詳解]</a><br /></td></tr>
-<tr class="separator:ab1fe8d01fb7c54e7233dc14ba19bf542"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee99ad571b2d4e69be0793fd30c5e0da"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="odometry_8c.html#aee99ad571b2d4e69be0793fd30c5e0da">ODOMETRY_CalculateInterval</a> ()</td></tr>
+<tr class="memdesc:aee99ad571b2d4e69be0793fd30c5e0da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate odometry  <a href="odometry_8c.html#aee99ad571b2d4e69be0793fd30c5e0da">[詳解]</a><br /></td></tr>
+<tr class="separator:aee99ad571b2d4e69be0793fd30c5e0da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a439ddae1dc13251f0ff183d7f967bb1f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="odometry_8c.html#a439ddae1dc13251f0ff183d7f967bb1f">ODOMETRY_Reset</a> ()</td></tr>
 <tr class="memdesc:a439ddae1dc13251f0ff183d7f967bb1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset sums  <a href="odometry_8c.html#a439ddae1dc13251f0ff183d7f967bb1f">[詳解]</a><br /></td></tr>
 <tr class="separator:a439ddae1dc13251f0ff183d7f967bb1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -218,14 +218,14 @@ odometry.c の依存先関係図:</div>
 </div>
 </div>
 <h2 class="groupheader">関数詳解</h2>
-<a id="ab1fe8d01fb7c54e7233dc14ba19bf542"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab1fe8d01fb7c54e7233dc14ba19bf542">&#9670;&nbsp;</a></span>ODOMETRY_Calculate()</h2>
+<a id="aee99ad571b2d4e69be0793fd30c5e0da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee99ad571b2d4e69be0793fd30c5e0da">&#9670;&nbsp;</a></span>ODOMETRY_CalculateInterval()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void ODOMETRY_Calculate </td>
+          <td class="memname">void ODOMETRY_CalculateInterval </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -241,21 +241,21 @@ odometry.c の依存先関係図:</div>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><img src="odometry_8c_ab1fe8d01fb7c54e7233dc14ba19bf542_cgraph.png" border="0" usemap="#aodometry_8c_ab1fe8d01fb7c54e7233dc14ba19bf542_cgraph" alt=""/></div>
-<map name="aodometry_8c_ab1fe8d01fb7c54e7233dc14ba19bf542_cgraph" id="aodometry_8c_ab1fe8d01fb7c54e7233dc14ba19bf542_cgraph">
-<area shape="rect" title="Calculate odometry" alt="" coords="5,81,169,108"/>
-<area shape="rect" href="sensor_8h.html#adfbc35238a4e4b710a62233159d0cfc3" title="Get a value of left encoder." alt="" coords="222,5,401,32"/>
-<area shape="rect" href="sensor_8h.html#a769222be0578c7a3fc8cedd68569def2" title="Get a value of right encoder." alt="" coords="217,56,405,83"/>
-<area shape="rect" href="sensor_8h.html#a7c44fd8863432b70379474c9cc274ea8" title="Reset encoder values." alt="" coords="227,107,395,133"/>
-<area shape="rect" href="sensor_8h.html#ad06e33bf7eaa70d78c6ab24ccb6a9ce3" title="Get current angular rate." alt="" coords="254,157,369,184"/>
+<div class="center"><img src="odometry_8c_aee99ad571b2d4e69be0793fd30c5e0da_cgraph.png" border="0" usemap="#aodometry_8c_aee99ad571b2d4e69be0793fd30c5e0da_cgraph" alt=""/></div>
+<map name="aodometry_8c_aee99ad571b2d4e69be0793fd30c5e0da_cgraph" id="aodometry_8c_aee99ad571b2d4e69be0793fd30c5e0da_cgraph">
+<area shape="rect" title="Calculate odometry" alt="" coords="5,81,220,108"/>
+<area shape="rect" href="sensor_8h.html#adfbc35238a4e4b710a62233159d0cfc3" title="Get a value of left encoder." alt="" coords="273,5,451,32"/>
+<area shape="rect" href="sensor_8h.html#a769222be0578c7a3fc8cedd68569def2" title="Get a value of right encoder." alt="" coords="268,56,456,83"/>
+<area shape="rect" href="sensor_8h.html#a7c44fd8863432b70379474c9cc274ea8" title="Reset encoder values." alt="" coords="278,107,446,133"/>
+<area shape="rect" href="sensor_8h.html#ad06e33bf7eaa70d78c6ab24ccb6a9ce3" title="Get current angular rate." alt="" coords="305,157,419,184"/>
 </map>
 </div>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><img src="odometry_8c_ab1fe8d01fb7c54e7233dc14ba19bf542_icgraph.png" border="0" usemap="#aodometry_8c_ab1fe8d01fb7c54e7233dc14ba19bf542_icgraph" alt=""/></div>
-<map name="aodometry_8c_ab1fe8d01fb7c54e7233dc14ba19bf542_icgraph" id="aodometry_8c_ab1fe8d01fb7c54e7233dc14ba19bf542_icgraph">
-<area shape="rect" title="Calculate odometry" alt="" coords="288,5,452,32"/>
+<div class="center"><img src="odometry_8c_aee99ad571b2d4e69be0793fd30c5e0da_icgraph.png" border="0" usemap="#aodometry_8c_aee99ad571b2d4e69be0793fd30c5e0da_icgraph" alt=""/></div>
+<map name="aodometry_8c_aee99ad571b2d4e69be0793fd30c5e0da_icgraph" id="aodometry_8c_aee99ad571b2d4e69be0793fd30c5e0da_icgraph">
+<area shape="rect" title="Calculate odometry" alt="" coords="288,5,503,32"/>
 <area shape="rect" href="interval_8c.html#a8a3b0ad512a6e6c6157440b68d395eac" title="timer interrupt TIM6: 2kHz" alt="" coords="5,5,240,32"/>
 </map>
 </div>
@@ -281,21 +281,22 @@ odometry.c の依存先関係図:</div>
 
 <p class="definition"> <a class="el" href="odometry_8c_source.html">odometry.c</a> の <a class="el" href="odometry_8c_source.html#l00073">73</a> 行目に定義があります。</p>
 
-<p class="reference">参照元 <a class="el" href="logger_8c_source.html#l00028">LOGGER_UpdateTarget()</a>, <a class="el" href="run_8c_source.html#l00013">RUN_Straight()</a>, <a class="el" href="run_8c_source.html#l00047">RUN_Turn()</a>, <a class="el" href="servo_8c_source.html#l00120">SERVO_Update()</a>.</p>
+<p class="reference">参照元 <a class="el" href="logger_8c_source.html#l00028">LOGGER_UpdateTarget()</a>, <a class="el" href="run_8c_source.html#l00013">RUN_Straight()</a>, <a class="el" href="run_8c_source.html#l00047">RUN_Turn()</a>, <a class="el" href="servo_8c_source.html#l00120">SERVO_UpdateInterval()</a>.</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="odometry_8c_a458ba16e05623612c350b22cea48ffc3_icgraph.png" border="0" usemap="#aodometry_8c_a458ba16e05623612c350b22cea48ffc3_icgraph" alt=""/></div>
 <map name="aodometry_8c_a458ba16e05623612c350b22cea48ffc3_icgraph" id="aodometry_8c_a458ba16e05623612c350b22cea48ffc3_icgraph">
-<area shape="rect" title="Get current" alt="" coords="685,81,860,108"/>
-<area shape="rect" href="logger_8c.html#ab8bf05edb97b9869366578c6e6b09052" title="Collect log (target mode)" alt="" coords="467,56,637,83"/>
-<area shape="rect" href="run_8h.html#ab51f5d38046671744984ff764c8949b9" title="Straight" alt="" coords="497,157,607,184"/>
-<area shape="rect" href="run_8h.html#aa99cd7e043851ce08f3fbd58ba75a945" title="Turn" alt="" coords="509,107,595,133"/>
-<area shape="rect" href="servo_8h.html#a96ad3be346e6bf55a2d1673ce8675367" title="Update servos" alt="" coords="293,5,413,32"/>
-<area shape="rect" href="logger_8h.html#a618b83ee39826975a831eec2e21355b0" title="Collect log" alt="" coords="288,56,419,83"/>
-<area shape="rect" href="interval_8c.html#a8a3b0ad512a6e6c6157440b68d395eac" title="timer interrupt TIM6: 2kHz" alt="" coords="5,31,240,57"/>
-<area shape="rect" href="app__main_8h.html#a630544a7f0a2cc40d8a7fefab7e2fe70" title=" " alt="" coords="310,157,397,184"/>
-<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="95,157,150,184"/>
+<area shape="rect" title="Get current" alt="" coords="828,81,1003,108"/>
+<area shape="rect" href="logger_8c.html#ab8bf05edb97b9869366578c6e6b09052" title="Collect log (target mode)" alt="" coords="609,56,780,83"/>
+<area shape="rect" href="run_8h.html#ab51f5d38046671744984ff764c8949b9" title="Straight" alt="" coords="640,157,749,184"/>
+<area shape="rect" href="run_8h.html#aa99cd7e043851ce08f3fbd58ba75a945" title="Turn" alt="" coords="652,107,737,133"/>
+<area shape="rect" href="servo_8h.html#a99842b136c70431b4466b31d04acd54e" title="Update servos" alt="" coords="391,5,561,32"/>
+<area shape="rect" href="logger_8h.html#a618b83ee39826975a831eec2e21355b0" title="Collect log" alt="" coords="411,56,541,83"/>
+<area shape="rect" href="interval_8c.html#a8a3b0ad512a6e6c6157440b68d395eac" title="timer interrupt TIM6: 2kHz" alt="" coords="108,31,343,57"/>
+<area shape="rect" href="app__main_8c.html#ac8ec403b244267ecd7c29fd6620076e3" title=" " alt="" coords="435,157,517,184"/>
+<area shape="rect" href="app__main_8h.html#a630544a7f0a2cc40d8a7fefab7e2fe70" title=" " alt="" coords="182,157,269,184"/>
+<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,157,60,184"/>
 </map>
 </div>
 
@@ -326,9 +327,10 @@ odometry.c の依存先関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="odometry_8c_a439ddae1dc13251f0ff183d7f967bb1f_icgraph.png" border="0" usemap="#aodometry_8c_a439ddae1dc13251f0ff183d7f967bb1f_icgraph" alt=""/></div>
 <map name="aodometry_8c_a439ddae1dc13251f0ff183d7f967bb1f_icgraph" id="aodometry_8c_a439ddae1dc13251f0ff183d7f967bb1f_icgraph">
-<area shape="rect" title="Reset sums" alt="" coords="400,31,540,57"/>
-<area shape="rect" href="run_8h.html#ab51f5d38046671744984ff764c8949b9" title="Straight" alt="" coords="243,5,352,32"/>
-<area shape="rect" href="run_8h.html#aa99cd7e043851ce08f3fbd58ba75a945" title="Turn" alt="" coords="255,56,340,83"/>
+<area shape="rect" title="Reset sums" alt="" coords="529,31,669,57"/>
+<area shape="rect" href="run_8h.html#ab51f5d38046671744984ff764c8949b9" title="Straight" alt="" coords="372,5,481,32"/>
+<area shape="rect" href="run_8h.html#aa99cd7e043851ce08f3fbd58ba75a945" title="Turn" alt="" coords="384,56,469,83"/>
+<area shape="rect" href="app__main_8c.html#ac8ec403b244267ecd7c29fd6620076e3" title=" " alt="" coords="243,5,324,32"/>
 <area shape="rect" href="app__main_8h.html#a630544a7f0a2cc40d8a7fefab7e2fe70" title=" " alt="" coords="108,5,195,32"/>
 <area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,5,60,32"/>
 </map>
@@ -361,7 +363,7 @@ odometry.c の依存先関係図:</div>
 
 <p class="definition"> <a class="el" href="odometry_8c_source.html">odometry.c</a> の <a class="el" href="odometry_8c_source.html#l00016">16</a> 行目に定義があります。</p>
 
-<p class="reference">参照元 <a class="el" href="odometry_8c_source.html#l00028">ODOMETRY_Calculate()</a>, <a class="el" href="odometry_8c_source.html#l00073">ODOMETRY_GetCurrent()</a>, <a class="el" href="odometry_8c_source.html#l00065">ODOMETRY_Reset()</a>.</p>
+<p class="reference">参照元 <a class="el" href="odometry_8c_source.html#l00028">ODOMETRY_CalculateInterval()</a>, <a class="el" href="odometry_8c_source.html#l00073">ODOMETRY_GetCurrent()</a>, <a class="el" href="odometry_8c_source.html#l00065">ODOMETRY_Reset()</a>.</p>
 
 </div>
 </div>
@@ -389,7 +391,7 @@ odometry.c の依存先関係図:</div>
 
 <p class="definition"> <a class="el" href="odometry_8c_source.html">odometry.c</a> の <a class="el" href="odometry_8c_source.html#l00020">20</a> 行目に定義があります。</p>
 
-<p class="reference">参照元 <a class="el" href="odometry_8c_source.html#l00028">ODOMETRY_Calculate()</a>.</p>
+<p class="reference">参照元 <a class="el" href="odometry_8c_source.html#l00028">ODOMETRY_CalculateInterval()</a>.</p>
 
 </div>
 </div>
@@ -417,7 +419,7 @@ odometry.c の依存先関係図:</div>
 
 <p class="definition"> <a class="el" href="odometry_8c_source.html">odometry.c</a> の <a class="el" href="odometry_8c_source.html#l00018">18</a> 行目に定義があります。</p>
 
-<p class="reference">参照元 <a class="el" href="odometry_8c_source.html#l00028">ODOMETRY_Calculate()</a>.</p>
+<p class="reference">参照元 <a class="el" href="odometry_8c_source.html#l00028">ODOMETRY_CalculateInterval()</a>.</p>
 
 </div>
 </div>
@@ -445,7 +447,7 @@ odometry.c の依存先関係図:</div>
 
 <p class="definition"> <a class="el" href="odometry_8c_source.html">odometry.c</a> の <a class="el" href="odometry_8c_source.html#l00022">22</a> 行目に定義があります。</p>
 
-<p class="reference">参照元 <a class="el" href="odometry_8c_source.html#l00028">ODOMETRY_Calculate()</a>.</p>
+<p class="reference">参照元 <a class="el" href="odometry_8c_source.html#l00028">ODOMETRY_CalculateInterval()</a>.</p>
 
 </div>
 </div>
@@ -473,7 +475,7 @@ odometry.c の依存先関係図:</div>
 
 <p class="definition"> <a class="el" href="odometry_8c_source.html">odometry.c</a> の <a class="el" href="odometry_8c_source.html#l00024">24</a> 行目に定義があります。</p>
 
-<p class="reference">参照元 <a class="el" href="odometry_8c_source.html#l00028">ODOMETRY_Calculate()</a>.</p>
+<p class="reference">参照元 <a class="el" href="odometry_8c_source.html#l00028">ODOMETRY_CalculateInterval()</a>.</p>
 
 </div>
 </div>

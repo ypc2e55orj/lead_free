@@ -1,8 +1,0 @@
-<map id="SERVO_Update" name="SERVO_Update">
-<area shape="rect" id="node1" title="Update servos (1kHz)" alt="" coords="5,107,125,133"/>
-<area shape="rect" id="node2" href="$sensor_8h.html#a73f23a67587cdbd0cecdf95b6ff4a821" title="Get battery voltage" alt="" coords="173,5,351,32"/>
-<area shape="rect" id="node3" href="$servo_8c.html#abebb1788d71aa20a2852028a9bb0c20e" title="Set a duty of left motor" alt="" coords="185,56,339,83"/>
-<area shape="rect" id="node4" href="$servo_8c.html#a9ea19dfec9713c6f94e9550cc5c40e19" title="Set a duty of right motor." alt="" coords="180,107,344,133"/>
-<area shape="rect" id="node5" href="$odometry_8h.html#a458ba16e05623612c350b22cea48ffc3" title="Get current" alt="" coords="175,157,349,184"/>
-<area shape="rect" id="node6" href="$pid_8h.html#a345bda1164d16e4e309c4d28376fccab" title="Update PID" alt="" coords="213,208,311,235"/>
-</map>

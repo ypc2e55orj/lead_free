@@ -354,14 +354,14 @@ sensor.c の依存先関係図:</div>
 
 <p class="definition"> <a class="el" href="sensor_8c_source.html">sensor.c</a> の <a class="el" href="sensor_8c_source.html#l00056">56</a> 行目に定義があります。</p>
 
-<p class="reference">参照元 <a class="el" href="servo_8c_source.html#l00120">SERVO_Update()</a>.</p>
+<p class="reference">参照元 <a class="el" href="servo_8c_source.html#l00120">SERVO_UpdateInterval()</a>.</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="sensor_8c_a73f23a67587cdbd0cecdf95b6ff4a821_icgraph.png" border="0" usemap="#asensor_8c_a73f23a67587cdbd0cecdf95b6ff4a821_icgraph" alt=""/></div>
 <map name="asensor_8c_a73f23a67587cdbd0cecdf95b6ff4a821_icgraph" id="asensor_8c_a73f23a67587cdbd0cecdf95b6ff4a821_icgraph">
-<area shape="rect" title="Get battery voltage" alt="" coords="456,5,633,32"/>
-<area shape="rect" href="servo_8h.html#a96ad3be346e6bf55a2d1673ce8675367" title="Update servos" alt="" coords="288,5,408,32"/>
+<area shape="rect" title="Get battery voltage" alt="" coords="507,5,684,32"/>
+<area shape="rect" href="servo_8h.html#a99842b136c70431b4466b31d04acd54e" title="Update servos" alt="" coords="288,5,459,32"/>
 <area shape="rect" href="interval_8c.html#a8a3b0ad512a6e6c6157440b68d395eac" title="timer interrupt TIM6: 2kHz" alt="" coords="5,5,240,32"/>
 </map>
 </div>
@@ -389,16 +389,18 @@ sensor.c の依存先関係図:</div>
 
 <p class="definition"> <a class="el" href="sensor_8c_source.html">sensor.c</a> の <a class="el" href="sensor_8c_source.html#l00064">64</a> 行目に定義があります。</p>
 
-<p class="reference">参照元 <a class="el" href="line_8c_source.html#l00123">LINE_Print()</a>, <a class="el" href="line_8c_source.html#l00020">LINE_UpdateMarkerState()</a>.</p>
+<p class="reference">参照元 <a class="el" href="line_8c_source.html#l00257">LINE_Print()</a>, <a class="el" href="line_8c_source.html#l00024">LINE_UpdateCalibration()</a>, <a class="el" href="line_8c_source.html#l00042">LINE_UpdateMarkerState()</a>.</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="sensor_8c_ad857373214395cc052b09499ac88b2dc_icgraph.png" border="0" usemap="#asensor_8c_ad857373214395cc052b09499ac88b2dc_icgraph" alt=""/></div>
 <map name="asensor_8c_ad857373214395cc052b09499ac88b2dc_icgraph" id="asensor_8c_ad857373214395cc052b09499ac88b2dc_icgraph">
-<area shape="rect" title="Get line sensor value" alt="" coords="520,31,707,57"/>
-<area shape="rect" href="line_8h.html#a9292a22c8a6f2fd537fcbf424b6fc089" title="Print line sensor" alt="" coords="336,5,424,32"/>
-<area shape="rect" href="line_8h.html#a9e4aa850bd358088bd2b337680422352" title="Update marker state" alt="" coords="288,56,472,83"/>
-<area shape="rect" href="interval_8c.html#a8a3b0ad512a6e6c6157440b68d395eac" title="timer interrupt TIM6: 2kHz" alt="" coords="5,56,240,83"/>
+<area shape="rect" title="Get line sensor value" alt="" coords="723,56,909,83"/>
+<area shape="rect" href="line_8h.html#a9292a22c8a6f2fd537fcbf424b6fc089" title="Print line sensor" alt="" coords="539,5,627,32"/>
+<area shape="rect" href="line_8c.html#a3770c9e291907067dac5b85ec7c2a80f" title="Update calibration data" alt="" coords="495,56,671,83"/>
+<area shape="rect" href="line_8c.html#a35826ab7a6f7e9ae20a2be11a0f06461" title="Update marker sensor state" alt="" coords="491,107,675,133"/>
+<area shape="rect" href="line_8h.html#aa662923661686d64790042b7cc783607" title="Update line sensor and marker sensor state" alt="" coords="288,81,443,108"/>
+<area shape="rect" href="interval_8c.html#a8a3b0ad512a6e6c6157440b68d395eac" title="timer interrupt TIM6: 2kHz" alt="" coords="5,81,240,108"/>
 </map>
 </div>
 
@@ -465,14 +467,14 @@ sensor.c の依存先関係図:</div>
 
 <p class="definition"> <a class="el" href="sensor_8c_source.html">sensor.c</a> の <a class="el" href="sensor_8c_source.html#l00181">181</a> 行目に定義があります。</p>
 
-<p class="reference">参照元 <a class="el" href="odometry_8c_source.html#l00028">ODOMETRY_Calculate()</a>.</p>
+<p class="reference">参照元 <a class="el" href="odometry_8c_source.html#l00028">ODOMETRY_CalculateInterval()</a>.</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="sensor_8c_adfbc35238a4e4b710a62233159d0cfc3_icgraph.png" border="0" usemap="#asensor_8c_adfbc35238a4e4b710a62233159d0cfc3_icgraph" alt=""/></div>
 <map name="asensor_8c_adfbc35238a4e4b710a62233159d0cfc3_icgraph" id="asensor_8c_adfbc35238a4e4b710a62233159d0cfc3_icgraph">
-<area shape="rect" title="Get a value of left encoder." alt="" coords="500,5,679,32"/>
-<area shape="rect" href="odometry_8h.html#ab1fe8d01fb7c54e7233dc14ba19bf542" title="Calculate odometry" alt="" coords="288,5,452,32"/>
+<area shape="rect" title="Get a value of left encoder." alt="" coords="551,5,729,32"/>
+<area shape="rect" href="odometry_8h.html#aee99ad571b2d4e69be0793fd30c5e0da" title="Calculate odometry" alt="" coords="288,5,503,32"/>
 <area shape="rect" href="interval_8c.html#a8a3b0ad512a6e6c6157440b68d395eac" title="timer interrupt TIM6: 2kHz" alt="" coords="5,5,240,32"/>
 </map>
 </div>
@@ -498,14 +500,14 @@ sensor.c の依存先関係図:</div>
 
 <p class="definition"> <a class="el" href="sensor_8c_source.html">sensor.c</a> の <a class="el" href="sensor_8c_source.html#l00169">169</a> 行目に定義があります。</p>
 
-<p class="reference">参照元 <a class="el" href="odometry_8c_source.html#l00028">ODOMETRY_Calculate()</a>.</p>
+<p class="reference">参照元 <a class="el" href="odometry_8c_source.html#l00028">ODOMETRY_CalculateInterval()</a>.</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="sensor_8c_a769222be0578c7a3fc8cedd68569def2_icgraph.png" border="0" usemap="#asensor_8c_a769222be0578c7a3fc8cedd68569def2_icgraph" alt=""/></div>
 <map name="asensor_8c_a769222be0578c7a3fc8cedd68569def2_icgraph" id="asensor_8c_a769222be0578c7a3fc8cedd68569def2_icgraph">
-<area shape="rect" title="Get a value of right encoder." alt="" coords="500,5,688,32"/>
-<area shape="rect" href="odometry_8h.html#ab1fe8d01fb7c54e7233dc14ba19bf542" title="Calculate odometry" alt="" coords="288,5,452,32"/>
+<area shape="rect" title="Get a value of right encoder." alt="" coords="551,5,739,32"/>
+<area shape="rect" href="odometry_8h.html#aee99ad571b2d4e69be0793fd30c5e0da" title="Calculate odometry" alt="" coords="288,5,503,32"/>
 <area shape="rect" href="interval_8c.html#a8a3b0ad512a6e6c6157440b68d395eac" title="timer interrupt TIM6: 2kHz" alt="" coords="5,5,240,32"/>
 </map>
 </div>
@@ -573,14 +575,14 @@ sensor.c の依存先関係図:</div>
 
 <p class="definition"> <a class="el" href="sensor_8c_source.html">sensor.c</a> の <a class="el" href="sensor_8c_source.html#l00192">192</a> 行目に定義があります。</p>
 
-<p class="reference">参照元 <a class="el" href="odometry_8c_source.html#l00028">ODOMETRY_Calculate()</a>.</p>
+<p class="reference">参照元 <a class="el" href="odometry_8c_source.html#l00028">ODOMETRY_CalculateInterval()</a>.</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="sensor_8c_a7c44fd8863432b70379474c9cc274ea8_icgraph.png" border="0" usemap="#asensor_8c_a7c44fd8863432b70379474c9cc274ea8_icgraph" alt=""/></div>
 <map name="asensor_8c_a7c44fd8863432b70379474c9cc274ea8_icgraph" id="asensor_8c_a7c44fd8863432b70379474c9cc274ea8_icgraph">
-<area shape="rect" title="Reset encoder values." alt="" coords="500,5,668,32"/>
-<area shape="rect" href="odometry_8h.html#ab1fe8d01fb7c54e7233dc14ba19bf542" title="Calculate odometry" alt="" coords="288,5,452,32"/>
+<area shape="rect" title="Reset encoder values." alt="" coords="551,5,719,32"/>
+<area shape="rect" href="odometry_8h.html#aee99ad571b2d4e69be0793fd30c5e0da" title="Calculate odometry" alt="" coords="288,5,503,32"/>
 <area shape="rect" href="interval_8c.html#a8a3b0ad512a6e6c6157440b68d395eac" title="timer interrupt TIM6: 2kHz" alt="" coords="5,5,240,32"/>
 </map>
 </div>
@@ -606,14 +608,14 @@ sensor.c の依存先関係図:</div>
 
 <p class="definition"> <a class="el" href="sensor_8c_source.html">sensor.c</a> の <a class="el" href="sensor_8c_source.html#l00110">110</a> 行目に定義があります。</p>
 
-<p class="reference">参照元 <a class="el" href="odometry_8c_source.html#l00028">ODOMETRY_Calculate()</a>.</p>
+<p class="reference">参照元 <a class="el" href="odometry_8c_source.html#l00028">ODOMETRY_CalculateInterval()</a>.</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="sensor_8c_ad06e33bf7eaa70d78c6ab24ccb6a9ce3_icgraph.png" border="0" usemap="#asensor_8c_ad06e33bf7eaa70d78c6ab24ccb6a9ce3_icgraph" alt=""/></div>
 <map name="asensor_8c_ad06e33bf7eaa70d78c6ab24ccb6a9ce3_icgraph" id="asensor_8c_ad06e33bf7eaa70d78c6ab24ccb6a9ce3_icgraph">
-<area shape="rect" title="Get current angular rate." alt="" coords="500,5,615,32"/>
-<area shape="rect" href="odometry_8h.html#ab1fe8d01fb7c54e7233dc14ba19bf542" title="Calculate odometry" alt="" coords="288,5,452,32"/>
+<area shape="rect" title="Get current angular rate." alt="" coords="551,5,665,32"/>
+<area shape="rect" href="odometry_8h.html#aee99ad571b2d4e69be0793fd30c5e0da" title="Calculate odometry" alt="" coords="288,5,503,32"/>
 <area shape="rect" href="interval_8c.html#a8a3b0ad512a6e6c6157440b68d395eac" title="timer interrupt TIM6: 2kHz" alt="" coords="5,5,240,32"/>
 </map>
 </div>
@@ -757,7 +759,7 @@ sensor.c の依存先関係図:</div>
 
 <p class="definition"> <a class="el" href="sensor_8c_source.html">sensor.c</a> の <a class="el" href="sensor_8c_source.html#l00204">204</a> 行目に定義があります。</p>
 
-<p class="reference">参照元 <a class="el" href="app__main_8c_source.html#l00022">app_main()</a>.</p>
+<p class="reference">参照元 <a class="el" href="app__main_8c_source.html#l00064">app_main()</a>.</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">

@@ -1,0 +1,29 @@
+<map id="Calibrate" name="Calibrate">
+<area shape="rect" id="node1" title=" " alt="" coords="5,309,87,336"/>
+<area shape="rect" id="node2" href="$button_8h.html#a31be2fcf32ca6c71005fc5f648edab78" title="Get button 1" alt="" coords="167,5,302,32"/>
+<area shape="rect" id="node3" href="$app__main_8c.html#a9efdce133fda030ebb0c7793ffc03d14" title=" " alt="" coords="205,56,265,83"/>
+<area shape="rect" id="node4" href="$interval_8h.html#a7f990ff62bbc126fa60a2c3a24532a5f" title="Buzzer" alt="" coords="167,107,303,133"/>
+<area shape="rect" id="node5" href="$line_8h.html#a9b4a00b81ce1cb20833130786318e85e" title="Get calibration value" alt="" coords="165,157,305,184"/>
+<area shape="rect" id="node6" href="$line_8h.html#a8b86f6a9eab7b902eabfffdb81ce0ffb" title="Start sensor calibration (back)" alt="" coords="145,259,325,285"/>
+<area shape="rect" id="node9" href="$line_8h.html#ad38f2ac38d03c071b0a22bdb93583300" title="Start sensor calibration (forward)" alt="" coords="135,309,335,336"/>
+<area shape="rect" id="node10" href="$line_8h.html#ac2241ed9289106ee413b2a84faa7c1b0" title="Stop sensor calibration" alt="" coords="161,208,308,235"/>
+<area shape="rect" id="node11" href="$logger_8h.html#ac4ca8d13d67a1ea91843038349036a37" title="Start logger (Set log frequency)" alt="" coords="177,360,292,387"/>
+<area shape="rect" id="node12" href="$logger_8h.html#a0d4f8f61d58f134b09406cd04afcc4db" title="Stop logger" alt="" coords="179,411,291,437"/>
+<area shape="rect" id="node13" href="$parameter_8h.html#a516dc6cce80e3f863aefb4e65b880053" title="Get current parameter" alt="" coords="169,461,300,488"/>
+<area shape="rect" id="node14" href="$run_8h.html#ab51f5d38046671744984ff764c8949b9" title="Straight" alt="" coords="180,512,289,539"/>
+<area shape="rect" id="node23" href="$servo_8h.html#a5ec56bf803908db98468c2325ade3a71" title="Start servos" alt="" coords="183,668,287,695"/>
+<area shape="rect" id="node26" href="$servo_8h.html#ad06676986fb4c97c7d94680f7bb059a2" title="Stop servos" alt="" coords="183,719,286,745"/>
+<area shape="rect" id="node7" href="$line_8c.html#a2fac48ee55eb99dbd94bdafb5fdb158a" title="Calculate sensor average" alt="" coords="403,197,594,238"/>
+<area shape="rect" id="node8" href="$line_8c.html#ab3af472291852b280b100925f5b9aa7a" title="Clear temporary" alt="" coords="383,263,615,289"/>
+<area shape="rect" id="node15" href="$odometry_8h.html#a458ba16e05623612c350b22cea48ffc3" title="Get current" alt="" coords="411,364,586,391"/>
+<area shape="rect" id="node16" href="$odometry_8h.html#a439ddae1dc13251f0ff183d7f967bb1f" title="Reset sums" alt="" coords="429,415,569,441"/>
+<area shape="rect" id="node17" href="$servo_8h.html#a1af12b4477ce75c5b8c5216a376d1aca" title="Get target velocity" alt="" coords="405,465,593,492"/>
+<area shape="rect" id="node18" href="$servo_8h.html#a8ee665f3ffbf3ff14a76584908892e2c" title="Reset servos" alt="" coords="443,516,554,543"/>
+<area shape="rect" id="node20" href="$servo_8h.html#ab9e6ac3e8dfa09cb2403c3092122ba3d" title="Set acceleration" alt="" coords="411,567,586,593"/>
+<area shape="rect" id="node21" href="$servo_8h.html#a7403dd9b206ea8feddb4e37efe76f7c2" title="Set target velocity" alt="" coords="411,617,586,644"/>
+<area shape="rect" id="node22" href="$servo_8h.html#a9f3f93599e5621878d49edbaf3547bd3" title="Set target velocity" alt="" coords="405,313,592,340"/>
+<area shape="rect" id="node19" href="$pid_8h.html#ad6d10faa2923f3e15e1af2473337b271" title="Reset PID" alt="" coords="663,617,751,644"/>
+<area shape="rect" id="node24" href="$servo_8c.html#a80a6c99ac80842c17cb0b6c7b40af4bc" title="Start motors." alt="" coords="444,668,553,695"/>
+<area shape="rect" id="node25" href="$servo_8c.html#a8ee665f3ffbf3ff14a76584908892e2c" title="Reset servos" alt="" coords="443,719,554,745"/>
+<area shape="rect" id="node27" href="$servo_8c.html#ae0e9456ef1224869ca7cc4a8d72d99e8" title="Stop motors" alt="" coords="445,769,552,796"/>
+</map>
