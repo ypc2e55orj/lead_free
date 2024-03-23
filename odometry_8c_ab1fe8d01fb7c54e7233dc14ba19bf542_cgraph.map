@@ -1,0 +1,7 @@
+<map id="ODOMETRY_Calculate" name="ODOMETRY_Calculate">
+<area shape="rect" id="node1" title="Calculate odometry." alt="" coords="5,81,169,108"/>
+<area shape="rect" id="node2" href="$sensor_8h.html#adfbc35238a4e4b710a62233159d0cfc3" title="Get a value of left encoder." alt="" coords="222,5,401,32"/>
+<area shape="rect" id="node3" href="$sensor_8h.html#a769222be0578c7a3fc8cedd68569def2" title="Get a value of right encoder." alt="" coords="217,56,405,83"/>
+<area shape="rect" id="node4" href="$sensor_8h.html#a7c44fd8863432b70379474c9cc274ea8" title="Reset encoder values." alt="" coords="227,107,395,133"/>
+<area shape="rect" id="node5" href="$sensor_8h.html#ad06e33bf7eaa70d78c6ab24ccb6a9ce3" title="Get current angular rate." alt="" coords="254,157,369,184"/>
+</map>

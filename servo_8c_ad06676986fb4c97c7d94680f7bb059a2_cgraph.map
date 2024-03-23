@@ -1,0 +1,6 @@
+<map id="SERVO_Stop" name="SERVO_Stop">
+<area shape="rect" id="node1" title="Stop servos." alt="" coords="5,31,108,57"/>
+<area shape="rect" id="node2" href="$servo_8c.html#ae0e9456ef1224869ca7cc4a8d72d99e8" title="Stop motors." alt="" coords="158,5,265,32"/>
+<area shape="rect" id="node3" href="$servo_8c.html#a8ee665f3ffbf3ff14a76584908892e2c" title="Reset servos." alt="" coords="156,56,267,83"/>
+<area shape="rect" id="node4" href="$pid_8h.html#ad6d10faa2923f3e15e1af2473337b271" title="Reset PID." alt="" coords="315,56,403,83"/>
+</map>

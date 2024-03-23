@@ -1,0 +1,5 @@
+<map id="LINE_StopCalibrate" name="LINE_StopCalibrate">
+<area shape="rect" id="node1" title="Stop sensor calibration." alt="" coords="5,42,152,69"/>
+<area shape="rect" id="node2" href="$line_8c.html#a2fac48ee55eb99dbd94bdafb5fdb158a" title="Calculate sensor average." alt="" coords="221,5,411,47"/>
+<area shape="rect" id="node3" href="$line_8c.html#ab3af472291852b280b100925f5b9aa7a" title="Clear temporary." alt="" coords="200,71,432,98"/>
+</map>
