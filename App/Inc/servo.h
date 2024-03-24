@@ -4,7 +4,7 @@
 /**
  * @brief Start servos
  */
-void SERVO_Start(float *veloPidGain, float *angPidGain);
+void SERVO_Start(const float *veloPidGain, const float *angPidGain);
 /**
  * @brief Reset servos
  */

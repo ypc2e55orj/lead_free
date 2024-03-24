@@ -79,7 +79,7 @@ static float servoAngularAcceleration = 0;
 /**
  * @brief Start servos
  */
-void SERVO_Start(float *veloPidGain, float *angPidGain)
+void SERVO_Start(const float *veloPidGain, const float *angPidGain)
 {
   servoVelocityPid.kp = veloPidGain[0];
   servoVelocityPid.ki = veloPidGain[1];
