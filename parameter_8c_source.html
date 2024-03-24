@@ -76,47 +76,50 @@ $(function() {
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
 <div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="parameter_8h.html#a4d8761c74e185fe13378d9624be30600">   11</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="parameter_8c.html#a4d8761c74e185fe13378d9624be30600">PARAMETER_Init</a>()</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;{</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#define SET_PARAMETER(num)                                                             \</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">  do                                                                                   \</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">  {                                                                                    \</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">    parameters[num].minVelocity = PARAMETER_##num##_MIN_VELOCITY;                      \</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">    parameters[num].maxVelocity = PARAMETER_##num##_MAX_VELOCITY;                      \</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">    parameters[num].acceleration = PARAMETER_##num##_ACCELERATION;                     \</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">    parameters[num].velocityPid[0] = PARAMETER_##num##_VELOCITY_PID_KP;                \</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">    parameters[num].velocityPid[1] = PARAMETER_##num##_VELOCITY_PID_KI;                \</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">    parameters[num].velocityPid[2] = PARAMETER_##num##_VELOCITY_PID_KD;                \</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">    parameters[num].minAngularVelocity = PARAMETER_##num##_MIN_ANGULAR_VELOCITY;       \</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">    parameters[num].maxAngularVelocity = PARAMETER_##num##_MAX_ANGULAR_VELOCITY;       \</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">    parameters[num].angularAcceleration = PARAMETER_##num##_ANGULAR_ACCELERATION;      \</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">    parameters[num].angularVelocityPid[0] = PARAMETER_##num##_ANGULAR_VELOCITY_PID_KP; \</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">    parameters[num].angularVelocityPid[1] = PARAMETER_##num##_ANGULAR_VELOCITY_PID_KI; \</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">    parameters[num].angularVelocityPid[2] = PARAMETER_##num##_ANGULAR_VELOCITY_PID_KD; \</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">  } while (0)</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <a class="code" href="parameter_8c.html#a1fce4c8bb1b3773c3dd015eb9093b779">SET_PARAMETER</a>(0);</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <a class="code" href="parameter_8c.html#a1fce4c8bb1b3773c3dd015eb9093b779">SET_PARAMETER</a>(1);</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <a class="code" href="parameter_8c.html#a1fce4c8bb1b3773c3dd015eb9093b779">SET_PARAMETER</a>(2);</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#undef SET_PARAMETER</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;}</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#define SET_PARAMETER(num)                                                                      \</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">  do                                                                                            \</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">  {                                                                                             \</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">    parameters[num].minVelocity = PARAMETER_##num##_MIN_VELOCITY;                               \</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">    parameters[num].maxVelocity = PARAMETER_##num##_MAX_VELOCITY;                               \</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">    parameters[num].acceleration = PARAMETER_##num##_ACCELERATION;                              \</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">    parameters[num].velocityPid[0] = PARAMETER_##num##_VELOCITY_PID_KP;                         \</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">    parameters[num].velocityPid[1] = PARAMETER_##num##_VELOCITY_PID_KI;                         \</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">    parameters[num].velocityPid[2] = PARAMETER_##num##_VELOCITY_PID_KD;                         \</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">    parameters[num].minAngularVelocity = PARAMETER_##num##_MIN_ANGULAR_VELOCITY;                \</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">    parameters[num].maxAngularVelocity = PARAMETER_##num##_MAX_ANGULAR_VELOCITY;                \</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">    parameters[num].angularAcceleration = PARAMETER_##num##_ANGULAR_ACCELERATION;               \</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">    parameters[num].angularVelocityPid[0] = PARAMETER_##num##_ANGULAR_VELOCITY_PID_KP;          \</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">    parameters[num].angularVelocityPid[1] = PARAMETER_##num##_ANGULAR_VELOCITY_PID_KI;          \</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">    parameters[num].angularVelocityPid[2] = PARAMETER_##num##_ANGULAR_VELOCITY_PID_KD;          \</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">    parameters[num].lineAngularVelocityPid[0] = PARAMETER_##num##_LINE_ANGULAR_VELOCITY_PID_KP; \</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">    parameters[num].lineAngularVelocityPid[1] = PARAMETER_##num##_LINE_ANGULAR_VELOCITY_PID_KI; \</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">    parameters[num].lineAngularVelocityPid[2] = PARAMETER_##num##_LINE_ANGULAR_VELOCITY_PID_KD; \</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">  } while (0)</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <a class="code" href="parameter_8c.html#a1fce4c8bb1b3773c3dd015eb9093b779">SET_PARAMETER</a>(0);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <a class="code" href="parameter_8c.html#a1fce4c8bb1b3773c3dd015eb9093b779">SET_PARAMETER</a>(1);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <a class="code" href="parameter_8c.html#a1fce4c8bb1b3773c3dd015eb9093b779">SET_PARAMETER</a>(2);</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="parameter_8h.html#a3615e58f1cb023ebdb5fd9b000bbcdd7">   40</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="parameter_8c.html#a3615e58f1cb023ebdb5fd9b000bbcdd7">PARAMETER_SetIndex</a>(uint8_t index)</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;{</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <a class="code" href="parameter_8c.html#a7e94860fd9abae8fadd1b19e1ad9ce21">parameterIndex</a> = index;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;}</div>
-<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="parameter_8h.html#a516dc6cce80e3f863aefb4e65b880053">   47</a></span>&#160;<span class="keyword">const</span> <a class="code" href="structPARAMETER.html">PARAMETER</a> *<a class="code" href="parameter_8c.html#a516dc6cce80e3f863aefb4e65b880053">PARAMETER_Get</a>()</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;{</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  <span class="keywordflow">return</span> &amp;<a class="code" href="parameter_8c.html#a5d09b5a70eba965e62dd49ec02abb47e">parameters</a>[<a class="code" href="parameter_8c.html#a7e94860fd9abae8fadd1b19e1ad9ce21">parameterIndex</a>];</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;}</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#undef SET_PARAMETER</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;}</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="parameter_8h.html#a3615e58f1cb023ebdb5fd9b000bbcdd7">   43</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="parameter_8c.html#a3615e58f1cb023ebdb5fd9b000bbcdd7">PARAMETER_SetIndex</a>(uint8_t index)</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;{</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  <a class="code" href="parameter_8c.html#a7e94860fd9abae8fadd1b19e1ad9ce21">parameterIndex</a> = index;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;}</div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="parameter_8h.html#a516dc6cce80e3f863aefb4e65b880053">   50</a></span>&#160;<span class="keyword">const</span> <a class="code" href="structPARAMETER.html">PARAMETER</a> *<a class="code" href="parameter_8c.html#a516dc6cce80e3f863aefb4e65b880053">PARAMETER_Get</a>()</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;{</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <span class="keywordflow">return</span> &amp;<a class="code" href="parameter_8c.html#a5d09b5a70eba965e62dd49ec02abb47e">parameters</a>[<a class="code" href="parameter_8c.html#a7e94860fd9abae8fadd1b19e1ad9ce21">parameterIndex</a>];</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;}</div>
 <div class="ttc" id="aparameter_8c_html_a1fce4c8bb1b3773c3dd015eb9093b779"><div class="ttname"><a href="parameter_8c.html#a1fce4c8bb1b3773c3dd015eb9093b779">SET_PARAMETER</a></div><div class="ttdeci">#define SET_PARAMETER(num)</div></div>
-<div class="ttc" id="aparameter_8c_html_a3615e58f1cb023ebdb5fd9b000bbcdd7"><div class="ttname"><a href="parameter_8c.html#a3615e58f1cb023ebdb5fd9b000bbcdd7">PARAMETER_SetIndex</a></div><div class="ttdeci">void PARAMETER_SetIndex(uint8_t index)</div><div class="ttdoc">Set parameter index</div><div class="ttdef"><b>Definition:</b> <a href="parameter_8c_source.html#l00040">parameter.c:40</a></div></div>
+<div class="ttc" id="aparameter_8c_html_a3615e58f1cb023ebdb5fd9b000bbcdd7"><div class="ttname"><a href="parameter_8c.html#a3615e58f1cb023ebdb5fd9b000bbcdd7">PARAMETER_SetIndex</a></div><div class="ttdeci">void PARAMETER_SetIndex(uint8_t index)</div><div class="ttdoc">Set parameter index</div><div class="ttdef"><b>Definition:</b> <a href="parameter_8c_source.html#l00043">parameter.c:43</a></div></div>
 <div class="ttc" id="aparameter_8c_html_a4d8761c74e185fe13378d9624be30600"><div class="ttname"><a href="parameter_8c.html#a4d8761c74e185fe13378d9624be30600">PARAMETER_Init</a></div><div class="ttdeci">void PARAMETER_Init()</div><div class="ttdoc">Initialize parameters</div><div class="ttdef"><b>Definition:</b> <a href="parameter_8c_source.html#l00011">parameter.c:11</a></div></div>
-<div class="ttc" id="aparameter_8c_html_a516dc6cce80e3f863aefb4e65b880053"><div class="ttname"><a href="parameter_8c.html#a516dc6cce80e3f863aefb4e65b880053">PARAMETER_Get</a></div><div class="ttdeci">const PARAMETER * PARAMETER_Get()</div><div class="ttdoc">Get current parameter</div><div class="ttdef"><b>Definition:</b> <a href="parameter_8c_source.html#l00047">parameter.c:47</a></div></div>
+<div class="ttc" id="aparameter_8c_html_a516dc6cce80e3f863aefb4e65b880053"><div class="ttname"><a href="parameter_8c.html#a516dc6cce80e3f863aefb4e65b880053">PARAMETER_Get</a></div><div class="ttdeci">const PARAMETER * PARAMETER_Get()</div><div class="ttdoc">Get current parameter</div><div class="ttdef"><b>Definition:</b> <a href="parameter_8c_source.html#l00050">parameter.c:50</a></div></div>
 <div class="ttc" id="aparameter_8c_html_a5d09b5a70eba965e62dd49ec02abb47e"><div class="ttname"><a href="parameter_8c.html#a5d09b5a70eba965e62dd49ec02abb47e">parameters</a></div><div class="ttdeci">static PARAMETER parameters[NUM_PARAMETERS]</div><div class="ttdoc">parameters</div><div class="ttdef"><b>Definition:</b> <a href="parameter_8c_source.html#l00004">parameter.c:4</a></div></div>
 <div class="ttc" id="aparameter_8c_html_a7e94860fd9abae8fadd1b19e1ad9ce21"><div class="ttname"><a href="parameter_8c.html#a7e94860fd9abae8fadd1b19e1ad9ce21">parameterIndex</a></div><div class="ttdeci">static uint8_t parameterIndex</div><div class="ttdoc">parameter index</div><div class="ttdef"><b>Definition:</b> <a href="parameter_8c_source.html#l00006">parameter.c:6</a></div></div>
 <div class="ttc" id="aparameter_8h_html"><div class="ttname"><a href="parameter_8h.html">parameter.h</a></div></div>
 <div class="ttc" id="aparameter_8h_html_ae80c74b7cac856ec6868587f85c47427"><div class="ttname"><a href="parameter_8h.html#ae80c74b7cac856ec6868587f85c47427">NUM_PARAMETERS</a></div><div class="ttdeci">#define NUM_PARAMETERS</div><div class="ttdef"><b>Definition:</b> <a href="parameter_8h_source.html#l00010">parameter.h:10</a></div></div>
-<div class="ttc" id="astructPARAMETER_html"><div class="ttname"><a href="structPARAMETER.html">PARAMETER</a></div><div class="ttdef"><b>Definition:</b> <a href="parameter_8h_source.html#l00060">parameter.h:61</a></div></div>
+<div class="ttc" id="astructPARAMETER_html"><div class="ttname"><a href="structPARAMETER.html">PARAMETER</a></div><div class="ttdef"><b>Definition:</b> <a href="parameter_8h_source.html#l00063">parameter.h:64</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

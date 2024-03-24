@@ -11,7 +11,7 @@
 <area shape="rect" id="node12" href="$logger_8h.html#a0d4f8f61d58f134b09406cd04afcc4db" title="Stop logger" alt="" coords="179,411,291,437"/>
 <area shape="rect" id="node13" href="$parameter_8h.html#a516dc6cce80e3f863aefb4e65b880053" title="Get current parameter" alt="" coords="169,461,300,488"/>
 <area shape="rect" id="node14" href="$run_8h.html#ab51f5d38046671744984ff764c8949b9" title="Straight" alt="" coords="180,512,289,539"/>
-<area shape="rect" id="node23" href="$servo_8h.html#a5ec56bf803908db98468c2325ade3a71" title="Start servos" alt="" coords="183,668,287,695"/>
+<area shape="rect" id="node23" href="$servo_8h.html#a1c520f57937bad54175d31da5f6414b6" title="Start servos" alt="" coords="183,668,287,695"/>
 <area shape="rect" id="node26" href="$servo_8h.html#ad06676986fb4c97c7d94680f7bb059a2" title="Stop servos" alt="" coords="183,719,286,745"/>
 <area shape="rect" id="node7" href="$line_8c.html#a2fac48ee55eb99dbd94bdafb5fdb158a" title="Calculate sensor average" alt="" coords="403,197,594,238"/>
 <area shape="rect" id="node8" href="$line_8c.html#ab3af472291852b280b100925f5b9aa7a" title="Clear temporary" alt="" coords="383,263,615,289"/>

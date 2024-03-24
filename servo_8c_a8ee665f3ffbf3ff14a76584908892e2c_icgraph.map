@@ -2,7 +2,7 @@
 <area shape="rect" id="node1" title="Reset servos" alt="" coords="529,81,640,108"/>
 <area shape="rect" id="node2" href="$run_8h.html#ab51f5d38046671744984ff764c8949b9" title="Straight" alt="" coords="372,5,481,32"/>
 <area shape="rect" id="node6" href="$run_8h.html#aa99cd7e043851ce08f3fbd58ba75a945" title="Turn" alt="" coords="384,56,469,83"/>
-<area shape="rect" id="node7" href="$servo_8h.html#a5ec56bf803908db98468c2325ade3a71" title="Start servos" alt="" coords="375,107,479,133"/>
+<area shape="rect" id="node7" href="$servo_8h.html#a1c520f57937bad54175d31da5f6414b6" title="Start servos" alt="" coords="375,107,479,133"/>
 <area shape="rect" id="node8" href="$servo_8h.html#ad06676986fb4c97c7d94680f7bb059a2" title="Stop servos" alt="" coords="375,157,478,184"/>
 <area shape="rect" id="node3" href="$app__main_8c.html#ac8ec403b244267ecd7c29fd6620076e3" title=" " alt="" coords="243,107,324,133"/>
 <area shape="rect" id="node4" href="$app__main_8h.html#a630544a7f0a2cc40d8a7fefab7e2fe70" title=" " alt="" coords="108,107,195,133"/>

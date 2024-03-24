@@ -131,20 +131,23 @@ parameter.c の依存先関係図:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>値:</b><div class="fragment"><div class="line">  <span class="keywordflow">do</span>                                                                                   \</div>
-<div class="line">  {                                                                                    \</div>
-<div class="line">    parameters[num].minVelocity = PARAMETER_##num##_MIN_VELOCITY;                      \</div>
-<div class="line">    parameters[num].maxVelocity = PARAMETER_##num##_MAX_VELOCITY;                      \</div>
-<div class="line">    parameters[num].acceleration = PARAMETER_##num##_ACCELERATION;                     \</div>
-<div class="line">    parameters[num].velocityPid[0] = PARAMETER_##num##_VELOCITY_PID_KP;                \</div>
-<div class="line">    parameters[num].velocityPid[1] = PARAMETER_##num##_VELOCITY_PID_KI;                \</div>
-<div class="line">    parameters[num].velocityPid[2] = PARAMETER_##num##_VELOCITY_PID_KD;                \</div>
-<div class="line">    parameters[num].minAngularVelocity = PARAMETER_##num##_MIN_ANGULAR_VELOCITY;       \</div>
-<div class="line">    parameters[num].maxAngularVelocity = PARAMETER_##num##_MAX_ANGULAR_VELOCITY;       \</div>
-<div class="line">    parameters[num].angularAcceleration = PARAMETER_##num##_ANGULAR_ACCELERATION;      \</div>
-<div class="line">    parameters[num].angularVelocityPid[0] = PARAMETER_##num##_ANGULAR_VELOCITY_PID_KP; \</div>
-<div class="line">    parameters[num].angularVelocityPid[1] = PARAMETER_##num##_ANGULAR_VELOCITY_PID_KI; \</div>
-<div class="line">    parameters[num].angularVelocityPid[2] = PARAMETER_##num##_ANGULAR_VELOCITY_PID_KD; \</div>
+<b>値:</b><div class="fragment"><div class="line">  <span class="keywordflow">do</span>                                                                                            \</div>
+<div class="line">  {                                                                                             \</div>
+<div class="line">    parameters[num].minVelocity = PARAMETER_##num##_MIN_VELOCITY;                               \</div>
+<div class="line">    parameters[num].maxVelocity = PARAMETER_##num##_MAX_VELOCITY;                               \</div>
+<div class="line">    parameters[num].acceleration = PARAMETER_##num##_ACCELERATION;                              \</div>
+<div class="line">    parameters[num].velocityPid[0] = PARAMETER_##num##_VELOCITY_PID_KP;                         \</div>
+<div class="line">    parameters[num].velocityPid[1] = PARAMETER_##num##_VELOCITY_PID_KI;                         \</div>
+<div class="line">    parameters[num].velocityPid[2] = PARAMETER_##num##_VELOCITY_PID_KD;                         \</div>
+<div class="line">    parameters[num].minAngularVelocity = PARAMETER_##num##_MIN_ANGULAR_VELOCITY;                \</div>
+<div class="line">    parameters[num].maxAngularVelocity = PARAMETER_##num##_MAX_ANGULAR_VELOCITY;                \</div>
+<div class="line">    parameters[num].angularAcceleration = PARAMETER_##num##_ANGULAR_ACCELERATION;               \</div>
+<div class="line">    parameters[num].angularVelocityPid[0] = PARAMETER_##num##_ANGULAR_VELOCITY_PID_KP;          \</div>
+<div class="line">    parameters[num].angularVelocityPid[1] = PARAMETER_##num##_ANGULAR_VELOCITY_PID_KI;          \</div>
+<div class="line">    parameters[num].angularVelocityPid[2] = PARAMETER_##num##_ANGULAR_VELOCITY_PID_KD;          \</div>
+<div class="line">    parameters[num].lineAngularVelocityPid[0] = PARAMETER_##num##_LINE_ANGULAR_VELOCITY_PID_KP; \</div>
+<div class="line">    parameters[num].lineAngularVelocityPid[1] = PARAMETER_##num##_LINE_ANGULAR_VELOCITY_PID_KI; \</div>
+<div class="line">    parameters[num].lineAngularVelocityPid[2] = PARAMETER_##num##_LINE_ANGULAR_VELOCITY_PID_KD; \</div>
 <div class="line">  } <span class="keywordflow">while</span> (0)</div>
 </div><!-- fragment -->
 </div>
@@ -167,7 +170,7 @@ parameter.c の依存先関係図:</div>
 
 <p>Get current parameter </p>
 
-<p class="definition"> <a class="el" href="parameter_8c_source.html">parameter.c</a> の <a class="el" href="parameter_8c_source.html#l00047">47</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="parameter_8c_source.html">parameter.c</a> の <a class="el" href="parameter_8c_source.html#l00050">50</a> 行目に定義があります。</p>
 
 <p class="reference">参照元 <a class="el" href="app__main_8c_source.html#l00030">Calibrate()</a>.</p>
 <div class="dynheader">
@@ -235,7 +238,7 @@ parameter.c の依存先関係図:</div>
 
 <p>Set parameter index </p>
 
-<p class="definition"> <a class="el" href="parameter_8c_source.html">parameter.c</a> の <a class="el" href="parameter_8c_source.html#l00040">40</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="parameter_8c_source.html">parameter.c</a> の <a class="el" href="parameter_8c_source.html#l00043">43</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -264,7 +267,7 @@ parameter.c の依存先関係図:</div>
 
 <p class="definition"> <a class="el" href="parameter_8c_source.html">parameter.c</a> の <a class="el" href="parameter_8c_source.html#l00006">6</a> 行目に定義があります。</p>
 
-<p class="reference">参照元 <a class="el" href="parameter_8c_source.html#l00047">PARAMETER_Get()</a>, <a class="el" href="parameter_8c_source.html#l00040">PARAMETER_SetIndex()</a>.</p>
+<p class="reference">参照元 <a class="el" href="parameter_8c_source.html#l00050">PARAMETER_Get()</a>, <a class="el" href="parameter_8c_source.html#l00043">PARAMETER_SetIndex()</a>.</p>
 
 </div>
 </div>
@@ -292,7 +295,7 @@ parameter.c の依存先関係図:</div>
 
 <p class="definition"> <a class="el" href="parameter_8c_source.html">parameter.c</a> の <a class="el" href="parameter_8c_source.html#l00004">4</a> 行目に定義があります。</p>
 
-<p class="reference">参照元 <a class="el" href="parameter_8c_source.html#l00047">PARAMETER_Get()</a>.</p>
+<p class="reference">参照元 <a class="el" href="parameter_8c_source.html#l00050">PARAMETER_Get()</a>.</p>
 
 </div>
 </div>
