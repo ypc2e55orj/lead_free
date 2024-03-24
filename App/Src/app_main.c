@@ -76,16 +76,21 @@ void app_main(void)
   {
     if (BUTTON_GetSw1())
     {
-      while (BUTTON_GetSw2())
+      while (BUTTON_GetSw1())
         ;
       INTERVAL_Buzzer(50);
       LOGGER_Print();
+      while (!BUTTON_GetSw1())
+      {
+        printf("%04d, %04d\r\n", (int)(odom->x * 1000.0f), (int)(odom->y * 1000.0f));
+      }
     }
     if (BUTTON_GetSw2())
     {
       while (BUTTON_GetSw2())
         ;
       INTERVAL_Buzzer(50);
+      LOGGER_SetMode(LOGGER_MODE_ODOMETRY);
       LINE_EnableFeedback(param->lineAngularVelocityPid);
       SERVO_Start(param->velocityPid, param->angularVelocityPid);
       LINE_ResetStartGoalState();
@@ -98,7 +103,7 @@ void app_main(void)
         if (LINE_GetStartGoalState() == STARTGOAL_MARKER_START_PASSED)
         {
           INTERVAL_Buzzer(50);
-          LOGGER_Start(10);
+          LOGGER_Start(100);
         }
         if (LINE_GetCurvatureState() == CURVATURE_MARKER_PASSED)
         {
@@ -112,7 +117,7 @@ void app_main(void)
       }
       LOGGER_Stop();
       INTERVAL_Buzzer(50);
-      float stopLength = odom->length + 0.5f;
+      float stopLength = odom->length + 0.25f;
       while (odom->length < stopLength)
       {
         float velo = LINE_GetAngularVelocity();
