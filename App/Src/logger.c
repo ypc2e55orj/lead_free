@@ -8,42 +8,46 @@
 #include "odometry.h"
 #include "servo.h"
 
-// #define LOGGER_ENABLED
+#define LOGGER_ENABLED
 #ifdef LOGGER_ENABLED
-#define LOGGER_BUFFER_SIZE 500
-#define LOGGER_ELEM_SIZE 8
+#define LOGGER_BUFFER_SIZE 4000
 //! log buffer
-static int16_t loggerBuffer[LOGGER_BUFFER_SIZE * LOGGER_ELEM_SIZE] = {};
+static int16_t loggerBuffer[LOGGER_BUFFER_SIZE] = {};
 //! log index
 static uint16_t loggerBufferIndex = 0;
 //! log interval count max
 static uint16_t loggerFreqCountMax = 0;
 //! log mode
 static LOGGER_MODE loggerMode = 0;
+//! mode element num
+static uint16_t loggerModeElmNum[NUM_LOGGER_MODE] = {
+    [LOGGER_MODE_TARGET] = 8,
+    [LOGGER_MODE_ODOMETRY] = 2,
+};
 #endif
 
 /**
  * @brief Collect log (target mode)
  */
-static void LOGGER_UpdateTarget()
+static void
+LOGGER_UpdateTarget()
 {
 #ifdef LOGGER_ENABLED
   const ODOMETRY *odom = ODOMETRY_GetCurrent();
-
-  loggerBuffer[loggerBufferIndex * LOGGER_ELEM_SIZE + 0] = (int16_t)(*SERVO_GetTargetVelocity() * 1000.0f);
-  loggerBuffer[loggerBufferIndex * LOGGER_ELEM_SIZE + 1] = (int16_t)(*SERVO_GetTargetAngularVelocity() * 1000.0f);
-  loggerBuffer[loggerBufferIndex * LOGGER_ELEM_SIZE + 2] = (int16_t)(odom->velocity * 1000.0f);
-  loggerBuffer[loggerBufferIndex * LOGGER_ELEM_SIZE + 3] = (int16_t)(odom->length * 1000.0f);
-  loggerBuffer[loggerBufferIndex * LOGGER_ELEM_SIZE + 4] = (int16_t)(odom->angularVelocity * 1000.0f);
-  loggerBuffer[loggerBufferIndex * LOGGER_ELEM_SIZE + 5] = (int16_t)(odom->angle * 1000.0f);
-  loggerBuffer[loggerBufferIndex * LOGGER_ELEM_SIZE + 6] = (int16_t)(odom->x * 1000.0f);
-  loggerBuffer[loggerBufferIndex * LOGGER_ELEM_SIZE + 7] = (int16_t)(odom->y * 1000.0f);
+  loggerBuffer[loggerBufferIndex++] = (int16_t)(*SERVO_GetTargetVelocity() * 1000.0f);
+  loggerBuffer[loggerBufferIndex++] = (int16_t)(*SERVO_GetTargetAngularVelocity() * 1000.0f);
+  loggerBuffer[loggerBufferIndex++] = (int16_t)(odom->velocity * 1000.0f);
+  loggerBuffer[loggerBufferIndex++] = (int16_t)(odom->length * 1000.0f);
+  loggerBuffer[loggerBufferIndex++] = (int16_t)(odom->angularVelocity * 1000.0f);
+  loggerBuffer[loggerBufferIndex++] = (int16_t)(odom->angle * 1000.0f);
+  loggerBuffer[loggerBufferIndex++] = (int16_t)(odom->x * 1000.0f);
+  loggerBuffer[loggerBufferIndex++] = (int16_t)(odom->y * 1000.0f);
 #endif
 }
 /**
  * @brief Pring log (target mode)
  */
-static void LOGGER_PrintTarget()
+static void LOGGER_PrintHeaderTarget()
 {
 #ifdef LOGGER_ENABLED
   printf(
@@ -57,15 +61,30 @@ static void LOGGER_PrintTarget()
       "x[1000*m],"
       "y[1000*m],"
       "\r\n");
-  for (uint16_t i = 0; i < loggerBufferIndex; i++)
-  {
-    printf("%d,", i);
-    for (uint16_t j = 0; j < LOGGER_ELEM_SIZE; j++)
-    {
-      printf("%d,", loggerBuffer[i * LOGGER_ELEM_SIZE + j]);
-    }
-    printf("\r\n");
-  }
+#endif
+}
+/**
+ * @brief Collect log (odometry mode)
+ */
+static void LOGGER_UpdateOdometry()
+{
+#ifdef LOGGER_ENABLED
+  const ODOMETRY *odom = ODOMETRY_GetCurrent();
+  loggerBuffer[loggerBufferIndex++] = (int16_t)(odom->x * 1000.0f);
+  loggerBuffer[loggerBufferIndex++] = (int16_t)(odom->y * 1000.0f);
+#endif
+}
+/**
+ * @brief Pring log (odometry mode)
+ */
+static void LOGGER_PrintHeaderOdometry()
+{
+#ifdef LOGGER_ENABLED
+  printf(
+      "index,"
+      "x[1000*m],"
+      "y[1000*m],"
+      "\r\n");
 #endif
 }
 /**
@@ -74,7 +93,7 @@ static void LOGGER_PrintTarget()
 void LOGGER_Clear()
 {
 #ifdef LOGGER_ENABLED
-  memset(loggerBuffer, 0, sizeof(int16_t) * LOGGER_BUFFER_SIZE * LOGGER_ELEM_SIZE);
+  memset(loggerBuffer, 0, sizeof(int16_t) * LOGGER_BUFFER_SIZE);
 #endif
 }
 /**
@@ -105,7 +124,16 @@ void LOGGER_Stop()
 void LOGGER_SetMode(LOGGER_MODE mode)
 {
 #ifdef LOGGER_ENABLED
-
+  switch (mode)
+  {
+  case LOGGER_MODE_TARGET:
+  case LOGGER_MODE_ODOMETRY:
+    loggerMode = mode;
+    break;
+  default:
+    loggerMode = LOGGER_MODE_TARGET;
+    break;
+  }
 #endif
 }
 /**
@@ -120,10 +148,18 @@ void LOGGER_Update()
   {
     loggerFreqCount = 0;
 
-    // TODO: logger mode
-    LOGGER_UpdateTarget();
+    switch (loggerMode)
+    {
+    default:
+    case LOGGER_MODE_TARGET:
+      LOGGER_UpdateTarget();
+      break;
+    case LOGGER_MODE_ODOMETRY:
+      LOGGER_UpdateOdometry();
+      break;
+    }
 
-    if (++loggerBufferIndex >= LOGGER_BUFFER_SIZE)
+    if (++loggerBufferIndex >= (LOGGER_BUFFER_SIZE - loggerModeElmNum[loggerMode]))
     {
       loggerFreqCountMax = 0;
     }
@@ -136,9 +172,24 @@ void LOGGER_Update()
 void LOGGER_Print()
 {
 #ifdef LOGGER_ENABLED
-
-  // TODO: logger mode
-  LOGGER_PrintTarget();
-
+  switch (loggerMode)
+  {
+  default:
+  case LOGGER_MODE_TARGET:
+    LOGGER_PrintHeaderTarget();
+    break;
+  case LOGGER_MODE_ODOMETRY:
+    LOGGER_PrintHeaderOdometry();
+    break;
+  }
+  for (uint16_t i = 0; i < loggerBufferIndex; i++)
+  {
+    printf("%d,", i);
+    for (uint16_t j = 0; j < loggerModeElmNum[loggerMode]; j++)
+    {
+      printf("%d,", loggerBuffer[i++]);
+    }
+    printf("\r\n");
+  }
 #endif
 }

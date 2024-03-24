@@ -16,7 +16,7 @@ typedef enum
   STARTGOAL_MARKER_GOAL_PASSING,  //!< on the goal marker
   STARTGOAL_MARKER_GOAL_PASSED,   //!< goaled
   STARTGOAL_MARKER_IGNORING,      //!< on the cross line
-} STARTGOAL_MARKER;
+} STARTGOAL_MARKER_STATE;
 
 //! Curvature marker state
 typedef enum
@@ -25,12 +25,20 @@ typedef enum
   CURVATURE_MARKER_PASSING,  //!< on the curvature marker
   CURVATURE_MARKER_PASSED,   //!< passed
   CURVATURE_MARKER_IGNORING, //!< on the cross line
-} CURVATURE_MARKER;
+} CURVATURE_MARKER_STATE;
+
+//! Line state
+typedef enum
+{
+  LINE_STATE_GOOD,
+  LINE_STATE_CROSS,
+  LINE_STATE_COURSE_OUT,
+} LINE_STATE;
 
 //! Sensor calibrate data (min, max)
 typedef struct
 {
-  uint16_t min, max;
+  float min, max;
 } LINE_CALIBRATE_MINMAX;
 
 //! Sensor threshold
@@ -38,10 +46,9 @@ typedef struct
 {
   LINE_CALIBRATE_MINMAX calibrateTemp[NUM_SENSOR_POS];
   LINE_CALIBRATE_MINMAX calibrateAverage[NUM_SENSOR_POS];
-  int lineOffsetOut;
-  int lineOffsetIn;
-  uint16_t markerThreshStartGoal;
-  uint16_t markerThreshCurvature;
+  float lineOffsetOut;
+  float lineOffsetIn;
+  float threshold[NUM_SENSOR_POS];
 } LINE_CALIBRATE;
 
 /**
@@ -51,19 +58,19 @@ void LINE_UpdateInterval();
 /**
  * @brief Get start and goal marker state
  */
-STARTGOAL_MARKER LINE_GetStartGoalState();
+STARTGOAL_MARKER_STATE LINE_GetStartGoalState();
 /**
  * @brief Get curvature marker state
  */
-CURVATURE_MARKER LINE_GetCurvatureState();
+CURVATURE_MARKER_STATE LINE_GetCurvatureState();
 /**
  * @brief Reset start and goal marker state
  */
-STARTGOAL_MARKER LINE_ResetStartGoalState();
+void LINE_ResetStartGoalState();
 /**
  * @brief Reset curvature marker state
  */
-CURVATURE_MARKER LINE_ResetCurvatureState();
+void LINE_ResetCurvatureState();
 /**
  * @brief Start sensor calibration (forward)
  */
@@ -85,7 +92,15 @@ const LINE_CALIBRATE *LINE_GetCalibrate();
  */
 float LINE_GetAngularVelocity();
 /**
- * @brief Print line sensor
+ * @brief Enable line feedback
+ */
+void LINE_EnableFeedback(const float *lineAngVeloPidGain);
+/**
+ * @brief Disable line feedback
+ */
+void LINE_DisableFeedback();
+/**
+ * @brief Print line value
  */
 void LINE_Print();
 

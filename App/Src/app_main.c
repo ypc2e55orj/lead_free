@@ -40,14 +40,13 @@ void Calibrate(void)
   printf("Execute calibration...\r\n");
   INTERVAL_Buzzer(50);
   HAL_GPIO_WritePin(Led_GPIO_Port, Led_Pin, GPIO_PIN_SET);
+  LINE_DisableFeedback();
   SERVO_Start(param->velocityPid, param->angularVelocityPid);
-  LOGGER_Start(250);
   LINE_StartCalibrateForward();
   RUN_Straight(RUN_DIRECTION_FORWARD, 0.1f, 0.5f, 0.01f, 0.1f, 0);
   LINE_StartCalibrateBack();
   RUN_Straight(RUN_DIRECTION_BACK, 0.1f, 0.5f, 0.01f, 0.1f, 0);
   LINE_StopCalibrate();
-  LOGGER_Stop();
   Delay(500);
   INTERVAL_Buzzer(50);
   SERVO_Stop();
@@ -55,10 +54,10 @@ void Calibrate(void)
   const LINE_CALIBRATE *p = LINE_GetCalibrate();
   for (LINE_SENSOR_POS i = 0; i < NUM_SENSOR_POS; i++)
   {
-    printf("%d: min %04d, max %04d \r\n", i, p->calibrateAverage[i].min, p->calibrateAverage[i].max);
+    printf("%d: min %04d, max %04d \r\n", i, (int)(p->calibrateAverage[i].min * 1000), (int)(p->calibrateAverage[i].max * 1000));
   }
-  printf("outOffset %04d, inOffset %04d\r\n", p->lineOffsetOut, p->lineOffsetIn);
-  printf("startGoalThresh %04d, curvatureThresh %04d\r\n", p->markerThreshStartGoal, p->markerThreshCurvature);
+  printf("outOffset %04d, inOffset %04d\r\n", (int)(p->lineOffsetOut * 1000), (int)(p->lineOffsetIn * 1000));
+  printf("startGoalThresh %04d, curvatureThresh %04d\r\n", (int)(p->threshold[MARKER_SENSOR_RIGHT] * 1000), (int)(p->threshold[MARKER_SENSOR_LEFT] * 1000));
 }
 
 void app_main(void)
@@ -71,26 +70,67 @@ void app_main(void)
   printf("Waiting calibration...\r\n");
   Calibrate();
 
+  const PARAMETER *param = PARAMETER_Get();
+  const ODOMETRY *odom = ODOMETRY_GetCurrent();
   while (1)
   {
     if (BUTTON_GetSw1())
     {
+      while (BUTTON_GetSw2())
+        ;
+      INTERVAL_Buzzer(50);
+      LOGGER_Print();
     }
     if (BUTTON_GetSw2())
     {
       while (BUTTON_GetSw2())
         ;
       INTERVAL_Buzzer(50);
-      // SERVO_Start(param->velocityPid, param->angularVelocityPid);
+      LINE_EnableFeedback(param->lineAngularVelocityPid);
+      SERVO_Start(param->velocityPid, param->angularVelocityPid);
       LINE_ResetStartGoalState();
       LINE_ResetCurvatureState();
-      while (!BUTTON_GetSw2())
+      SERVO_SetMaxVelocity(param->maxVelocity);
+      SERVO_SetAcceleration(param->acceleration);
+      SERVO_SetTargetVelocity(0.0f);
+      while (LINE_GetStartGoalState() != STARTGOAL_MARKER_GOAL_PASSED)
       {
-        printf("startGoal: %d, curvature: %d\r\n", LINE_GetStartGoalState(), LINE_GetCurvatureState());
+        if (LINE_GetStartGoalState() == STARTGOAL_MARKER_START_PASSED)
+        {
+          INTERVAL_Buzzer(50);
+          LOGGER_Start(10);
+        }
+        if (LINE_GetCurvatureState() == CURVATURE_MARKER_PASSED)
+        {
+          INTERVAL_Buzzer(50);
+        }
+        float velo = LINE_GetAngularVelocity();
+        float sign = velo < 0.0f ? -1.0f : 1.0f;
+        SERVO_SetAngularAcceleration(sign * param->acceleration);
+        SERVO_SetTargetAngularVelocity(velo);
+        SERVO_SetMaxAngularVelocity(sign * velo);
       }
-      while (BUTTON_GetSw2())
-        ;
-      // SERVO_Stop();
+      LOGGER_Stop();
+      INTERVAL_Buzzer(50);
+      float stopLength = odom->length + 0.5f;
+      while (odom->length < stopLength)
+      {
+        float velo = LINE_GetAngularVelocity();
+        float sign = velo < 0.0f ? -1.0f : 1.0f;
+        SERVO_SetAngularAcceleration(sign * param->acceleration);
+        SERVO_SetTargetAngularVelocity(velo);
+        SERVO_SetMaxAngularVelocity(sign * velo);
+      }
+      SERVO_SetAcceleration(-1.0f * param->acceleration);
+      while (*SERVO_GetTargetVelocity() > param->minVelocity)
+      {
+        float velo = LINE_GetAngularVelocity();
+        float sign = velo < 0.0f ? -1.0f : 1.0f;
+        SERVO_SetAngularAcceleration(sign * param->acceleration);
+        SERVO_SetTargetAngularVelocity(velo);
+        SERVO_SetMaxAngularVelocity(sign * velo);
+      }
+      SERVO_Stop();
       INTERVAL_Buzzer(50);
     }
   }

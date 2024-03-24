@@ -8,6 +8,7 @@ typedef enum
 {
   LOGGER_MODE_TARGET,
   LOGGER_MODE_ODOMETRY,
+  NUM_LOGGER_MODE,
 } LOGGER_MODE;
 
 /**
