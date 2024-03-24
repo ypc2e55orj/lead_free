@@ -80,10 +80,7 @@ void app_main(void)
         ;
       INTERVAL_Buzzer(50);
       LOGGER_Print();
-      while (!BUTTON_GetSw1())
-      {
-        printf("%04d, %04d\r\n", (int)(odom->x * 1000.0f), (int)(odom->y * 1000.0f));
-      }
+      INTERVAL_Buzzer(50);
     }
     if (BUTTON_GetSw2())
     {
@@ -92,12 +89,12 @@ void app_main(void)
       INTERVAL_Buzzer(50);
       LOGGER_SetMode(LOGGER_MODE_ODOMETRY);
       LINE_EnableFeedback(param->lineAngularVelocityPid);
-      SERVO_Start(param->velocityPid, param->angularVelocityPid);
       LINE_ResetStartGoalState();
       LINE_ResetCurvatureState();
-      SERVO_SetMaxVelocity(param->maxVelocity);
-      SERVO_SetAcceleration(param->acceleration);
       SERVO_SetTargetVelocity(0.0f);
+      SERVO_SetMaxVelocity(param->maxVelocity);
+      SERVO_Start(param->velocityPid, param->angularVelocityPid);
+      SERVO_SetAcceleration(param->acceleration);
       while (LINE_GetStartGoalState() != STARTGOAL_MARKER_GOAL_PASSED)
       {
         if (LINE_GetStartGoalState() == STARTGOAL_MARKER_START_PASSED)
@@ -117,6 +114,7 @@ void app_main(void)
       }
       LOGGER_Stop();
       INTERVAL_Buzzer(50);
+      /*
       float stopLength = odom->length + 0.25f;
       while (odom->length < stopLength)
       {
@@ -126,6 +124,7 @@ void app_main(void)
         SERVO_SetTargetAngularVelocity(velo);
         SERVO_SetMaxAngularVelocity(sign * velo);
       }
+      */
       SERVO_SetAcceleration(-1.0f * param->acceleration);
       while (*SERVO_GetTargetVelocity() > param->minVelocity)
       {

@@ -23,6 +23,10 @@ void ODOMETRY_CalculateInterval();
  */
 void ODOMETRY_Reset();
 /**
+ * @brief Reset position
+ */
+void ODOMETRY_ResetPos();
+/**
  * @brief Get current
  */
 const ODOMETRY *ODOMETRY_GetCurrent();
