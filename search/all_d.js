@@ -11,9 +11,10 @@ var searchData=
   ['odometry_5fmm_5fper_5fpulse_182',['ODOMETRY_MM_PER_PULSE',['../odometry_8c.html#a42033dcc3abd42d6bbd32970e5f60424',1,'odometry.c']]],
   ['odometry_5fnum_5fvelocity_5fsamples_183',['ODOMETRY_NUM_VELOCITY_SAMPLES',['../odometry_8c.html#a1b02a312c50832f55b7569a9571cd62c',1,'odometry.c']]],
   ['odometry_5freset_184',['ODOMETRY_Reset',['../odometry_8h.html#a439ddae1dc13251f0ff183d7f967bb1f',1,'ODOMETRY_Reset():&#160;odometry.c'],['../odometry_8c.html#a439ddae1dc13251f0ff183d7f967bb1f',1,'ODOMETRY_Reset():&#160;odometry.c']]],
-  ['odometry_5ftire_5fdiameter_185',['ODOMETRY_TIRE_DIAMETER',['../odometry_8c.html#a9dade6fa1077bddbdd6930b36417eaba',1,'odometry.c']]],
-  ['odometryvelocitysamplehead_186',['odometryVelocitySampleHead',['../odometry_8c.html#ac2f4cb73f6a4ab1678954c006f052db7',1,'odometry.c']]],
-  ['odometryvelocitysamples_187',['odometryVelocitySamples',['../odometry_8c.html#a4c541a817d2de8221de6dbcb988507ad',1,'odometry.c']]],
-  ['odometryvelocitysampletail_188',['odometryVelocitySampleTail',['../odometry_8c.html#ac2a2dd7aba6054d0c1a50f12d2e04031',1,'odometry.c']]],
-  ['odometryvelocitysums_189',['odometryVelocitySums',['../odometry_8c.html#a006518ac26ef9abb852740998cd5e4ce',1,'odometry.c']]]
+  ['odometry_5fresetpos_185',['ODOMETRY_ResetPos',['../odometry_8h.html#a26e4f0eed4ff499514cd64fbd7530c1d',1,'ODOMETRY_ResetPos():&#160;odometry.c'],['../odometry_8c.html#a26e4f0eed4ff499514cd64fbd7530c1d',1,'ODOMETRY_ResetPos():&#160;odometry.c']]],
+  ['odometry_5ftire_5fdiameter_186',['ODOMETRY_TIRE_DIAMETER',['../odometry_8c.html#a9dade6fa1077bddbdd6930b36417eaba',1,'odometry.c']]],
+  ['odometryvelocitysamplehead_187',['odometryVelocitySampleHead',['../odometry_8c.html#ac2f4cb73f6a4ab1678954c006f052db7',1,'odometry.c']]],
+  ['odometryvelocitysamples_188',['odometryVelocitySamples',['../odometry_8c.html#a4c541a817d2de8221de6dbcb988507ad',1,'odometry.c']]],
+  ['odometryvelocitysampletail_189',['odometryVelocitySampleTail',['../odometry_8c.html#ac2a2dd7aba6054d0c1a50f12d2e04031',1,'odometry.c']]],
+  ['odometryvelocitysums_190',['odometryVelocitySums',['../odometry_8c.html#a006518ac26ef9abb852740998cd5e4ce',1,'odometry.c']]]
 ];
