@@ -1,7 +1,8 @@
 <map id="LINE_UpdateInterval" name="LINE_UpdateInterval">
-<area shape="rect" id="node1" title="Update marker state" alt="" coords="5,56,160,83"/>
-<area shape="rect" id="node2" href="$line_8c.html#a9e2fb5bcc667c34f45ecc396b6d52560" title="Generate angular velocity" alt="" coords="208,5,428,32"/>
-<area shape="rect" id="node3" href="$line_8c.html#a3770c9e291907067dac5b85ec7c2a80f" title="Update calibration data" alt="" coords="230,56,406,83"/>
-<area shape="rect" id="node5" href="$line_8c.html#a35826ab7a6f7e9ae20a2be11a0f06461" title="Update marker sensor state" alt="" coords="226,107,410,133"/>
-<area shape="rect" id="node4" href="$sensor_8h.html#ad857373214395cc052b09499ac88b2dc" title="Get line sensor value" alt="" coords="476,81,663,108"/>
+<area shape="rect" id="node1" title="Update marker state" alt="" coords="5,52,160,79"/>
+<area shape="rect" id="node2" href="$sensor_8h.html#ad857373214395cc052b09499ac88b2dc" title="Get line sensor value" alt="" coords="463,27,649,53"/>
+<area shape="rect" id="node3" href="$line_8c.html#ae0a1060d434e75279c689f9c2b257f93" title="Update angular velocity" alt="" coords="208,128,415,155"/>
+<area shape="rect" id="node5" href="$line_8c.html#a3770c9e291907067dac5b85ec7c2a80f" title="Update calibration data" alt="" coords="223,27,399,53"/>
+<area shape="rect" id="node6" href="$line_8c.html#a35826ab7a6f7e9ae20a2be11a0f06461" title="Update marker sensor state" alt="" coords="219,77,403,104"/>
+<area shape="rect" id="node4" href="$pid_8h.html#a345bda1164d16e4e309c4d28376fccab" title="Update PID" alt="" coords="507,128,605,155"/>
 </map>

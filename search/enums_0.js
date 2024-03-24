@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['curvature_5fmarker_463',['CURVATURE_MARKER',['../line_8h.html#a83b0a96d09170e93b0c518b915c760aa',1,'line.h']]]
+  ['curvature_5fmarker_5fstate_496',['CURVATURE_MARKER_STATE',['../line_8h.html#ad9922fef692197ea2d3164b92eb38cd6',1,'line.h']]]
 ];

@@ -184,8 +184,13 @@ $(function() {
 <li>LINE_ClearCalibrationTemporary()
 : <a class="el" href="line_8c.html#ab3af472291852b280b100925f5b9aa7a">line.c</a>
 </li>
-<li>LINE_GenerateAngularVelocity()
-: <a class="el" href="line_8c.html#a9e2fb5bcc667c34f45ecc396b6d52560">line.c</a>
+<li>LINE_DisableFeedback()
+: <a class="el" href="line_8c.html#ab38cfb64d9a0da68234a9dfaf17aaec0">line.c</a>
+, <a class="el" href="line_8h.html#ab38cfb64d9a0da68234a9dfaf17aaec0">line.h</a>
+</li>
+<li>LINE_EnableFeedback()
+: <a class="el" href="line_8h.html#a73ea39c97531b32c2be5d18eb1b7981d">line.h</a>
+, <a class="el" href="line_8c.html#a73ea39c97531b32c2be5d18eb1b7981d">line.c</a>
 </li>
 <li>LINE_GetAngularVelocity()
 : <a class="el" href="line_8h.html#a1746c8257aa80aea4456d0e1e3058fcc">line.h</a>
@@ -196,24 +201,24 @@ $(function() {
 , <a class="el" href="line_8c.html#a9b4a00b81ce1cb20833130786318e85e">line.c</a>
 </li>
 <li>LINE_GetCurvatureState()
-: <a class="el" href="line_8h.html#a0cdd105cb1dbc360065b5b2f10b297f1">line.h</a>
-, <a class="el" href="line_8c.html#a0cdd105cb1dbc360065b5b2f10b297f1">line.c</a>
+: <a class="el" href="line_8h.html#afcc55f4276815a243820a0eac422608b">line.h</a>
+, <a class="el" href="line_8c.html#afcc55f4276815a243820a0eac422608b">line.c</a>
 </li>
 <li>LINE_GetStartGoalState()
-: <a class="el" href="line_8h.html#abbf4ea80eb020721bbbac59fd33d3e54">line.h</a>
-, <a class="el" href="line_8c.html#abbf4ea80eb020721bbbac59fd33d3e54">line.c</a>
+: <a class="el" href="line_8h.html#ac53f215e5d20488835e1cb6b19bebe3d">line.h</a>
+, <a class="el" href="line_8c.html#ac53f215e5d20488835e1cb6b19bebe3d">line.c</a>
 </li>
 <li>LINE_Print()
 : <a class="el" href="line_8h.html#a9292a22c8a6f2fd537fcbf424b6fc089">line.h</a>
 , <a class="el" href="line_8c.html#a9292a22c8a6f2fd537fcbf424b6fc089">line.c</a>
 </li>
 <li>LINE_ResetCurvatureState()
-: <a class="el" href="line_8h.html#a2723ef9983877b5a5125006a0a746c2d">line.h</a>
-, <a class="el" href="line_8c.html#a2723ef9983877b5a5125006a0a746c2d">line.c</a>
+: <a class="el" href="line_8h.html#a8c1a8019beab47b5f8306db41df7cfd9">line.h</a>
+, <a class="el" href="line_8c.html#a8c1a8019beab47b5f8306db41df7cfd9">line.c</a>
 </li>
 <li>LINE_ResetStartGoalState()
-: <a class="el" href="line_8h.html#a712fb1a714b857c47b57beedd16957d5">line.h</a>
-, <a class="el" href="line_8c.html#a712fb1a714b857c47b57beedd16957d5">line.c</a>
+: <a class="el" href="line_8h.html#a73029906d10d9afa817eb179126bbb97">line.h</a>
+, <a class="el" href="line_8c.html#a73029906d10d9afa817eb179126bbb97">line.c</a>
 </li>
 <li>LINE_StartCalibrateBack()
 : <a class="el" href="line_8h.html#a8b86f6a9eab7b902eabfffdb81ce0ffb">line.h</a>
@@ -226,6 +231,9 @@ $(function() {
 <li>LINE_StopCalibrate()
 : <a class="el" href="line_8h.html#ac2241ed9289106ee413b2a84faa7c1b0">line.h</a>
 , <a class="el" href="line_8c.html#ac2241ed9289106ee413b2a84faa7c1b0">line.c</a>
+</li>
+<li>LINE_UpdateAngularVelocity()
+: <a class="el" href="line_8c.html#ae0a1060d434e75279c689f9c2b257f93">line.c</a>
 </li>
 <li>LINE_UpdateCalibration()
 : <a class="el" href="line_8c.html#a3770c9e291907067dac5b85ec7c2a80f">line.c</a>
@@ -242,11 +250,14 @@ $(function() {
 , <a class="el" href="logger_8c.html#a5c31839f1b962339daaeb999d5caba50">logger.c</a>
 </li>
 <li>LOGGER_Print()
-: <a class="el" href="logger_8c.html#a7e1f6cceddb55ae4a35e23537e089d70">logger.c</a>
-, <a class="el" href="logger_8h.html#a7e1f6cceddb55ae4a35e23537e089d70">logger.h</a>
+: <a class="el" href="logger_8h.html#a7e1f6cceddb55ae4a35e23537e089d70">logger.h</a>
+, <a class="el" href="logger_8c.html#a7e1f6cceddb55ae4a35e23537e089d70">logger.c</a>
 </li>
-<li>LOGGER_PrintTarget()
-: <a class="el" href="logger_8c.html#a406833414579e96617bcf751be0f34bd">logger.c</a>
+<li>LOGGER_PrintHeaderOdometry()
+: <a class="el" href="logger_8c.html#a0573780c843e18b8be11e33c9e5c9636">logger.c</a>
+</li>
+<li>LOGGER_PrintHeaderTarget()
+: <a class="el" href="logger_8c.html#a60212f9386e4ab4b170f430f85a95c5d">logger.c</a>
 </li>
 <li>LOGGER_SetMode()
 : <a class="el" href="logger_8h.html#a61e3dd9a86f60d48fa173874783c21e7">logger.h</a>
@@ -263,6 +274,9 @@ $(function() {
 <li>LOGGER_Update()
 : <a class="el" href="logger_8h.html#a618b83ee39826975a831eec2e21355b0">logger.h</a>
 , <a class="el" href="logger_8c.html#a618b83ee39826975a831eec2e21355b0">logger.c</a>
+</li>
+<li>LOGGER_UpdateOdometry()
+: <a class="el" href="logger_8c.html#ac982f0bcff7e34a2a0e1189cf0086a65">logger.c</a>
 </li>
 <li>LOGGER_UpdateTarget()
 : <a class="el" href="logger_8c.html#ab8bf05edb97b9869366578c6e6b09052">logger.c</a>

@@ -1,0 +1,4 @@
+<map id="LINE_UpdateAngularVelocity" name="LINE_UpdateAngularVelocity">
+<area shape="rect" id="node1" title="Update angular velocity" alt="" coords="5,5,212,32"/>
+<area shape="rect" id="node2" href="$pid_8h.html#a345bda1164d16e4e309c4d28376fccab" title="Update PID" alt="" coords="260,5,359,32"/>
+</map>

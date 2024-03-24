@@ -1,5 +1,7 @@
 <map id="PID_Update" name="PID_Update">
-<area shape="rect" id="node1" title="Update PID" alt="" coords="507,5,605,32"/>
-<area shape="rect" id="node2" href="$servo_8h.html#a99842b136c70431b4466b31d04acd54e" title="Update servos" alt="" coords="288,5,459,32"/>
-<area shape="rect" id="node3" href="$interval_8c.html#a8a3b0ad512a6e6c6157440b68d395eac" title="timer interrupt TIM6: 2kHz" alt="" coords="5,5,240,32"/>
+<area shape="rect" id="node1" title="Update PID" alt="" coords="761,31,860,57"/>
+<area shape="rect" id="node2" href="$line_8c.html#ae0a1060d434e75279c689f9c2b257f93" title="Update angular velocity" alt="" coords="507,5,713,32"/>
+<area shape="rect" id="node5" href="$servo_8h.html#a99842b136c70431b4466b31d04acd54e" title="Update servos" alt="" coords="288,56,459,83"/>
+<area shape="rect" id="node3" href="$line_8h.html#aa662923661686d64790042b7cc783607" title="Update line sensor and marker sensor state" alt="" coords="296,5,451,32"/>
+<area shape="rect" id="node4" href="$interval_8c.html#a8a3b0ad512a6e6c6157440b68d395eac" title="timer interrupt TIM6: 2kHz" alt="" coords="5,31,240,57"/>
 </map>

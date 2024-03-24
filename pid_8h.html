@@ -77,10 +77,11 @@ $(function() {
 <div class="dyncontent">
 <div class="center"><img src="pid_8h__dep__incl.png" border="0" usemap="#aApp_2Inc_2pid_8hdep" alt=""/></div>
 <map name="aApp_2Inc_2pid_8hdep" id="aApp_2Inc_2pid_8hdep">
-<area shape="rect" title=" " alt="" coords="270,5,377,32"/>
+<area shape="rect" title=" " alt="" coords="338,5,445,32"/>
 <area shape="rect" href="parameter_8h.html" title=" " alt="" coords="92,80,245,107"/>
-<area shape="rect" href="pid_8c.html" title=" " alt="" coords="270,80,377,107"/>
-<area shape="rect" href="servo_8c.html" title=" " alt="" coords="401,80,523,107"/>
+<area shape="rect" href="line_8c.html" title=" " alt="" coords="269,80,380,107"/>
+<area shape="rect" href="pid_8c.html" title=" " alt="" coords="405,80,511,107"/>
+<area shape="rect" href="servo_8c.html" title=" " alt="" coords="535,80,658,107"/>
 <area shape="rect" href="app__main_8c.html" title=" " alt="" coords="5,155,156,181"/>
 <area shape="rect" href="parameter_8c.html" title=" " alt="" coords="180,155,333,181"/>
 </map>
@@ -123,21 +124,22 @@ $(function() {
 
 <p class="definition"> <a class="el" href="pid_8c_source.html">pid.c</a> の <a class="el" href="pid_8c_source.html#l00006">6</a> 行目に定義があります。</p>
 
-<p class="reference">参照元 <a class="el" href="servo_8c_source.html#l00098">SERVO_Reset()</a>.</p>
+<p class="reference">参照元 <a class="el" href="line_8c_source.html#l00302">LINE_EnableFeedback()</a>, <a class="el" href="servo_8c_source.html#l00098">SERVO_Reset()</a>.</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="pid_8h_ad6d10faa2923f3e15e1af2473337b271_icgraph.png" border="0" usemap="#apid_8h_ad6d10faa2923f3e15e1af2473337b271_icgraph" alt=""/></div>
 <map name="apid_8h_ad6d10faa2923f3e15e1af2473337b271_icgraph" id="apid_8h_ad6d10faa2923f3e15e1af2473337b271_icgraph">
-<area shape="rect" title="Reset PID" alt="" coords="688,81,776,108"/>
-<area shape="rect" href="servo_8h.html#a8ee665f3ffbf3ff14a76584908892e2c" title="Reset servos" alt="" coords="529,81,640,108"/>
-<area shape="rect" href="run_8h.html#ab51f5d38046671744984ff764c8949b9" title="Straight" alt="" coords="372,5,481,32"/>
-<area shape="rect" href="run_8h.html#aa99cd7e043851ce08f3fbd58ba75a945" title="Turn" alt="" coords="384,56,469,83"/>
-<area shape="rect" href="servo_8h.html#a1c520f57937bad54175d31da5f6414b6" title="Start servos" alt="" coords="375,107,479,133"/>
-<area shape="rect" href="servo_8h.html#ad06676986fb4c97c7d94680f7bb059a2" title="Stop servos" alt="" coords="375,157,478,184"/>
-<area shape="rect" href="app__main_8c.html#ac8ec403b244267ecd7c29fd6620076e3" title=" " alt="" coords="243,107,324,133"/>
-<area shape="rect" href="app__main_8h.html#a630544a7f0a2cc40d8a7fefab7e2fe70" title=" " alt="" coords="108,107,195,133"/>
-<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,107,60,133"/>
+<area shape="rect" title="Reset PID" alt="" coords="771,56,859,83"/>
+<area shape="rect" href="line_8h.html#a73ea39c97531b32c2be5d18eb1b7981d" title="Enable line feedback" alt="" coords="243,5,407,32"/>
+<area shape="rect" href="servo_8h.html#a8ee665f3ffbf3ff14a76584908892e2c" title="Reset servos" alt="" coords="612,107,723,133"/>
+<area shape="rect" href="app__main_8h.html#a630544a7f0a2cc40d8a7fefab7e2fe70" title=" " alt="" coords="108,81,195,108"/>
+<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,81,60,108"/>
+<area shape="rect" href="run_8h.html#ab51f5d38046671744984ff764c8949b9" title="Straight" alt="" coords="455,107,564,133"/>
+<area shape="rect" href="run_8h.html#aa99cd7e043851ce08f3fbd58ba75a945" title="Turn" alt="" coords="467,157,552,184"/>
+<area shape="rect" href="servo_8h.html#a1c520f57937bad54175d31da5f6414b6" title="Start servos" alt="" coords="457,208,561,235"/>
+<area shape="rect" href="servo_8h.html#ad06676986fb4c97c7d94680f7bb059a2" title="Stop servos" alt="" coords="458,56,561,83"/>
+<area shape="rect" href="app__main_8c.html#ac8ec403b244267ecd7c29fd6620076e3" title=" " alt="" coords="284,107,365,133"/>
 </map>
 </div>
 
@@ -185,15 +187,17 @@ $(function() {
 
 <p class="definition"> <a class="el" href="pid_8c_source.html">pid.c</a> の <a class="el" href="pid_8c_source.html#l00014">14</a> 行目に定義があります。</p>
 
-<p class="reference">参照元 <a class="el" href="servo_8c_source.html#l00120">SERVO_UpdateInterval()</a>.</p>
+<p class="reference">参照元 <a class="el" href="line_8c_source.html#l00143">LINE_UpdateAngularVelocity()</a>, <a class="el" href="servo_8c_source.html#l00120">SERVO_UpdateInterval()</a>.</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="pid_8h_a345bda1164d16e4e309c4d28376fccab_icgraph.png" border="0" usemap="#apid_8h_a345bda1164d16e4e309c4d28376fccab_icgraph" alt=""/></div>
 <map name="apid_8h_a345bda1164d16e4e309c4d28376fccab_icgraph" id="apid_8h_a345bda1164d16e4e309c4d28376fccab_icgraph">
-<area shape="rect" title="Update PID" alt="" coords="507,5,605,32"/>
-<area shape="rect" href="servo_8h.html#a99842b136c70431b4466b31d04acd54e" title="Update servos" alt="" coords="288,5,459,32"/>
-<area shape="rect" href="interval_8c.html#a8a3b0ad512a6e6c6157440b68d395eac" title="timer interrupt TIM6: 2kHz" alt="" coords="5,5,240,32"/>
+<area shape="rect" title="Update PID" alt="" coords="761,31,860,57"/>
+<area shape="rect" href="line_8c.html#ae0a1060d434e75279c689f9c2b257f93" title="Update angular velocity" alt="" coords="507,5,713,32"/>
+<area shape="rect" href="servo_8h.html#a99842b136c70431b4466b31d04acd54e" title="Update servos" alt="" coords="288,56,459,83"/>
+<area shape="rect" href="line_8h.html#aa662923661686d64790042b7cc783607" title="Update line sensor and marker sensor state" alt="" coords="296,5,451,32"/>
+<area shape="rect" href="interval_8c.html#a8a3b0ad512a6e6c6157440b68d395eac" title="timer interrupt TIM6: 2kHz" alt="" coords="5,31,240,57"/>
 </map>
 </div>
 

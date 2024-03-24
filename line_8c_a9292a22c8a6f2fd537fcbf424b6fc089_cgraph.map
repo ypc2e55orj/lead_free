@@ -1,4 +1,4 @@
 <map id="LINE_Print" name="LINE_Print">
-<area shape="rect" id="node1" title="Print line sensor" alt="" coords="5,5,93,32"/>
+<area shape="rect" id="node1" title="Print line value" alt="" coords="5,5,93,32"/>
 <area shape="rect" id="node2" href="$sensor_8h.html#ad857373214395cc052b09499ac88b2dc" title="Get line sensor value" alt="" coords="141,5,328,32"/>
 </map>
