@@ -9,15 +9,9 @@
 
 #define NUM_PARAMETERS 3
 
-/* Static parameter ----------------------------------------------------------*/
-#define PARAMETER_SENSOR_ALLOW_ERROR 0.10f // +-
-#define PARAMETER_SENSOR_PID_KP 10.0f
-#define PARAMETER_SENSOR_PID_KI 0.0f
-#define PARAMETER_SENSOR_PID_KD 0.0f
-
 /* Parameter 0 ---------------------------------------------------------------*/
 #define PARAMETER_0_MIN_VELOCITY 0.01f // [m/s]
-#define PARAMETER_0_MAX_VELOCITY 0.5f  // [m/s]
+#define PARAMETER_0_MAX_VELOCITY 0.3f  // [m/s]
 #define PARAMETER_0_ACCELERATION 1.0f  // [m/ss]
 #define PARAMETER_0_VELOCITY_PID_KP 10.0f
 #define PARAMETER_0_VELOCITY_PID_KI 0.5f
@@ -28,6 +22,9 @@
 #define PARAMETER_0_ANGULAR_VELOCITY_PID_KP 0.3f
 #define PARAMETER_0_ANGULAR_VELOCITY_PID_KI 0.02f
 #define PARAMETER_0_ANGULAR_VELOCITY_PID_KD 0.1f
+#define PARAMETER_0_LINE_ANGULAR_VELOCITY_PID_KP 0.5f
+#define PARAMETER_0_LINE_ANGULAR_VELOCITY_PID_KI 0.0f
+#define PARAMETER_0_LINE_ANGULAR_VELOCITY_PID_KD 0.0f
 
 /* Parameter 1 ---------------------------------------------------------------*/
 #define PARAMETER_1_MIN_VELOCITY 0.01f // [m/s]
@@ -42,6 +39,9 @@
 #define PARAMETER_1_ANGULAR_VELOCITY_PID_KP 0.6f
 #define PARAMETER_1_ANGULAR_VELOCITY_PID_KI 0.05f
 #define PARAMETER_1_ANGULAR_VELOCITY_PID_KD 0.0f
+#define PARAMETER_1_LINE_ANGULAR_VELOCITY_PID_KP 0.1f
+#define PARAMETER_1_LINE_ANGULAR_VELOCITY_PID_KI 0.02f
+#define PARAMETER_1_LINE_ANGULAR_VELOCITY_PID_KD 0.0f
 
 /* Parameter 2 ---------------------------------------------------------------*/
 #define PARAMETER_2_MIN_VELOCITY 0.01f // [m/s]
@@ -56,6 +56,9 @@
 #define PARAMETER_2_ANGULAR_VELOCITY_PID_KP 0.6f
 #define PARAMETER_2_ANGULAR_VELOCITY_PID_KI 0.05f
 #define PARAMETER_2_ANGULAR_VELOCITY_PID_KD 0.0f
+#define PARAMETER_2_LINE_ANGULAR_VELOCITY_PID_KP 0.1f
+#define PARAMETER_2_LINE_ANGULAR_VELOCITY_PID_KI 0.02f
+#define PARAMETER_2_LINE_ANGULAR_VELOCITY_PID_KD 0.0f
 
 typedef struct
 {
@@ -67,6 +70,7 @@ typedef struct
   float maxAngularVelocity;
   float angularAcceleration;
   float angularVelocityPid[3];
+  float lineAngularVelocityPid[3];
 } PARAMETER;
 
 /**
