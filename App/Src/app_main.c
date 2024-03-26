@@ -88,6 +88,8 @@ void app_main(void)
         ;
       INTERVAL_Buzzer(50);
       LOGGER_SetMode(LOGGER_MODE_ODOMETRY);
+      LOGGER_Clear();
+      ODOMETRY_Reset();
       LINE_EnableFeedback(param->lineAngularVelocityPid);
       LINE_ResetStartGoalState();
       LINE_ResetCurvatureState();

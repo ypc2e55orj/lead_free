@@ -94,6 +94,7 @@ void LOGGER_Clear()
 {
 #ifdef LOGGER_ENABLED
   memset(loggerBuffer, 0, sizeof(int16_t) * LOGGER_BUFFER_SIZE);
+  loggerBufferIndex = 0;
 #endif
 }
 /**

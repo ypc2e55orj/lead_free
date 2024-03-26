@@ -152,14 +152,15 @@ static void LINE_UpdateAngularVelocity()
   bool isRighIn = lineMarkerValue[LINE_SENSOR_RIGHT_IN] > lineMarkerCalibrateValue.threshold[LINE_SENSOR_RIGHT_IN];
   bool isLeftIn = lineMarkerValue[LINE_SENSOR_LEFT_IN] > lineMarkerCalibrateValue.threshold[LINE_SENSOR_LEFT_IN];
   bool isLeftOut = lineMarkerValue[LINE_SENSOR_LEFT_OUT] > lineMarkerCalibrateValue.threshold[LINE_SENSOR_LEFT_OUT];
-
-  if ((isRightOut && isLeftIn) || (isRighIn && isLeftOut))
-  {
-    // Cross line
-    lineAngularVelocity = 0.0f;
-    lineState = LINE_STATE_CROSS;
-  }
-  else if (!isRightOut && !isRighIn && !isLeftIn && !isLeftOut)
+  /*
+    if ((isRightOut && isLeftIn) || (isRighIn && isLeftOut))
+    {
+      // Cross line
+      lineAngularVelocity = 0.0f;
+      lineState = LINE_STATE_CROSS;
+    }
+    else */
+  if (!isRightOut && !isRighIn && !isLeftIn && !isLeftOut)
   {
     // Course out
     lineAngularVelocity = 0.0f;
