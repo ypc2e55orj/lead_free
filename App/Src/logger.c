@@ -7,12 +7,11 @@
 // project
 #include "odometry.h"
 #include "servo.h"
+#include "parameter_static.h"
 
-#define LOGGER_ENABLED
-#ifdef LOGGER_ENABLED
-#define LOGGER_BUFFER_SIZE 4000
+#if PARAMETER_STATIC_LOGGER_ENABLED != 0
 //! log buffer
-static int16_t loggerBuffer[LOGGER_BUFFER_SIZE] = {};
+static int16_t loggerBuffer[PARAMETER_STATIC_LOGGER_BUFFER_SIZE] = {};
 //! log index
 static uint16_t loggerBufferIndex = 0;
 //! log interval count max
@@ -32,7 +31,7 @@ static uint16_t loggerModeElmNum[NUM_LOGGER_MODE] = {
 static void
 LOGGER_UpdateTarget()
 {
-#ifdef LOGGER_ENABLED
+#if PARAMETER_STATIC_LOGGER_ENABLED != 0
   const ODOMETRY *odom = ODOMETRY_GetCurrent();
   loggerBuffer[loggerBufferIndex + 0] = (int16_t)(*SERVO_GetTargetVelocity() * 1000.0f);
   loggerBuffer[loggerBufferIndex + 1] = (int16_t)(*SERVO_GetTargetAngularVelocity() * 1000.0f);
@@ -49,7 +48,7 @@ LOGGER_UpdateTarget()
  */
 static void LOGGER_PrintHeaderTarget()
 {
-#ifdef LOGGER_ENABLED
+#if PARAMETER_STATIC_LOGGER_ENABLED != 0
   printf(
       "index,"
       "tar_velo[1000*m/s],"
@@ -68,7 +67,7 @@ static void LOGGER_PrintHeaderTarget()
  */
 static void LOGGER_UpdateOdometry()
 {
-#ifdef LOGGER_ENABLED
+#if PARAMETER_STATIC_LOGGER_ENABLED != 0
   const ODOMETRY *odom = ODOMETRY_GetCurrent();
   loggerBuffer[loggerBufferIndex + 0] = (int16_t)(odom->x * 1000.0f);
   loggerBuffer[loggerBufferIndex + 1] = (int16_t)(odom->y * 1000.0f);
@@ -79,7 +78,7 @@ static void LOGGER_UpdateOdometry()
  */
 static void LOGGER_PrintHeaderOdometry()
 {
-#ifdef LOGGER_ENABLED
+#if PARAMETER_STATIC_LOGGER_ENABLED != 0
   printf(
       "index,"
       "x[1000*m],"
@@ -92,8 +91,8 @@ static void LOGGER_PrintHeaderOdometry()
  */
 void LOGGER_Clear()
 {
-#ifdef LOGGER_ENABLED
-  memset(loggerBuffer, 0, sizeof(int16_t) * LOGGER_BUFFER_SIZE);
+#if PARAMETER_STATIC_LOGGER_ENABLED != 0
+  memset(loggerBuffer, 0, sizeof(int16_t) * PARAMETER_STATIC_LOGGER_BUFFER_SIZE);
   loggerBufferIndex = 0;
 #endif
 }
@@ -102,7 +101,7 @@ void LOGGER_Clear()
  */
 void LOGGER_Start(uint16_t freq)
 {
-#ifdef LOGGER_ENABLED
+#if PARAMETER_STATIC_LOGGER_ENABLED != 0
   if (freq > 1000)
   {
     freq = 1000;
@@ -115,7 +114,7 @@ void LOGGER_Start(uint16_t freq)
  */
 void LOGGER_Stop()
 {
-#ifdef LOGGER_ENABLED
+#if PARAMETER_STATIC_LOGGER_ENABLED != 0
   loggerFreqCountMax = 0;
 #endif
 }
@@ -124,7 +123,7 @@ void LOGGER_Stop()
  */
 void LOGGER_SetMode(LOGGER_MODE mode)
 {
-#ifdef LOGGER_ENABLED
+#if PARAMETER_STATIC_LOGGER_ENABLED != 0
   switch (mode)
   {
   case LOGGER_MODE_TARGET:
@@ -142,7 +141,7 @@ void LOGGER_SetMode(LOGGER_MODE mode)
  */
 void LOGGER_Update()
 {
-#ifdef LOGGER_ENABLED
+#if PARAMETER_STATIC_LOGGER_ENABLED != 0
   static uint16_t loggerFreqCount = 0;
 
   if (loggerFreqCountMax != 0 && ++loggerFreqCount >= loggerFreqCountMax)
@@ -160,7 +159,7 @@ void LOGGER_Update()
       break;
     }
 
-    if ((loggerBufferIndex += loggerModeElmNum[loggerMode]) >= LOGGER_BUFFER_SIZE)
+    if ((loggerBufferIndex += loggerModeElmNum[loggerMode]) >= PARAMETER_STATIC_LOGGER_BUFFER_SIZE)
     {
       loggerFreqCountMax = 0;
     }
@@ -172,7 +171,7 @@ void LOGGER_Update()
  */
 void LOGGER_Print()
 {
-#ifdef LOGGER_ENABLED
+#if PARAMETER_STATIC_LOGGER_ENABLED != 0
   switch (loggerMode)
   {
   default:

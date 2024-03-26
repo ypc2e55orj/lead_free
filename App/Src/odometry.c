@@ -6,16 +6,14 @@
 
 // project
 #include "sensor.h"
+#include "parameter_static.h"
 
-#define ODOMETRY_ENCODER_PPR 119.538f //! [Pulses per Revolution]
-#define ODOMETRY_TIRE_DIAMETER 20.9f  //! [mm]
-#define ODOMETRY_MM_PER_PULSE (((ODOMETRY_TIRE_DIAMETER) * M_PI) / ODOMETRY_ENCODER_PPR)
-#define ODOMETRY_NUM_VELOCITY_SAMPLES 8
-#define ODOMETRY_MASK_VELOCITY_SAMPLES (ODOMETRY_NUM_VELOCITY_SAMPLES - 1)
+#define ODOMETRY_MM_PER_PULSE (((PARAMETER_STATIC_ODOMETRY_TIRE_DIAMETER) * M_PI) / PARAMETER_STATIC_ODOMETRY_ENCODER_PPR)
+#define ODOMETRY_MASK_VELOCITY_SAMPLES (PARAMETER_STATIC_ODOMETRY_NUM_VELOCITY_SAMPLES - 1)
 //! Current odometry
 static ODOMETRY odometry = {0};
 //! Velocity moving average
-static float odometryVelocitySamples[ODOMETRY_NUM_VELOCITY_SAMPLES] = {0.0f};
+static float odometryVelocitySamples[PARAMETER_STATIC_ODOMETRY_NUM_VELOCITY_SAMPLES] = {0.0f};
 //! Velocity moving average index (head)
 static uint8_t odometryVelocitySampleHead = 0;
 //! Velocity moving average index (tail)
@@ -38,7 +36,7 @@ void ODOMETRY_CalculateInterval()
   odometryVelocitySums += odometryVelocitySamples[odometryVelocitySampleTail];
   odometryVelocitySampleTail = (odometryVelocitySampleTail + 1) & ODOMETRY_MASK_VELOCITY_SAMPLES;
 
-  odometry.velocity = odometryVelocitySums / (float)ODOMETRY_NUM_VELOCITY_SAMPLES;
+  odometry.velocity = odometryVelocitySums / (float)PARAMETER_STATIC_ODOMETRY_NUM_VELOCITY_SAMPLES;
   odometry.length += mmVelo / 1000.0f;
   odometry.angularVelocity = GYRO_GetYaw() * (M_PI / 180.0f);
   float angle = odometry.angle + odometry.angularVelocity / 1000.0f;

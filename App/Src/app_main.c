@@ -116,7 +116,6 @@ void app_main(void)
       }
       LOGGER_Stop();
       INTERVAL_Buzzer(50);
-      /*
       float stopLength = odom->length + 0.25f;
       while (odom->length < stopLength)
       {
@@ -126,7 +125,6 @@ void app_main(void)
         SERVO_SetTargetAngularVelocity(velo);
         SERVO_SetMaxAngularVelocity(sign * velo);
       }
-      */
       SERVO_SetAcceleration(-1.0f * param->acceleration);
       while (*SERVO_GetTargetVelocity() > param->minVelocity)
       {
