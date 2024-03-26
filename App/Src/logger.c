@@ -10,6 +10,28 @@
 #include "parameter_static.h"
 
 #if PARAMETER_STATIC_LOGGER_ENABLED != 0
+typedef enum
+{
+  LOGGER_MODE_TARGET_ELEMENT_VELOCITY,
+  LOGGER_MODE_TARGET_ELEMENT_ANGULAR_VELOCITY,
+  LOGGER_MODE_TARGET_ELEMENT_DUTY_RIGHT,
+  LOGGER_MODE_TARGET_ELEMENT_DUTY_LEFT,
+  LOGGER_MODE_TARGET_ELEMENT_ODOMETRY_VELOCITY,
+  LOGGER_MODE_TARGET_ELEMENT_ODOMETRY_LENGTH,
+  LOGGER_MODE_TARGET_ELEMENT_ODOMETRY_ANGULAR_VELOCITY,
+  LOGGER_MODE_TARGET_ELEMENT_ODOMETRY_ANGLE,
+  LOGGER_MODE_TARGET_ELEMENT_ODOMETRY_X,
+  LOGGER_MODE_TARGET_ELEMENT_ODOMETRY_Y,
+  NUM_LOGGER_MODE_TARGET_ELEMENT,
+} LOGGER_MODE_TARGET_ELEMENT;
+
+typedef enum
+{
+  LOGGER_MODE_ODOMETRY_ELEMENT_X,
+  LOGGER_MODE_ODOMETRY_ELEMENT_Y,
+  NUM_LOGGER_MODE_ODOMETRY_ELEMENT,
+} LOGGER_MODE_ODOMETRY_ELEMENT;
+
 //! log buffer
 static int16_t loggerBuffer[PARAMETER_STATIC_LOGGER_BUFFER_SIZE] = {};
 //! log index
@@ -20,8 +42,8 @@ static uint16_t loggerFreqCountMax = 0;
 static LOGGER_MODE loggerMode = 0;
 //! mode element num
 static uint16_t loggerModeElmNum[NUM_LOGGER_MODE] = {
-    [LOGGER_MODE_TARGET] = 8,
-    [LOGGER_MODE_ODOMETRY] = 2,
+    [LOGGER_MODE_TARGET] = NUM_LOGGER_MODE_TARGET_ELEMENT,
+    [LOGGER_MODE_ODOMETRY] = NUM_LOGGER_MODE_ODOMETRY_ELEMENT,
 };
 #endif
 
@@ -33,14 +55,16 @@ LOGGER_UpdateTarget()
 {
 #if PARAMETER_STATIC_LOGGER_ENABLED != 0
   const ODOMETRY *odom = ODOMETRY_GetCurrent();
-  loggerBuffer[loggerBufferIndex + 0] = (int16_t)(*SERVO_GetTargetVelocity() * 1000.0f);
-  loggerBuffer[loggerBufferIndex + 1] = (int16_t)(*SERVO_GetTargetAngularVelocity() * 1000.0f);
-  loggerBuffer[loggerBufferIndex + 2] = (int16_t)(odom->velocity * 1000.0f);
-  loggerBuffer[loggerBufferIndex + 3] = (int16_t)(odom->length * 1000.0f);
-  loggerBuffer[loggerBufferIndex + 4] = (int16_t)(odom->angularVelocity * 1000.0f);
-  loggerBuffer[loggerBufferIndex + 5] = (int16_t)(odom->angle * 1000.0f);
-  loggerBuffer[loggerBufferIndex + 6] = (int16_t)(odom->x * 1000.0f);
-  loggerBuffer[loggerBufferIndex + 7] = (int16_t)(odom->y * 1000.0f);
+  loggerBuffer[loggerBufferIndex + LOGGER_MODE_TARGET_ELEMENT_VELOCITY] = (int16_t)(*SERVO_GetTargetVelocity() * 1000.0f);
+  loggerBuffer[loggerBufferIndex + LOGGER_MODE_TARGET_ELEMENT_ANGULAR_VELOCITY] = (int16_t)(*SERVO_GetTargetAngularVelocity() * 1000.0f);
+  loggerBuffer[loggerBufferIndex + LOGGER_MODE_TARGET_ELEMENT_DUTY_RIGHT] = (int16_t)MOTOR_GetDutyRight();
+  loggerBuffer[loggerBufferIndex + LOGGER_MODE_TARGET_ELEMENT_DUTY_LEFT] = (int16_t)MOTOR_GetDutyLeft();
+  loggerBuffer[loggerBufferIndex + LOGGER_MODE_TARGET_ELEMENT_ODOMETRY_VELOCITY] = (int16_t)(odom->velocity * 1000.0f);
+  loggerBuffer[loggerBufferIndex + LOGGER_MODE_TARGET_ELEMENT_ODOMETRY_LENGTH] = (int16_t)(odom->length * 1000.0f);
+  loggerBuffer[loggerBufferIndex + LOGGER_MODE_TARGET_ELEMENT_ODOMETRY_ANGULAR_VELOCITY] = (int16_t)(odom->angularVelocity * 1000.0f);
+  loggerBuffer[loggerBufferIndex + LOGGER_MODE_TARGET_ELEMENT_ODOMETRY_ANGLE] = (int16_t)(odom->angle * 1000.0f);
+  loggerBuffer[loggerBufferIndex + LOGGER_MODE_TARGET_ELEMENT_ODOMETRY_X] = (int16_t)(odom->x * 1000.0f);
+  loggerBuffer[loggerBufferIndex + LOGGER_MODE_TARGET_ELEMENT_ODOMETRY_Y] = (int16_t)(odom->y * 1000.0f);
 #endif
 }
 /**
@@ -53,6 +77,8 @@ static void LOGGER_PrintHeaderTarget()
       "index,"
       "tar_velo[1000*m/s],"
       "tar_ang_velo[1000*rad/s],"
+      "duty_right,"
+      "duty_left,"
       "velo[1000*m/s],"
       "len[1000*m],"
       "ang_velo[1000*rad/s],"
@@ -69,8 +95,8 @@ static void LOGGER_UpdateOdometry()
 {
 #if PARAMETER_STATIC_LOGGER_ENABLED != 0
   const ODOMETRY *odom = ODOMETRY_GetCurrent();
-  loggerBuffer[loggerBufferIndex + 0] = (int16_t)(odom->x * 1000.0f);
-  loggerBuffer[loggerBufferIndex + 1] = (int16_t)(odom->y * 1000.0f);
+  loggerBuffer[loggerBufferIndex + LOGGER_MODE_ODOMETRY_ELEMENT_X] = (int16_t)(odom->x * 1000.0f);
+  loggerBuffer[loggerBufferIndex + LOGGER_MODE_ODOMETRY_ELEMENT_Y] = (int16_t)(odom->y * 1000.0f);
 #endif
 }
 /**

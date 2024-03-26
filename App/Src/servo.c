@@ -19,6 +19,10 @@
 extern TIM_HandleTypeDef htim1;
 //! TIM17 Handler extern
 extern TIM_HandleTypeDef htim17;
+//! Motor right duty
+static float motorRightDuty = 0;
+//! Motor left duty
+static float motorLeftDuty = 0;
 /**
  * @brief Start motors.
  */
@@ -44,7 +48,8 @@ static void MOTOR_Stop()
  */
 static void MOTOR_SetDutyRight(float duty)
 {
-  TIM17->CCR1 = (uint16_t)(fabsf(duty) * MOTOR_MAX_DUTY);
+  motorRightDuty = duty * MOTOR_MAX_DUTY;
+  TIM17->CCR1 = (uint16_t)fabsf(motorRightDuty);
   HAL_GPIO_WritePin(MotorRightPhase_GPIO_Port, MotorRightPhase_Pin, duty > 0.0f ? GPIO_PIN_RESET : GPIO_PIN_SET);
 }
 /**
@@ -52,10 +57,24 @@ static void MOTOR_SetDutyRight(float duty)
  */
 static void MOTOR_SetDutyLeft(float duty)
 {
-  TIM1->CCR4 = (uint16_t)(fabsf(duty) * MOTOR_MAX_DUTY);
+  motorLeftDuty = duty * MOTOR_MAX_DUTY;
+  TIM1->CCR4 = (uint16_t)fabsf(motorLeftDuty);
   HAL_GPIO_WritePin(MotorLeftPhase_GPIO_Port, MotorLeftPhase_Pin, duty > 0.0f ? GPIO_PIN_SET : GPIO_PIN_RESET);
 }
-
+/**
+ * @brief Get right motor duty
+ */
+float MOTOR_GetDutyRight()
+{
+  return motorRightDuty;
+}
+/**
+ * @brief Get Left motor duty
+ */
+float MOTOR_GetDutyLeft()
+{
+  return motorLeftDuty;
+}
 /* Servo ---------------------------------------------------------------------*/
 #define SERVO_LIMIT_VOTAGE 4.5f
 //! Servo enable flag

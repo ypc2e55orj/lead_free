@@ -2,6 +2,14 @@
 #define SERVO_H
 
 /**
+ * @brief Get right motor duty
+ */
+float MOTOR_GetDutyRight();
+/**
+ * @brief Get Left motor duty
+ */
+float MOTOR_GetDutyLeft();
+/**
  * @brief Start servos
  */
 void SERVO_Start(const float *veloPidGain, const float *angPidGain);

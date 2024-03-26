@@ -74,16 +74,18 @@ void EmergencyStop()
     INTERVAL_Buzzer(50);
     Delay(100);
   }
-  Delay(5000);
+  INTERVAL_Buzzer(1000);
+  Delay(1000);
+  SERVO_Stop();
 }
 
-void LineTrace()
+void TraceLine()
 {
   const PARAMETER *param = PARAMETER_Get();
   const ODOMETRY *odom = ODOMETRY_GetCurrent();
 
   INTERVAL_Buzzer(50);
-  LOGGER_SetMode(LOGGER_MODE_ODOMETRY);
+  LOGGER_SetMode(LOGGER_MODE_TARGET);
   LOGGER_Clear();
   ODOMETRY_Reset();
   LINE_EnableFeedback(param->lineAngularVelocityPid);
@@ -162,7 +164,7 @@ void app_main(void)
     {
       while (BUTTON_GetSw2())
         ;
-      LineTrace();
+      TraceLine();
     }
   }
 }
