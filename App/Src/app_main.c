@@ -30,6 +30,7 @@ void Delay(int ms)
 void Calibrate(void)
 {
   const PARAMETER *param = PARAMETER_Get();
+  printf("Waiting calibration...\r\n");
   while (!BUTTON_GetSw1())
   {
     HAL_GPIO_TogglePin(Led_GPIO_Port, Led_Pin);
@@ -145,7 +146,6 @@ void app_main(void)
   INTERVAL_Start();
   INTERVAL_Buzzer(50);
   printf("\r\n\r\n ---------- LeadFree is started !!! ----------\r\n");
-  printf("Waiting calibration...\r\n");
   Calibrate();
 
   while (1)
