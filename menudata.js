@@ -86,7 +86,6 @@ var menudata={children:[
 {text:"s",url:"globals_eval.html#index_s"}]},
 {text:"マクロ定義",url:"globals_defs.html",children:[
 {text:"b",url:"globals_defs.html#index_b"},
-{text:"l",url:"globals_defs.html#index_l"},
 {text:"m",url:"globals_defs.html#index_m"},
 {text:"n",url:"globals_defs.html#index_n"},
 {text:"o",url:"globals_defs.html#index_o"},

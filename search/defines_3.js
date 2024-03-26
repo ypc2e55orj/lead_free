@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['num_5fparameters_549',['NUM_PARAMETERS',['../parameter_8h.html#ae80c74b7cac856ec6868587f85c47427',1,'parameter.h']]]
+  ['odometry_5fmask_5fvelocity_5fsamples_540',['ODOMETRY_MASK_VELOCITY_SAMPLES',['../odometry_8c.html#adc6ca37ee7caa97e2baa8ece67ea6573',1,'odometry.c']]],
+  ['odometry_5fmm_5fper_5fpulse_541',['ODOMETRY_MM_PER_PULSE',['../odometry_8c.html#a42033dcc3abd42d6bbd32970e5f60424',1,'odometry.c']]]
 ];

@@ -77,16 +77,18 @@ $(function() {
 <code>#include &lt;math.h&gt;</code><br />
 <code>#include &lt;float.h&gt;</code><br />
 <code>#include &quot;<a class="el" href="sensor_8h_source.html">sensor.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="parameter__static_8h_source.html">parameter_static.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 odometry.c の依存先関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="odometry_8c__incl.png" border="0" usemap="#aApp_2Src_2odometry_8c" alt=""/></div>
 <map name="aApp_2Src_2odometry_8c" id="aApp_2Src_2odometry_8c">
-<area shape="rect" title=" " alt="" coords="129,5,275,32"/>
+<area shape="rect" title=" " alt="" coords="174,5,321,32"/>
 <area shape="rect" href="odometry_8h.html" title=" " alt="" coords="5,80,100,107"/>
 <area shape="rect" title=" " alt="" coords="124,80,192,107"/>
 <area shape="rect" title=" " alt="" coords="216,80,279,107"/>
 <area shape="rect" href="sensor_8h.html" title=" " alt="" coords="303,80,379,107"/>
+<area shape="rect" href="parameter__static_8h.html" title=" " alt="" coords="403,80,548,107"/>
 <area shape="rect" title=" " alt="" coords="161,155,232,181"/>
 </map>
 </div>
@@ -95,15 +97,9 @@ odometry.c の依存先関係図:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 マクロ定義</h2></td></tr>
-<tr class="memitem:a1a908a1bd69ea6df6d64e225e3420c9a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="odometry_8c.html#a1a908a1bd69ea6df6d64e225e3420c9a">ODOMETRY_ENCODER_PPR</a>&#160;&#160;&#160;119.538f</td></tr>
-<tr class="separator:a1a908a1bd69ea6df6d64e225e3420c9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9dade6fa1077bddbdd6930b36417eaba"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="odometry_8c.html#a9dade6fa1077bddbdd6930b36417eaba">ODOMETRY_TIRE_DIAMETER</a>&#160;&#160;&#160;20.9f</td></tr>
-<tr class="separator:a9dade6fa1077bddbdd6930b36417eaba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a42033dcc3abd42d6bbd32970e5f60424"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="odometry_8c.html#a42033dcc3abd42d6bbd32970e5f60424">ODOMETRY_MM_PER_PULSE</a>&#160;&#160;&#160;(((<a class="el" href="odometry_8c.html#a9dade6fa1077bddbdd6930b36417eaba">ODOMETRY_TIRE_DIAMETER</a>) * M_PI) / <a class="el" href="odometry_8c.html#a1a908a1bd69ea6df6d64e225e3420c9a">ODOMETRY_ENCODER_PPR</a>)</td></tr>
+<tr class="memitem:a42033dcc3abd42d6bbd32970e5f60424"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="odometry_8c.html#a42033dcc3abd42d6bbd32970e5f60424">ODOMETRY_MM_PER_PULSE</a>&#160;&#160;&#160;(((<a class="el" href="parameter__static_8h.html#a700602c72c1e6e57400fe49a0498611d">PARAMETER_STATIC_ODOMETRY_TIRE_DIAMETER</a>) * M_PI) / <a class="el" href="parameter__static_8h.html#ace071eae3d97d4c12a974f6215e9c911">PARAMETER_STATIC_ODOMETRY_ENCODER_PPR</a>)</td></tr>
 <tr class="separator:a42033dcc3abd42d6bbd32970e5f60424"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1b02a312c50832f55b7569a9571cd62c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="odometry_8c.html#a1b02a312c50832f55b7569a9571cd62c">ODOMETRY_NUM_VELOCITY_SAMPLES</a>&#160;&#160;&#160;8</td></tr>
-<tr class="separator:a1b02a312c50832f55b7569a9571cd62c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adc6ca37ee7caa97e2baa8ece67ea6573"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="odometry_8c.html#adc6ca37ee7caa97e2baa8ece67ea6573">ODOMETRY_MASK_VELOCITY_SAMPLES</a>&#160;&#160;&#160;(<a class="el" href="odometry_8c.html#a1b02a312c50832f55b7569a9571cd62c">ODOMETRY_NUM_VELOCITY_SAMPLES</a> - 1)</td></tr>
+<tr class="memitem:adc6ca37ee7caa97e2baa8ece67ea6573"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="odometry_8c.html#adc6ca37ee7caa97e2baa8ece67ea6573">ODOMETRY_MASK_VELOCITY_SAMPLES</a>&#160;&#160;&#160;(<a class="el" href="parameter__static_8h.html#a87df6004bbfec4c76a9b9a09e8e0139f">PARAMETER_STATIC_ODOMETRY_NUM_VELOCITY_SAMPLES</a> - 1)</td></tr>
 <tr class="separator:adc6ca37ee7caa97e2baa8ece67ea6573"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
@@ -126,9 +122,9 @@ odometry.c の依存先関係図:</div>
 <tr class="memitem:a898b9ebeecf9ee324257b447f04b485b"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structODOMETRY.html">ODOMETRY</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="odometry_8c.html#a898b9ebeecf9ee324257b447f04b485b">odometry</a> = {0}</td></tr>
 <tr class="memdesc:a898b9ebeecf9ee324257b447f04b485b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Current odometry  <a href="odometry_8c.html#a898b9ebeecf9ee324257b447f04b485b">[詳解]</a><br /></td></tr>
 <tr class="separator:a898b9ebeecf9ee324257b447f04b485b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4c541a817d2de8221de6dbcb988507ad"><td class="memItemLeft" align="right" valign="top">static float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="odometry_8c.html#a4c541a817d2de8221de6dbcb988507ad">odometryVelocitySamples</a> [<a class="el" href="odometry_8c.html#a1b02a312c50832f55b7569a9571cd62c">ODOMETRY_NUM_VELOCITY_SAMPLES</a>] = {0.0f}</td></tr>
-<tr class="memdesc:a4c541a817d2de8221de6dbcb988507ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Velocity moving average  <a href="odometry_8c.html#a4c541a817d2de8221de6dbcb988507ad">[詳解]</a><br /></td></tr>
-<tr class="separator:a4c541a817d2de8221de6dbcb988507ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf69aa11dff4851f51ea8a1259d28136"><td class="memItemLeft" align="right" valign="top">static float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="odometry_8c.html#adf69aa11dff4851f51ea8a1259d28136">odometryVelocitySamples</a> [<a class="el" href="parameter__static_8h.html#a87df6004bbfec4c76a9b9a09e8e0139f">PARAMETER_STATIC_ODOMETRY_NUM_VELOCITY_SAMPLES</a>] = {0.0f}</td></tr>
+<tr class="memdesc:adf69aa11dff4851f51ea8a1259d28136"><td class="mdescLeft">&#160;</td><td class="mdescRight">Velocity moving average  <a href="odometry_8c.html#adf69aa11dff4851f51ea8a1259d28136">[詳解]</a><br /></td></tr>
+<tr class="separator:adf69aa11dff4851f51ea8a1259d28136"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac2f4cb73f6a4ab1678954c006f052db7"><td class="memItemLeft" align="right" valign="top">static uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="odometry_8c.html#ac2f4cb73f6a4ab1678954c006f052db7">odometryVelocitySampleHead</a> = 0</td></tr>
 <tr class="memdesc:ac2f4cb73f6a4ab1678954c006f052db7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Velocity moving average index (head)  <a href="odometry_8c.html#ac2f4cb73f6a4ab1678954c006f052db7">[詳解]</a><br /></td></tr>
 <tr class="separator:ac2f4cb73f6a4ab1678954c006f052db7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -140,22 +136,6 @@ odometry.c の依存先関係図:</div>
 <tr class="separator:a006518ac26ef9abb852740998cd5e4ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">マクロ定義詳解</h2>
-<a id="a1a908a1bd69ea6df6d64e225e3420c9a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1a908a1bd69ea6df6d64e225e3420c9a">&#9670;&nbsp;</a></span>ODOMETRY_ENCODER_PPR</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define ODOMETRY_ENCODER_PPR&#160;&#160;&#160;119.538f</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition"> <a class="el" href="odometry_8c_source.html">odometry.c</a> の <a class="el" href="odometry_8c_source.html#l00010">10</a> 行目に定義があります。</p>
-
-</div>
-</div>
 <a id="adc6ca37ee7caa97e2baa8ece67ea6573"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#adc6ca37ee7caa97e2baa8ece67ea6573">&#9670;&nbsp;</a></span>ODOMETRY_MASK_VELOCITY_SAMPLES</h2>
 
@@ -163,12 +143,12 @@ odometry.c の依存先関係図:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define ODOMETRY_MASK_VELOCITY_SAMPLES&#160;&#160;&#160;(<a class="el" href="odometry_8c.html#a1b02a312c50832f55b7569a9571cd62c">ODOMETRY_NUM_VELOCITY_SAMPLES</a> - 1)</td>
+          <td class="memname">#define ODOMETRY_MASK_VELOCITY_SAMPLES&#160;&#160;&#160;(<a class="el" href="parameter__static_8h.html#a87df6004bbfec4c76a9b9a09e8e0139f">PARAMETER_STATIC_ODOMETRY_NUM_VELOCITY_SAMPLES</a> - 1)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="odometry_8c_source.html">odometry.c</a> の <a class="el" href="odometry_8c_source.html#l00014">14</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="odometry_8c_source.html">odometry.c</a> の <a class="el" href="odometry_8c_source.html#l00012">12</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -179,39 +159,7 @@ odometry.c の依存先関係図:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define ODOMETRY_MM_PER_PULSE&#160;&#160;&#160;(((<a class="el" href="odometry_8c.html#a9dade6fa1077bddbdd6930b36417eaba">ODOMETRY_TIRE_DIAMETER</a>) * M_PI) / <a class="el" href="odometry_8c.html#a1a908a1bd69ea6df6d64e225e3420c9a">ODOMETRY_ENCODER_PPR</a>)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition"> <a class="el" href="odometry_8c_source.html">odometry.c</a> の <a class="el" href="odometry_8c_source.html#l00012">12</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="a1b02a312c50832f55b7569a9571cd62c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1b02a312c50832f55b7569a9571cd62c">&#9670;&nbsp;</a></span>ODOMETRY_NUM_VELOCITY_SAMPLES</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define ODOMETRY_NUM_VELOCITY_SAMPLES&#160;&#160;&#160;8</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition"> <a class="el" href="odometry_8c_source.html">odometry.c</a> の <a class="el" href="odometry_8c_source.html#l00013">13</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="a9dade6fa1077bddbdd6930b36417eaba"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9dade6fa1077bddbdd6930b36417eaba">&#9670;&nbsp;</a></span>ODOMETRY_TIRE_DIAMETER</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define ODOMETRY_TIRE_DIAMETER&#160;&#160;&#160;20.9f</td>
+          <td class="memname">#define ODOMETRY_MM_PER_PULSE&#160;&#160;&#160;(((<a class="el" href="parameter__static_8h.html#a700602c72c1e6e57400fe49a0498611d">PARAMETER_STATIC_ODOMETRY_TIRE_DIAMETER</a>) * M_PI) / <a class="el" href="parameter__static_8h.html#ace071eae3d97d4c12a974f6215e9c911">PARAMETER_STATIC_ODOMETRY_ENCODER_PPR</a>)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -238,7 +186,7 @@ odometry.c の依存先関係図:</div>
 
 <p>Calculate odometry </p>
 
-<p class="definition"> <a class="el" href="odometry_8c_source.html">odometry.c</a> の <a class="el" href="odometry_8c_source.html#l00028">28</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="odometry_8c_source.html">odometry.c</a> の <a class="el" href="odometry_8c_source.html#l00026">26</a> 行目に定義があります。</p>
 
 <p class="reference">参照元 <a class="el" href="interval_8c_source.html#l00021">HAL_TIM_PeriodElapsedCallback()</a>.</p>
 <div class="dynheader">
@@ -282,9 +230,9 @@ odometry.c の依存先関係図:</div>
 
 <p>Get current </p>
 
-<p class="definition"> <a class="el" href="odometry_8c_source.html">odometry.c</a> の <a class="el" href="odometry_8c_source.html#l00080">80</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="odometry_8c_source.html">odometry.c</a> の <a class="el" href="odometry_8c_source.html#l00078">78</a> 行目に定義があります。</p>
 
-<p class="reference">参照元 <a class="el" href="app__main_8c_source.html#l00063">app_main()</a>, <a class="el" href="logger_8c_source.html#l00069">LOGGER_UpdateOdometry()</a>, <a class="el" href="logger_8c_source.html#l00033">LOGGER_UpdateTarget()</a>, <a class="el" href="run_8c_source.html#l00013">RUN_Straight()</a>, <a class="el" href="run_8c_source.html#l00047">RUN_Turn()</a>, <a class="el" href="servo_8c_source.html#l00120">SERVO_UpdateInterval()</a>.</p>
+<p class="reference">参照元 <a class="el" href="app__main_8c_source.html#l00063">app_main()</a>, <a class="el" href="logger_8c_source.html#l00068">LOGGER_UpdateOdometry()</a>, <a class="el" href="logger_8c_source.html#l00032">LOGGER_UpdateTarget()</a>, <a class="el" href="run_8c_source.html#l00013">RUN_Straight()</a>, <a class="el" href="run_8c_source.html#l00047">RUN_Turn()</a>, <a class="el" href="servo_8c_source.html#l00120">SERVO_UpdateInterval()</a>.</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
@@ -323,20 +271,20 @@ odometry.c の依存先関係図:</div>
 
 <p>Reset sums </p>
 
-<p class="definition"> <a class="el" href="odometry_8c_source.html">odometry.c</a> の <a class="el" href="odometry_8c_source.html#l00064">64</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="odometry_8c_source.html">odometry.c</a> の <a class="el" href="odometry_8c_source.html#l00062">62</a> 行目に定義があります。</p>
 
-<p class="reference">参照元 <a class="el" href="run_8c_source.html#l00013">RUN_Straight()</a>, <a class="el" href="run_8c_source.html#l00047">RUN_Turn()</a>.</p>
+<p class="reference">参照元 <a class="el" href="app__main_8c_source.html#l00063">app_main()</a>, <a class="el" href="run_8c_source.html#l00013">RUN_Straight()</a>, <a class="el" href="run_8c_source.html#l00047">RUN_Turn()</a>.</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="odometry_8c_a439ddae1dc13251f0ff183d7f967bb1f_icgraph.png" border="0" usemap="#aodometry_8c_a439ddae1dc13251f0ff183d7f967bb1f_icgraph" alt=""/></div>
 <map name="aodometry_8c_a439ddae1dc13251f0ff183d7f967bb1f_icgraph" id="aodometry_8c_a439ddae1dc13251f0ff183d7f967bb1f_icgraph">
 <area shape="rect" title="Reset sums" alt="" coords="529,31,669,57"/>
-<area shape="rect" href="run_8h.html#ab51f5d38046671744984ff764c8949b9" title="Straight" alt="" coords="372,5,481,32"/>
-<area shape="rect" href="run_8h.html#aa99cd7e043851ce08f3fbd58ba75a945" title="Turn" alt="" coords="384,56,469,83"/>
-<area shape="rect" href="app__main_8c.html#ac8ec403b244267ecd7c29fd6620076e3" title=" " alt="" coords="243,5,324,32"/>
 <area shape="rect" href="app__main_8h.html#a630544a7f0a2cc40d8a7fefab7e2fe70" title=" " alt="" coords="108,5,195,32"/>
+<area shape="rect" href="run_8h.html#ab51f5d38046671744984ff764c8949b9" title="Straight" alt="" coords="372,31,481,57"/>
+<area shape="rect" href="run_8h.html#aa99cd7e043851ce08f3fbd58ba75a945" title="Turn" alt="" coords="384,81,469,108"/>
 <area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,5,60,32"/>
+<area shape="rect" href="app__main_8c.html#ac8ec403b244267ecd7c29fd6620076e3" title=" " alt="" coords="243,31,324,57"/>
 </map>
 </div>
 
@@ -359,7 +307,7 @@ odometry.c の依存先関係図:</div>
 
 <p>Reset position </p>
 
-<p class="definition"> <a class="el" href="odometry_8c_source.html">odometry.c</a> の <a class="el" href="odometry_8c_source.html#l00072">72</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="odometry_8c_source.html">odometry.c</a> の <a class="el" href="odometry_8c_source.html#l00070">70</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -386,9 +334,9 @@ odometry.c の依存先関係図:</div>
 
 <p>Current odometry </p>
 
-<p class="definition"> <a class="el" href="odometry_8c_source.html">odometry.c</a> の <a class="el" href="odometry_8c_source.html#l00016">16</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="odometry_8c_source.html">odometry.c</a> の <a class="el" href="odometry_8c_source.html#l00014">14</a> 行目に定義があります。</p>
 
-<p class="reference">参照元 <a class="el" href="odometry_8c_source.html#l00028">ODOMETRY_CalculateInterval()</a>, <a class="el" href="odometry_8c_source.html#l00080">ODOMETRY_GetCurrent()</a>, <a class="el" href="odometry_8c_source.html#l00064">ODOMETRY_Reset()</a>, <a class="el" href="odometry_8c_source.html#l00072">ODOMETRY_ResetPos()</a>.</p>
+<p class="reference">参照元 <a class="el" href="odometry_8c_source.html#l00026">ODOMETRY_CalculateInterval()</a>, <a class="el" href="odometry_8c_source.html#l00078">ODOMETRY_GetCurrent()</a>, <a class="el" href="odometry_8c_source.html#l00062">ODOMETRY_Reset()</a>, <a class="el" href="odometry_8c_source.html#l00070">ODOMETRY_ResetPos()</a>.</p>
 
 </div>
 </div>
@@ -414,14 +362,14 @@ odometry.c の依存先関係図:</div>
 
 <p>Velocity moving average index (head) </p>
 
-<p class="definition"> <a class="el" href="odometry_8c_source.html">odometry.c</a> の <a class="el" href="odometry_8c_source.html#l00020">20</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="odometry_8c_source.html">odometry.c</a> の <a class="el" href="odometry_8c_source.html#l00018">18</a> 行目に定義があります。</p>
 
-<p class="reference">参照元 <a class="el" href="odometry_8c_source.html#l00028">ODOMETRY_CalculateInterval()</a>.</p>
+<p class="reference">参照元 <a class="el" href="odometry_8c_source.html#l00026">ODOMETRY_CalculateInterval()</a>.</p>
 
 </div>
 </div>
-<a id="a4c541a817d2de8221de6dbcb988507ad"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4c541a817d2de8221de6dbcb988507ad">&#9670;&nbsp;</a></span>odometryVelocitySamples</h2>
+<a id="adf69aa11dff4851f51ea8a1259d28136"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf69aa11dff4851f51ea8a1259d28136">&#9670;&nbsp;</a></span>odometryVelocitySamples</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -430,7 +378,7 @@ odometry.c の依存先関係図:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">float odometryVelocitySamples[<a class="el" href="odometry_8c.html#a1b02a312c50832f55b7569a9571cd62c">ODOMETRY_NUM_VELOCITY_SAMPLES</a>] = {0.0f}</td>
+          <td class="memname">float odometryVelocitySamples[<a class="el" href="parameter__static_8h.html#a87df6004bbfec4c76a9b9a09e8e0139f">PARAMETER_STATIC_ODOMETRY_NUM_VELOCITY_SAMPLES</a>] = {0.0f}</td>
         </tr>
       </table>
   </td>
@@ -442,9 +390,9 @@ odometry.c の依存先関係図:</div>
 
 <p>Velocity moving average </p>
 
-<p class="definition"> <a class="el" href="odometry_8c_source.html">odometry.c</a> の <a class="el" href="odometry_8c_source.html#l00018">18</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="odometry_8c_source.html">odometry.c</a> の <a class="el" href="odometry_8c_source.html#l00016">16</a> 行目に定義があります。</p>
 
-<p class="reference">参照元 <a class="el" href="odometry_8c_source.html#l00028">ODOMETRY_CalculateInterval()</a>.</p>
+<p class="reference">参照元 <a class="el" href="odometry_8c_source.html#l00026">ODOMETRY_CalculateInterval()</a>.</p>
 
 </div>
 </div>
@@ -470,9 +418,9 @@ odometry.c の依存先関係図:</div>
 
 <p>Velocity moving average index (tail) </p>
 
-<p class="definition"> <a class="el" href="odometry_8c_source.html">odometry.c</a> の <a class="el" href="odometry_8c_source.html#l00022">22</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="odometry_8c_source.html">odometry.c</a> の <a class="el" href="odometry_8c_source.html#l00020">20</a> 行目に定義があります。</p>
 
-<p class="reference">参照元 <a class="el" href="odometry_8c_source.html#l00028">ODOMETRY_CalculateInterval()</a>.</p>
+<p class="reference">参照元 <a class="el" href="odometry_8c_source.html#l00026">ODOMETRY_CalculateInterval()</a>.</p>
 
 </div>
 </div>
@@ -498,9 +446,9 @@ odometry.c の依存先関係図:</div>
 
 <p>Vloecity sums </p>
 
-<p class="definition"> <a class="el" href="odometry_8c_source.html">odometry.c</a> の <a class="el" href="odometry_8c_source.html#l00024">24</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="odometry_8c_source.html">odometry.c</a> の <a class="el" href="odometry_8c_source.html#l00022">22</a> 行目に定義があります。</p>
 
-<p class="reference">参照元 <a class="el" href="odometry_8c_source.html#l00028">ODOMETRY_CalculateInterval()</a>.</p>
+<p class="reference">参照元 <a class="el" href="odometry_8c_source.html#l00026">ODOMETRY_CalculateInterval()</a>.</p>
 
 </div>
 </div>
