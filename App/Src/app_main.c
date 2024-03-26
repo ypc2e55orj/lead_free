@@ -60,6 +60,84 @@ void Calibrate(void)
   printf("startGoalThresh %04d, curvatureThresh %04d\r\n", (int)(p->threshold[MARKER_SENSOR_RIGHT] * 1000), (int)(p->threshold[MARKER_SENSOR_LEFT] * 1000));
 }
 
+void EmergencyStop()
+{
+  SERVO_SetAcceleration(0.0f);
+  SERVO_SetMaxVelocity(0.0f);
+  SERVO_SetTargetVelocity(0.0f);
+  SERVO_SetAngularAcceleration(0.0f);
+  SERVO_SetMaxAngularVelocity(0.0f);
+  SERVO_SetTargetAngularVelocity(0.0f);
+  for (int i = 0; i < 4; i++)
+  {
+    INTERVAL_Buzzer(50);
+    Delay(100);
+  }
+  Delay(5000);
+}
+
+void LineTrace()
+{
+  const PARAMETER *param = PARAMETER_Get();
+  const ODOMETRY *odom = ODOMETRY_GetCurrent();
+
+  INTERVAL_Buzzer(50);
+  LOGGER_SetMode(LOGGER_MODE_ODOMETRY);
+  LOGGER_Clear();
+  ODOMETRY_Reset();
+  LINE_EnableFeedback(param->lineAngularVelocityPid);
+  LINE_ResetStartGoalState();
+  LINE_ResetCurvatureState();
+  SERVO_SetTargetVelocity(0.0f);
+  SERVO_SetMaxVelocity(param->maxVelocity);
+  SERVO_Start(param->velocityPid, param->angularVelocityPid);
+  SERVO_SetAcceleration(param->acceleration);
+  while (LINE_GetStartGoalState() != STARTGOAL_MARKER_GOAL_PASSED)
+  {
+    if (LINE_GetStartGoalState() == STARTGOAL_MARKER_START_PASSED)
+    {
+      INTERVAL_Buzzer(50);
+      LOGGER_Start(100);
+    }
+    if (LINE_GetCurvatureState() == CURVATURE_MARKER_PASSED)
+    {
+      INTERVAL_Buzzer(50);
+    }
+    if (LINE_GetLineState() == LINE_STATE_COURSE_OUT)
+    {
+      EmergencyStop();
+      return;
+    }
+    float velo = LINE_GetAngularVelocity();
+    float sign = velo < 0.0f ? -1.0f : 1.0f;
+    SERVO_SetAngularAcceleration(sign * param->acceleration);
+    SERVO_SetTargetAngularVelocity(velo);
+    SERVO_SetMaxAngularVelocity(sign * velo);
+  }
+  LOGGER_Stop();
+  INTERVAL_Buzzer(50);
+  float stopLength = odom->length + 0.25f;
+  while (odom->length < stopLength)
+  {
+    float velo = LINE_GetAngularVelocity();
+    float sign = velo < 0.0f ? -1.0f : 1.0f;
+    SERVO_SetAngularAcceleration(sign * param->acceleration);
+    SERVO_SetTargetAngularVelocity(velo);
+    SERVO_SetMaxAngularVelocity(sign * velo);
+  }
+  SERVO_SetAcceleration(-1.0f * param->acceleration);
+  while (*SERVO_GetTargetVelocity() > param->minVelocity)
+  {
+    float velo = LINE_GetAngularVelocity();
+    float sign = velo < 0.0f ? -1.0f : 1.0f;
+    SERVO_SetAngularAcceleration(sign * param->acceleration);
+    SERVO_SetTargetAngularVelocity(velo);
+    SERVO_SetMaxAngularVelocity(sign * velo);
+  }
+  SERVO_Stop();
+  INTERVAL_Buzzer(50);
+}
+
 void app_main(void)
 {
   PARAMETER_Init();
@@ -70,8 +148,6 @@ void app_main(void)
   printf("Waiting calibration...\r\n");
   Calibrate();
 
-  const PARAMETER *param = PARAMETER_Get();
-  const ODOMETRY *odom = ODOMETRY_GetCurrent();
   while (1)
   {
     if (BUTTON_GetSw1())
@@ -86,56 +162,7 @@ void app_main(void)
     {
       while (BUTTON_GetSw2())
         ;
-      INTERVAL_Buzzer(50);
-      LOGGER_SetMode(LOGGER_MODE_ODOMETRY);
-      LOGGER_Clear();
-      ODOMETRY_Reset();
-      LINE_EnableFeedback(param->lineAngularVelocityPid);
-      LINE_ResetStartGoalState();
-      LINE_ResetCurvatureState();
-      SERVO_SetTargetVelocity(0.0f);
-      SERVO_SetMaxVelocity(param->maxVelocity);
-      SERVO_Start(param->velocityPid, param->angularVelocityPid);
-      SERVO_SetAcceleration(param->acceleration);
-      while (LINE_GetStartGoalState() != STARTGOAL_MARKER_GOAL_PASSED)
-      {
-        if (LINE_GetStartGoalState() == STARTGOAL_MARKER_START_PASSED)
-        {
-          INTERVAL_Buzzer(50);
-          LOGGER_Start(100);
-        }
-        if (LINE_GetCurvatureState() == CURVATURE_MARKER_PASSED)
-        {
-          INTERVAL_Buzzer(50);
-        }
-        float velo = LINE_GetAngularVelocity();
-        float sign = velo < 0.0f ? -1.0f : 1.0f;
-        SERVO_SetAngularAcceleration(sign * param->acceleration);
-        SERVO_SetTargetAngularVelocity(velo);
-        SERVO_SetMaxAngularVelocity(sign * velo);
-      }
-      LOGGER_Stop();
-      INTERVAL_Buzzer(50);
-      float stopLength = odom->length + 0.25f;
-      while (odom->length < stopLength)
-      {
-        float velo = LINE_GetAngularVelocity();
-        float sign = velo < 0.0f ? -1.0f : 1.0f;
-        SERVO_SetAngularAcceleration(sign * param->acceleration);
-        SERVO_SetTargetAngularVelocity(velo);
-        SERVO_SetMaxAngularVelocity(sign * velo);
-      }
-      SERVO_SetAcceleration(-1.0f * param->acceleration);
-      while (*SERVO_GetTargetVelocity() > param->minVelocity)
-      {
-        float velo = LINE_GetAngularVelocity();
-        float sign = velo < 0.0f ? -1.0f : 1.0f;
-        SERVO_SetAngularAcceleration(sign * param->acceleration);
-        SERVO_SetTargetAngularVelocity(velo);
-        SERVO_SetMaxAngularVelocity(sign * velo);
-      }
-      SERVO_Stop();
-      INTERVAL_Buzzer(50);
+      LineTrace();
     }
   }
 }

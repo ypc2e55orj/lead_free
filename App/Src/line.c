@@ -11,6 +11,7 @@
 
 // project
 #include "pid.h"
+#include "parameter_static.h"
 
 //<! State of start and goal marker
 static STARTGOAL_MARKER_STATE lineMarkerStartGoalState = STARTGOAL_MARKER_START_WAITING;
@@ -152,14 +153,7 @@ static void LINE_UpdateAngularVelocity()
   bool isRighIn = lineMarkerValue[LINE_SENSOR_RIGHT_IN] > lineMarkerCalibrateValue.threshold[LINE_SENSOR_RIGHT_IN];
   bool isLeftIn = lineMarkerValue[LINE_SENSOR_LEFT_IN] > lineMarkerCalibrateValue.threshold[LINE_SENSOR_LEFT_IN];
   bool isLeftOut = lineMarkerValue[LINE_SENSOR_LEFT_OUT] > lineMarkerCalibrateValue.threshold[LINE_SENSOR_LEFT_OUT];
-  /*
-    if ((isRightOut && isLeftIn) || (isRighIn && isLeftOut))
-    {
-      // Cross line
-      lineAngularVelocity = 0.0f;
-      lineState = LINE_STATE_CROSS;
-    }
-    else */
+
   if (!isRightOut && !isRighIn && !isLeftIn && !isLeftOut)
   {
     // Course out
@@ -280,7 +274,7 @@ void LINE_StopCalibrate()
   LINE_ClearCalibrationTemporary();
   for (LINE_SENSOR_POS i = 0; i < NUM_SENSOR_POS; i++)
   {
-    lineMarkerCalibrateValue.threshold[i] = (lineMarkerCalibrateValue.calibrateAverage[i].max - lineMarkerCalibrateValue.calibrateAverage[i].min) / 2.0f;
+    lineMarkerCalibrateValue.threshold[i] = (lineMarkerCalibrateValue.calibrateAverage[i].max - lineMarkerCalibrateValue.calibrateAverage[i].min) * PARAMETER_STATIC_LINE_EXISTS_THRESHOLD;
   }
   float rightOut = lineMarkerCalibrateValue.calibrateAverage[LINE_SENSOR_RIGHT_OUT].max - lineMarkerCalibrateValue.calibrateAverage[LINE_SENSOR_RIGHT_OUT].min;
   float rightIn = lineMarkerCalibrateValue.calibrateAverage[LINE_SENSOR_RIGHT_IN].max - lineMarkerCalibrateValue.calibrateAverage[LINE_SENSOR_RIGHT_IN].min;
@@ -302,6 +296,20 @@ const LINE_CALIBRATE *LINE_GetCalibrate()
 float LINE_GetAngularVelocity()
 {
   return lineAngularVelocity;
+}
+/**
+ * @brief Get line state
+ */
+LINE_STATE LINE_GetLineState()
+{
+  return lineState;
+}
+/**
+ * @brief Reset line state
+ */
+void LINE_ResetLineState()
+{
+  lineState = LINE_STATE_SETUP;
 }
 /**
  * @brief Enable line feedback

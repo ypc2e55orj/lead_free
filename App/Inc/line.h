@@ -30,6 +30,7 @@ typedef enum
 //! Line state
 typedef enum
 {
+  LINE_STATE_SETUP,
   LINE_STATE_GOOD,
   LINE_STATE_CROSS,
   LINE_STATE_COURSE_OUT,
@@ -91,6 +92,14 @@ const LINE_CALIBRATE *LINE_GetCalibrate();
  * @brief Get generated angular velocity
  */
 float LINE_GetAngularVelocity();
+/**
+ * @brief Reset start and goal marker state
+ */
+LINE_STATE LINE_GetLineState();
+/**
+ * @brief Reset start and goal marker state
+ */
+void LINE_ResetLineState();
 /**
  * @brief Enable line feedback
  */
