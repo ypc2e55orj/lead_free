@@ -1,6 +1,8 @@
 <map id="SERVO_SetAngularAcceleration" name="SERVO_SetAngularAcceleration">
-<area shape="rect" id="node1" title="Set angular acceleration" alt="" coords="243,31,468,57"/>
-<area shape="rect" id="node2" href="$app__main_8h.html#a630544a7f0a2cc40d8a7fefab7e2fe70" title=" " alt="" coords="108,5,195,32"/>
-<area shape="rect" id="node4" href="$run_8h.html#aa99cd7e043851ce08f3fbd58ba75a945" title="Turn" alt="" coords="109,56,194,83"/>
-<area shape="rect" id="node3" href="$main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,5,60,32"/>
+<area shape="rect" id="node1" title="Set angular acceleration" alt="" coords="545,56,771,83"/>
+<area shape="rect" id="node2" href="$app__main_8c.html#ae947478c563efeb0546ca7c2dc247217" title=" " alt="" coords="373,5,497,32"/>
+<area shape="rect" id="node3" href="$app__main_8c.html#a8198f78d0645c1d3d50028a1a3b48d78" title=" " alt="" coords="243,31,325,57"/>
+<area shape="rect" id="node6" href="$run_8h.html#aa99cd7e043851ce08f3fbd58ba75a945" title="Turn" alt="" coords="393,107,478,133"/>
+<area shape="rect" id="node4" href="$app__main_8h.html#a630544a7f0a2cc40d8a7fefab7e2fe70" title=" " alt="" coords="108,31,195,57"/>
+<area shape="rect" id="node5" href="$main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,31,60,57"/>
 </map>

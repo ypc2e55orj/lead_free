@@ -232,23 +232,24 @@ odometry.c の依存先関係図:</div>
 
 <p class="definition"> <a class="el" href="odometry_8c_source.html">odometry.c</a> の <a class="el" href="odometry_8c_source.html#l00078">78</a> 行目に定義があります。</p>
 
-<p class="reference">参照元 <a class="el" href="app__main_8c_source.html#l00063">app_main()</a>, <a class="el" href="logger_8c_source.html#l00068">LOGGER_UpdateOdometry()</a>, <a class="el" href="logger_8c_source.html#l00032">LOGGER_UpdateTarget()</a>, <a class="el" href="run_8c_source.html#l00013">RUN_Straight()</a>, <a class="el" href="run_8c_source.html#l00047">RUN_Turn()</a>, <a class="el" href="servo_8c_source.html#l00120">SERVO_UpdateInterval()</a>.</p>
+<p class="reference">参照元 <a class="el" href="app__main_8c_source.html#l00079">LineTrace()</a>, <a class="el" href="logger_8c_source.html#l00068">LOGGER_UpdateOdometry()</a>, <a class="el" href="logger_8c_source.html#l00032">LOGGER_UpdateTarget()</a>, <a class="el" href="run_8c_source.html#l00013">RUN_Straight()</a>, <a class="el" href="run_8c_source.html#l00047">RUN_Turn()</a>, <a class="el" href="servo_8c_source.html#l00120">SERVO_UpdateInterval()</a>.</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="odometry_8c_a458ba16e05623612c350b22cea48ffc3_icgraph.png" border="0" usemap="#aodometry_8c_a458ba16e05623612c350b22cea48ffc3_icgraph" alt=""/></div>
 <map name="aodometry_8c_a458ba16e05623612c350b22cea48ffc3_icgraph" id="aodometry_8c_a458ba16e05623612c350b22cea48ffc3_icgraph">
-<area shape="rect" title="Get current" alt="" coords="852,127,1027,153"/>
-<area shape="rect" href="app__main_8h.html#a630544a7f0a2cc40d8a7fefab7e2fe70" title=" " alt="" coords="182,39,269,65"/>
-<area shape="rect" href="logger_8c.html#ac982f0bcff7e34a2a0e1189cf0086a65" title="Collect log (odometry mode)" alt="" coords="609,152,804,179"/>
-<area shape="rect" href="logger_8c.html#ab8bf05edb97b9869366578c6e6b09052" title="Collect log (target mode)" alt="" coords="621,253,792,280"/>
-<area shape="rect" href="run_8h.html#ab51f5d38046671744984ff764c8949b9" title="Straight" alt="" coords="652,51,761,77"/>
-<area shape="rect" href="run_8h.html#aa99cd7e043851ce08f3fbd58ba75a945" title="Turn" alt="" coords="664,203,749,229"/>
-<area shape="rect" href="servo_8h.html#a99842b136c70431b4466b31d04acd54e" title="Update servos" alt="" coords="391,101,561,128"/>
-<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,39,60,65"/>
-<area shape="rect" href="logger_8h.html#a618b83ee39826975a831eec2e21355b0" title="Collect log" alt="" coords="411,152,541,179"/>
-<area shape="rect" href="interval_8c.html#a8a3b0ad512a6e6c6157440b68d395eac" title="timer interrupt TIM6: 2kHz" alt="" coords="108,115,343,141"/>
-<area shape="rect" href="app__main_8c.html#ac8ec403b244267ecd7c29fd6620076e3" title=" " alt="" coords="435,51,517,77"/>
+<area shape="rect" title="Get current" alt="" coords="852,132,1027,159"/>
+<area shape="rect" href="app__main_8c.html#a8198f78d0645c1d3d50028a1a3b48d78" title=" " alt="" coords="435,5,517,32"/>
+<area shape="rect" href="logger_8c.html#ac982f0bcff7e34a2a0e1189cf0086a65" title="Collect log (odometry mode)" alt="" coords="609,157,804,184"/>
+<area shape="rect" href="logger_8c.html#ab8bf05edb97b9869366578c6e6b09052" title="Collect log (target mode)" alt="" coords="621,259,792,285"/>
+<area shape="rect" href="run_8h.html#ab51f5d38046671744984ff764c8949b9" title="Straight" alt="" coords="652,56,761,83"/>
+<area shape="rect" href="run_8h.html#aa99cd7e043851ce08f3fbd58ba75a945" title="Turn" alt="" coords="664,208,749,235"/>
+<area shape="rect" href="servo_8h.html#a99842b136c70431b4466b31d04acd54e" title="Update servos" alt="" coords="391,107,561,133"/>
+<area shape="rect" href="app__main_8h.html#a630544a7f0a2cc40d8a7fefab7e2fe70" title=" " alt="" coords="182,44,269,71"/>
+<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,44,60,71"/>
+<area shape="rect" href="logger_8h.html#a618b83ee39826975a831eec2e21355b0" title="Collect log" alt="" coords="411,157,541,184"/>
+<area shape="rect" href="interval_8c.html#a8a3b0ad512a6e6c6157440b68d395eac" title="timer interrupt TIM6: 2kHz" alt="" coords="108,120,343,147"/>
+<area shape="rect" href="app__main_8c.html#ac8ec403b244267ecd7c29fd6620076e3" title=" " alt="" coords="435,56,517,83"/>
 </map>
 </div>
 
@@ -273,18 +274,19 @@ odometry.c の依存先関係図:</div>
 
 <p class="definition"> <a class="el" href="odometry_8c_source.html">odometry.c</a> の <a class="el" href="odometry_8c_source.html#l00062">62</a> 行目に定義があります。</p>
 
-<p class="reference">参照元 <a class="el" href="app__main_8c_source.html#l00063">app_main()</a>, <a class="el" href="run_8c_source.html#l00013">RUN_Straight()</a>, <a class="el" href="run_8c_source.html#l00047">RUN_Turn()</a>.</p>
+<p class="reference">参照元 <a class="el" href="app__main_8c_source.html#l00079">LineTrace()</a>, <a class="el" href="run_8c_source.html#l00013">RUN_Straight()</a>, <a class="el" href="run_8c_source.html#l00047">RUN_Turn()</a>.</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="odometry_8c_a439ddae1dc13251f0ff183d7f967bb1f_icgraph.png" border="0" usemap="#aodometry_8c_a439ddae1dc13251f0ff183d7f967bb1f_icgraph" alt=""/></div>
 <map name="aodometry_8c_a439ddae1dc13251f0ff183d7f967bb1f_icgraph" id="aodometry_8c_a439ddae1dc13251f0ff183d7f967bb1f_icgraph">
-<area shape="rect" title="Reset sums" alt="" coords="529,31,669,57"/>
-<area shape="rect" href="app__main_8h.html#a630544a7f0a2cc40d8a7fefab7e2fe70" title=" " alt="" coords="108,5,195,32"/>
-<area shape="rect" href="run_8h.html#ab51f5d38046671744984ff764c8949b9" title="Straight" alt="" coords="372,31,481,57"/>
-<area shape="rect" href="run_8h.html#aa99cd7e043851ce08f3fbd58ba75a945" title="Turn" alt="" coords="384,81,469,108"/>
-<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,5,60,32"/>
-<area shape="rect" href="app__main_8c.html#ac8ec403b244267ecd7c29fd6620076e3" title=" " alt="" coords="243,31,324,57"/>
+<area shape="rect" title="Reset sums" alt="" coords="531,56,671,83"/>
+<area shape="rect" href="app__main_8c.html#a8198f78d0645c1d3d50028a1a3b48d78" title=" " alt="" coords="243,5,325,32"/>
+<area shape="rect" href="run_8h.html#ab51f5d38046671744984ff764c8949b9" title="Straight" alt="" coords="373,56,483,83"/>
+<area shape="rect" href="run_8h.html#aa99cd7e043851ce08f3fbd58ba75a945" title="Turn" alt="" coords="385,107,471,133"/>
+<area shape="rect" href="app__main_8h.html#a630544a7f0a2cc40d8a7fefab7e2fe70" title=" " alt="" coords="108,31,195,57"/>
+<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,31,60,57"/>
+<area shape="rect" href="app__main_8c.html#ac8ec403b244267ecd7c29fd6620076e3" title=" " alt="" coords="243,56,325,83"/>
 </map>
 </div>
 

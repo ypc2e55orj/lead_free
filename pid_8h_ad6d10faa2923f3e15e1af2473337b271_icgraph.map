@@ -1,12 +1,13 @@
 <map id="PID_Reset" name="PID_Reset">
-<area shape="rect" id="node1" title="Reset PID" alt="" coords="771,56,859,83"/>
-<area shape="rect" id="node2" href="$line_8h.html#a73ea39c97531b32c2be5d18eb1b7981d" title="Enable line feedback" alt="" coords="243,5,407,32"/>
-<area shape="rect" id="node5" href="$servo_8h.html#a8ee665f3ffbf3ff14a76584908892e2c" title="Reset servos" alt="" coords="612,107,723,133"/>
-<area shape="rect" id="node3" href="$app__main_8h.html#a630544a7f0a2cc40d8a7fefab7e2fe70" title=" " alt="" coords="108,81,195,108"/>
-<area shape="rect" id="node4" href="$main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,81,60,108"/>
-<area shape="rect" id="node6" href="$run_8h.html#ab51f5d38046671744984ff764c8949b9" title="Straight" alt="" coords="455,107,564,133"/>
-<area shape="rect" id="node8" href="$run_8h.html#aa99cd7e043851ce08f3fbd58ba75a945" title="Turn" alt="" coords="467,157,552,184"/>
-<area shape="rect" id="node9" href="$servo_8h.html#a1c520f57937bad54175d31da5f6414b6" title="Start servos" alt="" coords="457,208,561,235"/>
-<area shape="rect" id="node10" href="$servo_8h.html#ad06676986fb4c97c7d94680f7bb059a2" title="Stop servos" alt="" coords="458,56,561,83"/>
-<area shape="rect" id="node7" href="$app__main_8c.html#ac8ec403b244267ecd7c29fd6620076e3" title=" " alt="" coords="284,107,365,133"/>
+<area shape="rect" id="node1" title="Reset PID" alt="" coords="743,56,831,83"/>
+<area shape="rect" id="node2" href="$line_8h.html#a73ea39c97531b32c2be5d18eb1b7981d" title="Enable line feedback" alt="" coords="531,5,695,32"/>
+<area shape="rect" id="node6" href="$servo_8h.html#a8ee665f3ffbf3ff14a76584908892e2c" title="Reset servos" alt="" coords="557,81,668,108"/>
+<area shape="rect" id="node3" href="$app__main_8c.html#a8198f78d0645c1d3d50028a1a3b48d78" title=" " alt="" coords="243,31,325,57"/>
+<area shape="rect" id="node4" href="$app__main_8h.html#a630544a7f0a2cc40d8a7fefab7e2fe70" title=" " alt="" coords="108,56,195,83"/>
+<area shape="rect" id="node5" href="$main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,56,60,83"/>
+<area shape="rect" id="node7" href="$run_8h.html#ab51f5d38046671744984ff764c8949b9" title="Straight" alt="" coords="373,183,483,209"/>
+<area shape="rect" id="node9" href="$run_8h.html#aa99cd7e043851ce08f3fbd58ba75a945" title="Turn" alt="" coords="385,132,471,159"/>
+<area shape="rect" id="node10" href="$servo_8h.html#a1c520f57937bad54175d31da5f6414b6" title="Start servos" alt="" coords="376,81,480,108"/>
+<area shape="rect" id="node11" href="$servo_8h.html#ad06676986fb4c97c7d94680f7bb059a2" title="Stop servos" alt="" coords="377,31,479,57"/>
+<area shape="rect" id="node8" href="$app__main_8c.html#ac8ec403b244267ecd7c29fd6620076e3" title=" " alt="" coords="243,81,325,108"/>
 </map>
