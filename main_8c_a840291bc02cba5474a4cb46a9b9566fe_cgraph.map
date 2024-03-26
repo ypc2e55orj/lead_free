@@ -1,52 +1,52 @@
 <map id="main" name="main">
-<area shape="rect" id="node1" title="The application entry point." alt="" coords="5,1475,60,1501"/>
-<area shape="rect" id="node2" href="$app__main_8h.html#a630544a7f0a2cc40d8a7fefab7e2fe70" title=" " alt="" coords="151,625,237,652"/>
-<area shape="rect" id="node38" href="$main_8c.html#aaa163e37853e6fc971474824d9f655ca" title="ADC1 Initialization Function" alt="" coords="137,1627,251,1653"/>
-<area shape="rect" id="node40" href="$main_8c.html#a4e987f0fdef6459c1a03ca830bac23f5" title="ADC2 Initialization Function" alt="" coords="137,1677,251,1704"/>
-<area shape="rect" id="node41" href="$main_8c.html#a608dc9e9bcaf978f1611f3ec57670f64" title=" " alt="" coords="139,1323,249,1349"/>
-<area shape="rect" id="node42" href="$main_8c.html#ae89fdd15729ad41a66911190fcbab23a" title="GPIO Initialization Function" alt="" coords="139,1373,249,1400"/>
-<area shape="rect" id="node43" href="$main_8c.html#a4230d11f81d0b16e112f1cc3f40cb42f" title="I2C1 Initialization Function" alt="" coords="141,1728,247,1755"/>
-<area shape="rect" id="node44" href="$main_8c.html#a8e1d412799a648fd7b11ac4fb4a4a6a3" title="TIM17 Initialization Function" alt="" coords="135,1779,253,1805"/>
-<area shape="rect" id="node45" href="$main_8c.html#a1d1beb7da60021ee1adbca294f28ba88" title="TIM1 Initialization Function" alt="" coords="139,1221,249,1248"/>
-<area shape="rect" id="node46" href="$main_8c.html#af952250b2d49718b385e14a76fa7c1b8" title="TIM2 Initialization Function" alt="" coords="139,1272,249,1299"/>
-<area shape="rect" id="node47" href="$main_8c.html#a73ff2ff527606fb2be261e9f85aab83c" title="TIM3 Initialization Function" alt="" coords="139,1424,249,1451"/>
-<area shape="rect" id="node48" href="$main_8c.html#af5e0e0fbbf2e1ec351699c09950583fe" title="TIM6 Initialization Function" alt="" coords="139,1475,249,1501"/>
-<area shape="rect" id="node49" href="$main_8c.html#a6db1014d713f6f5c0f52a13299ee0733" title="USART2 Initialization Function" alt="" coords="108,1525,280,1552"/>
-<area shape="rect" id="node50" href="$main_8c.html#a70af21c671abfcc773614a9a4f63d920" title="System Clock Configuration" alt="" coords="117,1576,271,1603"/>
-<area shape="rect" id="node3" href="$button_8h.html#a31be2fcf32ca6c71005fc5f648edab78" title="Get button 1" alt="" coords="543,5,678,32"/>
-<area shape="rect" id="node4" href="$button_8h.html#abf3f39cd196cf25080c0e5acfdf16993" title="Get button 1" alt="" coords="328,335,463,361"/>
-<area shape="rect" id="node5" href="$app__main_8c.html#ac8ec403b244267ecd7c29fd6620076e3" title=" " alt="" coords="355,385,436,412"/>
-<area shape="rect" id="node7" href="$interval_8h.html#a7f990ff62bbc126fa60a2c3a24532a5f" title="Buzzer" alt="" coords="785,1424,921,1451"/>
-<area shape="rect" id="node21" href="$interval_8h.html#a4d3d968b3af31f3b95de7c6e0e71d4f6" title="Start interval process" alt="" coords="334,943,457,969"/>
-<area shape="rect" id="node22" href="$app__main_8c.html#a8198f78d0645c1d3d50028a1a3b48d78" title=" " alt="" coords="354,892,437,919"/>
-<area shape="rect" id="node35" href="$logger_8h.html#a7e1f6cceddb55ae4a35e23537e089d70" title="Pring log" alt="" coords="339,1525,452,1552"/>
-<area shape="rect" id="node36" href="$parameter_8h.html#a4d8761c74e185fe13378d9624be30600" title="Initialize parameters" alt="" coords="331,183,460,209"/>
-<area shape="rect" id="node37" href="$sensor_8h.html#ad87c5be998b7e544525713b0ca25c3e3" title="Initialize sensors" alt="" coords="344,233,447,260"/>
-<area shape="rect" id="node6" href="$app__main_8c.html#a9efdce133fda030ebb0c7793ffc03d14" title=" " alt="" coords="823,1373,883,1400"/>
-<area shape="rect" id="node8" href="$line_8h.html#ab38cfb64d9a0da68234a9dfaf17aaec0" title="Disable line feedback" alt="" coords="526,259,695,285"/>
-<area shape="rect" id="node9" href="$line_8h.html#a9b4a00b81ce1cb20833130786318e85e" title="Get calibration value" alt="" coords="541,309,681,336"/>
-<area shape="rect" id="node10" href="$line_8h.html#a8b86f6a9eab7b902eabfffdb81ce0ffb" title="Start sensor calibration (back)" alt="" coords="521,56,701,83"/>
-<area shape="rect" id="node11" href="$line_8h.html#ad38f2ac38d03c071b0a22bdb93583300" title="Start sensor calibration (forward)" alt="" coords="511,107,711,133"/>
-<area shape="rect" id="node12" href="$line_8h.html#ac2241ed9289106ee413b2a84faa7c1b0" title="Stop sensor calibration" alt="" coords="537,157,684,184"/>
-<area shape="rect" id="node13" href="$parameter_8h.html#a516dc6cce80e3f863aefb4e65b880053" title="Get current parameter" alt="" coords="545,461,676,488"/>
-<area shape="rect" id="node14" href="$run_8h.html#ab51f5d38046671744984ff764c8949b9" title="Straight" alt="" coords="556,208,665,235"/>
-<area shape="rect" id="node19" href="$servo_8h.html#a1c520f57937bad54175d31da5f6414b6" title="Start servos" alt="" coords="559,512,663,539"/>
-<area shape="rect" id="node20" href="$servo_8h.html#ad06676986fb4c97c7d94680f7bb059a2" title="Stop servos" alt="" coords="559,563,662,589"/>
-<area shape="rect" id="node15" href="$odometry_8h.html#a458ba16e05623612c350b22cea48ffc3" title="Get current" alt="" coords="765,791,940,817"/>
-<area shape="rect" id="node16" href="$odometry_8h.html#a439ddae1dc13251f0ff183d7f967bb1f" title="Reset sums" alt="" coords="783,309,923,336"/>
-<area shape="rect" id="node17" href="$servo_8h.html#a1af12b4477ce75c5b8c5216a376d1aca" title="Get target velocity" alt="" coords="759,461,947,488"/>
-<area shape="rect" id="node18" href="$servo_8h.html#ab9e6ac3e8dfa09cb2403c3092122ba3d" title="Set acceleration" alt="" coords="765,1323,940,1349"/>
-<area shape="rect" id="node23" href="$app__main_8c.html#ae947478c563efeb0546ca7c2dc247217" title=" " alt="" coords="549,1373,673,1400"/>
-<area shape="rect" id="node24" href="$line_8h.html#a73ea39c97531b32c2be5d18eb1b7981d" title="Enable line feedback" alt="" coords="529,715,693,741"/>
-<area shape="rect" id="node25" href="$line_8h.html#a1746c8257aa80aea4456d0e1e3058fcc" title="Get generated angular velocity" alt="" coords="519,765,702,792"/>
-<area shape="rect" id="node26" href="$line_8h.html#afcc55f4276815a243820a0eac422608b" title="Get curvature marker state" alt="" coords="521,816,700,843"/>
-<area shape="rect" id="node27" href="$line_8h.html#a57113586c6f12cca00281769dea96721" title="Reset start and goal marker state" alt="" coords="539,867,682,893"/>
-<area shape="rect" id="node28" href="$line_8h.html#ac53f215e5d20488835e1cb6b19bebe3d" title="Get start and goal marker state" alt="" coords="523,917,699,944"/>
-<area shape="rect" id="node29" href="$line_8h.html#a8c1a8019beab47b5f8306db41df7cfd9" title="Reset curvature marker state" alt="" coords="514,968,707,995"/>
-<area shape="rect" id="node30" href="$line_8h.html#a73029906d10d9afa817eb179126bbb97" title="Reset start and goal marker state" alt="" coords="515,1019,706,1045"/>
-<area shape="rect" id="node31" href="$logger_8h.html#a5c31839f1b962339daaeb999d5caba50" title="Clear log" alt="" coords="552,1069,669,1096"/>
-<area shape="rect" id="node32" href="$logger_8h.html#a61e3dd9a86f60d48fa173874783c21e7" title="Set logger mode" alt="" coords="541,1120,681,1147"/>
-<area shape="rect" id="node33" href="$logger_8h.html#ac4ca8d13d67a1ea91843038349036a37" title="Start logger (Set log frequency)" alt="" coords="553,1171,668,1197"/>
-<area shape="rect" id="node34" href="$logger_8h.html#a0d4f8f61d58f134b09406cd04afcc4db" title="Stop logger" alt="" coords="555,1221,667,1248"/>
-<area shape="rect" id="node39" href="$main_8c.html#a1730ffe1e560465665eb47d9264826f9" title="This function is executed in case of error occurrence." alt="" coords="340,1576,451,1603"/>
+<area shape="rect" id="node1" title="The application entry point." alt="" coords="5,1247,60,1273"/>
+<area shape="rect" id="node2" href="$app__main_8h.html#a630544a7f0a2cc40d8a7fefab7e2fe70" title=" " alt="" coords="151,728,237,755"/>
+<area shape="rect" id="node38" href="$main_8c.html#aaa163e37853e6fc971474824d9f655ca" title="ADC1 Initialization Function" alt="" coords="137,1145,251,1172"/>
+<area shape="rect" id="node40" href="$main_8c.html#a4e987f0fdef6459c1a03ca830bac23f5" title="ADC2 Initialization Function" alt="" coords="137,1196,251,1223"/>
+<area shape="rect" id="node41" href="$main_8c.html#a608dc9e9bcaf978f1611f3ec57670f64" title=" " alt="" coords="139,1500,249,1527"/>
+<area shape="rect" id="node42" href="$main_8c.html#ae89fdd15729ad41a66911190fcbab23a" title="GPIO Initialization Function" alt="" coords="139,1551,249,1577"/>
+<area shape="rect" id="node43" href="$main_8c.html#a4230d11f81d0b16e112f1cc3f40cb42f" title="I2C1 Initialization Function" alt="" coords="141,1247,247,1273"/>
+<area shape="rect" id="node44" href="$main_8c.html#a8e1d412799a648fd7b11ac4fb4a4a6a3" title="TIM17 Initialization Function" alt="" coords="135,1297,253,1324"/>
+<area shape="rect" id="node45" href="$main_8c.html#a1d1beb7da60021ee1adbca294f28ba88" title="TIM1 Initialization Function" alt="" coords="139,1348,249,1375"/>
+<area shape="rect" id="node46" href="$main_8c.html#af952250b2d49718b385e14a76fa7c1b8" title="TIM2 Initialization Function" alt="" coords="139,1399,249,1425"/>
+<area shape="rect" id="node47" href="$main_8c.html#a73ff2ff527606fb2be261e9f85aab83c" title="TIM3 Initialization Function" alt="" coords="139,1449,249,1476"/>
+<area shape="rect" id="node48" href="$main_8c.html#af5e0e0fbbf2e1ec351699c09950583fe" title="TIM6 Initialization Function" alt="" coords="139,993,249,1020"/>
+<area shape="rect" id="node49" href="$main_8c.html#a6db1014d713f6f5c0f52a13299ee0733" title="USART2 Initialization Function" alt="" coords="108,1044,280,1071"/>
+<area shape="rect" id="node50" href="$main_8c.html#a70af21c671abfcc773614a9a4f63d920" title="System Clock Configuration" alt="" coords="117,1095,271,1121"/>
+<area shape="rect" id="node3" href="$button_8h.html#a31be2fcf32ca6c71005fc5f648edab78" title="Get button 1" alt="" coords="556,208,691,235"/>
+<area shape="rect" id="node4" href="$button_8h.html#abf3f39cd196cf25080c0e5acfdf16993" title="Get button 1" alt="" coords="328,1044,463,1071"/>
+<area shape="rect" id="node5" href="$app__main_8c.html#ac8ec403b244267ecd7c29fd6620076e3" title=" " alt="" coords="355,512,436,539"/>
+<area shape="rect" id="node7" href="$interval_8h.html#a7f990ff62bbc126fa60a2c3a24532a5f" title="Buzzer" alt="" coords="784,740,920,767"/>
+<area shape="rect" id="node17" href="$interval_8h.html#a4d3d968b3af31f3b95de7c6e0e71d4f6" title="Start interval process" alt="" coords="334,1095,457,1121"/>
+<area shape="rect" id="node18" href="$logger_8h.html#a7e1f6cceddb55ae4a35e23537e089d70" title="Pring log" alt="" coords="339,1196,452,1223"/>
+<area shape="rect" id="node21" href="$parameter_8h.html#a4d8761c74e185fe13378d9624be30600" title="Initialize parameters" alt="" coords="331,56,460,83"/>
+<area shape="rect" id="node22" href="$sensor_8h.html#ad87c5be998b7e544525713b0ca25c3e3" title="Initialize sensors" alt="" coords="344,107,447,133"/>
+<area shape="rect" id="node26" href="$app__main_8c.html#aba412806b10e230ad1f2aeb986d9b59c" title=" " alt="" coords="354,993,437,1020"/>
+<area shape="rect" id="node6" href="$app__main_8c.html#a9efdce133fda030ebb0c7793ffc03d14" title=" " alt="" coords="822,551,882,577"/>
+<area shape="rect" id="node8" href="$line_8h.html#ab38cfb64d9a0da68234a9dfaf17aaec0" title="Disable line feedback" alt="" coords="539,613,708,640"/>
+<area shape="rect" id="node9" href="$line_8h.html#a9b4a00b81ce1cb20833130786318e85e" title="Get calibration value" alt="" coords="553,664,693,691"/>
+<area shape="rect" id="node10" href="$line_8h.html#a8b86f6a9eab7b902eabfffdb81ce0ffb" title="Start sensor calibration (back)" alt="" coords="533,259,713,285"/>
+<area shape="rect" id="node11" href="$line_8h.html#ad38f2ac38d03c071b0a22bdb93583300" title="Start sensor calibration (forward)" alt="" coords="523,309,723,336"/>
+<area shape="rect" id="node12" href="$line_8h.html#ac2241ed9289106ee413b2a84faa7c1b0" title="Stop sensor calibration" alt="" coords="550,360,697,387"/>
+<area shape="rect" id="node13" href="$parameter_8h.html#a516dc6cce80e3f863aefb4e65b880053" title="Get current parameter" alt="" coords="558,715,689,741"/>
+<area shape="rect" id="node14" href="$run_8h.html#ab51f5d38046671744984ff764c8949b9" title="Straight" alt="" coords="569,563,678,589"/>
+<area shape="rect" id="node15" href="$servo_8h.html#a1c520f57937bad54175d31da5f6414b6" title="Start servos" alt="" coords="571,765,675,792"/>
+<area shape="rect" id="node16" href="$servo_8h.html#ad06676986fb4c97c7d94680f7bb059a2" title="Stop servos" alt="" coords="801,1069,903,1096"/>
+<area shape="rect" id="node19" href="$logger_8c.html#a0573780c843e18b8be11e33c9e5c9636" title="Pring log (odometry mode)" alt="" coords="511,1525,736,1552"/>
+<area shape="rect" id="node20" href="$logger_8c.html#a60212f9386e4ab4b170f430f85a95c5d" title="Pring log (target mode)" alt="" coords="523,1475,723,1501"/>
+<area shape="rect" id="node23" href="$sensor_8c.html#ab3f7e3afc0b46ed3410f806805b2328e" title="Initialize ADC" alt="" coords="584,107,663,133"/>
+<area shape="rect" id="node24" href="$sensor_8c.html#a0d5bbefe4e42fe2bf21a65184f63dbd8" title="Initialize encoders." alt="" coords="566,5,681,32"/>
+<area shape="rect" id="node25" href="$sensor_8c.html#a30661b3385e75411ed11f8318ac90e46" title="Initialize the gyro." alt="" coords="580,56,667,83"/>
+<area shape="rect" id="node27" href="$app__main_8c.html#ae947478c563efeb0546ca7c2dc247217" title=" " alt="" coords="561,1069,685,1096"/>
+<area shape="rect" id="node28" href="$line_8h.html#a73ea39c97531b32c2be5d18eb1b7981d" title="Enable line feedback" alt="" coords="541,1373,705,1400"/>
+<area shape="rect" id="node29" href="$line_8h.html#a1746c8257aa80aea4456d0e1e3058fcc" title="Get generated angular velocity" alt="" coords="532,816,715,843"/>
+<area shape="rect" id="node30" href="$line_8h.html#afcc55f4276815a243820a0eac422608b" title="Get curvature marker state" alt="" coords="534,867,713,893"/>
+<area shape="rect" id="node31" href="$line_8h.html#a57113586c6f12cca00281769dea96721" title="Reset start and goal marker state" alt="" coords="552,917,695,944"/>
+<area shape="rect" id="node32" href="$line_8h.html#ac53f215e5d20488835e1cb6b19bebe3d" title="Get start and goal marker state" alt="" coords="535,968,711,995"/>
+<area shape="rect" id="node33" href="$line_8h.html#a8c1a8019beab47b5f8306db41df7cfd9" title="Reset curvature marker state" alt="" coords="527,1019,720,1045"/>
+<area shape="rect" id="node34" href="$line_8h.html#a73029906d10d9afa817eb179126bbb97" title="Reset start and goal marker state" alt="" coords="528,1120,719,1147"/>
+<area shape="rect" id="node35" href="$logger_8h.html#a5c31839f1b962339daaeb999d5caba50" title="Clear log" alt="" coords="565,1171,682,1197"/>
+<area shape="rect" id="node36" href="$logger_8h.html#a61e3dd9a86f60d48fa173874783c21e7" title="Set logger mode" alt="" coords="553,1221,693,1248"/>
+<area shape="rect" id="node37" href="$logger_8h.html#ac4ca8d13d67a1ea91843038349036a37" title="Start logger (Set log frequency)" alt="" coords="566,1272,681,1299"/>
+<area shape="rect" id="node39" href="$main_8c.html#a1730ffe1e560465665eb47d9264826f9" title="This function is executed in case of error occurrence." alt="" coords="340,1247,451,1273"/>
 </map>

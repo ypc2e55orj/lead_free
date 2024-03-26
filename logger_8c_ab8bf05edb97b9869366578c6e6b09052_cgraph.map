@@ -1,6 +1,8 @@
 <map id="LOGGER_UpdateTarget" name="LOGGER_UpdateTarget">
-<area shape="rect" id="node1" title="Collect log (target mode)" alt="" coords="5,56,176,83"/>
-<area shape="rect" id="node2" href="$odometry_8h.html#a458ba16e05623612c350b22cea48ffc3" title="Get current" alt="" coords="256,5,431,32"/>
-<area shape="rect" id="node3" href="$servo_8h.html#a2c410a8313437103a2c6129d8173a224" title="Get target angular velocity" alt="" coords="224,56,463,83"/>
-<area shape="rect" id="node4" href="$servo_8h.html#a1af12b4477ce75c5b8c5216a376d1aca" title="Get target velocity" alt="" coords="249,107,437,133"/>
+<area shape="rect" id="node1" title="Collect log (target mode)" alt="" coords="5,107,176,133"/>
+<area shape="rect" id="node2" href="$servo_8h.html#adac7938efd6cb78ea00bc3cca42db760" title="Get Left motor duty" alt="" coords="265,5,421,32"/>
+<area shape="rect" id="node3" href="$servo_8h.html#acb78d709b5b01f46fa29a3c440948652" title="Get right motor duty" alt="" coords="260,56,427,83"/>
+<area shape="rect" id="node4" href="$odometry_8h.html#a458ba16e05623612c350b22cea48ffc3" title="Get current" alt="" coords="256,107,431,133"/>
+<area shape="rect" id="node5" href="$servo_8h.html#a2c410a8313437103a2c6129d8173a224" title="Get target angular velocity" alt="" coords="224,157,463,184"/>
+<area shape="rect" id="node6" href="$servo_8h.html#a1af12b4477ce75c5b8c5216a376d1aca" title="Get target velocity" alt="" coords="249,208,437,235"/>
 </map>

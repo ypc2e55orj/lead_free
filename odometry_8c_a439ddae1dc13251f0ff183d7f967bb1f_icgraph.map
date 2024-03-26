@@ -1,9 +1,9 @@
 <map id="ODOMETRY_Reset" name="ODOMETRY_Reset">
 <area shape="rect" id="node1" title="Reset sums" alt="" coords="531,56,671,83"/>
-<area shape="rect" id="node2" href="$app__main_8c.html#a8198f78d0645c1d3d50028a1a3b48d78" title=" " alt="" coords="243,5,325,32"/>
-<area shape="rect" id="node5" href="$run_8h.html#ab51f5d38046671744984ff764c8949b9" title="Straight" alt="" coords="373,56,483,83"/>
-<area shape="rect" id="node7" href="$run_8h.html#aa99cd7e043851ce08f3fbd58ba75a945" title="Turn" alt="" coords="385,107,471,133"/>
-<area shape="rect" id="node3" href="$app__main_8h.html#a630544a7f0a2cc40d8a7fefab7e2fe70" title=" " alt="" coords="108,31,195,57"/>
-<area shape="rect" id="node4" href="$main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,31,60,57"/>
-<area shape="rect" id="node6" href="$app__main_8c.html#ac8ec403b244267ecd7c29fd6620076e3" title=" " alt="" coords="243,56,325,83"/>
+<area shape="rect" id="node2" href="$run_8h.html#ab51f5d38046671744984ff764c8949b9" title="Straight" alt="" coords="373,5,483,32"/>
+<area shape="rect" id="node6" href="$run_8h.html#aa99cd7e043851ce08f3fbd58ba75a945" title="Turn" alt="" coords="385,56,471,83"/>
+<area shape="rect" id="node7" href="$app__main_8c.html#aba412806b10e230ad1f2aeb986d9b59c" title=" " alt="" coords="243,81,325,108"/>
+<area shape="rect" id="node3" href="$app__main_8c.html#ac8ec403b244267ecd7c29fd6620076e3" title=" " alt="" coords="243,19,325,45"/>
+<area shape="rect" id="node4" href="$app__main_8h.html#a630544a7f0a2cc40d8a7fefab7e2fe70" title=" " alt="" coords="108,56,195,83"/>
+<area shape="rect" id="node5" href="$main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,56,60,83"/>
 </map>
