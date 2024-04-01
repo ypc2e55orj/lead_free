@@ -1,8 +1,5 @@
 var searchData=
 [
-  ['dmabufferadc1_440',['dmaBufferAdc1',['../sensor_8c.html#a6ba42e27e804d0ffaff5bdb7f82c0011',1,'sensor.c']]],
-  ['dmabufferadc2_441',['dmaBufferAdc2',['../sensor_8c.html#a214764e77dc6a4d470f372f1e74ee51a',1,'sensor.c']]],
-  ['dmabufferi2c1rx_442',['dmaBufferI2c1Rx',['../sensor_8c.html#ad5aa22930b059699a890e20fa6c171d5',1,'sensor.c']]],
-  ['dmabufferi2c1tx_443',['dmaBufferI2c1Tx',['../sensor_8c.html#ac2fd731064fb9736f5ee4534bf9a93e4',1,'sensor.c']]],
-  ['dmabufferposlinesensor_444',['dmaBufferPosLineSensor',['../sensor_8c.html#afa450f1fe2e3afa8430fe4578bbc01b3',1,'sensor.c']]]
+  ['calibrateaverage_675',['calibrateAverage',['../structLINE__CALIBRATE.html#ab838036d7f4baf627d21a156ab8ee3ff',1,'LINE_CALIBRATE']]],
+  ['calibratetemp_676',['calibrateTemp',['../structLINE__CALIBRATE.html#aa7f4dd1b819bd9874c28e68432414505',1,'LINE_CALIBRATE']]]
 ];

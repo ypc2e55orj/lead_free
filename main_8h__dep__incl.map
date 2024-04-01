@@ -1,0 +1,12 @@
+<map id="Core/Inc/main.h" name="Core/Inc/main.h">
+<area shape="rect" id="node1" title=": Header for main.c file. This file contains the common defines of the application." alt="" coords="707,5,831,32"/>
+<area shape="rect" id="node2" href="$main_8c.html" title=": Main program body" alt="" coords="5,87,129,114"/>
+<area shape="rect" id="node3" href="$stm32f3xx__hal__msp_8c.html" title="This file provides code for the MSP Initialization and de&#45;Initialization codes." alt="" coords="153,80,304,121"/>
+<area shape="rect" id="node4" href="$stm32f3xx__it_8c.html" title="Interrupt Service Routines." alt="" coords="328,87,505,114"/>
+<area shape="rect" id="node5" href="$app__main_8c.html" title=" " alt="" coords="529,87,680,114"/>
+<area shape="rect" id="node6" href="$button_8c.html" title=" " alt="" coords="705,87,833,114"/>
+<area shape="rect" id="node7" href="$interval_8c.html" title=" " alt="" coords="857,87,993,114"/>
+<area shape="rect" id="node8" href="$line_8c.html" title=" " alt="" coords="1017,87,1128,114"/>
+<area shape="rect" id="node9" href="$sensor_8c.html" title=" " alt="" coords="1153,87,1281,114"/>
+<area shape="rect" id="node10" href="$servo_8c.html" title=" " alt="" coords="1305,87,1427,114"/>
+</map>

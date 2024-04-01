@@ -72,7 +72,7 @@ $(function() {
 <a href="main_8c.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/* USER CODE BEGIN Header */</span></div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">/* USER CODE END Header */</span></div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">/* Includes ------------------------------------------------------------------*/</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &quot;main.h&quot;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="main_8h.html">main.h</a>&quot;</span></div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">/* Private includes ----------------------------------------------------------*/</span></div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">/* USER CODE BEGIN Includes */</span></div>
@@ -472,7 +472,7 @@ $(function() {
 <div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;  <span class="comment">/* USER CODE BEGIN TIM1_Init 2 */</span></div>
 <div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160; </div>
 <div class="line"><a name="l00479"></a><span class="lineno">  479</span>&#160;  <span class="comment">/* USER CODE END TIM1_Init 2 */</span></div>
-<div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160;  HAL_TIM_MspPostInit(&amp;<a class="code" href="main_8c.html#a25fc663547539bc49fecc0011bd76ab5">htim1</a>);</div>
+<div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160;  <a class="code" href="main_8h.html#ae70bce6c39d0b570a7523b86738cec4b">HAL_TIM_MspPostInit</a>(&amp;<a class="code" href="main_8c.html#a25fc663547539bc49fecc0011bd76ab5">htim1</a>);</div>
 <div class="line"><a name="l00481"></a><span class="lineno">  481</span>&#160; </div>
 <div class="line"><a name="l00482"></a><span class="lineno">  482</span>&#160;}</div>
 <div class="line"><a name="l00483"></a><span class="lineno">  483</span>&#160; </div>
@@ -647,7 +647,7 @@ $(function() {
 <div class="line"><a name="l00672"></a><span class="lineno">  672</span>&#160;  <span class="comment">/* USER CODE BEGIN TIM17_Init 2 */</span></div>
 <div class="line"><a name="l00673"></a><span class="lineno">  673</span>&#160; </div>
 <div class="line"><a name="l00674"></a><span class="lineno">  674</span>&#160;  <span class="comment">/* USER CODE END TIM17_Init 2 */</span></div>
-<div class="line"><a name="l00675"></a><span class="lineno">  675</span>&#160;  HAL_TIM_MspPostInit(&amp;<a class="code" href="main_8c.html#a51c6d0c070f8c00f33ee08b4f1eb6e90">htim17</a>);</div>
+<div class="line"><a name="l00675"></a><span class="lineno">  675</span>&#160;  <a class="code" href="main_8h.html#ae70bce6c39d0b570a7523b86738cec4b">HAL_TIM_MspPostInit</a>(&amp;<a class="code" href="main_8c.html#a51c6d0c070f8c00f33ee08b4f1eb6e90">htim17</a>);</div>
 <div class="line"><a name="l00676"></a><span class="lineno">  676</span>&#160; </div>
 <div class="line"><a name="l00677"></a><span class="lineno">  677</span>&#160;}</div>
 <div class="line"><a name="l00678"></a><span class="lineno">  678</span>&#160; </div>
@@ -715,32 +715,32 @@ $(function() {
 <div class="line"><a name="l00753"></a><span class="lineno">  753</span>&#160;  __HAL_RCC_GPIOB_CLK_ENABLE();</div>
 <div class="line"><a name="l00754"></a><span class="lineno">  754</span>&#160; </div>
 <div class="line"><a name="l00755"></a><span class="lineno">  755</span>&#160;  <span class="comment">/*Configure GPIO pin Output Level */</span></div>
-<div class="line"><a name="l00756"></a><span class="lineno">  756</span>&#160;  HAL_GPIO_WritePin(GPIOA, MotorLeftPhase_Pin|Buzzer_Pin, GPIO_PIN_RESET);</div>
+<div class="line"><a name="l00756"></a><span class="lineno">  756</span>&#160;  HAL_GPIO_WritePin(GPIOA, <a class="code" href="main_8h.html#a4d9b667e5fcdeb42ca64695679a8a253">MotorLeftPhase_Pin</a>|<a class="code" href="main_8h.html#a0ecd6af5a9dee4eba35f6624764a6978">Buzzer_Pin</a>, GPIO_PIN_RESET);</div>
 <div class="line"><a name="l00757"></a><span class="lineno">  757</span>&#160; </div>
 <div class="line"><a name="l00758"></a><span class="lineno">  758</span>&#160;  <span class="comment">/*Configure GPIO pin Output Level */</span></div>
-<div class="line"><a name="l00759"></a><span class="lineno">  759</span>&#160;  HAL_GPIO_WritePin(GPIOB, Led_Pin|MotorRightPhase_Pin, GPIO_PIN_RESET);</div>
+<div class="line"><a name="l00759"></a><span class="lineno">  759</span>&#160;  HAL_GPIO_WritePin(GPIOB, <a class="code" href="main_8h.html#a51002063f7ce118faccc1e69646e9efb">Led_Pin</a>|<a class="code" href="main_8h.html#a1e5bfcc723396d8bdb226b2332eabe2c">MotorRightPhase_Pin</a>, GPIO_PIN_RESET);</div>
 <div class="line"><a name="l00760"></a><span class="lineno">  760</span>&#160; </div>
 <div class="line"><a name="l00761"></a><span class="lineno">  761</span>&#160;  <span class="comment">/*Configure GPIO pins : Switch1_Pin Switch2_Pin */</span></div>
-<div class="line"><a name="l00762"></a><span class="lineno">  762</span>&#160;  GPIO_InitStruct.Pin = Switch1_Pin|Switch2_Pin;</div>
+<div class="line"><a name="l00762"></a><span class="lineno">  762</span>&#160;  GPIO_InitStruct.Pin = <a class="code" href="main_8h.html#ac2f69cc6bfbfe5419cdfec8192d9ddba">Switch1_Pin</a>|<a class="code" href="main_8h.html#afe20ef34b55bf1bfa6481cf0e6a5533a">Switch2_Pin</a>;</div>
 <div class="line"><a name="l00763"></a><span class="lineno">  763</span>&#160;  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;</div>
 <div class="line"><a name="l00764"></a><span class="lineno">  764</span>&#160;  GPIO_InitStruct.Pull = GPIO_PULLUP;</div>
 <div class="line"><a name="l00765"></a><span class="lineno">  765</span>&#160;  HAL_GPIO_Init(GPIOF, &amp;GPIO_InitStruct);</div>
 <div class="line"><a name="l00766"></a><span class="lineno">  766</span>&#160; </div>
 <div class="line"><a name="l00767"></a><span class="lineno">  767</span>&#160;  <span class="comment">/*Configure GPIO pins : EncoderLeftA_Pin EncoderLeftB_Pin */</span></div>
-<div class="line"><a name="l00768"></a><span class="lineno">  768</span>&#160;  GPIO_InitStruct.Pin = EncoderLeftA_Pin|EncoderLeftB_Pin;</div>
+<div class="line"><a name="l00768"></a><span class="lineno">  768</span>&#160;  GPIO_InitStruct.Pin = <a class="code" href="main_8h.html#a2b44d3aef888513c5d526f83c8bfa051">EncoderLeftA_Pin</a>|<a class="code" href="main_8h.html#a6e43c8b5abe4a06c98ffba7d29427677">EncoderLeftB_Pin</a>;</div>
 <div class="line"><a name="l00769"></a><span class="lineno">  769</span>&#160;  GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING_FALLING;</div>
 <div class="line"><a name="l00770"></a><span class="lineno">  770</span>&#160;  GPIO_InitStruct.Pull = GPIO_NOPULL;</div>
 <div class="line"><a name="l00771"></a><span class="lineno">  771</span>&#160;  HAL_GPIO_Init(GPIOA, &amp;GPIO_InitStruct);</div>
 <div class="line"><a name="l00772"></a><span class="lineno">  772</span>&#160; </div>
 <div class="line"><a name="l00773"></a><span class="lineno">  773</span>&#160;  <span class="comment">/*Configure GPIO pins : MotorLeftPhase_Pin Buzzer_Pin */</span></div>
-<div class="line"><a name="l00774"></a><span class="lineno">  774</span>&#160;  GPIO_InitStruct.Pin = MotorLeftPhase_Pin|Buzzer_Pin;</div>
+<div class="line"><a name="l00774"></a><span class="lineno">  774</span>&#160;  GPIO_InitStruct.Pin = <a class="code" href="main_8h.html#a4d9b667e5fcdeb42ca64695679a8a253">MotorLeftPhase_Pin</a>|<a class="code" href="main_8h.html#a0ecd6af5a9dee4eba35f6624764a6978">Buzzer_Pin</a>;</div>
 <div class="line"><a name="l00775"></a><span class="lineno">  775</span>&#160;  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;</div>
 <div class="line"><a name="l00776"></a><span class="lineno">  776</span>&#160;  GPIO_InitStruct.Pull = GPIO_NOPULL;</div>
 <div class="line"><a name="l00777"></a><span class="lineno">  777</span>&#160;  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;</div>
 <div class="line"><a name="l00778"></a><span class="lineno">  778</span>&#160;  HAL_GPIO_Init(GPIOA, &amp;GPIO_InitStruct);</div>
 <div class="line"><a name="l00779"></a><span class="lineno">  779</span>&#160; </div>
 <div class="line"><a name="l00780"></a><span class="lineno">  780</span>&#160;  <span class="comment">/*Configure GPIO pins : Led_Pin MotorRightPhase_Pin */</span></div>
-<div class="line"><a name="l00781"></a><span class="lineno">  781</span>&#160;  GPIO_InitStruct.Pin = Led_Pin|MotorRightPhase_Pin;</div>
+<div class="line"><a name="l00781"></a><span class="lineno">  781</span>&#160;  GPIO_InitStruct.Pin = <a class="code" href="main_8h.html#a51002063f7ce118faccc1e69646e9efb">Led_Pin</a>|<a class="code" href="main_8h.html#a1e5bfcc723396d8bdb226b2332eabe2c">MotorRightPhase_Pin</a>;</div>
 <div class="line"><a name="l00782"></a><span class="lineno">  782</span>&#160;  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;</div>
 <div class="line"><a name="l00783"></a><span class="lineno">  783</span>&#160;  GPIO_InitStruct.Pull = GPIO_NOPULL;</div>
 <div class="line"><a name="l00784"></a><span class="lineno">  784</span>&#160;  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;</div>
@@ -758,7 +758,7 @@ $(function() {
 <div class="line"><a name="l00796"></a><span class="lineno">  796</span>&#160; </div>
 <div class="line"><a name="l00797"></a><span class="lineno">  797</span>&#160;<span class="comment">/* USER CODE END 4 */</span></div>
 <div class="line"><a name="l00798"></a><span class="lineno">  798</span>&#160; </div>
-<div class="line"><a name="l00803"></a><span class="lineno"><a class="line" href="main_8c.html#a1730ffe1e560465665eb47d9264826f9">  803</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="main_8c.html#a1730ffe1e560465665eb47d9264826f9">Error_Handler</a>(<span class="keywordtype">void</span>)</div>
+<div class="line"><a name="l00803"></a><span class="lineno"><a class="line" href="main_8h.html#a1730ffe1e560465665eb47d9264826f9">  803</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="main_8c.html#a1730ffe1e560465665eb47d9264826f9">Error_Handler</a>(<span class="keywordtype">void</span>)</div>
 <div class="line"><a name="l00804"></a><span class="lineno">  804</span>&#160;{</div>
 <div class="line"><a name="l00805"></a><span class="lineno">  805</span>&#160;  <span class="comment">/* USER CODE BEGIN Error_Handler_Debug */</span></div>
 <div class="line"><a name="l00806"></a><span class="lineno">  806</span>&#160;  <span class="comment">/* User can add his own implementation to report the HAL error return state */</span></div>
@@ -808,6 +808,16 @@ $(function() {
 <div class="ttc" id="amain_8c_html_af5e0e0fbbf2e1ec351699c09950583fe"><div class="ttname"><a href="main_8c.html#af5e0e0fbbf2e1ec351699c09950583fe">MX_TIM6_Init</a></div><div class="ttdeci">static void MX_TIM6_Init(void)</div><div class="ttdoc">TIM6 Initialization Function</div><div class="ttdef"><b>Definition:</b> <a href="main_8c_source.html#l00583">main.c:583</a></div></div>
 <div class="ttc" id="amain_8c_html_af7b2c26e44dadaaa798a5c3d82914ba7"><div class="ttname"><a href="main_8c.html#af7b2c26e44dadaaa798a5c3d82914ba7">hi2c1</a></div><div class="ttdeci">I2C_HandleTypeDef hi2c1</div><div class="ttdoc">I2C1 Handler extern</div><div class="ttdef"><b>Definition:</b> <a href="main_8c_source.html#l00046">main.c:46</a></div></div>
 <div class="ttc" id="amain_8c_html_af952250b2d49718b385e14a76fa7c1b8"><div class="ttname"><a href="main_8c.html#af952250b2d49718b385e14a76fa7c1b8">MX_TIM2_Init</a></div><div class="ttdeci">static void MX_TIM2_Init(void)</div><div class="ttdoc">TIM2 Initialization Function</div><div class="ttdef"><b>Definition:</b> <a href="main_8c_source.html#l00489">main.c:489</a></div></div>
+<div class="ttc" id="amain_8h_html"><div class="ttname"><a href="main_8h.html">main.h</a></div><div class="ttdoc">: Header for main.c file. This file contains the common defines of the application.</div></div>
+<div class="ttc" id="amain_8h_html_a0ecd6af5a9dee4eba35f6624764a6978"><div class="ttname"><a href="main_8h.html#a0ecd6af5a9dee4eba35f6624764a6978">Buzzer_Pin</a></div><div class="ttdeci">#define Buzzer_Pin</div><div class="ttdef"><b>Definition:</b> <a href="main_8h_source.html#l00096">main.h:96</a></div></div>
+<div class="ttc" id="amain_8h_html_a1e5bfcc723396d8bdb226b2332eabe2c"><div class="ttname"><a href="main_8h.html#a1e5bfcc723396d8bdb226b2332eabe2c">MotorRightPhase_Pin</a></div><div class="ttdeci">#define MotorRightPhase_Pin</div><div class="ttdef"><b>Definition:</b> <a href="main_8h_source.html#l00106">main.h:106</a></div></div>
+<div class="ttc" id="amain_8h_html_a2b44d3aef888513c5d526f83c8bfa051"><div class="ttname"><a href="main_8h.html#a2b44d3aef888513c5d526f83c8bfa051">EncoderLeftA_Pin</a></div><div class="ttdeci">#define EncoderLeftA_Pin</div><div class="ttdef"><b>Definition:</b> <a href="main_8h_source.html#l00086">main.h:86</a></div></div>
+<div class="ttc" id="amain_8h_html_a4d9b667e5fcdeb42ca64695679a8a253"><div class="ttname"><a href="main_8h.html#a4d9b667e5fcdeb42ca64695679a8a253">MotorLeftPhase_Pin</a></div><div class="ttdeci">#define MotorLeftPhase_Pin</div><div class="ttdef"><b>Definition:</b> <a href="main_8h_source.html#l00092">main.h:92</a></div></div>
+<div class="ttc" id="amain_8h_html_a51002063f7ce118faccc1e69646e9efb"><div class="ttname"><a href="main_8h.html#a51002063f7ce118faccc1e69646e9efb">Led_Pin</a></div><div class="ttdeci">#define Led_Pin</div><div class="ttdef"><b>Definition:</b> <a href="main_8h_source.html#l00104">main.h:104</a></div></div>
+<div class="ttc" id="amain_8h_html_a6e43c8b5abe4a06c98ffba7d29427677"><div class="ttname"><a href="main_8h.html#a6e43c8b5abe4a06c98ffba7d29427677">EncoderLeftB_Pin</a></div><div class="ttdeci">#define EncoderLeftB_Pin</div><div class="ttdef"><b>Definition:</b> <a href="main_8h_source.html#l00089">main.h:89</a></div></div>
+<div class="ttc" id="amain_8h_html_ac2f69cc6bfbfe5419cdfec8192d9ddba"><div class="ttname"><a href="main_8h.html#ac2f69cc6bfbfe5419cdfec8192d9ddba">Switch1_Pin</a></div><div class="ttdeci">#define Switch1_Pin</div><div class="ttdef"><b>Definition:</b> <a href="main_8h_source.html#l00062">main.h:62</a></div></div>
+<div class="ttc" id="amain_8h_html_ae70bce6c39d0b570a7523b86738cec4b"><div class="ttname"><a href="main_8h.html#ae70bce6c39d0b570a7523b86738cec4b">HAL_TIM_MspPostInit</a></div><div class="ttdeci">void HAL_TIM_MspPostInit(TIM_HandleTypeDef *htim)</div><div class="ttdef"><b>Definition:</b> <a href="stm32f3xx__hal__msp_8c_source.html#l00466">stm32f3xx_hal_msp.c:466</a></div></div>
+<div class="ttc" id="amain_8h_html_afe20ef34b55bf1bfa6481cf0e6a5533a"><div class="ttname"><a href="main_8h.html#afe20ef34b55bf1bfa6481cf0e6a5533a">Switch2_Pin</a></div><div class="ttdeci">#define Switch2_Pin</div><div class="ttdef"><b>Definition:</b> <a href="main_8h_source.html#l00064">main.h:64</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

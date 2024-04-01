@@ -77,7 +77,7 @@ $(function() {
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;stdbool.h&gt;</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">// STM32CubeMX</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;main.h&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="main_8h.html">main.h</a>&gt;</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">// project</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="sensor_8h.html">sensor.h</a>&quot;</span></div>
@@ -108,13 +108,13 @@ $(function() {
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;{</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <a class="code" href="servo_8c.html#ad41876891bfb0b39dab49958d1ef4d78">motorRightDuty</a> = duty * <a class="code" href="servo_8c.html#ae8116cc30d2a034d3415d54fb02afd18">MOTOR_MAX_DUTY</a>;</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  TIM17-&gt;CCR1 = (uint16_t)fabsf(<a class="code" href="servo_8c.html#ad41876891bfb0b39dab49958d1ef4d78">motorRightDuty</a>);</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  HAL_GPIO_WritePin(MotorRightPhase_GPIO_Port, MotorRightPhase_Pin, duty &gt; 0.0f ? GPIO_PIN_RESET : GPIO_PIN_SET);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  HAL_GPIO_WritePin(<a class="code" href="main_8h.html#a3f7900ba109d9d178e6724f30fc7292a">MotorRightPhase_GPIO_Port</a>, <a class="code" href="main_8h.html#a1e5bfcc723396d8bdb226b2332eabe2c">MotorRightPhase_Pin</a>, duty &gt; 0.0f ? GPIO_PIN_RESET : GPIO_PIN_SET);</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;}</div>
 <div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="servo_8c.html#abebb1788d71aa20a2852028a9bb0c20e">   58</a></span>&#160;<span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="servo_8c.html#abebb1788d71aa20a2852028a9bb0c20e">MOTOR_SetDutyLeft</a>(<span class="keywordtype">float</span> duty)</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;{</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  <a class="code" href="servo_8c.html#acdbaecd4a55fadb7a8650007f06821dd">motorLeftDuty</a> = duty * <a class="code" href="servo_8c.html#ae8116cc30d2a034d3415d54fb02afd18">MOTOR_MAX_DUTY</a>;</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  TIM1-&gt;CCR4 = (uint16_t)fabsf(<a class="code" href="servo_8c.html#acdbaecd4a55fadb7a8650007f06821dd">motorLeftDuty</a>);</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  HAL_GPIO_WritePin(MotorLeftPhase_GPIO_Port, MotorLeftPhase_Pin, duty &gt; 0.0f ? GPIO_PIN_SET : GPIO_PIN_RESET);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  HAL_GPIO_WritePin(<a class="code" href="main_8h.html#a046227d7cebfd5cbccc4db1aa752ce80">MotorLeftPhase_GPIO_Port</a>, <a class="code" href="main_8h.html#a4d9b667e5fcdeb42ca64695679a8a253">MotorLeftPhase_Pin</a>, duty &gt; 0.0f ? GPIO_PIN_SET : GPIO_PIN_RESET);</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;}</div>
 <div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="servo_8h.html#acb78d709b5b01f46fa29a3c440948652">   67</a></span>&#160;<span class="keywordtype">float</span> <a class="code" href="servo_8c.html#acb78d709b5b01f46fa29a3c440948652">MOTOR_GetDutyRight</a>()</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;{</div>
@@ -239,6 +239,11 @@ $(function() {
 <div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;{</div>
 <div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;  <a class="code" href="servo_8c.html#aa3037d26a791134973c2026027c66495">servoMaxAngularVelocity</a> = angVelo;</div>
 <div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;}</div>
+<div class="ttc" id="amain_8h_html"><div class="ttname"><a href="main_8h.html">main.h</a></div><div class="ttdoc">: Header for main.c file. This file contains the common defines of the application.</div></div>
+<div class="ttc" id="amain_8h_html_a046227d7cebfd5cbccc4db1aa752ce80"><div class="ttname"><a href="main_8h.html#a046227d7cebfd5cbccc4db1aa752ce80">MotorLeftPhase_GPIO_Port</a></div><div class="ttdeci">#define MotorLeftPhase_GPIO_Port</div><div class="ttdef"><b>Definition:</b> <a href="main_8h_source.html#l00093">main.h:93</a></div></div>
+<div class="ttc" id="amain_8h_html_a1e5bfcc723396d8bdb226b2332eabe2c"><div class="ttname"><a href="main_8h.html#a1e5bfcc723396d8bdb226b2332eabe2c">MotorRightPhase_Pin</a></div><div class="ttdeci">#define MotorRightPhase_Pin</div><div class="ttdef"><b>Definition:</b> <a href="main_8h_source.html#l00106">main.h:106</a></div></div>
+<div class="ttc" id="amain_8h_html_a3f7900ba109d9d178e6724f30fc7292a"><div class="ttname"><a href="main_8h.html#a3f7900ba109d9d178e6724f30fc7292a">MotorRightPhase_GPIO_Port</a></div><div class="ttdeci">#define MotorRightPhase_GPIO_Port</div><div class="ttdef"><b>Definition:</b> <a href="main_8h_source.html#l00107">main.h:107</a></div></div>
+<div class="ttc" id="amain_8h_html_a4d9b667e5fcdeb42ca64695679a8a253"><div class="ttname"><a href="main_8h.html#a4d9b667e5fcdeb42ca64695679a8a253">MotorLeftPhase_Pin</a></div><div class="ttdeci">#define MotorLeftPhase_Pin</div><div class="ttdef"><b>Definition:</b> <a href="main_8h_source.html#l00092">main.h:92</a></div></div>
 <div class="ttc" id="aodometry_8h_html"><div class="ttname"><a href="odometry_8h.html">odometry.h</a></div></div>
 <div class="ttc" id="aodometry_8h_html_a458ba16e05623612c350b22cea48ffc3"><div class="ttname"><a href="odometry_8h.html#a458ba16e05623612c350b22cea48ffc3">ODOMETRY_GetCurrent</a></div><div class="ttdeci">const ODOMETRY * ODOMETRY_GetCurrent()</div><div class="ttdoc">Get current</div><div class="ttdef"><b>Definition:</b> <a href="odometry_8c_source.html#l00078">odometry.c:78</a></div></div>
 <div class="ttc" id="apid_8h_html"><div class="ttname"><a href="pid_8h.html">pid.h</a></div></div>

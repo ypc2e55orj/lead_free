@@ -75,16 +75,17 @@ $(function() {
 
 <p>: Main program body  
 <a href="#details">[詳解]</a></p>
-<div class="textblock"><code>#include &quot;main.h&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="main_8h_source.html">main.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="app__main_8h_source.html">app_main.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 main.c の依存先関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="main_8c__incl.png" border="0" usemap="#aCore_2Src_2main_8c" alt=""/></div>
 <map name="aCore_2Src_2main_8c" id="aCore_2Src_2main_8c">
-<area shape="rect" title=": Main program body" alt="" coords="30,5,154,32"/>
-<area shape="rect" title=" " alt="" coords="5,80,72,107"/>
-<area shape="rect" href="app__main_8h.html" title=" " alt="" coords="96,80,195,107"/>
+<area shape="rect" title=": Main program body" alt="" coords="62,5,186,32"/>
+<area shape="rect" href="main_8h.html" title=": Header for main.c file. This file contains the common defines of the application." alt="" coords="37,80,104,107"/>
+<area shape="rect" href="app__main_8h.html" title=" " alt="" coords="128,80,227,107"/>
+<area shape="rect" title=" " alt="" coords="5,155,136,181"/>
 </map>
 </div>
 </div>
@@ -230,24 +231,26 @@ main.c の依存先関係図:</div>
 
 <p class="definition"> <a class="el" href="main_8c_source.html">main.c</a> の <a class="el" href="main_8c_source.html#l00803">803</a> 行目に定義があります。</p>
 
-<p class="reference">参照元 <a class="el" href="main_8c_source.html#l00191">MX_ADC1_Init()</a>, <a class="el" href="main_8c_source.html#l00276">MX_ADC2_Init()</a>, <a class="el" href="main_8c_source.html#l00362">MX_I2C1_Init()</a>, <a class="el" href="main_8c_source.html#l00621">MX_TIM17_Init()</a>, <a class="el" href="main_8c_source.html#l00410">MX_TIM1_Init()</a>, <a class="el" href="main_8c_source.html#l00489">MX_TIM2_Init()</a>, <a class="el" href="main_8c_source.html#l00538">MX_TIM3_Init()</a>, <a class="el" href="main_8c_source.html#l00583">MX_TIM6_Init()</a>, <a class="el" href="main_8c_source.html#l00684">MX_USART2_UART_Init()</a>, <a class="el" href="main_8c_source.html#l00144">SystemClock_Config()</a>.</p>
+<p class="reference">参照元 <a class="el" href="stm32f3xx__hal__msp_8c_source.html#l00097">HAL_ADC_MspInit()</a>, <a class="el" href="stm32f3xx__hal__msp_8c_source.html#l00264">HAL_I2C_MspInit()</a>, <a class="el" href="main_8c_source.html#l00191">MX_ADC1_Init()</a>, <a class="el" href="main_8c_source.html#l00276">MX_ADC2_Init()</a>, <a class="el" href="main_8c_source.html#l00362">MX_I2C1_Init()</a>, <a class="el" href="main_8c_source.html#l00621">MX_TIM17_Init()</a>, <a class="el" href="main_8c_source.html#l00410">MX_TIM1_Init()</a>, <a class="el" href="main_8c_source.html#l00489">MX_TIM2_Init()</a>, <a class="el" href="main_8c_source.html#l00538">MX_TIM3_Init()</a>, <a class="el" href="main_8c_source.html#l00583">MX_TIM6_Init()</a>, <a class="el" href="main_8c_source.html#l00684">MX_USART2_UART_Init()</a>, <a class="el" href="main_8c_source.html#l00144">SystemClock_Config()</a>.</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="main_8c_a1730ffe1e560465665eb47d9264826f9_icgraph.png" border="0" usemap="#amain_8c_a1730ffe1e560465665eb47d9264826f9_icgraph" alt=""/></div>
 <map name="amain_8c_a1730ffe1e560465665eb47d9264826f9_icgraph" id="amain_8c_a1730ffe1e560465665eb47d9264826f9_icgraph">
-<area shape="rect" title="This function is executed in case of error occurrence." alt="" coords="328,233,439,260"/>
-<area shape="rect" href="main_8c.html#aaa163e37853e6fc971474824d9f655ca" title="ADC1 Initialization Function" alt="" coords="137,5,251,32"/>
-<area shape="rect" href="main_8c.html#a4e987f0fdef6459c1a03ca830bac23f5" title="ADC2 Initialization Function" alt="" coords="137,56,251,83"/>
-<area shape="rect" href="main_8c.html#a4230d11f81d0b16e112f1cc3f40cb42f" title="I2C1 Initialization Function" alt="" coords="141,107,247,133"/>
-<area shape="rect" href="main_8c.html#a8e1d412799a648fd7b11ac4fb4a4a6a3" title="TIM17 Initialization Function" alt="" coords="135,157,253,184"/>
-<area shape="rect" href="main_8c.html#a1d1beb7da60021ee1adbca294f28ba88" title="TIM1 Initialization Function" alt="" coords="139,208,249,235"/>
-<area shape="rect" href="main_8c.html#af952250b2d49718b385e14a76fa7c1b8" title="TIM2 Initialization Function" alt="" coords="139,259,249,285"/>
-<area shape="rect" href="main_8c.html#a73ff2ff527606fb2be261e9f85aab83c" title="TIM3 Initialization Function" alt="" coords="139,309,249,336"/>
-<area shape="rect" href="main_8c.html#af5e0e0fbbf2e1ec351699c09950583fe" title="TIM6 Initialization Function" alt="" coords="139,360,249,387"/>
-<area shape="rect" href="main_8c.html#a6db1014d713f6f5c0f52a13299ee0733" title="USART2 Initialization Function" alt="" coords="108,411,280,437"/>
-<area shape="rect" href="main_8c.html#a70af21c671abfcc773614a9a4f63d920" title="System Clock Configuration" alt="" coords="117,461,271,488"/>
-<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,233,60,260"/>
+<area shape="rect" title="This function is executed in case of error occurrence." alt="" coords="328,284,439,311"/>
+<area shape="rect" href="stm32f3xx__hal__msp_8c.html#aa30863492d5c3103e3e8ce8a63dadd07" title="ADC MSP Initialization This function configures the hardware resources used in this example" alt="" coords="125,5,263,32"/>
+<area shape="rect" href="stm32f3xx__hal__msp_8c.html#abe01a202c27b23fc150aa66af3130073" title="I2C MSP Initialization This function configures the hardware resources used in this example" alt="" coords="129,56,259,83"/>
+<area shape="rect" href="main_8c.html#aaa163e37853e6fc971474824d9f655ca" title="ADC1 Initialization Function" alt="" coords="137,107,251,133"/>
+<area shape="rect" href="main_8c.html#a4e987f0fdef6459c1a03ca830bac23f5" title="ADC2 Initialization Function" alt="" coords="137,157,251,184"/>
+<area shape="rect" href="main_8c.html#a4230d11f81d0b16e112f1cc3f40cb42f" title="I2C1 Initialization Function" alt="" coords="141,208,247,235"/>
+<area shape="rect" href="main_8c.html#a8e1d412799a648fd7b11ac4fb4a4a6a3" title="TIM17 Initialization Function" alt="" coords="135,259,253,285"/>
+<area shape="rect" href="main_8c.html#a1d1beb7da60021ee1adbca294f28ba88" title="TIM1 Initialization Function" alt="" coords="139,309,249,336"/>
+<area shape="rect" href="main_8c.html#af952250b2d49718b385e14a76fa7c1b8" title="TIM2 Initialization Function" alt="" coords="139,360,249,387"/>
+<area shape="rect" href="main_8c.html#a73ff2ff527606fb2be261e9f85aab83c" title="TIM3 Initialization Function" alt="" coords="139,411,249,437"/>
+<area shape="rect" href="main_8c.html#af5e0e0fbbf2e1ec351699c09950583fe" title="TIM6 Initialization Function" alt="" coords="139,461,249,488"/>
+<area shape="rect" href="main_8c.html#a6db1014d713f6f5c0f52a13299ee0733" title="USART2 Initialization Function" alt="" coords="108,512,280,539"/>
+<area shape="rect" href="main_8c.html#a70af21c671abfcc773614a9a4f63d920" title="System Clock Configuration" alt="" coords="117,563,271,589"/>
+<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,335,60,361"/>
 </map>
 </div>
 
@@ -283,56 +286,56 @@ main.c の依存先関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="main_8c_a840291bc02cba5474a4cb46a9b9566fe_cgraph.png" border="0" usemap="#amain_8c_a840291bc02cba5474a4cb46a9b9566fe_cgraph" alt=""/></div>
 <map name="amain_8c_a840291bc02cba5474a4cb46a9b9566fe_cgraph" id="amain_8c_a840291bc02cba5474a4cb46a9b9566fe_cgraph">
-<area shape="rect" title="The application entry point." alt="" coords="5,1247,60,1273"/>
-<area shape="rect" href="app__main_8h.html#a630544a7f0a2cc40d8a7fefab7e2fe70" title=" " alt="" coords="151,728,237,755"/>
-<area shape="rect" href="main_8c.html#aaa163e37853e6fc971474824d9f655ca" title="ADC1 Initialization Function" alt="" coords="137,1145,251,1172"/>
-<area shape="rect" href="main_8c.html#a4e987f0fdef6459c1a03ca830bac23f5" title="ADC2 Initialization Function" alt="" coords="137,1196,251,1223"/>
-<area shape="rect" href="main_8c.html#a608dc9e9bcaf978f1611f3ec57670f64" title=" " alt="" coords="139,1500,249,1527"/>
-<area shape="rect" href="main_8c.html#ae89fdd15729ad41a66911190fcbab23a" title="GPIO Initialization Function" alt="" coords="139,1551,249,1577"/>
-<area shape="rect" href="main_8c.html#a4230d11f81d0b16e112f1cc3f40cb42f" title="I2C1 Initialization Function" alt="" coords="141,1247,247,1273"/>
-<area shape="rect" href="main_8c.html#a8e1d412799a648fd7b11ac4fb4a4a6a3" title="TIM17 Initialization Function" alt="" coords="135,1297,253,1324"/>
-<area shape="rect" href="main_8c.html#a1d1beb7da60021ee1adbca294f28ba88" title="TIM1 Initialization Function" alt="" coords="139,1348,249,1375"/>
-<area shape="rect" href="main_8c.html#af952250b2d49718b385e14a76fa7c1b8" title="TIM2 Initialization Function" alt="" coords="139,1399,249,1425"/>
-<area shape="rect" href="main_8c.html#a73ff2ff527606fb2be261e9f85aab83c" title="TIM3 Initialization Function" alt="" coords="139,1449,249,1476"/>
-<area shape="rect" href="main_8c.html#af5e0e0fbbf2e1ec351699c09950583fe" title="TIM6 Initialization Function" alt="" coords="139,993,249,1020"/>
-<area shape="rect" href="main_8c.html#a6db1014d713f6f5c0f52a13299ee0733" title="USART2 Initialization Function" alt="" coords="108,1044,280,1071"/>
-<area shape="rect" href="main_8c.html#a70af21c671abfcc773614a9a4f63d920" title="System Clock Configuration" alt="" coords="117,1095,271,1121"/>
-<area shape="rect" href="button_8h.html#a31be2fcf32ca6c71005fc5f648edab78" title="Get button 1" alt="" coords="556,208,691,235"/>
-<area shape="rect" href="button_8h.html#abf3f39cd196cf25080c0e5acfdf16993" title="Get button 1" alt="" coords="328,1044,463,1071"/>
-<area shape="rect" href="app__main_8c.html#ac8ec403b244267ecd7c29fd6620076e3" title=" " alt="" coords="355,512,436,539"/>
-<area shape="rect" href="interval_8h.html#a7f990ff62bbc126fa60a2c3a24532a5f" title="Buzzer" alt="" coords="784,740,920,767"/>
-<area shape="rect" href="interval_8h.html#a4d3d968b3af31f3b95de7c6e0e71d4f6" title="Start interval process" alt="" coords="334,1095,457,1121"/>
-<area shape="rect" href="logger_8h.html#a7e1f6cceddb55ae4a35e23537e089d70" title="Pring log" alt="" coords="339,1196,452,1223"/>
-<area shape="rect" href="parameter_8h.html#a4d8761c74e185fe13378d9624be30600" title="Initialize parameters" alt="" coords="331,56,460,83"/>
-<area shape="rect" href="sensor_8h.html#ad87c5be998b7e544525713b0ca25c3e3" title="Initialize sensors" alt="" coords="344,107,447,133"/>
-<area shape="rect" href="app__main_8c.html#aba412806b10e230ad1f2aeb986d9b59c" title=" " alt="" coords="354,993,437,1020"/>
-<area shape="rect" href="app__main_8c.html#a9efdce133fda030ebb0c7793ffc03d14" title=" " alt="" coords="822,551,882,577"/>
-<area shape="rect" href="line_8h.html#ab38cfb64d9a0da68234a9dfaf17aaec0" title="Disable line feedback" alt="" coords="539,613,708,640"/>
-<area shape="rect" href="line_8h.html#a9b4a00b81ce1cb20833130786318e85e" title="Get calibration value" alt="" coords="553,664,693,691"/>
-<area shape="rect" href="line_8h.html#a8b86f6a9eab7b902eabfffdb81ce0ffb" title="Start sensor calibration (back)" alt="" coords="533,259,713,285"/>
-<area shape="rect" href="line_8h.html#ad38f2ac38d03c071b0a22bdb93583300" title="Start sensor calibration (forward)" alt="" coords="523,309,723,336"/>
-<area shape="rect" href="line_8h.html#ac2241ed9289106ee413b2a84faa7c1b0" title="Stop sensor calibration" alt="" coords="550,360,697,387"/>
-<area shape="rect" href="parameter_8h.html#a516dc6cce80e3f863aefb4e65b880053" title="Get current parameter" alt="" coords="558,715,689,741"/>
-<area shape="rect" href="run_8h.html#ab51f5d38046671744984ff764c8949b9" title="Straight" alt="" coords="569,563,678,589"/>
-<area shape="rect" href="servo_8h.html#a1c520f57937bad54175d31da5f6414b6" title="Start servos" alt="" coords="571,765,675,792"/>
-<area shape="rect" href="servo_8h.html#ad06676986fb4c97c7d94680f7bb059a2" title="Stop servos" alt="" coords="801,1069,903,1096"/>
-<area shape="rect" href="logger_8c.html#a0573780c843e18b8be11e33c9e5c9636" title="Pring log (odometry mode)" alt="" coords="511,1525,736,1552"/>
-<area shape="rect" href="logger_8c.html#a60212f9386e4ab4b170f430f85a95c5d" title="Pring log (target mode)" alt="" coords="523,1475,723,1501"/>
-<area shape="rect" href="sensor_8c.html#ab3f7e3afc0b46ed3410f806805b2328e" title="Initialize ADC" alt="" coords="584,107,663,133"/>
-<area shape="rect" href="sensor_8c.html#a0d5bbefe4e42fe2bf21a65184f63dbd8" title="Initialize encoders." alt="" coords="566,5,681,32"/>
-<area shape="rect" href="sensor_8c.html#a30661b3385e75411ed11f8318ac90e46" title="Initialize the gyro." alt="" coords="580,56,667,83"/>
-<area shape="rect" href="app__main_8c.html#ae947478c563efeb0546ca7c2dc247217" title=" " alt="" coords="561,1069,685,1096"/>
-<area shape="rect" href="line_8h.html#a73ea39c97531b32c2be5d18eb1b7981d" title="Enable line feedback" alt="" coords="541,1373,705,1400"/>
-<area shape="rect" href="line_8h.html#a1746c8257aa80aea4456d0e1e3058fcc" title="Get generated angular velocity" alt="" coords="532,816,715,843"/>
-<area shape="rect" href="line_8h.html#afcc55f4276815a243820a0eac422608b" title="Get curvature marker state" alt="" coords="534,867,713,893"/>
-<area shape="rect" href="line_8h.html#a57113586c6f12cca00281769dea96721" title="Reset start and goal marker state" alt="" coords="552,917,695,944"/>
-<area shape="rect" href="line_8h.html#ac53f215e5d20488835e1cb6b19bebe3d" title="Get start and goal marker state" alt="" coords="535,968,711,995"/>
-<area shape="rect" href="line_8h.html#a8c1a8019beab47b5f8306db41df7cfd9" title="Reset curvature marker state" alt="" coords="527,1019,720,1045"/>
-<area shape="rect" href="line_8h.html#a73029906d10d9afa817eb179126bbb97" title="Reset start and goal marker state" alt="" coords="528,1120,719,1147"/>
-<area shape="rect" href="logger_8h.html#a5c31839f1b962339daaeb999d5caba50" title="Clear log" alt="" coords="565,1171,682,1197"/>
-<area shape="rect" href="logger_8h.html#a61e3dd9a86f60d48fa173874783c21e7" title="Set logger mode" alt="" coords="553,1221,693,1248"/>
-<area shape="rect" href="logger_8h.html#ac4ca8d13d67a1ea91843038349036a37" title="Start logger (Set log frequency)" alt="" coords="566,1272,681,1299"/>
-<area shape="rect" href="main_8c.html#a1730ffe1e560465665eb47d9264826f9" title="This function is executed in case of error occurrence." alt="" coords="340,1247,451,1273"/>
+<area shape="rect" title="The application entry point." alt="" coords="5,1171,60,1197"/>
+<area shape="rect" href="app__main_8h.html#a630544a7f0a2cc40d8a7fefab7e2fe70" title=" " alt="" coords="151,284,237,311"/>
+<area shape="rect" href="main_8c.html#aaa163e37853e6fc971474824d9f655ca" title="ADC1 Initialization Function" alt="" coords="137,1019,251,1045"/>
+<area shape="rect" href="main_8c.html#a4e987f0fdef6459c1a03ca830bac23f5" title="ADC2 Initialization Function" alt="" coords="137,1069,251,1096"/>
+<area shape="rect" href="main_8c.html#a608dc9e9bcaf978f1611f3ec57670f64" title=" " alt="" coords="139,1424,249,1451"/>
+<area shape="rect" href="main_8c.html#ae89fdd15729ad41a66911190fcbab23a" title="GPIO Initialization Function" alt="" coords="139,1475,249,1501"/>
+<area shape="rect" href="main_8c.html#a4230d11f81d0b16e112f1cc3f40cb42f" title="I2C1 Initialization Function" alt="" coords="141,1120,247,1147"/>
+<area shape="rect" href="main_8c.html#a8e1d412799a648fd7b11ac4fb4a4a6a3" title="TIM17 Initialization Function" alt="" coords="135,1323,253,1349"/>
+<area shape="rect" href="main_8c.html#a1d1beb7da60021ee1adbca294f28ba88" title="TIM1 Initialization Function" alt="" coords="139,1373,249,1400"/>
+<area shape="rect" href="main_8c.html#af952250b2d49718b385e14a76fa7c1b8" title="TIM2 Initialization Function" alt="" coords="139,1171,249,1197"/>
+<area shape="rect" href="main_8c.html#a73ff2ff527606fb2be261e9f85aab83c" title="TIM3 Initialization Function" alt="" coords="139,1221,249,1248"/>
+<area shape="rect" href="main_8c.html#af5e0e0fbbf2e1ec351699c09950583fe" title="TIM6 Initialization Function" alt="" coords="139,1272,249,1299"/>
+<area shape="rect" href="main_8c.html#a6db1014d713f6f5c0f52a13299ee0733" title="USART2 Initialization Function" alt="" coords="108,917,280,944"/>
+<area shape="rect" href="main_8c.html#a70af21c671abfcc773614a9a4f63d920" title="System Clock Configuration" alt="" coords="117,968,271,995"/>
+<area shape="rect" href="button_8h.html#a31be2fcf32ca6c71005fc5f648edab78" title="Get button 1" alt="" coords="584,309,719,336"/>
+<area shape="rect" href="button_8h.html#abf3f39cd196cf25080c0e5acfdf16993" title="Get button 1" alt="" coords="342,1120,477,1147"/>
+<area shape="rect" href="app__main_8c.html#ac8ec403b244267ecd7c29fd6620076e3" title=" " alt="" coords="369,563,450,589"/>
+<area shape="rect" href="interval_8h.html#a7f990ff62bbc126fa60a2c3a24532a5f" title="Buzzer" alt="" coords="812,563,948,589"/>
+<area shape="rect" href="interval_8h.html#a4d3d968b3af31f3b95de7c6e0e71d4f6" title="Start interval process" alt="" coords="348,31,471,57"/>
+<area shape="rect" href="logger_8h.html#a7e1f6cceddb55ae4a35e23537e089d70" title="Pring log" alt="" coords="353,81,466,108"/>
+<area shape="rect" href="parameter_8h.html#a4d8761c74e185fe13378d9624be30600" title="Initialize parameters" alt="" coords="345,157,474,184"/>
+<area shape="rect" href="sensor_8h.html#ad87c5be998b7e544525713b0ca25c3e3" title="Initialize sensors" alt="" coords="358,208,461,235"/>
+<area shape="rect" href="app__main_8c.html#aba412806b10e230ad1f2aeb986d9b59c" title=" " alt="" coords="368,1069,451,1096"/>
+<area shape="rect" href="app__main_8c.html#a9efdce133fda030ebb0c7793ffc03d14" title=" " alt="" coords="850,816,910,843"/>
+<area shape="rect" href="line_8h.html#ab38cfb64d9a0da68234a9dfaf17aaec0" title="Disable line feedback" alt="" coords="567,461,736,488"/>
+<area shape="rect" href="line_8h.html#a9b4a00b81ce1cb20833130786318e85e" title="Get calibration value" alt="" coords="581,512,721,539"/>
+<area shape="rect" href="line_8h.html#a8b86f6a9eab7b902eabfffdb81ce0ffb" title="Start sensor calibration (back)" alt="" coords="561,563,741,589"/>
+<area shape="rect" href="line_8h.html#ad38f2ac38d03c071b0a22bdb93583300" title="Start sensor calibration (forward)" alt="" coords="551,613,751,640"/>
+<area shape="rect" href="line_8h.html#ac2241ed9289106ee413b2a84faa7c1b0" title="Stop sensor calibration" alt="" coords="578,664,725,691"/>
+<area shape="rect" href="parameter_8h.html#a516dc6cce80e3f863aefb4e65b880053" title="Get current parameter" alt="" coords="586,867,717,893"/>
+<area shape="rect" href="run_8h.html#ab51f5d38046671744984ff764c8949b9" title="Straight" alt="" coords="597,411,706,437"/>
+<area shape="rect" href="servo_8h.html#a1c520f57937bad54175d31da5f6414b6" title="Start servos" alt="" coords="599,816,703,843"/>
+<area shape="rect" href="servo_8h.html#ad06676986fb4c97c7d94680f7bb059a2" title="Stop servos" alt="" coords="829,968,931,995"/>
+<area shape="rect" href="logger_8c.html#a0573780c843e18b8be11e33c9e5c9636" title="Pring log (odometry mode)" alt="" coords="539,56,764,83"/>
+<area shape="rect" href="logger_8c.html#a60212f9386e4ab4b170f430f85a95c5d" title="Pring log (target mode)" alt="" coords="551,5,751,32"/>
+<area shape="rect" href="sensor_8c.html#ab3f7e3afc0b46ed3410f806805b2328e" title="Initialize ADC" alt="" coords="612,157,691,184"/>
+<area shape="rect" href="sensor_8c.html#a0d5bbefe4e42fe2bf21a65184f63dbd8" title="Initialize encoders." alt="" coords="594,208,709,235"/>
+<area shape="rect" href="sensor_8c.html#a30661b3385e75411ed11f8318ac90e46" title="Initialize the gyro." alt="" coords="608,107,695,133"/>
+<area shape="rect" href="app__main_8c.html#ae947478c563efeb0546ca7c2dc247217" title=" " alt="" coords="589,968,713,995"/>
+<area shape="rect" href="line_8h.html#a73ea39c97531b32c2be5d18eb1b7981d" title="Enable line feedback" alt="" coords="569,1019,733,1045"/>
+<area shape="rect" href="line_8h.html#a1746c8257aa80aea4456d0e1e3058fcc" title="Get generated angular velocity" alt="" coords="560,1069,743,1096"/>
+<area shape="rect" href="line_8h.html#afcc55f4276815a243820a0eac422608b" title="Get curvature marker state" alt="" coords="562,1120,741,1147"/>
+<area shape="rect" href="line_8h.html#a57113586c6f12cca00281769dea96721" title="Reset start and goal marker state" alt="" coords="580,1171,723,1197"/>
+<area shape="rect" href="line_8h.html#ac53f215e5d20488835e1cb6b19bebe3d" title="Get start and goal marker state" alt="" coords="563,1221,739,1248"/>
+<area shape="rect" href="line_8h.html#a8c1a8019beab47b5f8306db41df7cfd9" title="Reset curvature marker state" alt="" coords="555,1272,748,1299"/>
+<area shape="rect" href="line_8h.html#a73029906d10d9afa817eb179126bbb97" title="Reset start and goal marker state" alt="" coords="556,1323,747,1349"/>
+<area shape="rect" href="logger_8h.html#a5c31839f1b962339daaeb999d5caba50" title="Clear log" alt="" coords="593,1373,710,1400"/>
+<area shape="rect" href="logger_8h.html#a61e3dd9a86f60d48fa173874783c21e7" title="Set logger mode" alt="" coords="581,1424,721,1451"/>
+<area shape="rect" href="main_8c.html#a1730ffe1e560465665eb47d9264826f9" title="This function is executed in case of error occurrence." alt="" coords="354,1171,465,1197"/>
+<area shape="rect" href="main_8h.html#ae70bce6c39d0b570a7523b86738cec4b" title=" " alt="" coords="328,1348,491,1375"/>
 </map>
 </div>
 
@@ -675,8 +678,9 @@ main.c の依存先関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="main_8c_a8e1d412799a648fd7b11ac4fb4a4a6a3_cgraph.png" border="0" usemap="#amain_8c_a8e1d412799a648fd7b11ac4fb4a4a6a3_cgraph" alt=""/></div>
 <map name="amain_8c_a8e1d412799a648fd7b11ac4fb4a4a6a3_cgraph" id="amain_8c_a8e1d412799a648fd7b11ac4fb4a4a6a3_cgraph">
-<area shape="rect" title="TIM17 Initialization Function" alt="" coords="5,5,124,32"/>
-<area shape="rect" href="main_8c.html#a1730ffe1e560465665eb47d9264826f9" title="This function is executed in case of error occurrence." alt="" coords="172,5,283,32"/>
+<area shape="rect" title="TIM17 Initialization Function" alt="" coords="5,31,124,57"/>
+<area shape="rect" href="main_8c.html#a1730ffe1e560465665eb47d9264826f9" title="This function is executed in case of error occurrence." alt="" coords="198,5,309,32"/>
+<area shape="rect" href="main_8h.html#ae70bce6c39d0b570a7523b86738cec4b" title=" " alt="" coords="172,56,335,83"/>
 </map>
 </div>
 <div class="dynheader">
@@ -737,8 +741,9 @@ main.c の依存先関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="main_8c_a1d1beb7da60021ee1adbca294f28ba88_cgraph.png" border="0" usemap="#amain_8c_a1d1beb7da60021ee1adbca294f28ba88_cgraph" alt=""/></div>
 <map name="amain_8c_a1d1beb7da60021ee1adbca294f28ba88_cgraph" id="amain_8c_a1d1beb7da60021ee1adbca294f28ba88_cgraph">
-<area shape="rect" title="TIM1 Initialization Function" alt="" coords="5,5,116,32"/>
-<area shape="rect" href="main_8c.html#a1730ffe1e560465665eb47d9264826f9" title="This function is executed in case of error occurrence." alt="" coords="164,5,275,32"/>
+<area shape="rect" title="TIM1 Initialization Function" alt="" coords="5,31,116,57"/>
+<area shape="rect" href="main_8c.html#a1730ffe1e560465665eb47d9264826f9" title="This function is executed in case of error occurrence." alt="" coords="190,5,301,32"/>
+<area shape="rect" href="main_8h.html#ae70bce6c39d0b570a7523b86738cec4b" title=" " alt="" coords="164,56,327,83"/>
 </map>
 </div>
 <div class="dynheader">
@@ -1106,6 +1111,8 @@ main.c の依存先関係図:</div>
 
 <p class="definition"> <a class="el" href="main_8c_source.html">main.c</a> の <a class="el" href="main_8c_source.html#l00043">43</a> 行目に定義があります。</p>
 
+<p class="reference">参照元 <a class="el" href="stm32f3xx__it_8c_source.html#l00209">DMA1_Channel1_IRQHandler()</a>, <a class="el" href="stm32f3xx__hal__msp_8c_source.html#l00097">HAL_ADC_MspInit()</a>.</p>
+
 </div>
 </div>
 <a id="ad99dd74cc50b61cf07680c1adaf80337"></a>
@@ -1121,6 +1128,8 @@ main.c の依存先関係図:</div>
 </div><div class="memdoc">
 
 <p class="definition"> <a class="el" href="main_8c_source.html">main.c</a> の <a class="el" href="main_8c_source.html#l00044">44</a> 行目に定義があります。</p>
+
+<p class="reference">参照元 <a class="el" href="stm32f3xx__it_8c_source.html#l00223">DMA1_Channel2_IRQHandler()</a>, <a class="el" href="stm32f3xx__hal__msp_8c_source.html#l00097">HAL_ADC_MspInit()</a>.</p>
 
 </div>
 </div>
@@ -1138,6 +1147,8 @@ main.c の依存先関係図:</div>
 
 <p class="definition"> <a class="el" href="main_8c_source.html">main.c</a> の <a class="el" href="main_8c_source.html#l00047">47</a> 行目に定義があります。</p>
 
+<p class="reference">参照元 <a class="el" href="stm32f3xx__it_8c_source.html#l00237">DMA1_Channel3_IRQHandler()</a>, <a class="el" href="stm32f3xx__hal__msp_8c_source.html#l00264">HAL_I2C_MspInit()</a>.</p>
+
 </div>
 </div>
 <a id="ae4780ad74b8c24d6fffa8ec7fc8ea105"></a>
@@ -1153,6 +1164,8 @@ main.c の依存先関係図:</div>
 </div><div class="memdoc">
 
 <p class="definition"> <a class="el" href="main_8c_source.html">main.c</a> の <a class="el" href="main_8c_source.html#l00048">48</a> 行目に定義があります。</p>
+
+<p class="reference">参照元 <a class="el" href="stm32f3xx__it_8c_source.html#l00251">DMA1_Channel4_IRQHandler()</a>, <a class="el" href="stm32f3xx__hal__msp_8c_source.html#l00264">HAL_I2C_MspInit()</a>.</p>
 
 </div>
 </div>
@@ -1172,7 +1185,7 @@ main.c の依存先関係図:</div>
 
 <p class="definition"> <a class="el" href="main_8c_source.html">main.c</a> の <a class="el" href="main_8c_source.html#l00046">46</a> 行目に定義があります。</p>
 
-<p class="reference">参照元 <a class="el" href="sensor_8c_source.html#l00084">GYRO_Init()</a>, <a class="el" href="sensor_8c_source.html#l00102">GYRO_UpdateYaw()</a>, <a class="el" href="sensor_8c_source.html#l00120">HAL_I2C_MasterTxCpltCallback()</a>, <a class="el" href="main_8c_source.html#l00362">MX_I2C1_Init()</a>.</p>
+<p class="reference">参照元 <a class="el" href="sensor_8c_source.html#l00084">GYRO_Init()</a>, <a class="el" href="sensor_8c_source.html#l00102">GYRO_UpdateYaw()</a>, <a class="el" href="sensor_8c_source.html#l00120">HAL_I2C_MasterTxCpltCallback()</a>, <a class="el" href="stm32f3xx__it_8c_source.html#l00280">I2C1_EV_IRQHandler()</a>, <a class="el" href="main_8c_source.html#l00362">MX_I2C1_Init()</a>.</p>
 
 </div>
 </div>
@@ -1272,7 +1285,7 @@ main.c の依存先関係図:</div>
 
 <p class="definition"> <a class="el" href="main_8c_source.html">main.c</a> の <a class="el" href="main_8c_source.html#l00053">53</a> 行目に定義があります。</p>
 
-<p class="reference">参照元 <a class="el" href="interval_8c_source.html#l00021">HAL_TIM_PeriodElapsedCallback()</a>, <a class="el" href="interval_8c_source.html#l00060">INTERVAL_Start()</a>, <a class="el" href="main_8c_source.html#l00583">MX_TIM6_Init()</a>.</p>
+<p class="reference">参照元 <a class="el" href="interval_8c_source.html#l00021">HAL_TIM_PeriodElapsedCallback()</a>, <a class="el" href="interval_8c_source.html#l00060">INTERVAL_Start()</a>, <a class="el" href="main_8c_source.html#l00583">MX_TIM6_Init()</a>, <a class="el" href="stm32f3xx__it_8c_source.html#l00294">TIM6_DAC1_IRQHandler()</a>.</p>
 
 </div>
 </div>

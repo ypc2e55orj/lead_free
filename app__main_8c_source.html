@@ -77,7 +77,7 @@ $(function() {
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;float.h&gt;</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">// STM32CubeMX</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;main.h&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="main_8h.html">main.h</a>&gt;</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">// project</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="interval_8h.html">interval.h</a>&quot;</span></div>
@@ -104,14 +104,14 @@ $(function() {
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  printf(<span class="stringliteral">&quot;Waiting calibration...\r\n&quot;</span>);</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <span class="keywordflow">while</span> (!<a class="code" href="button_8h.html#a31be2fcf32ca6c71005fc5f648edab78">BUTTON_GetSw1</a>())</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  {</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    HAL_GPIO_TogglePin(Led_GPIO_Port, Led_Pin);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    HAL_GPIO_TogglePin(<a class="code" href="main_8h.html#a7851335a4c1df35a732450489a8b4f32">Led_GPIO_Port</a>, <a class="code" href="main_8h.html#a51002063f7ce118faccc1e69646e9efb">Led_Pin</a>);</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="app__main_8c.html#a9efdce133fda030ebb0c7793ffc03d14">Delay</a>(10);</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  }</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <span class="keywordflow">while</span> (<a class="code" href="button_8h.html#a31be2fcf32ca6c71005fc5f648edab78">BUTTON_GetSw1</a>())</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    ;</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  printf(<span class="stringliteral">&quot;Execute calibration...\r\n&quot;</span>);</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <a class="code" href="interval_8h.html#a7f990ff62bbc126fa60a2c3a24532a5f">INTERVAL_Buzzer</a>(50);</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  HAL_GPIO_WritePin(Led_GPIO_Port, Led_Pin, GPIO_PIN_SET);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  HAL_GPIO_WritePin(<a class="code" href="main_8h.html#a7851335a4c1df35a732450489a8b4f32">Led_GPIO_Port</a>, <a class="code" href="main_8h.html#a51002063f7ce118faccc1e69646e9efb">Led_Pin</a>, GPIO_PIN_SET);</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  <a class="code" href="line_8h.html#ab38cfb64d9a0da68234a9dfaf17aaec0">LINE_DisableFeedback</a>();</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  <a class="code" href="servo_8h.html#a1c520f57937bad54175d31da5f6414b6">SERVO_Start</a>(param-&gt;<a class="code" href="structPARAMETER.html#a5b49dffd017d854d8e2b7a21c3e4ce2e">velocityPid</a>, param-&gt;<a class="code" href="structPARAMETER.html#a474b45b36949d24896e89ed534a3c87c">angularVelocityPid</a>);</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  <a class="code" href="line_8h.html#ad38f2ac38d03c071b0a22bdb93583300">LINE_StartCalibrateForward</a>();</div>
@@ -122,7 +122,7 @@ $(function() {
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <a class="code" href="app__main_8c.html#a9efdce133fda030ebb0c7793ffc03d14">Delay</a>(500);</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <a class="code" href="interval_8h.html#a7f990ff62bbc126fa60a2c3a24532a5f">INTERVAL_Buzzer</a>(50);</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <a class="code" href="servo_8h.html#ad06676986fb4c97c7d94680f7bb059a2">SERVO_Stop</a>();</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  HAL_GPIO_WritePin(Led_GPIO_Port, Led_Pin, GPIO_PIN_RESET);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  HAL_GPIO_WritePin(<a class="code" href="main_8h.html#a7851335a4c1df35a732450489a8b4f32">Led_GPIO_Port</a>, <a class="code" href="main_8h.html#a51002063f7ce118faccc1e69646e9efb">Led_Pin</a>, GPIO_PIN_RESET);</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  <span class="keyword">const</span> <a class="code" href="structLINE__CALIBRATE.html">LINE_CALIBRATE</a> *p = <a class="code" href="line_8h.html#a9b4a00b81ce1cb20833130786318e85e">LINE_GetCalibrate</a>();</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <span class="keywordflow">for</span> (<a class="code" href="sensor_8h.html#a78d269997aaee18405db7c81806d4c91">LINE_SENSOR_POS</a> i = 0; i &lt; <a class="code" href="sensor_8h.html#a78d269997aaee18405db7c81806d4c91a72bc30b41e130b5a733fa67f1f1db14b">NUM_SENSOR_POS</a>; i++)</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  {</div>
@@ -275,6 +275,9 @@ $(function() {
 <div class="ttc" id="alogger_8h_html_a7e1f6cceddb55ae4a35e23537e089d70"><div class="ttname"><a href="logger_8h.html#a7e1f6cceddb55ae4a35e23537e089d70">LOGGER_Print</a></div><div class="ttdeci">void LOGGER_Print()</div><div class="ttdoc">Pring log</div><div class="ttdef"><b>Definition:</b> <a href="logger_8c_source.html#l00198">logger.c:198</a></div></div>
 <div class="ttc" id="alogger_8h_html_ac4ca8d13d67a1ea91843038349036a37"><div class="ttname"><a href="logger_8h.html#ac4ca8d13d67a1ea91843038349036a37">LOGGER_Start</a></div><div class="ttdeci">void LOGGER_Start(uint16_t freq)</div><div class="ttdoc">Start logger (Set log frequency)</div><div class="ttdef"><b>Definition:</b> <a href="logger_8c_source.html#l00128">logger.c:128</a></div></div>
 <div class="ttc" id="alogger_8h_html_af5ec6072c032269d4011d55ec0f7f9bea1453e97c1e7cc4e605cb7440dd1efa11"><div class="ttname"><a href="logger_8h.html#af5ec6072c032269d4011d55ec0f7f9bea1453e97c1e7cc4e605cb7440dd1efa11">LOGGER_MODE_TARGET</a></div><div class="ttdeci">@ LOGGER_MODE_TARGET</div><div class="ttdef"><b>Definition:</b> <a href="logger_8h_source.html#l00009">logger.h:9</a></div></div>
+<div class="ttc" id="amain_8h_html"><div class="ttname"><a href="main_8h.html">main.h</a></div><div class="ttdoc">: Header for main.c file. This file contains the common defines of the application.</div></div>
+<div class="ttc" id="amain_8h_html_a51002063f7ce118faccc1e69646e9efb"><div class="ttname"><a href="main_8h.html#a51002063f7ce118faccc1e69646e9efb">Led_Pin</a></div><div class="ttdeci">#define Led_Pin</div><div class="ttdef"><b>Definition:</b> <a href="main_8h_source.html#l00104">main.h:104</a></div></div>
+<div class="ttc" id="amain_8h_html_a7851335a4c1df35a732450489a8b4f32"><div class="ttname"><a href="main_8h.html#a7851335a4c1df35a732450489a8b4f32">Led_GPIO_Port</a></div><div class="ttdeci">#define Led_GPIO_Port</div><div class="ttdef"><b>Definition:</b> <a href="main_8h_source.html#l00105">main.h:105</a></div></div>
 <div class="ttc" id="aodometry_8h_html"><div class="ttname"><a href="odometry_8h.html">odometry.h</a></div></div>
 <div class="ttc" id="aodometry_8h_html_a439ddae1dc13251f0ff183d7f967bb1f"><div class="ttname"><a href="odometry_8h.html#a439ddae1dc13251f0ff183d7f967bb1f">ODOMETRY_Reset</a></div><div class="ttdeci">void ODOMETRY_Reset()</div><div class="ttdoc">Reset sums</div><div class="ttdef"><b>Definition:</b> <a href="odometry_8c_source.html#l00062">odometry.c:62</a></div></div>
 <div class="ttc" id="aodometry_8h_html_a458ba16e05623612c350b22cea48ffc3"><div class="ttname"><a href="odometry_8h.html#a458ba16e05623612c350b22cea48ffc3">ODOMETRY_GetCurrent</a></div><div class="ttdeci">const ODOMETRY * ODOMETRY_GetCurrent()</div><div class="ttdoc">Get current</div><div class="ttdef"><b>Definition:</b> <a href="odometry_8c_source.html#l00078">odometry.c:78</a></div></div>

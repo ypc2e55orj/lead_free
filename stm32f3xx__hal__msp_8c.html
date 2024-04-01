@@ -1,0 +1,711 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Lead Free: Core/Src/stm32f3xx_hal_msp.c ファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Lead Free
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_c6310732a22f63c0c2fc5595561e68f1.html">Core</a></li><li class="navelem"><a class="el" href="dir_b596f468b52957496e4f78b80e029268.html">Src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">関数</a> &#124;
+<a href="#var-members">変数</a>  </div>
+  <div class="headertitle">
+<div class="title">stm32f3xx_hal_msp.c ファイル</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>This file provides code for the MSP Initialization and de-Initialization codes.  
+<a href="#details">[詳解]</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="main_8h_source.html">main.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+stm32f3xx_hal_msp.c の依存先関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="stm32f3xx__hal__msp_8c__incl.png" border="0" usemap="#aCore_2Src_2stm32f3xx__hal__msp_8c" alt=""/></div>
+<map name="aCore_2Src_2stm32f3xx__hal__msp_8c" id="aCore_2Src_2stm32f3xx__hal__msp_8c">
+<area shape="rect" title="This file provides code for the MSP Initialization and de&#45;Initialization codes." alt="" coords="5,5,156,47"/>
+<area shape="rect" href="main_8h.html" title=": Header for main.c file. This file contains the common defines of the application." alt="" coords="47,95,114,121"/>
+<area shape="rect" title=" " alt="" coords="15,169,146,196"/>
+</map>
+</div>
+</div>
+<p><a href="stm32f3xx__hal__msp_8c_source.html">[ソースコード]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:ae70bce6c39d0b570a7523b86738cec4b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stm32f3xx__hal__msp_8c.html#ae70bce6c39d0b570a7523b86738cec4b">HAL_TIM_MspPostInit</a> (TIM_HandleTypeDef *htim)</td></tr>
+<tr class="separator:ae70bce6c39d0b570a7523b86738cec4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4fb8e66865c87d0ebab74a726a6891f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stm32f3xx__hal__msp_8c.html#ae4fb8e66865c87d0ebab74a726a6891f">HAL_MspInit</a> (void)</td></tr>
+<tr class="separator:ae4fb8e66865c87d0ebab74a726a6891f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa30863492d5c3103e3e8ce8a63dadd07"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stm32f3xx__hal__msp_8c.html#aa30863492d5c3103e3e8ce8a63dadd07">HAL_ADC_MspInit</a> (ADC_HandleTypeDef *hadc)</td></tr>
+<tr class="memdesc:aa30863492d5c3103e3e8ce8a63dadd07"><td class="mdescLeft">&#160;</td><td class="mdescRight">ADC MSP Initialization This function configures the hardware resources used in this example  <a href="stm32f3xx__hal__msp_8c.html#aa30863492d5c3103e3e8ce8a63dadd07">[詳解]</a><br /></td></tr>
+<tr class="separator:aa30863492d5c3103e3e8ce8a63dadd07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39b0f8e80268ab3e660ead921ad4b22f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stm32f3xx__hal__msp_8c.html#a39b0f8e80268ab3e660ead921ad4b22f">HAL_ADC_MspDeInit</a> (ADC_HandleTypeDef *hadc)</td></tr>
+<tr class="memdesc:a39b0f8e80268ab3e660ead921ad4b22f"><td class="mdescLeft">&#160;</td><td class="mdescRight">ADC MSP De-Initialization This function freeze the hardware resources used in this example  <a href="stm32f3xx__hal__msp_8c.html#a39b0f8e80268ab3e660ead921ad4b22f">[詳解]</a><br /></td></tr>
+<tr class="separator:a39b0f8e80268ab3e660ead921ad4b22f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe01a202c27b23fc150aa66af3130073"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stm32f3xx__hal__msp_8c.html#abe01a202c27b23fc150aa66af3130073">HAL_I2C_MspInit</a> (I2C_HandleTypeDef *hi2c)</td></tr>
+<tr class="memdesc:abe01a202c27b23fc150aa66af3130073"><td class="mdescLeft">&#160;</td><td class="mdescRight">I2C MSP Initialization This function configures the hardware resources used in this example  <a href="stm32f3xx__hal__msp_8c.html#abe01a202c27b23fc150aa66af3130073">[詳解]</a><br /></td></tr>
+<tr class="separator:abe01a202c27b23fc150aa66af3130073"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ec8d9b09854c732e2feed549278f048"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stm32f3xx__hal__msp_8c.html#a2ec8d9b09854c732e2feed549278f048">HAL_I2C_MspDeInit</a> (I2C_HandleTypeDef *hi2c)</td></tr>
+<tr class="memdesc:a2ec8d9b09854c732e2feed549278f048"><td class="mdescLeft">&#160;</td><td class="mdescRight">I2C MSP De-Initialization This function freeze the hardware resources used in this example  <a href="stm32f3xx__hal__msp_8c.html#a2ec8d9b09854c732e2feed549278f048">[詳解]</a><br /></td></tr>
+<tr class="separator:a2ec8d9b09854c732e2feed549278f048"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb25ade2f7e3f7aae167bd52270c2b86"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stm32f3xx__hal__msp_8c.html#abb25ade2f7e3f7aae167bd52270c2b86">HAL_TIM_Base_MspInit</a> (TIM_HandleTypeDef *htim_base)</td></tr>
+<tr class="memdesc:abb25ade2f7e3f7aae167bd52270c2b86"><td class="mdescLeft">&#160;</td><td class="mdescRight">TIM_Base MSP Initialization This function configures the hardware resources used in this example  <a href="stm32f3xx__hal__msp_8c.html#abb25ade2f7e3f7aae167bd52270c2b86">[詳解]</a><br /></td></tr>
+<tr class="separator:abb25ade2f7e3f7aae167bd52270c2b86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8cc723aedb4c01bc57cbe38c21f0b0a3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stm32f3xx__hal__msp_8c.html#a8cc723aedb4c01bc57cbe38c21f0b0a3">HAL_TIM_Encoder_MspInit</a> (TIM_HandleTypeDef *htim_encoder)</td></tr>
+<tr class="memdesc:a8cc723aedb4c01bc57cbe38c21f0b0a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">TIM_Encoder MSP Initialization This function configures the hardware resources used in this example  <a href="stm32f3xx__hal__msp_8c.html#a8cc723aedb4c01bc57cbe38c21f0b0a3">[詳解]</a><br /></td></tr>
+<tr class="separator:a8cc723aedb4c01bc57cbe38c21f0b0a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a555b8a2d3c7a07341f8cb1255318fa2b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stm32f3xx__hal__msp_8c.html#a555b8a2d3c7a07341f8cb1255318fa2b">HAL_TIM_Base_MspDeInit</a> (TIM_HandleTypeDef *htim_base)</td></tr>
+<tr class="memdesc:a555b8a2d3c7a07341f8cb1255318fa2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">TIM_Base MSP De-Initialization This function freeze the hardware resources used in this example  <a href="stm32f3xx__hal__msp_8c.html#a555b8a2d3c7a07341f8cb1255318fa2b">[詳解]</a><br /></td></tr>
+<tr class="separator:a555b8a2d3c7a07341f8cb1255318fa2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a53eee786f7e7e0217ce5b466c75f8a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stm32f3xx__hal__msp_8c.html#a9a53eee786f7e7e0217ce5b466c75f8a">HAL_TIM_Encoder_MspDeInit</a> (TIM_HandleTypeDef *htim_encoder)</td></tr>
+<tr class="memdesc:a9a53eee786f7e7e0217ce5b466c75f8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">TIM_Encoder MSP De-Initialization This function freeze the hardware resources used in this example  <a href="stm32f3xx__hal__msp_8c.html#a9a53eee786f7e7e0217ce5b466c75f8a">[詳解]</a><br /></td></tr>
+<tr class="separator:a9a53eee786f7e7e0217ce5b466c75f8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e553b32211877322f949b14801bbfa7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stm32f3xx__hal__msp_8c.html#a0e553b32211877322f949b14801bbfa7">HAL_UART_MspInit</a> (UART_HandleTypeDef *huart)</td></tr>
+<tr class="memdesc:a0e553b32211877322f949b14801bbfa7"><td class="mdescLeft">&#160;</td><td class="mdescRight">UART MSP Initialization This function configures the hardware resources used in this example  <a href="stm32f3xx__hal__msp_8c.html#a0e553b32211877322f949b14801bbfa7">[詳解]</a><br /></td></tr>
+<tr class="separator:a0e553b32211877322f949b14801bbfa7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a718f39804e3b910d738a0e1e46151188"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stm32f3xx__hal__msp_8c.html#a718f39804e3b910d738a0e1e46151188">HAL_UART_MspDeInit</a> (UART_HandleTypeDef *huart)</td></tr>
+<tr class="memdesc:a718f39804e3b910d738a0e1e46151188"><td class="mdescLeft">&#160;</td><td class="mdescRight">UART MSP De-Initialization This function freeze the hardware resources used in this example  <a href="stm32f3xx__hal__msp_8c.html#a718f39804e3b910d738a0e1e46151188">[詳解]</a><br /></td></tr>
+<tr class="separator:a718f39804e3b910d738a0e1e46151188"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+変数</h2></td></tr>
+<tr class="memitem:a1c126854bb1813d31ab4776b21dcc51f"><td class="memItemLeft" align="right" valign="top">DMA_HandleTypeDef&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stm32f3xx__hal__msp_8c.html#a1c126854bb1813d31ab4776b21dcc51f">hdma_adc1</a></td></tr>
+<tr class="separator:a1c126854bb1813d31ab4776b21dcc51f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad99dd74cc50b61cf07680c1adaf80337"><td class="memItemLeft" align="right" valign="top">DMA_HandleTypeDef&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stm32f3xx__hal__msp_8c.html#ad99dd74cc50b61cf07680c1adaf80337">hdma_adc2</a></td></tr>
+<tr class="separator:ad99dd74cc50b61cf07680c1adaf80337"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9cf31216ab15c3f167902641b70c0f38"><td class="memItemLeft" align="right" valign="top">DMA_HandleTypeDef&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stm32f3xx__hal__msp_8c.html#a9cf31216ab15c3f167902641b70c0f38">hdma_i2c1_rx</a></td></tr>
+<tr class="separator:a9cf31216ab15c3f167902641b70c0f38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4780ad74b8c24d6fffa8ec7fc8ea105"><td class="memItemLeft" align="right" valign="top">DMA_HandleTypeDef&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stm32f3xx__hal__msp_8c.html#ae4780ad74b8c24d6fffa8ec7fc8ea105">hdma_i2c1_tx</a></td></tr>
+<tr class="separator:ae4780ad74b8c24d6fffa8ec7fc8ea105"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa80765d6a2be18aab6d9f93c12bc9cd8"><td class="memItemLeft" align="right" valign="top">static uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stm32f3xx__hal__msp_8c.html#aa80765d6a2be18aab6d9f93c12bc9cd8">HAL_RCC_ADC12_CLK_ENABLED</a> =0</td></tr>
+<tr class="separator:aa80765d6a2be18aab6d9f93c12bc9cd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>This file provides code for the MSP Initialization and de-Initialization codes. </p>
+<dl class="section attention"><dt>注意</dt><dd></dd></dl>
+<p>Copyright (c) 2024 STMicroelectronics. All rights reserved.</p>
+<p>This software is licensed under terms that can be found in the LICENSE file in the root directory of this software component. If no LICENSE file comes with this software, it is provided AS-IS. </p>
+
+<p class="definition"> <a class="el" href="stm32f3xx__hal__msp_8c_source.html">stm32f3xx_hal_msp.c</a> に定義があります。</p>
+</div><h2 class="groupheader">関数詳解</h2>
+<a id="a39b0f8e80268ab3e660ead921ad4b22f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a39b0f8e80268ab3e660ead921ad4b22f">&#9670;&nbsp;</a></span>HAL_ADC_MspDeInit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void HAL_ADC_MspDeInit </td>
+          <td>(</td>
+          <td class="paramtype">ADC_HandleTypeDef *&#160;</td>
+          <td class="paramname"><em>hadc</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ADC MSP De-Initialization This function freeze the hardware resources used in this example </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">hadc</td><td>ADC handle pointer </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">None</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<p>ADC1 GPIO Configuration PA3 ---&mdash;&gt; ADC1_IN4 PB0 ---&mdash;&gt; ADC1_IN11 PB1 ---&mdash;&gt; ADC1_IN12</p>
+<p>ADC2 GPIO Configuration PA4 ---&mdash;&gt; ADC2_IN1 PA5 ---&mdash;&gt; ADC2_IN2 PA6 ---&mdash;&gt; ADC2_IN3 PA7 ---&mdash;&gt; ADC2_IN4</p>
+
+<p class="definition"> <a class="el" href="stm32f3xx__hal__msp_8c_source.html">stm32f3xx_hal_msp.c</a> の <a class="el" href="stm32f3xx__hal__msp_8c_source.html#l00202">202</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="aa30863492d5c3103e3e8ce8a63dadd07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa30863492d5c3103e3e8ce8a63dadd07">&#9670;&nbsp;</a></span>HAL_ADC_MspInit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void HAL_ADC_MspInit </td>
+          <td>(</td>
+          <td class="paramtype">ADC_HandleTypeDef *&#160;</td>
+          <td class="paramname"><em>hadc</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ADC MSP Initialization This function configures the hardware resources used in this example </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">hadc</td><td>ADC handle pointer </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">None</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<p>ADC1 GPIO Configuration PA3 ---&mdash;&gt; ADC1_IN4 PB0 ---&mdash;&gt; ADC1_IN11 PB1 ---&mdash;&gt; ADC1_IN12</p>
+<p>ADC2 GPIO Configuration PA4 ---&mdash;&gt; ADC2_IN1 PA5 ---&mdash;&gt; ADC2_IN2 PA6 ---&mdash;&gt; ADC2_IN3 PA7 ---&mdash;&gt; ADC2_IN4</p>
+
+<p class="definition"> <a class="el" href="stm32f3xx__hal__msp_8c_source.html">stm32f3xx_hal_msp.c</a> の <a class="el" href="stm32f3xx__hal__msp_8c_source.html#l00097">97</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="stm32f3xx__hal__msp_8c_aa30863492d5c3103e3e8ce8a63dadd07_cgraph.png" border="0" usemap="#astm32f3xx__hal__msp_8c_aa30863492d5c3103e3e8ce8a63dadd07_cgraph" alt=""/></div>
+<map name="astm32f3xx__hal__msp_8c_aa30863492d5c3103e3e8ce8a63dadd07_cgraph" id="astm32f3xx__hal__msp_8c_aa30863492d5c3103e3e8ce8a63dadd07_cgraph">
+<area shape="rect" title="ADC MSP Initialization This function configures the hardware resources used in this example" alt="" coords="5,5,144,32"/>
+<area shape="rect" href="main_8h.html#a1730ffe1e560465665eb47d9264826f9" title="This function is executed in case of error occurrence." alt="" coords="192,5,303,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a2ec8d9b09854c732e2feed549278f048"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ec8d9b09854c732e2feed549278f048">&#9670;&nbsp;</a></span>HAL_I2C_MspDeInit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void HAL_I2C_MspDeInit </td>
+          <td>(</td>
+          <td class="paramtype">I2C_HandleTypeDef *&#160;</td>
+          <td class="paramname"><em>hi2c</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>I2C MSP De-Initialization This function freeze the hardware resources used in this example </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">hi2c</td><td>I2C handle pointer </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">None</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<p>I2C1 GPIO Configuration PB6 ---&mdash;&gt; I2C1_SCL PB7 ---&mdash;&gt; I2C1_SDA</p>
+
+<p class="definition"> <a class="el" href="stm32f3xx__hal__msp_8c_source.html">stm32f3xx_hal_msp.c</a> の <a class="el" href="stm32f3xx__hal__msp_8c_source.html#l00341">341</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="abe01a202c27b23fc150aa66af3130073"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe01a202c27b23fc150aa66af3130073">&#9670;&nbsp;</a></span>HAL_I2C_MspInit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void HAL_I2C_MspInit </td>
+          <td>(</td>
+          <td class="paramtype">I2C_HandleTypeDef *&#160;</td>
+          <td class="paramname"><em>hi2c</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>I2C MSP Initialization This function configures the hardware resources used in this example </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">hi2c</td><td>I2C handle pointer </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">None</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<p>I2C1 GPIO Configuration PB6 ---&mdash;&gt; I2C1_SCL PB7 ---&mdash;&gt; I2C1_SDA</p>
+
+<p class="definition"> <a class="el" href="stm32f3xx__hal__msp_8c_source.html">stm32f3xx_hal_msp.c</a> の <a class="el" href="stm32f3xx__hal__msp_8c_source.html#l00264">264</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="stm32f3xx__hal__msp_8c_abe01a202c27b23fc150aa66af3130073_cgraph.png" border="0" usemap="#astm32f3xx__hal__msp_8c_abe01a202c27b23fc150aa66af3130073_cgraph" alt=""/></div>
+<map name="astm32f3xx__hal__msp_8c_abe01a202c27b23fc150aa66af3130073_cgraph" id="astm32f3xx__hal__msp_8c_abe01a202c27b23fc150aa66af3130073_cgraph">
+<area shape="rect" title="I2C MSP Initialization This function configures the hardware resources used in this example" alt="" coords="5,5,136,32"/>
+<area shape="rect" href="main_8h.html#a1730ffe1e560465665eb47d9264826f9" title="This function is executed in case of error occurrence." alt="" coords="184,5,295,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae4fb8e66865c87d0ebab74a726a6891f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4fb8e66865c87d0ebab74a726a6891f">&#9670;&nbsp;</a></span>HAL_MspInit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void HAL_MspInit </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Initializes the Global MSP. </p>
+
+<p class="definition"> <a class="el" href="stm32f3xx__hal__msp_8c_source.html">stm32f3xx_hal_msp.c</a> の <a class="el" href="stm32f3xx__hal__msp_8c_source.html#l00073">73</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a555b8a2d3c7a07341f8cb1255318fa2b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a555b8a2d3c7a07341f8cb1255318fa2b">&#9670;&nbsp;</a></span>HAL_TIM_Base_MspDeInit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void HAL_TIM_Base_MspDeInit </td>
+          <td>(</td>
+          <td class="paramtype">TIM_HandleTypeDef *&#160;</td>
+          <td class="paramname"><em>htim_base</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>TIM_Base MSP De-Initialization This function freeze the hardware resources used in this example </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">htim_base</td><td>TIM_Base handle pointer </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">None</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="stm32f3xx__hal__msp_8c_source.html">stm32f3xx_hal_msp.c</a> の <a class="el" href="stm32f3xx__hal__msp_8c_source.html#l00518">518</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="abb25ade2f7e3f7aae167bd52270c2b86"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb25ade2f7e3f7aae167bd52270c2b86">&#9670;&nbsp;</a></span>HAL_TIM_Base_MspInit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void HAL_TIM_Base_MspInit </td>
+          <td>(</td>
+          <td class="paramtype">TIM_HandleTypeDef *&#160;</td>
+          <td class="paramname"><em>htim_base</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>TIM_Base MSP Initialization This function configures the hardware resources used in this example </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">htim_base</td><td>TIM_Base handle pointer </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">None</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="stm32f3xx__hal__msp_8c_source.html">stm32f3xx_hal_msp.c</a> の <a class="el" href="stm32f3xx__hal__msp_8c_source.html#l00378">378</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a9a53eee786f7e7e0217ce5b466c75f8a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a53eee786f7e7e0217ce5b466c75f8a">&#9670;&nbsp;</a></span>HAL_TIM_Encoder_MspDeInit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void HAL_TIM_Encoder_MspDeInit </td>
+          <td>(</td>
+          <td class="paramtype">TIM_HandleTypeDef *&#160;</td>
+          <td class="paramname"><em>htim_encoder</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>TIM_Encoder MSP De-Initialization This function freeze the hardware resources used in this example </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">htim_encoder</td><td>TIM_Encoder handle pointer </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">None</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<p>TIM2 GPIO Configuration PA0 ---&mdash;&gt; TIM2_CH1 PA1 ---&mdash;&gt; TIM2_CH2</p>
+
+<p class="definition"> <a class="el" href="stm32f3xx__hal__msp_8c_source.html">stm32f3xx_hal_msp.c</a> の <a class="el" href="stm32f3xx__hal__msp_8c_source.html#l00576">576</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a8cc723aedb4c01bc57cbe38c21f0b0a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8cc723aedb4c01bc57cbe38c21f0b0a3">&#9670;&nbsp;</a></span>HAL_TIM_Encoder_MspInit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void HAL_TIM_Encoder_MspInit </td>
+          <td>(</td>
+          <td class="paramtype">TIM_HandleTypeDef *&#160;</td>
+          <td class="paramname"><em>htim_encoder</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>TIM_Encoder MSP Initialization This function configures the hardware resources used in this example </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">htim_encoder</td><td>TIM_Encoder handle pointer </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">None</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<p>TIM2 GPIO Configuration PA0 ---&mdash;&gt; TIM2_CH1 PA1 ---&mdash;&gt; TIM2_CH2</p>
+
+<p class="definition"> <a class="el" href="stm32f3xx__hal__msp_8c_source.html">stm32f3xx_hal_msp.c</a> の <a class="el" href="stm32f3xx__hal__msp_8c_source.html#l00436">436</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ae70bce6c39d0b570a7523b86738cec4b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae70bce6c39d0b570a7523b86738cec4b">&#9670;&nbsp;</a></span>HAL_TIM_MspPostInit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void HAL_TIM_MspPostInit </td>
+          <td>(</td>
+          <td class="paramtype">TIM_HandleTypeDef *&#160;</td>
+          <td class="paramname"><em>htim</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>TIM1 GPIO Configuration PA11 ---&mdash;&gt; TIM1_CH4</p>
+<p>TIM17 GPIO Configuration PB5 ---&mdash;&gt; TIM17_CH1</p>
+
+<p class="definition"> <a class="el" href="stm32f3xx__hal__msp_8c_source.html">stm32f3xx_hal_msp.c</a> の <a class="el" href="stm32f3xx__hal__msp_8c_source.html#l00466">466</a> 行目に定義があります。</p>
+
+<p class="reference">参照元 <a class="el" href="main_8c_source.html#l00621">MX_TIM17_Init()</a>, <a class="el" href="main_8c_source.html#l00410">MX_TIM1_Init()</a>.</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="stm32f3xx__hal__msp_8c_ae70bce6c39d0b570a7523b86738cec4b_icgraph.png" border="0" usemap="#astm32f3xx__hal__msp_8c_ae70bce6c39d0b570a7523b86738cec4b_icgraph" alt=""/></div>
+<map name="astm32f3xx__hal__msp_8c_ae70bce6c39d0b570a7523b86738cec4b_icgraph" id="astm32f3xx__hal__msp_8c_ae70bce6c39d0b570a7523b86738cec4b_icgraph">
+<area shape="rect" title=" " alt="" coords="275,31,437,57"/>
+<area shape="rect" href="main_8c.html#a8e1d412799a648fd7b11ac4fb4a4a6a3" title="TIM17 Initialization Function" alt="" coords="108,5,227,32"/>
+<area shape="rect" href="main_8c.html#a1d1beb7da60021ee1adbca294f28ba88" title="TIM1 Initialization Function" alt="" coords="112,56,223,83"/>
+<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,31,60,57"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a718f39804e3b910d738a0e1e46151188"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a718f39804e3b910d738a0e1e46151188">&#9670;&nbsp;</a></span>HAL_UART_MspDeInit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void HAL_UART_MspDeInit </td>
+          <td>(</td>
+          <td class="paramtype">UART_HandleTypeDef *&#160;</td>
+          <td class="paramname"><em>huart</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>UART MSP De-Initialization This function freeze the hardware resources used in this example </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">huart</td><td>UART handle pointer </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">None</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<p>USART2 GPIO Configuration PA2 ---&mdash;&gt; USART2_TX PA15 ---&mdash;&gt; USART2_RX</p>
+
+<p class="definition"> <a class="el" href="stm32f3xx__hal__msp_8c_source.html">stm32f3xx_hal_msp.c</a> の <a class="el" href="stm32f3xx__hal__msp_8c_source.html#l00641">641</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a0e553b32211877322f949b14801bbfa7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e553b32211877322f949b14801bbfa7">&#9670;&nbsp;</a></span>HAL_UART_MspInit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void HAL_UART_MspInit </td>
+          <td>(</td>
+          <td class="paramtype">UART_HandleTypeDef *&#160;</td>
+          <td class="paramname"><em>huart</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>UART MSP Initialization This function configures the hardware resources used in this example </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">huart</td><td>UART handle pointer </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">None</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<p>USART2 GPIO Configuration PA2 ---&mdash;&gt; USART2_TX PA15 ---&mdash;&gt; USART2_RX</p>
+
+<p class="definition"> <a class="el" href="stm32f3xx__hal__msp_8c_source.html">stm32f3xx_hal_msp.c</a> の <a class="el" href="stm32f3xx__hal__msp_8c_source.html#l00605">605</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<h2 class="groupheader">変数詳解</h2>
+<a id="aa80765d6a2be18aab6d9f93c12bc9cd8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa80765d6a2be18aab6d9f93c12bc9cd8">&#9670;&nbsp;</a></span>HAL_RCC_ADC12_CLK_ENABLED</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t HAL_RCC_ADC12_CLK_ENABLED =0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="stm32f3xx__hal__msp_8c_source.html">stm32f3xx_hal_msp.c</a> の <a class="el" href="stm32f3xx__hal__msp_8c_source.html#l00089">89</a> 行目に定義があります。</p>
+
+<p class="reference">参照元 <a class="el" href="stm32f3xx__hal__msp_8c_source.html#l00202">HAL_ADC_MspDeInit()</a>, <a class="el" href="stm32f3xx__hal__msp_8c_source.html#l00097">HAL_ADC_MspInit()</a>.</p>
+
+</div>
+</div>
+<a id="a1c126854bb1813d31ab4776b21dcc51f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c126854bb1813d31ab4776b21dcc51f">&#9670;&nbsp;</a></span>hdma_adc1</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">DMA_HandleTypeDef hdma_adc1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="main_8c_source.html">main.c</a> の <a class="el" href="main_8c_source.html#l00043">43</a> 行目に定義があります。</p>
+
+<p class="reference">参照元 <a class="el" href="stm32f3xx__hal__msp_8c_source.html#l00097">HAL_ADC_MspInit()</a>.</p>
+
+</div>
+</div>
+<a id="ad99dd74cc50b61cf07680c1adaf80337"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad99dd74cc50b61cf07680c1adaf80337">&#9670;&nbsp;</a></span>hdma_adc2</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">DMA_HandleTypeDef hdma_adc2</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="main_8c_source.html">main.c</a> の <a class="el" href="main_8c_source.html#l00044">44</a> 行目に定義があります。</p>
+
+<p class="reference">参照元 <a class="el" href="stm32f3xx__hal__msp_8c_source.html#l00097">HAL_ADC_MspInit()</a>.</p>
+
+</div>
+</div>
+<a id="a9cf31216ab15c3f167902641b70c0f38"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9cf31216ab15c3f167902641b70c0f38">&#9670;&nbsp;</a></span>hdma_i2c1_rx</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">DMA_HandleTypeDef hdma_i2c1_rx</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="main_8c_source.html">main.c</a> の <a class="el" href="main_8c_source.html#l00047">47</a> 行目に定義があります。</p>
+
+<p class="reference">参照元 <a class="el" href="stm32f3xx__hal__msp_8c_source.html#l00264">HAL_I2C_MspInit()</a>.</p>
+
+</div>
+</div>
+<a id="ae4780ad74b8c24d6fffa8ec7fc8ea105"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4780ad74b8c24d6fffa8ec7fc8ea105">&#9670;&nbsp;</a></span>hdma_i2c1_tx</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">DMA_HandleTypeDef hdma_i2c1_tx</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="main_8c_source.html">main.c</a> の <a class="el" href="main_8c_source.html#l00048">48</a> 行目に定義があります。</p>
+
+<p class="reference">参照元 <a class="el" href="stm32f3xx__hal__msp_8c_source.html#l00264">HAL_I2C_MspInit()</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

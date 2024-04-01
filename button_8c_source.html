@@ -75,19 +75,24 @@ $(function() {
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">// STM32CubeMX</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;main.h&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="main_8h.html">main.h</a>&gt;</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
 <div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="button_8h.html#a31be2fcf32ca6c71005fc5f648edab78">   12</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="button_8c.html#a31be2fcf32ca6c71005fc5f648edab78">BUTTON_GetSw1</a>()</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;{</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  <span class="keywordflow">return</span> HAL_GPIO_ReadPin(Switch1_GPIO_Port, Switch1_Pin) == GPIO_PIN_RESET;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  <span class="keywordflow">return</span> HAL_GPIO_ReadPin(<a class="code" href="main_8h.html#ae85814b56375a0f23bcff12f06a0c97f">Switch1_GPIO_Port</a>, <a class="code" href="main_8h.html#ac2f69cc6bfbfe5419cdfec8192d9ddba">Switch1_Pin</a>) == GPIO_PIN_RESET;</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;}</div>
 <div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="button_8h.html#abf3f39cd196cf25080c0e5acfdf16993">   19</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="button_8c.html#abf3f39cd196cf25080c0e5acfdf16993">BUTTON_GetSw2</a>()</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;{</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  <span class="keywordflow">return</span> HAL_GPIO_ReadPin(Switch2_GPIO_Port, Switch2_Pin) == GPIO_PIN_RESET;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  <span class="keywordflow">return</span> HAL_GPIO_ReadPin(<a class="code" href="main_8h.html#abb78974d1db6366d34e6202f7e49ad28">Switch2_GPIO_Port</a>, <a class="code" href="main_8h.html#afe20ef34b55bf1bfa6481cf0e6a5533a">Switch2_Pin</a>) == GPIO_PIN_RESET;</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;}</div>
 <div class="ttc" id="abutton_8c_html_a31be2fcf32ca6c71005fc5f648edab78"><div class="ttname"><a href="button_8c.html#a31be2fcf32ca6c71005fc5f648edab78">BUTTON_GetSw1</a></div><div class="ttdeci">bool BUTTON_GetSw1()</div><div class="ttdoc">Get button 1</div><div class="ttdef"><b>Definition:</b> <a href="button_8c_source.html#l00012">button.c:12</a></div></div>
 <div class="ttc" id="abutton_8c_html_abf3f39cd196cf25080c0e5acfdf16993"><div class="ttname"><a href="button_8c.html#abf3f39cd196cf25080c0e5acfdf16993">BUTTON_GetSw2</a></div><div class="ttdeci">bool BUTTON_GetSw2()</div><div class="ttdoc">Get button 1</div><div class="ttdef"><b>Definition:</b> <a href="button_8c_source.html#l00019">button.c:19</a></div></div>
 <div class="ttc" id="abutton_8h_html"><div class="ttname"><a href="button_8h.html">button.h</a></div></div>
+<div class="ttc" id="amain_8h_html"><div class="ttname"><a href="main_8h.html">main.h</a></div><div class="ttdoc">: Header for main.c file. This file contains the common defines of the application.</div></div>
+<div class="ttc" id="amain_8h_html_abb78974d1db6366d34e6202f7e49ad28"><div class="ttname"><a href="main_8h.html#abb78974d1db6366d34e6202f7e49ad28">Switch2_GPIO_Port</a></div><div class="ttdeci">#define Switch2_GPIO_Port</div><div class="ttdef"><b>Definition:</b> <a href="main_8h_source.html#l00065">main.h:65</a></div></div>
+<div class="ttc" id="amain_8h_html_ac2f69cc6bfbfe5419cdfec8192d9ddba"><div class="ttname"><a href="main_8h.html#ac2f69cc6bfbfe5419cdfec8192d9ddba">Switch1_Pin</a></div><div class="ttdeci">#define Switch1_Pin</div><div class="ttdef"><b>Definition:</b> <a href="main_8h_source.html#l00062">main.h:62</a></div></div>
+<div class="ttc" id="amain_8h_html_ae85814b56375a0f23bcff12f06a0c97f"><div class="ttname"><a href="main_8h.html#ae85814b56375a0f23bcff12f06a0c97f">Switch1_GPIO_Port</a></div><div class="ttdeci">#define Switch1_GPIO_Port</div><div class="ttdef"><b>Definition:</b> <a href="main_8h_source.html#l00063">main.h:63</a></div></div>
+<div class="ttc" id="amain_8h_html_afe20ef34b55bf1bfa6481cf0e6a5533a"><div class="ttname"><a href="main_8h.html#afe20ef34b55bf1bfa6481cf0e6a5533a">Switch2_Pin</a></div><div class="ttdeci">#define Switch2_Pin</div><div class="ttdef"><b>Definition:</b> <a href="main_8h_source.html#l00064">main.h:64</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
