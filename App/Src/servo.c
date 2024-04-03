@@ -12,6 +12,7 @@
 #include "sensor.h"
 #include "odometry.h"
 #include "pid.h"
+#include "parameter_static.h"
 
 /* Motor ---------------------------------------------------------------------*/
 #define MOTOR_MAX_DUTY 3199
@@ -76,7 +77,6 @@ float MOTOR_GetDutyLeft()
   return motorLeftDuty;
 }
 /* Servo ---------------------------------------------------------------------*/
-#define SERVO_LIMIT_VOTAGE 4.5f
 //! Servo enable flag
 static volatile bool servoRunning = false;
 //! Target velocity
@@ -164,14 +164,14 @@ void SERVO_UpdateInterval()
   float volRight = veloError + angVeloError;
   float volLeft = veloError - angVeloError;
 
-  if (volRight < -SERVO_LIMIT_VOTAGE)
-    volRight = -SERVO_LIMIT_VOTAGE;
-  else if (SERVO_LIMIT_VOTAGE < volRight)
-    volRight = SERVO_LIMIT_VOTAGE;
-  if (volLeft < -SERVO_LIMIT_VOTAGE)
-    volLeft = -SERVO_LIMIT_VOTAGE;
-  else if (SERVO_LIMIT_VOTAGE < volLeft)
-    volLeft = SERVO_LIMIT_VOTAGE;
+  if (volRight < -PARAMETER_STATIC_SERVO_LIMIT_VOTAGE)
+    volRight = -PARAMETER_STATIC_SERVO_LIMIT_VOTAGE;
+  else if (PARAMETER_STATIC_SERVO_LIMIT_VOTAGE < volRight)
+    volRight = PARAMETER_STATIC_SERVO_LIMIT_VOTAGE;
+  if (volLeft < -PARAMETER_STATIC_SERVO_LIMIT_VOTAGE)
+    volLeft = -PARAMETER_STATIC_SERVO_LIMIT_VOTAGE;
+  else if (PARAMETER_STATIC_SERVO_LIMIT_VOTAGE < volLeft)
+    volLeft = PARAMETER_STATIC_SERVO_LIMIT_VOTAGE;
 
   float dutyRight = volRight / batVol;
   float dutyLeft = volLeft / batVol;

@@ -100,7 +100,7 @@ void TraceLine()
     if (LINE_GetStartGoalState() == STARTGOAL_MARKER_START_PASSED)
     {
       INTERVAL_Buzzer(50);
-      LOGGER_Start(100);
+      LOGGER_Start(10);
     }
     if (LINE_GetCurvatureState() == CURVATURE_MARKER_PASSED)
     {

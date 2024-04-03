@@ -43,13 +43,13 @@ void ODOMETRY_CalculateInterval()
 
   if (fabsf(odometry.angularVelocity) <= FLT_EPSILON)
   {
-    odometry.x += mmVelo * cosf(angle);
-    odometry.y += mmVelo * sinf(angle);
+    odometry.x += odometry.velocity * cosf(angle);
+    odometry.y += odometry.velocity * sinf(angle);
   }
   else
   {
     float delta = (angle - odometry.angle) / 2.0f;
-    float a = 2.0f * mmVelo / odometry.angularVelocity * sinf(delta);
+    float a = 2.0f * odometry.velocity / odometry.angularVelocity * sinf(delta);
     float b = angle + delta;
     odometry.x += a * cosf(b);
     odometry.y += a * sinf(b);

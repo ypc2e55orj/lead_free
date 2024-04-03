@@ -11,7 +11,7 @@
 
 /* Parameter 0 ---------------------------------------------------------------*/
 #define PARAMETER_0_MIN_VELOCITY 0.01f // [m/s]
-#define PARAMETER_0_MAX_VELOCITY 1.0f  // [m/s]
+#define PARAMETER_0_MAX_VELOCITY 0.7f  // [m/s]
 #define PARAMETER_0_ACCELERATION 1.0f  // [m/ss]
 #define PARAMETER_0_VELOCITY_PID_KP 10.0f
 #define PARAMETER_0_VELOCITY_PID_KI 0.5f
