@@ -67,6 +67,11 @@ uint16_t ADC_GetLineSensorValue(LINE_SENSOR_POS pos)
 }
 
 /* Gyro ----------------------------------------------------------------------*/
+#define BMX055_ACCL_I2C_ADDR 0x19
+#define BMX055_ACCL_REG_RANGE 0x0f
+#define BMX055_ACCL_REG_BW 0x10
+#define BMX055_ACCEL_REG_LPW 0x11
+#define BMX055_ACCEL_REG_ACCD_X_LSB 0x02
 #define BMX055_GYRO_I2C_ADDR 0x69
 #define BMX055_GYRO_REG_RANGE 0x0f
 #define BMX055_GYRO_REG_BW 0x10
@@ -83,6 +88,25 @@ static uint8_t dmaBufferI2c1Rx[2] = {0};
  */
 static void GYRO_Init()
 {
+  /*
+   Accel Setup
+   {
+   */
+  // Set measurement ranges of linear acceleration rate.
+  /*
+  dmaBufferI2c1Tx[0] = BMX055_ACCL_REG_RANGE;
+  dmaBufferI2c1Tx[1] = 0x03; // +-2g
+  HAL_I2C_Master_Transmit(&hi2c1, (BMX055_ACCL_I2C_ADDR << 1), dmaBufferI2c1Tx, 2, UINT32_MAX);
+  // Set power mode.
+  dmaBufferI2c1Tx[0] = BMX055_ACCEL_REG_LPW;
+  */
+  /*
+   }
+   */
+  /*
+   Gyro Setup
+   {
+   */
   // Set measurement ranges of angular rate.
   dmaBufferI2c1Tx[0] = BMX055_GYRO_REG_RANGE;
   dmaBufferI2c1Tx[1] = 0; // 2000dps
@@ -95,6 +119,9 @@ static void GYRO_Init()
   dmaBufferI2c1Tx[0] = BMX055_GYRO_REG_LPM1;
   dmaBufferI2c1Tx[1] = 0; // NORMAL mode
   HAL_I2C_Master_Transmit(&hi2c1, (BMX055_GYRO_I2C_ADDR << 1), dmaBufferI2c1Tx, 2, UINT32_MAX);
+  /*
+   }
+   */
 }
 /**
  * @brief Update an angular rate.
