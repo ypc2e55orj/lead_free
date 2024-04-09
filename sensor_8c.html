@@ -93,6 +93,16 @@ sensor.c の依存先関係図:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 マクロ定義</h2></td></tr>
+<tr class="memitem:a4a8846d495a1a1d70a83537aa854896f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sensor_8c.html#a4a8846d495a1a1d70a83537aa854896f">BMX055_ACCL_I2C_ADDR</a>&#160;&#160;&#160;0x19</td></tr>
+<tr class="separator:a4a8846d495a1a1d70a83537aa854896f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a589c0bc90fc9ed8480ae8d6dc9b94980"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sensor_8c.html#a589c0bc90fc9ed8480ae8d6dc9b94980">BMX055_ACCL_REG_RANGE</a>&#160;&#160;&#160;0x0f</td></tr>
+<tr class="separator:a589c0bc90fc9ed8480ae8d6dc9b94980"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b7b8f97f4d45a1d86201ed5ad76d49d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sensor_8c.html#a3b7b8f97f4d45a1d86201ed5ad76d49d">BMX055_ACCL_REG_BW</a>&#160;&#160;&#160;0x10</td></tr>
+<tr class="separator:a3b7b8f97f4d45a1d86201ed5ad76d49d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac94ba65897107f5f456c8eb2d579c31"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sensor_8c.html#aac94ba65897107f5f456c8eb2d579c31">BMX055_ACCEL_REG_LPW</a>&#160;&#160;&#160;0x11</td></tr>
+<tr class="separator:aac94ba65897107f5f456c8eb2d579c31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a163c76b302c4fb291cd750624a2d2d46"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sensor_8c.html#a163c76b302c4fb291cd750624a2d2d46">BMX055_ACCEL_REG_ACCD_X_LSB</a>&#160;&#160;&#160;0x02</td></tr>
+<tr class="separator:a163c76b302c4fb291cd750624a2d2d46"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aca7a50a68f93485b95912463d6bafcae"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sensor_8c.html#aca7a50a68f93485b95912463d6bafcae">BMX055_GYRO_I2C_ADDR</a>&#160;&#160;&#160;0x69</td></tr>
 <tr class="separator:aca7a50a68f93485b95912463d6bafcae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab8e37db47601746ffb9eb91d11272a01"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sensor_8c.html#ab8e37db47601746ffb9eb91d11272a01">BMX055_GYRO_REG_RANGE</a>&#160;&#160;&#160;0x0f</td></tr>
@@ -106,24 +116,24 @@ sensor.c の依存先関係図:</div>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 列挙型</h2></td></tr>
-<tr class="memitem:a06fc87d81c62e9abb8790b6e5713c55b"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="sensor_8c.html#a06fc87d81c62e9abb8790b6e5713c55ba675644cbca367674d765282eec66ad4f">ADC1_LINE_SENSOR_RIGHT_OUT</a>
-, <a class="el" href="sensor_8c.html#a06fc87d81c62e9abb8790b6e5713c55baba6bb8419cec899bdea56fb11d8450e7">ADC1_MARKER_SENSOR_RIGHT</a>
-, <a class="el" href="sensor_8c.html#a06fc87d81c62e9abb8790b6e5713c55bad423b44dba1e7cf90c5ba39b0111f4fa">ADC1_MARKER_SENSOR_LEFT</a>
-, <a class="el" href="sensor_8c.html#a06fc87d81c62e9abb8790b6e5713c55bab71aa73289648a1635a6b96e74c11d56">NUM_ADC1</a>
+<tr class="memitem:adc29c2ff13d900c2f185ee95427fb06c"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="sensor_8c.html#adc29c2ff13d900c2f185ee95427fb06ca675644cbca367674d765282eec66ad4f">ADC1_LINE_SENSOR_RIGHT_OUT</a>
+, <a class="el" href="sensor_8c.html#adc29c2ff13d900c2f185ee95427fb06caba6bb8419cec899bdea56fb11d8450e7">ADC1_MARKER_SENSOR_RIGHT</a>
+, <a class="el" href="sensor_8c.html#adc29c2ff13d900c2f185ee95427fb06cad423b44dba1e7cf90c5ba39b0111f4fa">ADC1_MARKER_SENSOR_LEFT</a>
+, <a class="el" href="sensor_8c.html#adc29c2ff13d900c2f185ee95427fb06cab71aa73289648a1635a6b96e74c11d56">NUM_ADC1</a>
  }</td></tr>
-<tr class="memdesc:a06fc87d81c62e9abb8790b6e5713c55b"><td class="mdescLeft">&#160;</td><td class="mdescRight">ADC1 sensors  <a href="sensor_8c.html#a06fc87d81c62e9abb8790b6e5713c55b">[詳解]</a><br /></td></tr>
-<tr class="separator:a06fc87d81c62e9abb8790b6e5713c55b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adf764cbdea00d65edcd07bb9953ad2b7"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <br />
-&#160;&#160;<a class="el" href="sensor_8c.html#adf764cbdea00d65edcd07bb9953ad2b7aafe2bf84f4fcfb60081742c3d43de1e3">ADC2_LINE_SENSOR_RIGHT_IN</a>
-, <a class="el" href="sensor_8c.html#adf764cbdea00d65edcd07bb9953ad2b7ad54de0874c63b43e35c62b5d3855a100">ADC2_LINE_SENSOR_LEFT_IN</a>
-, <a class="el" href="sensor_8c.html#adf764cbdea00d65edcd07bb9953ad2b7a66b2d15e6fae2f5d4970c6e3f8e31f14">ADC2_LINE_SENSOR_LEFT_OUT</a>
-, <a class="el" href="sensor_8c.html#adf764cbdea00d65edcd07bb9953ad2b7acefb9add7c98fa98d21d956a58d5caea">ADC2_BATTERY_VOLTAGE</a>
+<tr class="memdesc:adc29c2ff13d900c2f185ee95427fb06c"><td class="mdescLeft">&#160;</td><td class="mdescRight">ADC1 sensors  <a href="sensor_8c.html#adc29c2ff13d900c2f185ee95427fb06c">[詳解]</a><br /></td></tr>
+<tr class="separator:adc29c2ff13d900c2f185ee95427fb06c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61dadd085c1777f559549e05962b2c9e"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <br />
+&#160;&#160;<a class="el" href="sensor_8c.html#a61dadd085c1777f559549e05962b2c9eaafe2bf84f4fcfb60081742c3d43de1e3">ADC2_LINE_SENSOR_RIGHT_IN</a>
+, <a class="el" href="sensor_8c.html#a61dadd085c1777f559549e05962b2c9ead54de0874c63b43e35c62b5d3855a100">ADC2_LINE_SENSOR_LEFT_IN</a>
+, <a class="el" href="sensor_8c.html#a61dadd085c1777f559549e05962b2c9ea66b2d15e6fae2f5d4970c6e3f8e31f14">ADC2_LINE_SENSOR_LEFT_OUT</a>
+, <a class="el" href="sensor_8c.html#a61dadd085c1777f559549e05962b2c9eacefb9add7c98fa98d21d956a58d5caea">ADC2_BATTERY_VOLTAGE</a>
 , <br />
-&#160;&#160;<a class="el" href="sensor_8c.html#adf764cbdea00d65edcd07bb9953ad2b7aebd7fe214babf2c5f94fda908c67c2d7">NUM_ADC2</a>
+&#160;&#160;<a class="el" href="sensor_8c.html#a61dadd085c1777f559549e05962b2c9eaebd7fe214babf2c5f94fda908c67c2d7">NUM_ADC2</a>
 <br />
  }</td></tr>
-<tr class="memdesc:adf764cbdea00d65edcd07bb9953ad2b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">ADC2 sensors  <a href="sensor_8c.html#adf764cbdea00d65edcd07bb9953ad2b7">[詳解]</a><br /></td></tr>
-<tr class="separator:adf764cbdea00d65edcd07bb9953ad2b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memdesc:a61dadd085c1777f559549e05962b2c9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">ADC2 sensors  <a href="sensor_8c.html#a61dadd085c1777f559549e05962b2c9e">[詳解]</a><br /></td></tr>
+<tr class="separator:a61dadd085c1777f559549e05962b2c9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 関数</h2></td></tr>
@@ -178,10 +188,10 @@ sensor.c の依存先関係図:</div>
 <tr class="memitem:aac3d2c59ee0e3bbae1b99529a154eb62"><td class="memItemLeft" align="right" valign="top">TIM_HandleTypeDef&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sensor_8c.html#aac3d2c59ee0e3bbae1b99529a154eb62">htim3</a></td></tr>
 <tr class="memdesc:aac3d2c59ee0e3bbae1b99529a154eb62"><td class="mdescLeft">&#160;</td><td class="mdescRight">TIM3 Handler extern  <a href="sensor_8c.html#aac3d2c59ee0e3bbae1b99529a154eb62">[詳解]</a><br /></td></tr>
 <tr class="separator:aac3d2c59ee0e3bbae1b99529a154eb62"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6ba42e27e804d0ffaff5bdb7f82c0011"><td class="memItemLeft" align="right" valign="top">static uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sensor_8c.html#a6ba42e27e804d0ffaff5bdb7f82c0011">dmaBufferAdc1</a> [<a class="el" href="sensor_8c.html#a06fc87d81c62e9abb8790b6e5713c55bab71aa73289648a1635a6b96e74c11d56">NUM_ADC1</a>] = {0}</td></tr>
+<tr class="memitem:a6ba42e27e804d0ffaff5bdb7f82c0011"><td class="memItemLeft" align="right" valign="top">static uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sensor_8c.html#a6ba42e27e804d0ffaff5bdb7f82c0011">dmaBufferAdc1</a> [<a class="el" href="sensor_8c.html#adc29c2ff13d900c2f185ee95427fb06cab71aa73289648a1635a6b96e74c11d56">NUM_ADC1</a>] = {0}</td></tr>
 <tr class="memdesc:a6ba42e27e804d0ffaff5bdb7f82c0011"><td class="mdescLeft">&#160;</td><td class="mdescRight">ADC1 buffer  <a href="sensor_8c.html#a6ba42e27e804d0ffaff5bdb7f82c0011">[詳解]</a><br /></td></tr>
 <tr class="separator:a6ba42e27e804d0ffaff5bdb7f82c0011"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a214764e77dc6a4d470f372f1e74ee51a"><td class="memItemLeft" align="right" valign="top">static uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sensor_8c.html#a214764e77dc6a4d470f372f1e74ee51a">dmaBufferAdc2</a> [<a class="el" href="sensor_8c.html#adf764cbdea00d65edcd07bb9953ad2b7aebd7fe214babf2c5f94fda908c67c2d7">NUM_ADC2</a>] = {0}</td></tr>
+<tr class="memitem:a214764e77dc6a4d470f372f1e74ee51a"><td class="memItemLeft" align="right" valign="top">static uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sensor_8c.html#a214764e77dc6a4d470f372f1e74ee51a">dmaBufferAdc2</a> [<a class="el" href="sensor_8c.html#a61dadd085c1777f559549e05962b2c9eaebd7fe214babf2c5f94fda908c67c2d7">NUM_ADC2</a>] = {0}</td></tr>
 <tr class="memdesc:a214764e77dc6a4d470f372f1e74ee51a"><td class="mdescLeft">&#160;</td><td class="mdescRight">ADC2 buffer  <a href="sensor_8c.html#a214764e77dc6a4d470f372f1e74ee51a">[詳解]</a><br /></td></tr>
 <tr class="separator:a214764e77dc6a4d470f372f1e74ee51a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afa450f1fe2e3afa8430fe4578bbc01b3"><td class="memItemLeft" align="right" valign="top">static uint16_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sensor_8c.html#afa450f1fe2e3afa8430fe4578bbc01b3">dmaBufferPosLineSensor</a> []</td></tr>
@@ -204,6 +214,86 @@ sensor.c の依存先関係図:</div>
 <tr class="separator:a36e229a60de95207ced90d5f2305195b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">マクロ定義詳解</h2>
+<a id="a163c76b302c4fb291cd750624a2d2d46"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a163c76b302c4fb291cd750624a2d2d46">&#9670;&nbsp;</a></span>BMX055_ACCEL_REG_ACCD_X_LSB</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMX055_ACCEL_REG_ACCD_X_LSB&#160;&#160;&#160;0x02</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="sensor_8c_source.html">sensor.c</a> の <a class="el" href="sensor_8c_source.html#l00074">74</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="aac94ba65897107f5f456c8eb2d579c31"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac94ba65897107f5f456c8eb2d579c31">&#9670;&nbsp;</a></span>BMX055_ACCEL_REG_LPW</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMX055_ACCEL_REG_LPW&#160;&#160;&#160;0x11</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="sensor_8c_source.html">sensor.c</a> の <a class="el" href="sensor_8c_source.html#l00073">73</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a4a8846d495a1a1d70a83537aa854896f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a8846d495a1a1d70a83537aa854896f">&#9670;&nbsp;</a></span>BMX055_ACCL_I2C_ADDR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMX055_ACCL_I2C_ADDR&#160;&#160;&#160;0x19</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="sensor_8c_source.html">sensor.c</a> の <a class="el" href="sensor_8c_source.html#l00070">70</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a3b7b8f97f4d45a1d86201ed5ad76d49d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b7b8f97f4d45a1d86201ed5ad76d49d">&#9670;&nbsp;</a></span>BMX055_ACCL_REG_BW</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMX055_ACCL_REG_BW&#160;&#160;&#160;0x10</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="sensor_8c_source.html">sensor.c</a> の <a class="el" href="sensor_8c_source.html#l00072">72</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a589c0bc90fc9ed8480ae8d6dc9b94980"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a589c0bc90fc9ed8480ae8d6dc9b94980">&#9670;&nbsp;</a></span>BMX055_ACCL_REG_RANGE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMX055_ACCL_REG_RANGE&#160;&#160;&#160;0x0f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="sensor_8c_source.html">sensor.c</a> の <a class="el" href="sensor_8c_source.html#l00071">71</a> 行目に定義があります。</p>
+
+</div>
+</div>
 <a id="aca7a50a68f93485b95912463d6bafcae"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aca7a50a68f93485b95912463d6bafcae">&#9670;&nbsp;</a></span>BMX055_GYRO_I2C_ADDR</h2>
 
@@ -216,7 +306,7 @@ sensor.c の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="sensor_8c_source.html">sensor.c</a> の <a class="el" href="sensor_8c_source.html#l00070">70</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="sensor_8c_source.html">sensor.c</a> の <a class="el" href="sensor_8c_source.html#l00075">75</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -232,7 +322,7 @@ sensor.c の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="sensor_8c_source.html">sensor.c</a> の <a class="el" href="sensor_8c_source.html#l00072">72</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="sensor_8c_source.html">sensor.c</a> の <a class="el" href="sensor_8c_source.html#l00077">77</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -248,7 +338,7 @@ sensor.c の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="sensor_8c_source.html">sensor.c</a> の <a class="el" href="sensor_8c_source.html#l00073">73</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="sensor_8c_source.html">sensor.c</a> の <a class="el" href="sensor_8c_source.html#l00078">78</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -264,7 +354,7 @@ sensor.c の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="sensor_8c_source.html">sensor.c</a> の <a class="el" href="sensor_8c_source.html#l00071">71</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="sensor_8c_source.html">sensor.c</a> の <a class="el" href="sensor_8c_source.html#l00076">76</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -280,13 +370,13 @@ sensor.c の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="sensor_8c_source.html">sensor.c</a> の <a class="el" href="sensor_8c_source.html#l00074">74</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="sensor_8c_source.html">sensor.c</a> の <a class="el" href="sensor_8c_source.html#l00079">79</a> 行目に定義があります。</p>
 
 </div>
 </div>
 <h2 class="groupheader">列挙型詳解</h2>
-<a id="a06fc87d81c62e9abb8790b6e5713c55b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a06fc87d81c62e9abb8790b6e5713c55b">&#9670;&nbsp;</a></span>anonymous enum</h2>
+<a id="adc29c2ff13d900c2f185ee95427fb06c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc29c2ff13d900c2f185ee95427fb06c">&#9670;&nbsp;</a></span>anonymous enum</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -299,18 +389,18 @@ sensor.c の依存先関係図:</div>
 
 <p>ADC1 sensors </p>
 <table class="fieldtable">
-<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55ba675644cbca367674d765282eec66ad4f"></a>ADC1_LINE_SENSOR_RIGHT_OUT&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55baba6bb8419cec899bdea56fb11d8450e7"></a>ADC1_MARKER_SENSOR_RIGHT&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55bad423b44dba1e7cf90c5ba39b0111f4fa"></a>ADC1_MARKER_SENSOR_LEFT&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55bab71aa73289648a1635a6b96e74c11d56"></a>NUM_ADC1&#160;</td><td class="fielddoc"></td></tr>
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06ca675644cbca367674d765282eec66ad4f"></a>ADC1_LINE_SENSOR_RIGHT_OUT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06caba6bb8419cec899bdea56fb11d8450e7"></a>ADC1_MARKER_SENSOR_RIGHT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06cad423b44dba1e7cf90c5ba39b0111f4fa"></a>ADC1_MARKER_SENSOR_LEFT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06cab71aa73289648a1635a6b96e74c11d56"></a>NUM_ADC1&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
 <p class="definition"> <a class="el" href="sensor_8c_source.html">sensor.c</a> の <a class="el" href="sensor_8c_source.html#l00014">14</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="adf764cbdea00d65edcd07bb9953ad2b7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adf764cbdea00d65edcd07bb9953ad2b7">&#9670;&nbsp;</a></span>anonymous enum</h2>
+<a id="a61dadd085c1777f559549e05962b2c9e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61dadd085c1777f559549e05962b2c9e">&#9670;&nbsp;</a></span>anonymous enum</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -323,11 +413,11 @@ sensor.c の依存先関係図:</div>
 
 <p>ADC2 sensors </p>
 <table class="fieldtable">
-<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="adf764cbdea00d65edcd07bb9953ad2b7aafe2bf84f4fcfb60081742c3d43de1e3"></a>ADC2_LINE_SENSOR_RIGHT_IN&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adf764cbdea00d65edcd07bb9953ad2b7ad54de0874c63b43e35c62b5d3855a100"></a>ADC2_LINE_SENSOR_LEFT_IN&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adf764cbdea00d65edcd07bb9953ad2b7a66b2d15e6fae2f5d4970c6e3f8e31f14"></a>ADC2_LINE_SENSOR_LEFT_OUT&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adf764cbdea00d65edcd07bb9953ad2b7acefb9add7c98fa98d21d956a58d5caea"></a>ADC2_BATTERY_VOLTAGE&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adf764cbdea00d65edcd07bb9953ad2b7aebd7fe214babf2c5f94fda908c67c2d7"></a>NUM_ADC2&#160;</td><td class="fielddoc"></td></tr>
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9eaafe2bf84f4fcfb60081742c3d43de1e3"></a>ADC2_LINE_SENSOR_RIGHT_IN&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9ead54de0874c63b43e35c62b5d3855a100"></a>ADC2_LINE_SENSOR_LEFT_IN&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9ea66b2d15e6fae2f5d4970c6e3f8e31f14"></a>ADC2_LINE_SENSOR_LEFT_OUT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9eacefb9add7c98fa98d21d956a58d5caea"></a>ADC2_BATTERY_VOLTAGE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9eaebd7fe214babf2c5f94fda908c67c2d7"></a>NUM_ADC2&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
 <p class="definition"> <a class="el" href="sensor_8c_source.html">sensor.c</a> の <a class="el" href="sensor_8c_source.html#l00022">22</a> 行目に定義があります。</p>
@@ -434,7 +524,7 @@ sensor.c の依存先関係図:</div>
 
 <p class="definition"> <a class="el" href="sensor_8c_source.html">sensor.c</a> の <a class="el" href="sensor_8c_source.html#l00046">46</a> 行目に定義があります。</p>
 
-<p class="reference">参照元 <a class="el" href="sensor_8c_source.html#l00204">SENSOR_Init()</a>.</p>
+<p class="reference">参照元 <a class="el" href="sensor_8c_source.html#l00231">SENSOR_Init()</a>.</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
@@ -466,7 +556,7 @@ sensor.c の依存先関係図:</div>
 
 <p>Get a value of left encoder. </p>
 
-<p class="definition"> <a class="el" href="sensor_8c_source.html">sensor.c</a> の <a class="el" href="sensor_8c_source.html#l00181">181</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="sensor_8c_source.html">sensor.c</a> の <a class="el" href="sensor_8c_source.html#l00208">208</a> 行目に定義があります。</p>
 
 <p class="reference">参照元 <a class="el" href="odometry_8c_source.html#l00026">ODOMETRY_CalculateInterval()</a>.</p>
 <div class="dynheader">
@@ -499,7 +589,7 @@ sensor.c の依存先関係図:</div>
 
 <p>Get a value of right encoder. </p>
 
-<p class="definition"> <a class="el" href="sensor_8c_source.html">sensor.c</a> の <a class="el" href="sensor_8c_source.html#l00169">169</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="sensor_8c_source.html">sensor.c</a> の <a class="el" href="sensor_8c_source.html#l00196">196</a> 行目に定義があります。</p>
 
 <p class="reference">参照元 <a class="el" href="odometry_8c_source.html#l00026">ODOMETRY_CalculateInterval()</a>.</p>
 <div class="dynheader">
@@ -540,9 +630,9 @@ sensor.c の依存先関係図:</div>
 
 <p>Initialize encoders. </p>
 
-<p class="definition"> <a class="el" href="sensor_8c_source.html">sensor.c</a> の <a class="el" href="sensor_8c_source.html#l00137">137</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="sensor_8c_source.html">sensor.c</a> の <a class="el" href="sensor_8c_source.html#l00164">164</a> 行目に定義があります。</p>
 
-<p class="reference">参照元 <a class="el" href="sensor_8c_source.html#l00204">SENSOR_Init()</a>.</p>
+<p class="reference">参照元 <a class="el" href="sensor_8c_source.html#l00231">SENSOR_Init()</a>.</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
@@ -574,7 +664,7 @@ sensor.c の依存先関係図:</div>
 
 <p>Reset encoder values. </p>
 
-<p class="definition"> <a class="el" href="sensor_8c_source.html">sensor.c</a> の <a class="el" href="sensor_8c_source.html#l00192">192</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="sensor_8c_source.html">sensor.c</a> の <a class="el" href="sensor_8c_source.html#l00219">219</a> 行目に定義があります。</p>
 
 <p class="reference">参照元 <a class="el" href="odometry_8c_source.html#l00026">ODOMETRY_CalculateInterval()</a>.</p>
 <div class="dynheader">
@@ -607,7 +697,7 @@ sensor.c の依存先関係図:</div>
 
 <p>Get current angular rate. </p>
 
-<p class="definition"> <a class="el" href="sensor_8c_source.html">sensor.c</a> の <a class="el" href="sensor_8c_source.html#l00110">110</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="sensor_8c_source.html">sensor.c</a> の <a class="el" href="sensor_8c_source.html#l00137">137</a> 行目に定義があります。</p>
 
 <p class="reference">参照元 <a class="el" href="odometry_8c_source.html#l00026">ODOMETRY_CalculateInterval()</a>.</p>
 <div class="dynheader">
@@ -648,9 +738,9 @@ sensor.c の依存先関係図:</div>
 
 <p>Initialize the gyro. </p>
 
-<p class="definition"> <a class="el" href="sensor_8c_source.html">sensor.c</a> の <a class="el" href="sensor_8c_source.html#l00084">84</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="sensor_8c_source.html">sensor.c</a> の <a class="el" href="sensor_8c_source.html#l00089">89</a> 行目に定義があります。</p>
 
-<p class="reference">参照元 <a class="el" href="sensor_8c_source.html#l00204">SENSOR_Init()</a>.</p>
+<p class="reference">参照元 <a class="el" href="sensor_8c_source.html#l00231">SENSOR_Init()</a>.</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
@@ -682,7 +772,7 @@ sensor.c の依存先関係図:</div>
 
 <p>Update an angular rate. </p>
 
-<p class="definition"> <a class="el" href="sensor_8c_source.html">sensor.c</a> の <a class="el" href="sensor_8c_source.html#l00102">102</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="sensor_8c_source.html">sensor.c</a> の <a class="el" href="sensor_8c_source.html#l00129">129</a> 行目に定義があります。</p>
 
 <p class="reference">参照元 <a class="el" href="interval_8c_source.html#l00021">HAL_TIM_PeriodElapsedCallback()</a>.</p>
 <div class="dynheader">
@@ -715,7 +805,7 @@ sensor.c の依存先関係図:</div>
 
 <p>GPIO external interrupt (left encoder) </p>
 
-<p class="definition"> <a class="el" href="sensor_8c_source.html">sensor.c</a> の <a class="el" href="sensor_8c_source.html#l00144">144</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="sensor_8c_source.html">sensor.c</a> の <a class="el" href="sensor_8c_source.html#l00171">171</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -737,7 +827,7 @@ sensor.c の依存先関係図:</div>
 
 <p>I2C DMA completed interrupt </p>
 
-<p class="definition"> <a class="el" href="sensor_8c_source.html">sensor.c</a> の <a class="el" href="sensor_8c_source.html#l00120">120</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="sensor_8c_source.html">sensor.c</a> の <a class="el" href="sensor_8c_source.html#l00147">147</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -758,7 +848,7 @@ sensor.c の依存先関係図:</div>
 
 <p>Initialize sensors </p>
 
-<p class="definition"> <a class="el" href="sensor_8c_source.html">sensor.c</a> の <a class="el" href="sensor_8c_source.html#l00204">204</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="sensor_8c_source.html">sensor.c</a> の <a class="el" href="sensor_8c_source.html#l00231">231</a> 行目に定義があります。</p>
 
 <p class="reference">参照元 <a class="el" href="app__main_8c_source.html#l00144">app_main()</a>.</p>
 <div class="dynheader">
@@ -796,7 +886,7 @@ sensor.c の依存先関係図:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">uint16_t dmaBufferAdc1[<a class="el" href="sensor_8c.html#a06fc87d81c62e9abb8790b6e5713c55bab71aa73289648a1635a6b96e74c11d56">NUM_ADC1</a>] = {0}</td>
+          <td class="memname">uint16_t dmaBufferAdc1[<a class="el" href="sensor_8c.html#adc29c2ff13d900c2f185ee95427fb06cab71aa73289648a1635a6b96e74c11d56">NUM_ADC1</a>] = {0}</td>
         </tr>
       </table>
   </td>
@@ -824,7 +914,7 @@ sensor.c の依存先関係図:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">uint16_t dmaBufferAdc2[<a class="el" href="sensor_8c.html#adf764cbdea00d65edcd07bb9953ad2b7aebd7fe214babf2c5f94fda908c67c2d7">NUM_ADC2</a>] = {0}</td>
+          <td class="memname">uint16_t dmaBufferAdc2[<a class="el" href="sensor_8c.html#a61dadd085c1777f559549e05962b2c9eaebd7fe214babf2c5f94fda908c67c2d7">NUM_ADC2</a>] = {0}</td>
         </tr>
       </table>
   </td>
@@ -864,9 +954,9 @@ sensor.c の依存先関係図:</div>
 
 <p>i2c1 dma rx buffer </p>
 
-<p class="definition"> <a class="el" href="sensor_8c_source.html">sensor.c</a> の <a class="el" href="sensor_8c_source.html#l00080">80</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="sensor_8c_source.html">sensor.c</a> の <a class="el" href="sensor_8c_source.html#l00085">85</a> 行目に定義があります。</p>
 
-<p class="reference">参照元 <a class="el" href="sensor_8c_source.html#l00110">GYRO_GetYaw()</a>, <a class="el" href="sensor_8c_source.html#l00120">HAL_I2C_MasterTxCpltCallback()</a>.</p>
+<p class="reference">参照元 <a class="el" href="sensor_8c_source.html#l00137">GYRO_GetYaw()</a>, <a class="el" href="sensor_8c_source.html#l00147">HAL_I2C_MasterTxCpltCallback()</a>.</p>
 
 </div>
 </div>
@@ -892,9 +982,9 @@ sensor.c の依存先関係図:</div>
 
 <p>i2c1 dma tx buffer </p>
 
-<p class="definition"> <a class="el" href="sensor_8c_source.html">sensor.c</a> の <a class="el" href="sensor_8c_source.html#l00078">78</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="sensor_8c_source.html">sensor.c</a> の <a class="el" href="sensor_8c_source.html#l00083">83</a> 行目に定義があります。</p>
 
-<p class="reference">参照元 <a class="el" href="sensor_8c_source.html#l00084">GYRO_Init()</a>, <a class="el" href="sensor_8c_source.html#l00102">GYRO_UpdateYaw()</a>.</p>
+<p class="reference">参照元 <a class="el" href="sensor_8c_source.html#l00089">GYRO_Init()</a>, <a class="el" href="sensor_8c_source.html#l00129">GYRO_UpdateYaw()</a>.</p>
 
 </div>
 </div>
@@ -918,21 +1008,21 @@ sensor.c の依存先関係図:</div>
 </table>
 </div><div class="memdoc">
 <b>初期値:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    [<a class="code" href="sensor_8h.html#a78d269997aaee18405db7c81806d4c91a8eb8c7aa9d6f1a115236c625ec3b1e04">MARKER_SENSOR_RIGHT</a>] = &amp;<a class="code" href="sensor_8c.html#a6ba42e27e804d0ffaff5bdb7f82c0011">dmaBufferAdc1</a>[<a class="code" href="sensor_8c.html#a06fc87d81c62e9abb8790b6e5713c55baba6bb8419cec899bdea56fb11d8450e7">ADC1_MARKER_SENSOR_RIGHT</a>],</div>
-<div class="line">    [<a class="code" href="sensor_8h.html#a78d269997aaee18405db7c81806d4c91a8f563a0b43860c5f60109f9e8201304a">LINE_SENSOR_RIGHT_OUT</a>] = &amp;<a class="code" href="sensor_8c.html#a6ba42e27e804d0ffaff5bdb7f82c0011">dmaBufferAdc1</a>[<a class="code" href="sensor_8c.html#a06fc87d81c62e9abb8790b6e5713c55ba675644cbca367674d765282eec66ad4f">ADC1_LINE_SENSOR_RIGHT_OUT</a>],</div>
-<div class="line">    [<a class="code" href="sensor_8h.html#a78d269997aaee18405db7c81806d4c91acd7e3afe7bc79266e1fbd7cc81fce19f">LINE_SENSOR_RIGHT_IN</a>] = &amp;<a class="code" href="sensor_8c.html#a214764e77dc6a4d470f372f1e74ee51a">dmaBufferAdc2</a>[<a class="code" href="sensor_8c.html#adf764cbdea00d65edcd07bb9953ad2b7aafe2bf84f4fcfb60081742c3d43de1e3">ADC2_LINE_SENSOR_RIGHT_IN</a>],</div>
-<div class="line">    [<a class="code" href="sensor_8h.html#a78d269997aaee18405db7c81806d4c91a21ae287b53a2f451584db4e27c4592f8">LINE_SENSOR_LEFT_IN</a>] = &amp;<a class="code" href="sensor_8c.html#a214764e77dc6a4d470f372f1e74ee51a">dmaBufferAdc2</a>[<a class="code" href="sensor_8c.html#adf764cbdea00d65edcd07bb9953ad2b7ad54de0874c63b43e35c62b5d3855a100">ADC2_LINE_SENSOR_LEFT_IN</a>],</div>
-<div class="line">    [<a class="code" href="sensor_8h.html#a78d269997aaee18405db7c81806d4c91a043ed7f39d2ecb54741fc76b2da72f9b">LINE_SENSOR_LEFT_OUT</a>] = &amp;<a class="code" href="sensor_8c.html#a214764e77dc6a4d470f372f1e74ee51a">dmaBufferAdc2</a>[<a class="code" href="sensor_8c.html#adf764cbdea00d65edcd07bb9953ad2b7a66b2d15e6fae2f5d4970c6e3f8e31f14">ADC2_LINE_SENSOR_LEFT_OUT</a>],</div>
-<div class="line">    [<a class="code" href="sensor_8h.html#a78d269997aaee18405db7c81806d4c91a4b5cb7fe82dd9e2f967239785f852eb9">MARKER_SENSOR_LEFT</a>] = &amp;<a class="code" href="sensor_8c.html#a6ba42e27e804d0ffaff5bdb7f82c0011">dmaBufferAdc1</a>[<a class="code" href="sensor_8c.html#a06fc87d81c62e9abb8790b6e5713c55bad423b44dba1e7cf90c5ba39b0111f4fa">ADC1_MARKER_SENSOR_LEFT</a>],</div>
+<div class="line">    [<a class="code" href="sensor_8h.html#a78d269997aaee18405db7c81806d4c91a8eb8c7aa9d6f1a115236c625ec3b1e04">MARKER_SENSOR_RIGHT</a>] = &amp;<a class="code" href="sensor_8c.html#a6ba42e27e804d0ffaff5bdb7f82c0011">dmaBufferAdc1</a>[<a class="code" href="sensor_8c.html#adc29c2ff13d900c2f185ee95427fb06caba6bb8419cec899bdea56fb11d8450e7">ADC1_MARKER_SENSOR_RIGHT</a>],</div>
+<div class="line">    [<a class="code" href="sensor_8h.html#a78d269997aaee18405db7c81806d4c91a8f563a0b43860c5f60109f9e8201304a">LINE_SENSOR_RIGHT_OUT</a>] = &amp;<a class="code" href="sensor_8c.html#a6ba42e27e804d0ffaff5bdb7f82c0011">dmaBufferAdc1</a>[<a class="code" href="sensor_8c.html#adc29c2ff13d900c2f185ee95427fb06ca675644cbca367674d765282eec66ad4f">ADC1_LINE_SENSOR_RIGHT_OUT</a>],</div>
+<div class="line">    [<a class="code" href="sensor_8h.html#a78d269997aaee18405db7c81806d4c91acd7e3afe7bc79266e1fbd7cc81fce19f">LINE_SENSOR_RIGHT_IN</a>] = &amp;<a class="code" href="sensor_8c.html#a214764e77dc6a4d470f372f1e74ee51a">dmaBufferAdc2</a>[<a class="code" href="sensor_8c.html#a61dadd085c1777f559549e05962b2c9eaafe2bf84f4fcfb60081742c3d43de1e3">ADC2_LINE_SENSOR_RIGHT_IN</a>],</div>
+<div class="line">    [<a class="code" href="sensor_8h.html#a78d269997aaee18405db7c81806d4c91a21ae287b53a2f451584db4e27c4592f8">LINE_SENSOR_LEFT_IN</a>] = &amp;<a class="code" href="sensor_8c.html#a214764e77dc6a4d470f372f1e74ee51a">dmaBufferAdc2</a>[<a class="code" href="sensor_8c.html#a61dadd085c1777f559549e05962b2c9ead54de0874c63b43e35c62b5d3855a100">ADC2_LINE_SENSOR_LEFT_IN</a>],</div>
+<div class="line">    [<a class="code" href="sensor_8h.html#a78d269997aaee18405db7c81806d4c91a043ed7f39d2ecb54741fc76b2da72f9b">LINE_SENSOR_LEFT_OUT</a>] = &amp;<a class="code" href="sensor_8c.html#a214764e77dc6a4d470f372f1e74ee51a">dmaBufferAdc2</a>[<a class="code" href="sensor_8c.html#a61dadd085c1777f559549e05962b2c9ea66b2d15e6fae2f5d4970c6e3f8e31f14">ADC2_LINE_SENSOR_LEFT_OUT</a>],</div>
+<div class="line">    [<a class="code" href="sensor_8h.html#a78d269997aaee18405db7c81806d4c91a4b5cb7fe82dd9e2f967239785f852eb9">MARKER_SENSOR_LEFT</a>] = &amp;<a class="code" href="sensor_8c.html#a6ba42e27e804d0ffaff5bdb7f82c0011">dmaBufferAdc1</a>[<a class="code" href="sensor_8c.html#adc29c2ff13d900c2f185ee95427fb06cad423b44dba1e7cf90c5ba39b0111f4fa">ADC1_MARKER_SENSOR_LEFT</a>],</div>
 <div class="line">}</div>
-<div class="ttc" id="asensor_8c_html_a06fc87d81c62e9abb8790b6e5713c55ba675644cbca367674d765282eec66ad4f"><div class="ttname"><a href="sensor_8c.html#a06fc87d81c62e9abb8790b6e5713c55ba675644cbca367674d765282eec66ad4f">ADC1_LINE_SENSOR_RIGHT_OUT</a></div><div class="ttdeci">@ ADC1_LINE_SENSOR_RIGHT_OUT</div><div class="ttdef"><b>Definition:</b> <a href="sensor_8c_source.html#l00016">sensor.c:16</a></div></div>
-<div class="ttc" id="asensor_8c_html_a06fc87d81c62e9abb8790b6e5713c55baba6bb8419cec899bdea56fb11d8450e7"><div class="ttname"><a href="sensor_8c.html#a06fc87d81c62e9abb8790b6e5713c55baba6bb8419cec899bdea56fb11d8450e7">ADC1_MARKER_SENSOR_RIGHT</a></div><div class="ttdeci">@ ADC1_MARKER_SENSOR_RIGHT</div><div class="ttdef"><b>Definition:</b> <a href="sensor_8c_source.html#l00017">sensor.c:17</a></div></div>
-<div class="ttc" id="asensor_8c_html_a06fc87d81c62e9abb8790b6e5713c55bad423b44dba1e7cf90c5ba39b0111f4fa"><div class="ttname"><a href="sensor_8c.html#a06fc87d81c62e9abb8790b6e5713c55bad423b44dba1e7cf90c5ba39b0111f4fa">ADC1_MARKER_SENSOR_LEFT</a></div><div class="ttdeci">@ ADC1_MARKER_SENSOR_LEFT</div><div class="ttdef"><b>Definition:</b> <a href="sensor_8c_source.html#l00018">sensor.c:18</a></div></div>
 <div class="ttc" id="asensor_8c_html_a214764e77dc6a4d470f372f1e74ee51a"><div class="ttname"><a href="sensor_8c.html#a214764e77dc6a4d470f372f1e74ee51a">dmaBufferAdc2</a></div><div class="ttdeci">static uint16_t dmaBufferAdc2[NUM_ADC2]</div><div class="ttdoc">ADC2 buffer</div><div class="ttdef"><b>Definition:</b> <a href="sensor_8c_source.html#l00033">sensor.c:33</a></div></div>
+<div class="ttc" id="asensor_8c_html_a61dadd085c1777f559549e05962b2c9ea66b2d15e6fae2f5d4970c6e3f8e31f14"><div class="ttname"><a href="sensor_8c.html#a61dadd085c1777f559549e05962b2c9ea66b2d15e6fae2f5d4970c6e3f8e31f14">ADC2_LINE_SENSOR_LEFT_OUT</a></div><div class="ttdeci">@ ADC2_LINE_SENSOR_LEFT_OUT</div><div class="ttdef"><b>Definition:</b> <a href="sensor_8c_source.html#l00026">sensor.c:26</a></div></div>
+<div class="ttc" id="asensor_8c_html_a61dadd085c1777f559549e05962b2c9eaafe2bf84f4fcfb60081742c3d43de1e3"><div class="ttname"><a href="sensor_8c.html#a61dadd085c1777f559549e05962b2c9eaafe2bf84f4fcfb60081742c3d43de1e3">ADC2_LINE_SENSOR_RIGHT_IN</a></div><div class="ttdeci">@ ADC2_LINE_SENSOR_RIGHT_IN</div><div class="ttdef"><b>Definition:</b> <a href="sensor_8c_source.html#l00024">sensor.c:24</a></div></div>
+<div class="ttc" id="asensor_8c_html_a61dadd085c1777f559549e05962b2c9ead54de0874c63b43e35c62b5d3855a100"><div class="ttname"><a href="sensor_8c.html#a61dadd085c1777f559549e05962b2c9ead54de0874c63b43e35c62b5d3855a100">ADC2_LINE_SENSOR_LEFT_IN</a></div><div class="ttdeci">@ ADC2_LINE_SENSOR_LEFT_IN</div><div class="ttdef"><b>Definition:</b> <a href="sensor_8c_source.html#l00025">sensor.c:25</a></div></div>
 <div class="ttc" id="asensor_8c_html_a6ba42e27e804d0ffaff5bdb7f82c0011"><div class="ttname"><a href="sensor_8c.html#a6ba42e27e804d0ffaff5bdb7f82c0011">dmaBufferAdc1</a></div><div class="ttdeci">static uint16_t dmaBufferAdc1[NUM_ADC1]</div><div class="ttdoc">ADC1 buffer</div><div class="ttdef"><b>Definition:</b> <a href="sensor_8c_source.html#l00031">sensor.c:31</a></div></div>
-<div class="ttc" id="asensor_8c_html_adf764cbdea00d65edcd07bb9953ad2b7a66b2d15e6fae2f5d4970c6e3f8e31f14"><div class="ttname"><a href="sensor_8c.html#adf764cbdea00d65edcd07bb9953ad2b7a66b2d15e6fae2f5d4970c6e3f8e31f14">ADC2_LINE_SENSOR_LEFT_OUT</a></div><div class="ttdeci">@ ADC2_LINE_SENSOR_LEFT_OUT</div><div class="ttdef"><b>Definition:</b> <a href="sensor_8c_source.html#l00026">sensor.c:26</a></div></div>
-<div class="ttc" id="asensor_8c_html_adf764cbdea00d65edcd07bb9953ad2b7aafe2bf84f4fcfb60081742c3d43de1e3"><div class="ttname"><a href="sensor_8c.html#adf764cbdea00d65edcd07bb9953ad2b7aafe2bf84f4fcfb60081742c3d43de1e3">ADC2_LINE_SENSOR_RIGHT_IN</a></div><div class="ttdeci">@ ADC2_LINE_SENSOR_RIGHT_IN</div><div class="ttdef"><b>Definition:</b> <a href="sensor_8c_source.html#l00024">sensor.c:24</a></div></div>
-<div class="ttc" id="asensor_8c_html_adf764cbdea00d65edcd07bb9953ad2b7ad54de0874c63b43e35c62b5d3855a100"><div class="ttname"><a href="sensor_8c.html#adf764cbdea00d65edcd07bb9953ad2b7ad54de0874c63b43e35c62b5d3855a100">ADC2_LINE_SENSOR_LEFT_IN</a></div><div class="ttdeci">@ ADC2_LINE_SENSOR_LEFT_IN</div><div class="ttdef"><b>Definition:</b> <a href="sensor_8c_source.html#l00025">sensor.c:25</a></div></div>
+<div class="ttc" id="asensor_8c_html_adc29c2ff13d900c2f185ee95427fb06ca675644cbca367674d765282eec66ad4f"><div class="ttname"><a href="sensor_8c.html#adc29c2ff13d900c2f185ee95427fb06ca675644cbca367674d765282eec66ad4f">ADC1_LINE_SENSOR_RIGHT_OUT</a></div><div class="ttdeci">@ ADC1_LINE_SENSOR_RIGHT_OUT</div><div class="ttdef"><b>Definition:</b> <a href="sensor_8c_source.html#l00016">sensor.c:16</a></div></div>
+<div class="ttc" id="asensor_8c_html_adc29c2ff13d900c2f185ee95427fb06caba6bb8419cec899bdea56fb11d8450e7"><div class="ttname"><a href="sensor_8c.html#adc29c2ff13d900c2f185ee95427fb06caba6bb8419cec899bdea56fb11d8450e7">ADC1_MARKER_SENSOR_RIGHT</a></div><div class="ttdeci">@ ADC1_MARKER_SENSOR_RIGHT</div><div class="ttdef"><b>Definition:</b> <a href="sensor_8c_source.html#l00017">sensor.c:17</a></div></div>
+<div class="ttc" id="asensor_8c_html_adc29c2ff13d900c2f185ee95427fb06cad423b44dba1e7cf90c5ba39b0111f4fa"><div class="ttname"><a href="sensor_8c.html#adc29c2ff13d900c2f185ee95427fb06cad423b44dba1e7cf90c5ba39b0111f4fa">ADC1_MARKER_SENSOR_LEFT</a></div><div class="ttdeci">@ ADC1_MARKER_SENSOR_LEFT</div><div class="ttdef"><b>Definition:</b> <a href="sensor_8c_source.html#l00018">sensor.c:18</a></div></div>
 <div class="ttc" id="asensor_8h_html_a78d269997aaee18405db7c81806d4c91a043ed7f39d2ecb54741fc76b2da72f9b"><div class="ttname"><a href="sensor_8h.html#a78d269997aaee18405db7c81806d4c91a043ed7f39d2ecb54741fc76b2da72f9b">LINE_SENSOR_LEFT_OUT</a></div><div class="ttdeci">@ LINE_SENSOR_LEFT_OUT</div><div class="ttdef"><b>Definition:</b> <a href="sensor_8h_source.html#l00014">sensor.h:14</a></div></div>
 <div class="ttc" id="asensor_8h_html_a78d269997aaee18405db7c81806d4c91a21ae287b53a2f451584db4e27c4592f8"><div class="ttname"><a href="sensor_8h.html#a78d269997aaee18405db7c81806d4c91a21ae287b53a2f451584db4e27c4592f8">LINE_SENSOR_LEFT_IN</a></div><div class="ttdeci">@ LINE_SENSOR_LEFT_IN</div><div class="ttdef"><b>Definition:</b> <a href="sensor_8h_source.html#l00013">sensor.h:13</a></div></div>
 <div class="ttc" id="asensor_8h_html_a78d269997aaee18405db7c81806d4c91a4b5cb7fe82dd9e2f967239785f852eb9"><div class="ttname"><a href="sensor_8h.html#a78d269997aaee18405db7c81806d4c91a4b5cb7fe82dd9e2f967239785f852eb9">MARKER_SENSOR_LEFT</a></div><div class="ttdeci">@ MARKER_SENSOR_LEFT</div><div class="ttdef"><b>Definition:</b> <a href="sensor_8h_source.html#l00015">sensor.h:15</a></div></div>
@@ -970,9 +1060,9 @@ sensor.c の依存先関係図:</div>
 
 <p>left encoder count value </p>
 
-<p class="definition"> <a class="el" href="sensor_8c_source.html">sensor.c</a> の <a class="el" href="sensor_8c_source.html#l00133">133</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="sensor_8c_source.html">sensor.c</a> の <a class="el" href="sensor_8c_source.html#l00160">160</a> 行目に定義があります。</p>
 
-<p class="reference">参照元 <a class="el" href="sensor_8c_source.html#l00181">ENCODER_GetCountLeft()</a>, <a class="el" href="sensor_8c_source.html#l00192">ENCODER_ResetCount()</a>, <a class="el" href="sensor_8c_source.html#l00144">HAL_GPIO_EXTI_Callback()</a>.</p>
+<p class="reference">参照元 <a class="el" href="sensor_8c_source.html#l00208">ENCODER_GetCountLeft()</a>, <a class="el" href="sensor_8c_source.html#l00219">ENCODER_ResetCount()</a>, <a class="el" href="sensor_8c_source.html#l00171">HAL_GPIO_EXTI_Callback()</a>.</p>
 
 </div>
 </div>
@@ -1056,7 +1146,7 @@ sensor.c の依存先関係図:</div>
 
 <p class="definition"> <a class="el" href="main_8c_source.html">main.c</a> の <a class="el" href="main_8c_source.html#l00046">46</a> 行目に定義があります。</p>
 
-<p class="reference">参照元 <a class="el" href="sensor_8c_source.html#l00084">GYRO_Init()</a>, <a class="el" href="sensor_8c_source.html#l00102">GYRO_UpdateYaw()</a>, <a class="el" href="sensor_8c_source.html#l00120">HAL_I2C_MasterTxCpltCallback()</a>, <a class="el" href="main_8c_source.html#l00362">MX_I2C1_Init()</a>.</p>
+<p class="reference">参照元 <a class="el" href="sensor_8c_source.html#l00089">GYRO_Init()</a>, <a class="el" href="sensor_8c_source.html#l00129">GYRO_UpdateYaw()</a>, <a class="el" href="sensor_8c_source.html#l00147">HAL_I2C_MasterTxCpltCallback()</a>, <a class="el" href="main_8c_source.html#l00362">MX_I2C1_Init()</a>.</p>
 
 </div>
 </div>
@@ -1084,7 +1174,7 @@ sensor.c の依存先関係図:</div>
 
 <p class="definition"> <a class="el" href="main_8c_source.html">main.c</a> の <a class="el" href="main_8c_source.html#l00051">51</a> 行目に定義があります。</p>
 
-<p class="reference">参照元 <a class="el" href="sensor_8c_source.html#l00137">ENCODER_Init()</a>, <a class="el" href="main_8c_source.html#l00489">MX_TIM2_Init()</a>.</p>
+<p class="reference">参照元 <a class="el" href="sensor_8c_source.html#l00164">ENCODER_Init()</a>, <a class="el" href="main_8c_source.html#l00489">MX_TIM2_Init()</a>.</p>
 
 </div>
 </div>
