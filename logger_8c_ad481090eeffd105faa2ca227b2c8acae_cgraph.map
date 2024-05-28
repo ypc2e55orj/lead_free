@@ -1,0 +1,6 @@
+<map id="LOGGER_UpdateSensor" name="LOGGER_UpdateSensor">
+<area shape="rect" id="node1" title="Collect log (sensor mode)" alt="" coords="5,56,180,83"/>
+<area shape="rect" id="node2" href="$sensor_8h.html#ad857373214395cc052b09499ac88b2dc" title="Get line sensor value" alt="" coords="228,5,415,32"/>
+<area shape="rect" id="node3" href="$servo_8h.html#adac7938efd6cb78ea00bc3cca42db760" title="Get Left motor duty" alt="" coords="243,56,399,83"/>
+<area shape="rect" id="node4" href="$servo_8h.html#acb78d709b5b01f46fa29a3c440948652" title="Get right motor duty" alt="" coords="238,107,405,133"/>
+</map>

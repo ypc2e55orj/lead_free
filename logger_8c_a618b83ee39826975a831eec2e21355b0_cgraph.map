@@ -1,10 +1,12 @@
 <map id="LOGGER_Update" name="LOGGER_Update">
-<area shape="rect" id="node1" title="Collect log" alt="" coords="5,56,136,83"/>
-<area shape="rect" id="node2" href="$logger_8c.html#ac982f0bcff7e34a2a0e1189cf0086a65" title="Collect log (odometry mode)" alt="" coords="184,19,379,45"/>
-<area shape="rect" id="node4" href="$logger_8c.html#ab8bf05edb97b9869366578c6e6b09052" title="Collect log (target mode)" alt="" coords="196,81,367,108"/>
+<area shape="rect" id="node1" title="Collect log" alt="" coords="5,107,136,133"/>
+<area shape="rect" id="node2" href="$logger_8c.html#ac982f0bcff7e34a2a0e1189cf0086a65" title="Collect log (odometry mode)" alt="" coords="184,31,379,57"/>
+<area shape="rect" id="node4" href="$logger_8c.html#ad481090eeffd105faa2ca227b2c8acae" title="Collect log (sensor mode)" alt="" coords="194,107,369,133"/>
+<area shape="rect" id="node8" href="$logger_8c.html#ab8bf05edb97b9869366578c6e6b09052" title="Collect log (target mode)" alt="" coords="196,157,367,184"/>
 <area shape="rect" id="node3" href="$odometry_8h.html#a458ba16e05623612c350b22cea48ffc3" title="Get current" alt="" coords="459,5,633,32"/>
-<area shape="rect" id="node5" href="$servo_8h.html#adac7938efd6cb78ea00bc3cca42db760" title="Get Left motor duty" alt="" coords="468,56,624,83"/>
-<area shape="rect" id="node6" href="$servo_8h.html#acb78d709b5b01f46fa29a3c440948652" title="Get right motor duty" alt="" coords="463,107,629,133"/>
-<area shape="rect" id="node7" href="$servo_8h.html#a2c410a8313437103a2c6129d8173a224" title="Get target angular velocity" alt="" coords="427,157,665,184"/>
-<area shape="rect" id="node8" href="$servo_8h.html#a1af12b4477ce75c5b8c5216a376d1aca" title="Get target velocity" alt="" coords="452,208,640,235"/>
+<area shape="rect" id="node5" href="$sensor_8h.html#ad857373214395cc052b09499ac88b2dc" title="Get line sensor value" alt="" coords="453,56,639,83"/>
+<area shape="rect" id="node6" href="$servo_8h.html#adac7938efd6cb78ea00bc3cca42db760" title="Get Left motor duty" alt="" coords="468,107,624,133"/>
+<area shape="rect" id="node7" href="$servo_8h.html#acb78d709b5b01f46fa29a3c440948652" title="Get right motor duty" alt="" coords="463,157,629,184"/>
+<area shape="rect" id="node9" href="$servo_8h.html#a2c410a8313437103a2c6129d8173a224" title="Get target angular velocity" alt="" coords="427,208,665,235"/>
+<area shape="rect" id="node10" href="$servo_8h.html#a1af12b4477ce75c5b8c5216a376d1aca" title="Get target velocity" alt="" coords="452,259,640,285"/>
 </map>

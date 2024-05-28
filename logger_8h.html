@@ -100,6 +100,7 @@ logger.h の依存先関係図:</div>
 列挙型</h2></td></tr>
 <tr class="memitem:af5ec6072c032269d4011d55ec0f7f9be"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logger_8h.html#af5ec6072c032269d4011d55ec0f7f9be">LOGGER_MODE</a> { <a class="el" href="logger_8h.html#af5ec6072c032269d4011d55ec0f7f9bea1453e97c1e7cc4e605cb7440dd1efa11">LOGGER_MODE_TARGET</a>
 , <a class="el" href="logger_8h.html#af5ec6072c032269d4011d55ec0f7f9beac7d3362094c91de35fe95ba2640ee269">LOGGER_MODE_ODOMETRY</a>
+, <a class="el" href="logger_8h.html#af5ec6072c032269d4011d55ec0f7f9beac80b44a847741bb80d78d242c0bee14a">LOGGER_MODE_SENSOR</a>
 , <a class="el" href="logger_8h.html#af5ec6072c032269d4011d55ec0f7f9bea82ba2e3599d66e67fd4f4c2e566e9784">NUM_LOGGER_MODE</a>
  }</td></tr>
 <tr class="separator:af5ec6072c032269d4011d55ec0f7f9be"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -140,6 +141,7 @@ logger.h の依存先関係図:</div>
 <table class="fieldtable">
 <tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="af5ec6072c032269d4011d55ec0f7f9bea1453e97c1e7cc4e605cb7440dd1efa11"></a>LOGGER_MODE_TARGET&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="af5ec6072c032269d4011d55ec0f7f9beac7d3362094c91de35fe95ba2640ee269"></a>LOGGER_MODE_ODOMETRY&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="af5ec6072c032269d4011d55ec0f7f9beac80b44a847741bb80d78d242c0bee14a"></a>LOGGER_MODE_SENSOR&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="af5ec6072c032269d4011d55ec0f7f9bea82ba2e3599d66e67fd4f4c2e566e9784"></a>NUM_LOGGER_MODE&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
@@ -165,7 +167,7 @@ logger.h の依存先関係図:</div>
 
 <p>Clear log </p>
 
-<p class="definition"> <a class="el" href="logger_8c_source.html">logger.c</a> の <a class="el" href="logger_8c_source.html#l00118">118</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="logger_8c_source.html">logger.c</a> の <a class="el" href="logger_8c_source.html#l00164">164</a> 行目に定義があります。</p>
 
 <p class="reference">参照元 <a class="el" href="app__main_8c_source.html#l00082">TraceLine()</a>.</p>
 <div class="dynheader">
@@ -199,7 +201,7 @@ logger.h の依存先関係図:</div>
 
 <p>Pring log </p>
 
-<p class="definition"> <a class="el" href="logger_8c_source.html">logger.c</a> の <a class="el" href="logger_8c_source.html#l00198">198</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="logger_8c_source.html">logger.c</a> の <a class="el" href="logger_8c_source.html#l00248">248</a> 行目に定義があります。</p>
 
 <p class="reference">参照元 <a class="el" href="app__main_8c_source.html#l00144">app_main()</a>.</p>
 <div class="dynheader">
@@ -207,9 +209,10 @@ logger.h の依存先関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="logger_8h_a7e1f6cceddb55ae4a35e23537e089d70_cgraph.png" border="0" usemap="#alogger_8h_a7e1f6cceddb55ae4a35e23537e089d70_cgraph" alt=""/></div>
 <map name="alogger_8h_a7e1f6cceddb55ae4a35e23537e089d70_cgraph" id="alogger_8h_a7e1f6cceddb55ae4a35e23537e089d70_cgraph">
-<area shape="rect" title="Pring log" alt="" coords="5,31,119,57"/>
+<area shape="rect" title="Pring log" alt="" coords="5,56,119,83"/>
 <area shape="rect" href="logger_8c.html#a0573780c843e18b8be11e33c9e5c9636" title="Pring log (odometry mode)" alt="" coords="167,5,392,32"/>
-<area shape="rect" href="logger_8c.html#a60212f9386e4ab4b170f430f85a95c5d" title="Pring log (target mode)" alt="" coords="179,56,379,83"/>
+<area shape="rect" href="logger_8c.html#a151edc08d024fd8c6f1143276c6875de" title="Pring log (target mode)" alt="" coords="177,56,381,83"/>
+<area shape="rect" href="logger_8c.html#a60212f9386e4ab4b170f430f85a95c5d" title="Pring log (target mode)" alt="" coords="179,107,379,133"/>
 </map>
 </div>
 <div class="dynheader">
@@ -243,7 +246,7 @@ logger.h の依存先関係図:</div>
 
 <p>Set logger mode </p>
 
-<p class="definition"> <a class="el" href="logger_8c_source.html">logger.c</a> の <a class="el" href="logger_8c_source.html#l00150">150</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="logger_8c_source.html">logger.c</a> の <a class="el" href="logger_8c_source.html#l00196">196</a> 行目に定義があります。</p>
 
 <p class="reference">参照元 <a class="el" href="app__main_8c_source.html#l00082">TraceLine()</a>.</p>
 <div class="dynheader">
@@ -279,7 +282,7 @@ logger.h の依存先関係図:</div>
 <p>Start logger (Set log frequency) </p>
 <p>Start logger (Set log frequency) </p>
 
-<p class="definition"> <a class="el" href="logger_8c_source.html">logger.c</a> の <a class="el" href="logger_8c_source.html#l00128">128</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="logger_8c_source.html">logger.c</a> の <a class="el" href="logger_8c_source.html#l00174">174</a> 行目に定義があります。</p>
 
 <p class="reference">参照元 <a class="el" href="app__main_8c_source.html#l00082">TraceLine()</a>.</p>
 <div class="dynheader">
@@ -313,7 +316,7 @@ logger.h の依存先関係図:</div>
 
 <p>Stop logger </p>
 
-<p class="definition"> <a class="el" href="logger_8c_source.html">logger.c</a> の <a class="el" href="logger_8c_source.html#l00141">141</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="logger_8c_source.html">logger.c</a> の <a class="el" href="logger_8c_source.html#l00187">187</a> 行目に定義があります。</p>
 
 <p class="reference">参照元 <a class="el" href="app__main_8c_source.html#l00082">TraceLine()</a>.</p>
 <div class="dynheader">
@@ -347,7 +350,7 @@ logger.h の依存先関係図:</div>
 
 <p>Collect log </p>
 
-<p class="definition"> <a class="el" href="logger_8c_source.html">logger.c</a> の <a class="el" href="logger_8c_source.html#l00168">168</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="logger_8c_source.html">logger.c</a> の <a class="el" href="logger_8c_source.html#l00215">215</a> 行目に定義があります。</p>
 
 <p class="reference">参照元 <a class="el" href="interval_8c_source.html#l00021">HAL_TIM_PeriodElapsedCallback()</a>.</p>
 <div class="dynheader">
@@ -355,14 +358,16 @@ logger.h の依存先関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="logger_8h_a618b83ee39826975a831eec2e21355b0_cgraph.png" border="0" usemap="#alogger_8h_a618b83ee39826975a831eec2e21355b0_cgraph" alt=""/></div>
 <map name="alogger_8h_a618b83ee39826975a831eec2e21355b0_cgraph" id="alogger_8h_a618b83ee39826975a831eec2e21355b0_cgraph">
-<area shape="rect" title="Collect log" alt="" coords="5,56,136,83"/>
-<area shape="rect" href="logger_8c.html#ac982f0bcff7e34a2a0e1189cf0086a65" title="Collect log (odometry mode)" alt="" coords="184,19,379,45"/>
-<area shape="rect" href="logger_8c.html#ab8bf05edb97b9869366578c6e6b09052" title="Collect log (target mode)" alt="" coords="196,81,367,108"/>
+<area shape="rect" title="Collect log" alt="" coords="5,107,136,133"/>
+<area shape="rect" href="logger_8c.html#ac982f0bcff7e34a2a0e1189cf0086a65" title="Collect log (odometry mode)" alt="" coords="184,31,379,57"/>
+<area shape="rect" href="logger_8c.html#ad481090eeffd105faa2ca227b2c8acae" title="Collect log (sensor mode)" alt="" coords="194,107,369,133"/>
+<area shape="rect" href="logger_8c.html#ab8bf05edb97b9869366578c6e6b09052" title="Collect log (target mode)" alt="" coords="196,157,367,184"/>
 <area shape="rect" href="odometry_8h.html#a458ba16e05623612c350b22cea48ffc3" title="Get current" alt="" coords="459,5,633,32"/>
-<area shape="rect" href="servo_8h.html#adac7938efd6cb78ea00bc3cca42db760" title="Get Left motor duty" alt="" coords="468,56,624,83"/>
-<area shape="rect" href="servo_8h.html#acb78d709b5b01f46fa29a3c440948652" title="Get right motor duty" alt="" coords="463,107,629,133"/>
-<area shape="rect" href="servo_8h.html#a2c410a8313437103a2c6129d8173a224" title="Get target angular velocity" alt="" coords="427,157,665,184"/>
-<area shape="rect" href="servo_8h.html#a1af12b4477ce75c5b8c5216a376d1aca" title="Get target velocity" alt="" coords="452,208,640,235"/>
+<area shape="rect" href="sensor_8h.html#ad857373214395cc052b09499ac88b2dc" title="Get line sensor value" alt="" coords="453,56,639,83"/>
+<area shape="rect" href="servo_8h.html#adac7938efd6cb78ea00bc3cca42db760" title="Get Left motor duty" alt="" coords="468,107,624,133"/>
+<area shape="rect" href="servo_8h.html#acb78d709b5b01f46fa29a3c440948652" title="Get right motor duty" alt="" coords="463,157,629,184"/>
+<area shape="rect" href="servo_8h.html#a2c410a8313437103a2c6129d8173a224" title="Get target angular velocity" alt="" coords="427,208,665,235"/>
+<area shape="rect" href="servo_8h.html#a1af12b4477ce75c5b8c5216a376d1aca" title="Get target velocity" alt="" coords="452,259,640,285"/>
 </map>
 </div>
 <div class="dynheader">

@@ -1,6 +1,7 @@
 <map id="MOTOR_GetDutyLeft" name="MOTOR_GetDutyLeft">
-<area shape="rect" id="node1" title="Get Left motor duty" alt="" coords="685,5,841,32"/>
-<area shape="rect" id="node2" href="$logger_8c.html#ab8bf05edb97b9869366578c6e6b09052" title="Collect log (target mode)" alt="" coords="467,5,637,32"/>
-<area shape="rect" id="node3" href="$logger_8h.html#a618b83ee39826975a831eec2e21355b0" title="Collect log" alt="" coords="288,5,419,32"/>
-<area shape="rect" id="node4" href="$interval_8c.html#a8a3b0ad512a6e6c6157440b68d395eac" title="timer interrupt TIM6: 2kHz" alt="" coords="5,5,240,32"/>
+<area shape="rect" id="node1" title="Get Left motor duty" alt="" coords="689,31,845,57"/>
+<area shape="rect" id="node2" href="$logger_8c.html#ad481090eeffd105faa2ca227b2c8acae" title="Collect log (sensor mode)" alt="" coords="467,5,641,32"/>
+<area shape="rect" id="node5" href="$logger_8c.html#ab8bf05edb97b9869366578c6e6b09052" title="Collect log (target mode)" alt="" coords="469,56,639,83"/>
+<area shape="rect" id="node3" href="$logger_8h.html#a618b83ee39826975a831eec2e21355b0" title="Collect log" alt="" coords="288,31,419,57"/>
+<area shape="rect" id="node4" href="$interval_8c.html#a8a3b0ad512a6e6c6157440b68d395eac" title="timer interrupt TIM6: 2kHz" alt="" coords="5,31,240,57"/>
 </map>

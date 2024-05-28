@@ -1,5 +1,6 @@
 <map id="LOGGER_Print" name="LOGGER_Print">
-<area shape="rect" id="node1" title="Pring log" alt="" coords="5,31,119,57"/>
+<area shape="rect" id="node1" title="Pring log" alt="" coords="5,56,119,83"/>
 <area shape="rect" id="node2" href="$logger_8c.html#a0573780c843e18b8be11e33c9e5c9636" title="Pring log (odometry mode)" alt="" coords="167,5,392,32"/>
-<area shape="rect" id="node3" href="$logger_8c.html#a60212f9386e4ab4b170f430f85a95c5d" title="Pring log (target mode)" alt="" coords="179,56,379,83"/>
+<area shape="rect" id="node3" href="$logger_8c.html#a151edc08d024fd8c6f1143276c6875de" title="Pring log (target mode)" alt="" coords="177,56,381,83"/>
+<area shape="rect" id="node4" href="$logger_8c.html#a60212f9386e4ab4b170f430f85a95c5d" title="Pring log (target mode)" alt="" coords="179,107,379,133"/>
 </map>
