@@ -6,10 +6,22 @@
 
 // project
 #include "odometry.h"
+#include "sensor.h"
 #include "servo.h"
 #include "parameter_static.h"
 
 #if PARAMETER_STATIC_LOGGER_ENABLED != 0
+typedef enum
+{
+  LOGGER_MODE_SENSOR_ELEMENT_DUTY_RIGHT,
+  LOGGER_MODE_SENSOR_ELEMENT_DUTY_LEFT,
+  LOGGER_MODE_SENSOR_ELEMENT_RIGHT_OUT,
+  LOGGER_MODE_SENSOR_ELEMENT_RIGHT_IN,
+  LOGGER_MODE_SENSOR_ELEMENT_LEFT_IN,
+  LOGGER_MODE_SENSOR_ELEMENT_LEFT_OUT,
+  NUM_LOGGER_MODE_SENSOR_ELEMENT,
+} LOGGER_MODE_SENSOR_ELEMENT;
+
 typedef enum
 {
   LOGGER_MODE_TARGET_ELEMENT_VELOCITY,
@@ -44,8 +56,42 @@ static LOGGER_MODE loggerMode = 0;
 static uint16_t loggerModeElmNum[NUM_LOGGER_MODE] = {
     [LOGGER_MODE_TARGET] = NUM_LOGGER_MODE_TARGET_ELEMENT,
     [LOGGER_MODE_ODOMETRY] = NUM_LOGGER_MODE_ODOMETRY_ELEMENT,
+    [LOGGER_MODE_SENSOR] = NUM_LOGGER_MODE_SENSOR_ELEMENT,
 };
 #endif
+
+/**
+ * @brief Pring log (target mode)
+ */
+static void LOGGER_PrintHeaderSensor()
+{
+#if PARAMETER_STATIC_LOGGER_ENABLED != 0
+  printf(
+      "index,"
+      "duty_right,"
+      "duty_left,"
+      "right_out,"
+      "right_in,"
+      "left_in,"
+      "left_out,"
+      "\r\n");
+#endif
+}
+/**
+ * @brief Collect log (sensor mode)
+ */
+static void
+LOGGER_UpdateSensor()
+{
+#if PARAMETER_STATIC_LOGGER_ENABLED != 0
+  loggerBuffer[loggerBufferIndex + LOGGER_MODE_SENSOR_ELEMENT_DUTY_RIGHT] = (int16_t)MOTOR_GetDutyRight();
+  loggerBuffer[loggerBufferIndex + LOGGER_MODE_SENSOR_ELEMENT_DUTY_LEFT] = (int16_t)MOTOR_GetDutyLeft();
+  loggerBuffer[loggerBufferIndex + LOGGER_MODE_SENSOR_ELEMENT_RIGHT_OUT] = (int16_t)ADC_GetLineSensorValue(LINE_SENSOR_RIGHT_OUT);
+  loggerBuffer[loggerBufferIndex + LOGGER_MODE_SENSOR_ELEMENT_RIGHT_IN] = (int16_t)ADC_GetLineSensorValue(LINE_SENSOR_RIGHT_IN);
+  loggerBuffer[loggerBufferIndex + LOGGER_MODE_SENSOR_ELEMENT_LEFT_IN] = (int16_t)ADC_GetLineSensorValue(LINE_SENSOR_LEFT_IN);
+  loggerBuffer[loggerBufferIndex + LOGGER_MODE_SENSOR_ELEMENT_LEFT_OUT] = (int16_t)ADC_GetLineSensorValue(LINE_SENSOR_LEFT_OUT);
+#endif
+}
 
 /**
  * @brief Collect log (target mode)
@@ -152,6 +198,7 @@ void LOGGER_SetMode(LOGGER_MODE mode)
 #if PARAMETER_STATIC_LOGGER_ENABLED != 0
   switch (mode)
   {
+  case LOGGER_MODE_SENSOR:
   case LOGGER_MODE_TARGET:
   case LOGGER_MODE_ODOMETRY:
     loggerMode = mode;
@@ -183,6 +230,9 @@ void LOGGER_Update()
     case LOGGER_MODE_ODOMETRY:
       LOGGER_UpdateOdometry();
       break;
+    case LOGGER_MODE_SENSOR:
+      LOGGER_UpdateSensor();
+      break;
     }
 
     if ((loggerBufferIndex += loggerModeElmNum[loggerMode]) >= PARAMETER_STATIC_LOGGER_BUFFER_SIZE)
@@ -206,6 +256,9 @@ void LOGGER_Print()
     break;
   case LOGGER_MODE_ODOMETRY:
     LOGGER_PrintHeaderOdometry();
+    break;
+  case LOGGER_MODE_SENSOR:
+    LOGGER_PrintHeaderSensor();
     break;
   }
   for (uint16_t i = 0; i < loggerBufferIndex; i += loggerModeElmNum[loggerMode])

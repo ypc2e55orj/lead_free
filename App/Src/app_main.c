@@ -85,7 +85,7 @@ void TraceLine()
   const ODOMETRY *odom = ODOMETRY_GetCurrent();
 
   INTERVAL_Buzzer(50);
-  LOGGER_SetMode(LOGGER_MODE_TARGET);
+  LOGGER_SetMode(LOGGER_MODE_SENSOR);
   LOGGER_Clear();
   ODOMETRY_Reset();
   LINE_EnableFeedback(param->lineAngularVelocityPid);
