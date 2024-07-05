@@ -34,6 +34,7 @@ typedef enum
   LOGGER_MODE_TARGET_ELEMENT_ODOMETRY_ANGLE,
   LOGGER_MODE_TARGET_ELEMENT_ODOMETRY_X,
   LOGGER_MODE_TARGET_ELEMENT_ODOMETRY_Y,
+  LOGGER_MODE_TARGET_ELEMENT_ODOMETRY_IS_APPROX_STRAIGHT,
   NUM_LOGGER_MODE_TARGET_ELEMENT,
 } LOGGER_MODE_TARGET_ELEMENT;
 
@@ -111,6 +112,7 @@ LOGGER_UpdateTarget()
   loggerBuffer[loggerBufferIndex + LOGGER_MODE_TARGET_ELEMENT_ODOMETRY_ANGLE] = (int16_t)(odom->angle * 1000.0f);
   loggerBuffer[loggerBufferIndex + LOGGER_MODE_TARGET_ELEMENT_ODOMETRY_X] = (int16_t)(odom->x * 1000.0f);
   loggerBuffer[loggerBufferIndex + LOGGER_MODE_TARGET_ELEMENT_ODOMETRY_Y] = (int16_t)(odom->y * 1000.0f);
+  loggerBuffer[loggerBufferIndex + LOGGER_MODE_TARGET_ELEMENT_ODOMETRY_IS_APPROX_STRAIGHT] = (int16_t)odom->isApproxStraight;
 #endif
 }
 /**
@@ -131,6 +133,7 @@ static void LOGGER_PrintHeaderTarget()
       "ang[1000*rad/s],"
       "x[1000*m],"
       "y[1000*m],"
+      "approx,"
       "\r\n");
 #endif
 }
@@ -221,6 +224,11 @@ void LOGGER_Update()
   {
     loggerFreqCount = 0;
 
+    if ((loggerBufferIndex + loggerModeElmNum[loggerMode]) >= PARAMETER_STATIC_LOGGER_BUFFER_SIZE)
+    {
+      loggerFreqCountMax = 0;
+      return;
+    }
     switch (loggerMode)
     {
     default:
@@ -234,11 +242,7 @@ void LOGGER_Update()
       LOGGER_UpdateSensor();
       break;
     }
-
-    if ((loggerBufferIndex += loggerModeElmNum[loggerMode]) >= PARAMETER_STATIC_LOGGER_BUFFER_SIZE)
-    {
-      loggerFreqCountMax = 0;
-    }
+    loggerBufferIndex += loggerModeElmNum[loggerMode];
   }
 #endif
 }

@@ -3,6 +3,7 @@
 
 // libc
 #include <stdint.h>
+#include <stdbool.h>
 
 typedef struct
 {
@@ -12,6 +13,7 @@ typedef struct
   float angle;            //!< [rad]
   float x;                //!< [m]
   float y;                //!< [m]
+  bool isApproxStraight;  //!< true if the robot is moving straight
 } ODOMETRY;
 
 /**

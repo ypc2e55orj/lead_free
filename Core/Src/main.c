@@ -93,6 +93,7 @@ int __io_putchar(int ch)
   */
 int main(void)
 {
+
   /* USER CODE BEGIN 1 */
 
   /* USER CODE END 1 */

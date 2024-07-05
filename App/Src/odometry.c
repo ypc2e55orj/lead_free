@@ -36,25 +36,29 @@ void ODOMETRY_CalculateInterval()
   odometryVelocitySums += odometryVelocitySamples[odometryVelocitySampleTail];
   odometryVelocitySampleTail = (odometryVelocitySampleTail + 1) & ODOMETRY_MASK_VELOCITY_SAMPLES;
 
-  odometry.velocity = odometryVelocitySums / (float)PARAMETER_STATIC_ODOMETRY_NUM_VELOCITY_SAMPLES;
+  float velocity = odometryVelocitySums / (float)PARAMETER_STATIC_ODOMETRY_NUM_VELOCITY_SAMPLES;
+  odometry.velocity = (odometry.velocity + velocity) / 2;
   odometry.length += mmVelo / 1000.0f;
   odometry.angularVelocity = GYRO_GetYaw() * (M_PI / 180.0f);
-  float angle = odometry.angle + odometry.angularVelocity / 1000.0f;
 
-  if (fabsf(odometry.angularVelocity) <= FLT_EPSILON)
+  float delta_angle = odometry.angularVelocity / 1000.0f;
+  odometry.angle += delta_angle;
+
+  if (fabsf(odometry.angularVelocity) < FLT_EPSILON)
   {
-    odometry.x += odometry.velocity * cosf(angle);
-    odometry.y += odometry.velocity * sinf(angle);
+    odometry.x += odometry.velocity * cosf(odometry.angle);
+    odometry.y += odometry.velocity * sinf(odometry.angle);
+    odometry.isApproxStraight = true;
   }
   else
   {
-    float delta = (angle - odometry.angle) / 2.0f;
-    float a = 2.0f * odometry.velocity / odometry.angularVelocity * sinf(delta);
-    float b = angle + delta;
+    float delta = delta_angle / 2.0f;
+    float a = (2.0f * odometry.velocity * sinf(delta)) / odometry.angularVelocity;
+    float b = odometry.angle + delta;
     odometry.x += a * cosf(b);
     odometry.y += a * sinf(b);
+    odometry.isApproxStraight = false;
   }
-  odometry.angle = angle;
 }
 /**
  * @brief Reset sums

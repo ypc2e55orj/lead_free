@@ -85,7 +85,7 @@ void TraceLine()
   const ODOMETRY *odom = ODOMETRY_GetCurrent();
 
   INTERVAL_Buzzer(50);
-  LOGGER_SetMode(LOGGER_MODE_SENSOR);
+  LOGGER_SetMode(LOGGER_MODE_TARGET);
   LOGGER_Clear();
   ODOMETRY_Reset();
   LINE_EnableFeedback(param->lineAngularVelocityPid);
@@ -100,7 +100,7 @@ void TraceLine()
     if (LINE_GetStartGoalState() == STARTGOAL_MARKER_START_PASSED)
     {
       INTERVAL_Buzzer(50);
-      LOGGER_Start(10);
+      LOGGER_Start(100);
     }
     if (LINE_GetCurvatureState() == CURVATURE_MARKER_PASSED)
     {
