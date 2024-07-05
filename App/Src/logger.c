@@ -10,6 +10,7 @@
 #include "servo.h"
 #include "parameter_static.h"
 
+#define PARAMETER_STATIC_LOGGER_ENABLED 1
 #if PARAMETER_STATIC_LOGGER_ENABLED != 0
 typedef enum
 {

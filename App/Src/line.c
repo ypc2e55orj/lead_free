@@ -5,7 +5,6 @@
 
 // libc
 #include <stdio.h>
-#include <stdbool.h>
 #include <math.h>
 #include <float.h>
 
@@ -328,6 +327,13 @@ void LINE_EnableFeedback(const float *lineAngVeloPidGain)
 void LINE_DisableFeedback()
 {
   lineEnableFeedback = false;
+}
+/**
+ * @brief Get feedback state
+ */
+bool LINE_IsFeedbackEnabled()
+{
+  return lineEnableFeedback;
 }
 /**
  * @brief Print line value

@@ -2,6 +2,7 @@
 
 // libc
 #include <stdint.h>
+#include <stdbool.h>
 
 // project
 #include "sensor.h"
@@ -108,6 +109,10 @@ void LINE_EnableFeedback(const float *lineAngVeloPidGain);
  * @brief Disable line feedback
  */
 void LINE_DisableFeedback();
+/**
+ * @brief Get feedback state
+ */
+bool LINE_IsFeedbackEnabled();
 /**
  * @brief Print line value
  */

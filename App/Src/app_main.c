@@ -18,6 +18,7 @@
 #include "logger.h"
 #include "run.h"
 #include "line.h"
+#include "search.h"
 
 void Delay(int ms)
 {
@@ -88,13 +89,14 @@ void TraceLine()
   LOGGER_SetMode(LOGGER_MODE_TARGET);
   LOGGER_Clear();
   ODOMETRY_Reset();
-  LINE_EnableFeedback(param->lineAngularVelocityPid);
-  LINE_ResetStartGoalState();
-  LINE_ResetCurvatureState();
   SERVO_SetTargetVelocity(0.0f);
   SERVO_SetMaxVelocity(param->maxVelocity);
   SERVO_Start(param->velocityPid, param->angularVelocityPid);
   SERVO_SetAcceleration(param->acceleration);
+  LINE_ResetStartGoalState();
+  LINE_ResetCurvatureState();
+  LINE_EnableFeedback(param->lineAngularVelocityPid);
+  SEARCH_Start();
   while (LINE_GetStartGoalState() != STARTGOAL_MARKER_GOAL_PASSED)
   {
     if (LINE_GetStartGoalState() == STARTGOAL_MARKER_START_PASSED)
@@ -111,31 +113,84 @@ void TraceLine()
       EmergencyStop();
       return;
     }
-    float velo = LINE_GetAngularVelocity();
-    float sign = velo < 0.0f ? -1.0f : 1.0f;
-    SERVO_SetAngularAcceleration(sign * param->acceleration);
-    SERVO_SetTargetAngularVelocity(velo);
-    SERVO_SetMaxAngularVelocity(sign * velo);
+    RUN_LineFeedback();
   }
+  SEARCH_Stop();
   LOGGER_Stop();
   INTERVAL_Buzzer(50);
   float stopLength = odom->length + 0.25f;
   while (odom->length < stopLength)
   {
-    float velo = LINE_GetAngularVelocity();
-    float sign = velo < 0.0f ? -1.0f : 1.0f;
-    SERVO_SetAngularAcceleration(sign * param->acceleration);
-    SERVO_SetTargetAngularVelocity(velo);
-    SERVO_SetMaxAngularVelocity(sign * velo);
+    RUN_LineFeedback();
   }
   SERVO_SetAcceleration(-1.0f * param->acceleration);
   while (*SERVO_GetTargetVelocity() > param->minVelocity)
   {
-    float velo = LINE_GetAngularVelocity();
-    float sign = velo < 0.0f ? -1.0f : 1.0f;
-    SERVO_SetAngularAcceleration(sign * param->acceleration);
-    SERVO_SetTargetAngularVelocity(velo);
-    SERVO_SetMaxAngularVelocity(sign * velo);
+    RUN_LineFeedback();
+  }
+  SERVO_Stop();
+  INTERVAL_Buzzer(50);
+}
+
+void FastTraceLine()
+{
+  PARAMETER_SetIndex(2);
+  const PARAMETER *param = PARAMETER_Get();
+  const ODOMETRY *odom = ODOMETRY_GetCurrent();
+
+  INTERVAL_Buzzer(50);
+  LOGGER_SetMode(LOGGER_MODE_TARGET);
+  LOGGER_Clear();
+  ODOMETRY_Reset();
+  LINE_EnableFeedback(param->lineAngularVelocityPid);
+  LINE_ResetStartGoalState();
+  LINE_ResetCurvatureState();
+  SERVO_SetTargetVelocity(0.0f);
+  SERVO_SetMaxVelocity(param->maxVelocity);
+  SERVO_Start(param->velocityPid, param->angularVelocityPid);
+  SERVO_SetAcceleration(param->acceleration);
+  FAST_Start();
+  while (LINE_GetStartGoalState() != STARTGOAL_MARKER_GOAL_PASSED)
+  {
+    if (LINE_GetStartGoalState() == STARTGOAL_MARKER_START_PASSED)
+    {
+      INTERVAL_Buzzer(50);
+      LOGGER_Start(100);
+    }
+    if (LINE_GetCurvatureState() == CURVATURE_MARKER_PASSED)
+    {
+      INTERVAL_Buzzer(50);
+    }
+    if (LINE_GetStartGoalState() == STARTGOAL_MARKER_GOAL_WAITING)
+    {
+      const COURSE *course = FAST_Get();
+      if (course != NULL && course->pattern == COURSE_PATTERN_STRAIGHT)
+      {
+        RUN_Straight(RUN_DIRECTION_FORWARD, course->length, param->acceleration, param->minVelocity, param->maxVelocity, param->minVelocity);
+      }
+      else
+      {
+        RUN_LineFeedback();
+      }
+    }
+    if (LINE_GetLineState() == LINE_STATE_COURSE_OUT)
+    {
+      EmergencyStop();
+      return;
+    }
+  }
+  FAST_Stop();
+  LOGGER_Stop();
+  INTERVAL_Buzzer(50);
+  float stopLength = odom->length + 0.25f;
+  while (odom->length < stopLength)
+  {
+    RUN_LineFeedback();
+  }
+  SERVO_SetAcceleration(-1.0f * param->acceleration);
+  while (*SERVO_GetTargetVelocity() > param->minVelocity)
+  {
+    RUN_LineFeedback();
   }
   SERVO_Stop();
   INTERVAL_Buzzer(50);
@@ -156,7 +211,12 @@ void app_main(void)
     {
       while (BUTTON_GetSw1())
         ;
+      TraceLine();
+
+      while (!BUTTON_GetSw1())
+        ;
       INTERVAL_Buzzer(50);
+      SEARCH_Print();
       LOGGER_Print();
       INTERVAL_Buzzer(50);
     }
@@ -164,7 +224,12 @@ void app_main(void)
     {
       while (BUTTON_GetSw2())
         ;
-      TraceLine();
+      FastTraceLine();
+      while (!BUTTON_GetSw2())
+        ;
+      INTERVAL_Buzzer(50);
+      LOGGER_Print();
+      INTERVAL_Buzzer(50);
     }
   }
 }

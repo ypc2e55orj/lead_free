@@ -6,31 +6,53 @@
 // project
 #include "odometry.h"
 #include "servo.h"
+#include "parameter.h"
+#include "odometry.h"
+#include "interval.h"
+#include "line.h"
+
+/**
+ * @brief Feedback line
+ */
+void RUN_LineFeedback()
+{
+  const PARAMETER *param = PARAMETER_Get();
+  float angVelo = LINE_GetAngularVelocity();
+  float angSign = angVelo < 0.0f ? -1.0f : 1.0f;
+  SERVO_SetAngularAcceleration(angSign * param->angularAcceleration);
+  SERVO_SetTargetAngularVelocity(angVelo);
+  SERVO_SetMaxAngularVelocity(angSign * angVelo);
+}
 
 /**
  * @brief Straight
  */
 void RUN_Straight(RUN_DIRECTION dir, float length, float accel, float minVelo, float maxVelo, float endVelo)
 {
-  ODOMETRY_Reset();
   SERVO_Reset();
 
   const ODOMETRY *odom = ODOMETRY_GetCurrent();
   const float *tarVelo = SERVO_GetTargetVelocity();
 
+  float startLength = odom->length;
   float sign = dir == RUN_DIRECTION_FORWARD ? 1.0f : -1.0f;
   float accelLength = (maxVelo * maxVelo - *tarVelo * *tarVelo) / (2.0f * accel);
   float decelLength = (maxVelo * maxVelo - endVelo * endVelo) / (2.0f * accel);
 
   SERVO_SetMaxVelocity(maxVelo);
   SERVO_SetAcceleration(sign * accel);
-  while (accelLength > sign * odom->length)
-    ;
-  while (length - decelLength > sign * odom->length)
-    ;
-  SERVO_SetAcceleration(-1.0f * sign * accel);
-  while (length > sign * odom->length)
+  while (accelLength > sign * (odom->length - startLength))
   {
+    RUN_LineFeedback();
+  }
+  while (length - decelLength > sign * (odom->length - startLength))
+  {
+    RUN_LineFeedback();
+  }
+  SERVO_SetAcceleration(-1.0f * sign * accel);
+  while (length > sign * (odom->length - startLength))
+  {
+    RUN_LineFeedback();
     if (sign * *tarVelo < minVelo)
     {
       SERVO_SetAcceleration(0.0f);

@@ -8,6 +8,7 @@
 #include "button.h"
 #include "logger.h"
 #include "line.h"
+#include "search.h"
 
 /* Variables ------------------------------------------------------------------*/
 //! TIM6 Handler extern
@@ -48,6 +49,7 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
       LINE_UpdateInterval();
       ODOMETRY_CalculateInterval();
       SERVO_UpdateInterval();
+      SEARCH_Update();
       LOGGER_Update();
       updateState = UPDATE_STATE_GYRO;
       break;

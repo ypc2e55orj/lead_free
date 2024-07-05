@@ -9,6 +9,10 @@ typedef enum
 } RUN_DIRECTION;
 
 /**
+ * @brief Line feedback
+ */
+void RUN_LineFeedback();
+/**
  * @brief Straight
  */
 void RUN_Straight(RUN_DIRECTION dir, float length, float accel, float minVelo, float maxVelo, float endVelo);
