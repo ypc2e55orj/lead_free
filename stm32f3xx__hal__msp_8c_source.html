@@ -74,55 +74,55 @@ $(function() {
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">/* Includes ------------------------------------------------------------------*/</span></div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="main_8h.html">main.h</a>&quot;</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">/* USER CODE BEGIN Includes */</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">/* USER CODE END Includes */</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">extern</span> DMA_HandleTypeDef <a class="code" href="stm32f3xx__hal__msp_8c.html#a1c126854bb1813d31ab4776b21dcc51f">hdma_adc1</a>;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">extern</span> DMA_HandleTypeDef <a class="code" href="stm32f3xx__hal__msp_8c.html#ad99dd74cc50b61cf07680c1adaf80337">hdma_adc2</a>;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">extern</span> DMA_HandleTypeDef <a class="code" href="stm32f3xx__hal__msp_8c.html#a9cf31216ab15c3f167902641b70c0f38">hdma_i2c1_rx</a>;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">extern</span> DMA_HandleTypeDef <a class="code" href="stm32f3xx__hal__msp_8c.html#ae4780ad74b8c24d6fffa8ec7fc8ea105">hdma_i2c1_tx</a>;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">/* Private typedef -----------------------------------------------------------*/</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">/* USER CODE BEGIN TD */</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment">/* USER CODE END TD */</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment">/* Private define ------------------------------------------------------------*/</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment">/* USER CODE BEGIN Define */</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment">/* USER CODE END Define */</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment">/* Private macro -------------------------------------------------------------*/</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment">/* USER CODE BEGIN Macro */</span></div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="comment">/* USER CODE END Macro */</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="comment">/* Private variables ---------------------------------------------------------*/</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="comment">/* USER CODE BEGIN PV */</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="comment">/* USER CODE END PV */</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="comment">/* Private function prototypes -----------------------------------------------*/</span></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="comment">/* USER CODE BEGIN PFP */</span></div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="comment">/* USER CODE END PFP */</span></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="comment">/* External functions --------------------------------------------------------*/</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="comment">/* USER CODE BEGIN ExternalFunctions */</span></div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="comment">/* USER CODE END ExternalFunctions */</span></div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="comment">/* USER CODE BEGIN 0 */</span></div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="comment">/* USER CODE END 0 */</span></div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="keywordtype">void</span> <a class="code" href="stm32f3xx__hal__msp_8c.html#ae70bce6c39d0b570a7523b86738cec4b">HAL_TIM_MspPostInit</a>(TIM_HandleTypeDef *htim);</div>
-<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="stm32f3xx__hal__msp_8c.html#ae4fb8e66865c87d0ebab74a726a6891f">   73</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="stm32f3xx__hal__msp_8c.html#ae4fb8e66865c87d0ebab74a726a6891f">HAL_MspInit</a>(<span class="keywordtype">void</span>)</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;{</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">/* USER CODE BEGIN Includes */</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">/* USER CODE END Includes */</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">extern</span> DMA_HandleTypeDef <a class="code" href="stm32f3xx__hal__msp_8c.html#a1c126854bb1813d31ab4776b21dcc51f">hdma_adc1</a>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">extern</span> DMA_HandleTypeDef <a class="code" href="stm32f3xx__hal__msp_8c.html#ad99dd74cc50b61cf07680c1adaf80337">hdma_adc2</a>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">extern</span> DMA_HandleTypeDef <a class="code" href="stm32f3xx__hal__msp_8c.html#a9cf31216ab15c3f167902641b70c0f38">hdma_i2c1_rx</a>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">extern</span> DMA_HandleTypeDef <a class="code" href="stm32f3xx__hal__msp_8c.html#ae4780ad74b8c24d6fffa8ec7fc8ea105">hdma_i2c1_tx</a>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment">/* Private typedef -----------------------------------------------------------*/</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">/* USER CODE BEGIN TD */</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment">/* USER CODE END TD */</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">/* Private define ------------------------------------------------------------*/</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment">/* USER CODE BEGIN Define */</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment">/* USER CODE END Define */</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment">/* Private macro -------------------------------------------------------------*/</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment">/* USER CODE BEGIN Macro */</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="comment">/* USER CODE END Macro */</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="comment">/* Private variables ---------------------------------------------------------*/</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="comment">/* USER CODE BEGIN PV */</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="comment">/* USER CODE END PV */</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="comment">/* Private function prototypes -----------------------------------------------*/</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="comment">/* USER CODE BEGIN PFP */</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="comment">/* USER CODE END PFP */</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="comment">/* External functions --------------------------------------------------------*/</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="comment">/* USER CODE BEGIN ExternalFunctions */</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="comment">/* USER CODE END ExternalFunctions */</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="comment">/* USER CODE BEGIN 0 */</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="comment">/* USER CODE END 0 */</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="keywordtype">void</span> <a class="code" href="stm32f3xx__hal__msp_8c.html#ae70bce6c39d0b570a7523b86738cec4b">HAL_TIM_MspPostInit</a>(TIM_HandleTypeDef *htim);</div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="stm32f3xx__hal__msp_8c.html#ae4fb8e66865c87d0ebab74a726a6891f">   72</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="stm32f3xx__hal__msp_8c.html#ae4fb8e66865c87d0ebab74a726a6891f">HAL_MspInit</a>(<span class="keywordtype">void</span>)</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;{</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  <span class="comment">/* USER CODE BEGIN MspInit 0 */</span></div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  <span class="comment">/* USER CODE END MspInit 0 */</span></div>
@@ -605,7 +605,7 @@ $(function() {
 <div class="line"><a name="l00666"></a><span class="lineno">  666</span>&#160;<span class="comment">/* USER CODE END 1 */</span></div>
 <div class="ttc" id="amain_8h_html"><div class="ttname"><a href="main_8h.html">main.h</a></div><div class="ttdoc">: Header for main.c file. This file contains the common defines of the application.</div></div>
 <div class="ttc" id="amain_8h_html_a10a02ca988625822680999d97c501a82"><div class="ttname"><a href="main_8h.html#a10a02ca988625822680999d97c501a82">Bmx055Sda_GPIO_Port</a></div><div class="ttdeci">#define Bmx055Sda_GPIO_Port</div><div class="ttdef"><b>Definition:</b> <a href="main_8h_source.html#l00113">main.h:113</a></div></div>
-<div class="ttc" id="amain_8h_html_a1730ffe1e560465665eb47d9264826f9"><div class="ttname"><a href="main_8h.html#a1730ffe1e560465665eb47d9264826f9">Error_Handler</a></div><div class="ttdeci">void Error_Handler(void)</div><div class="ttdoc">This function is executed in case of error occurrence.</div><div class="ttdef"><b>Definition:</b> <a href="main_8c_source.html#l00803">main.c:803</a></div></div>
+<div class="ttc" id="amain_8h_html_a1730ffe1e560465665eb47d9264826f9"><div class="ttname"><a href="main_8h.html#a1730ffe1e560465665eb47d9264826f9">Error_Handler</a></div><div class="ttdeci">void Error_Handler(void)</div><div class="ttdoc">This function is executed in case of error occurrence.</div><div class="ttdef"><b>Definition:</b> <a href="main_8c_source.html#l00804">main.c:804</a></div></div>
 <div class="ttc" id="amain_8h_html_a2be69394c9cc9ccbf570c4a2737e6eca"><div class="ttname"><a href="main_8h.html#a2be69394c9cc9ccbf570c4a2737e6eca">EncoderRightA_Pin</a></div><div class="ttdeci">#define EncoderRightA_Pin</div><div class="ttdef"><b>Definition:</b> <a href="main_8h_source.html#l00068">main.h:68</a></div></div>
 <div class="ttc" id="amain_8h_html_a30757df57cbc78bd10cf2c030737b8d8"><div class="ttname"><a href="main_8h.html#a30757df57cbc78bd10cf2c030737b8d8">MotorRightEnable_Pin</a></div><div class="ttdeci">#define MotorRightEnable_Pin</div><div class="ttdef"><b>Definition:</b> <a href="main_8h_source.html#l00108">main.h:108</a></div></div>
 <div class="ttc" id="amain_8h_html_a337a3ce5ac30c4822454eeb27384eb23"><div class="ttname"><a href="main_8h.html#a337a3ce5ac30c4822454eeb27384eb23">LineSensorLeftIn_Pin</a></div><div class="ttdeci">#define LineSensorLeftIn_Pin</div><div class="ttdef"><b>Definition:</b> <a href="main_8h_source.html#l00076">main.h:76</a></div></div>
@@ -640,7 +640,7 @@ $(function() {
 <div class="ttc" id="astm32f3xx__hal__msp_8c_html_abe01a202c27b23fc150aa66af3130073"><div class="ttname"><a href="stm32f3xx__hal__msp_8c.html#abe01a202c27b23fc150aa66af3130073">HAL_I2C_MspInit</a></div><div class="ttdeci">void HAL_I2C_MspInit(I2C_HandleTypeDef *hi2c)</div><div class="ttdoc">I2C MSP Initialization This function configures the hardware resources used in this example</div><div class="ttdef"><b>Definition:</b> <a href="stm32f3xx__hal__msp_8c_source.html#l00264">stm32f3xx_hal_msp.c:264</a></div></div>
 <div class="ttc" id="astm32f3xx__hal__msp_8c_html_ad99dd74cc50b61cf07680c1adaf80337"><div class="ttname"><a href="stm32f3xx__hal__msp_8c.html#ad99dd74cc50b61cf07680c1adaf80337">hdma_adc2</a></div><div class="ttdeci">DMA_HandleTypeDef hdma_adc2</div><div class="ttdef"><b>Definition:</b> <a href="main_8c_source.html#l00044">main.c:44</a></div></div>
 <div class="ttc" id="astm32f3xx__hal__msp_8c_html_ae4780ad74b8c24d6fffa8ec7fc8ea105"><div class="ttname"><a href="stm32f3xx__hal__msp_8c.html#ae4780ad74b8c24d6fffa8ec7fc8ea105">hdma_i2c1_tx</a></div><div class="ttdeci">DMA_HandleTypeDef hdma_i2c1_tx</div><div class="ttdef"><b>Definition:</b> <a href="main_8c_source.html#l00048">main.c:48</a></div></div>
-<div class="ttc" id="astm32f3xx__hal__msp_8c_html_ae4fb8e66865c87d0ebab74a726a6891f"><div class="ttname"><a href="stm32f3xx__hal__msp_8c.html#ae4fb8e66865c87d0ebab74a726a6891f">HAL_MspInit</a></div><div class="ttdeci">void HAL_MspInit(void)</div><div class="ttdef"><b>Definition:</b> <a href="stm32f3xx__hal__msp_8c_source.html#l00073">stm32f3xx_hal_msp.c:73</a></div></div>
+<div class="ttc" id="astm32f3xx__hal__msp_8c_html_ae4fb8e66865c87d0ebab74a726a6891f"><div class="ttname"><a href="stm32f3xx__hal__msp_8c.html#ae4fb8e66865c87d0ebab74a726a6891f">HAL_MspInit</a></div><div class="ttdeci">void HAL_MspInit(void)</div><div class="ttdef"><b>Definition:</b> <a href="stm32f3xx__hal__msp_8c_source.html#l00072">stm32f3xx_hal_msp.c:72</a></div></div>
 <div class="ttc" id="astm32f3xx__hal__msp_8c_html_ae70bce6c39d0b570a7523b86738cec4b"><div class="ttname"><a href="stm32f3xx__hal__msp_8c.html#ae70bce6c39d0b570a7523b86738cec4b">HAL_TIM_MspPostInit</a></div><div class="ttdeci">void HAL_TIM_MspPostInit(TIM_HandleTypeDef *htim)</div><div class="ttdef"><b>Definition:</b> <a href="stm32f3xx__hal__msp_8c_source.html#l00466">stm32f3xx_hal_msp.c:466</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

@@ -75,7 +75,7 @@ ODOMETRY 連携図</div>
 <div class="dyncontent">
 <div class="center"><img src="structODOMETRY__coll__graph.png" border="0" usemap="#aODOMETRY_coll__map" alt="Collaboration graph"/></div>
 <map name="aODOMETRY_coll__map" id="aODOMETRY_coll__map">
-<area shape="rect" title=" " alt="" coords="5,5,144,156"/>
+<area shape="rect" title=" " alt="" coords="5,5,151,171"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -99,10 +99,13 @@ ODOMETRY 連携図</div>
 <tr class="memitem:a26591010f5faee9caaf10598db0e03e8"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structODOMETRY.html#a26591010f5faee9caaf10598db0e03e8">y</a></td></tr>
 <tr class="memdesc:a26591010f5faee9caaf10598db0e03e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">[m]  <a href="structODOMETRY.html#a26591010f5faee9caaf10598db0e03e8">[詳解]</a><br /></td></tr>
 <tr class="separator:a26591010f5faee9caaf10598db0e03e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7236b723b0428c64b59aede1237e5cfc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structODOMETRY.html#a7236b723b0428c64b59aede1237e5cfc">isApproxStraight</a></td></tr>
+<tr class="memdesc:a7236b723b0428c64b59aede1237e5cfc"><td class="mdescLeft">&#160;</td><td class="mdescRight">true if the robot is moving straight  <a href="structODOMETRY.html#a7236b723b0428c64b59aede1237e5cfc">[詳解]</a><br /></td></tr>
+<tr class="separator:a7236b723b0428c64b59aede1237e5cfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
 <div class="textblock">
-<p class="definition"> <a class="el" href="odometry_8h_source.html">odometry.h</a> の <a class="el" href="odometry_8h_source.html#l00007">7</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="odometry_8h_source.html">odometry.h</a> の <a class="el" href="odometry_8h_source.html#l00008">8</a> 行目に定義があります。</p>
 </div><h2 class="groupheader">メンバ詳解</h2>
 <a id="ac9716fda3def02f0c5c0a344890f09a3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac9716fda3def02f0c5c0a344890f09a3">&#9670;&nbsp;</a></span>angle</h2>
@@ -118,9 +121,9 @@ ODOMETRY 連携図</div>
 
 <p>[rad] </p>
 
-<p class="definition"> <a class="el" href="odometry_8h_source.html">odometry.h</a> の <a class="el" href="odometry_8h_source.html#l00012">12</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="odometry_8h_source.html">odometry.h</a> の <a class="el" href="odometry_8h_source.html#l00013">13</a> 行目に定義があります。</p>
 
-<p class="reference">参照元 <a class="el" href="logger_8c_source.html#l00100">LOGGER_UpdateTarget()</a>, <a class="el" href="odometry_8c_source.html#l00026">ODOMETRY_CalculateInterval()</a>, <a class="el" href="odometry_8c_source.html#l00062">ODOMETRY_Reset()</a>, <a class="el" href="run_8c_source.html#l00047">RUN_Turn()</a>.</p>
+<p class="reference">参照元 <a class="el" href="logger_8c_source.html#l00101">LOGGER_UpdateTarget()</a>, <a class="el" href="odometry_8c_source.html#l00026">ODOMETRY_CalculateInterval()</a>, <a class="el" href="odometry_8c_source.html#l00066">ODOMETRY_Reset()</a>, <a class="el" href="run_8c_source.html#l00047">RUN_Turn()</a>.</p>
 
 </div>
 </div>
@@ -138,9 +141,29 @@ ODOMETRY 連携図</div>
 
 <p>[rad/s] </p>
 
-<p class="definition"> <a class="el" href="odometry_8h_source.html">odometry.h</a> の <a class="el" href="odometry_8h_source.html#l00010">10</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="odometry_8h_source.html">odometry.h</a> の <a class="el" href="odometry_8h_source.html#l00011">11</a> 行目に定義があります。</p>
 
-<p class="reference">参照元 <a class="el" href="logger_8c_source.html#l00100">LOGGER_UpdateTarget()</a>, <a class="el" href="odometry_8c_source.html#l00026">ODOMETRY_CalculateInterval()</a>, <a class="el" href="servo_8c_source.html#l00139">SERVO_UpdateInterval()</a>.</p>
+<p class="reference">参照元 <a class="el" href="logger_8c_source.html#l00101">LOGGER_UpdateTarget()</a>, <a class="el" href="odometry_8c_source.html#l00026">ODOMETRY_CalculateInterval()</a>, <a class="el" href="servo_8c_source.html#l00139">SERVO_UpdateInterval()</a>.</p>
+
+</div>
+</div>
+<a id="a7236b723b0428c64b59aede1237e5cfc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7236b723b0428c64b59aede1237e5cfc">&#9670;&nbsp;</a></span>isApproxStraight</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ODOMETRY::isApproxStraight</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>true if the robot is moving straight </p>
+
+<p class="definition"> <a class="el" href="odometry_8h_source.html">odometry.h</a> の <a class="el" href="odometry_8h_source.html#l00016">16</a> 行目に定義があります。</p>
+
+<p class="reference">参照元 <a class="el" href="logger_8c_source.html#l00101">LOGGER_UpdateTarget()</a>, <a class="el" href="odometry_8c_source.html#l00026">ODOMETRY_CalculateInterval()</a>.</p>
 
 </div>
 </div>
@@ -158,9 +181,9 @@ ODOMETRY 連携図</div>
 
 <p>[m] </p>
 
-<p class="definition"> <a class="el" href="odometry_8h_source.html">odometry.h</a> の <a class="el" href="odometry_8h_source.html#l00011">11</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="odometry_8h_source.html">odometry.h</a> の <a class="el" href="odometry_8h_source.html#l00012">12</a> 行目に定義があります。</p>
 
-<p class="reference">参照元 <a class="el" href="logger_8c_source.html#l00100">LOGGER_UpdateTarget()</a>, <a class="el" href="odometry_8c_source.html#l00026">ODOMETRY_CalculateInterval()</a>, <a class="el" href="odometry_8c_source.html#l00062">ODOMETRY_Reset()</a>, <a class="el" href="run_8c_source.html#l00013">RUN_Straight()</a>, <a class="el" href="app__main_8c_source.html#l00082">TraceLine()</a>.</p>
+<p class="reference">参照元 <a class="el" href="logger_8c_source.html#l00101">LOGGER_UpdateTarget()</a>, <a class="el" href="odometry_8c_source.html#l00026">ODOMETRY_CalculateInterval()</a>, <a class="el" href="odometry_8c_source.html#l00066">ODOMETRY_Reset()</a>, <a class="el" href="run_8c_source.html#l00013">RUN_Straight()</a>, <a class="el" href="app__main_8c_source.html#l00082">TraceLine()</a>.</p>
 
 </div>
 </div>
@@ -178,9 +201,9 @@ ODOMETRY 連携図</div>
 
 <p>[m/s] </p>
 
-<p class="definition"> <a class="el" href="odometry_8h_source.html">odometry.h</a> の <a class="el" href="odometry_8h_source.html#l00009">9</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="odometry_8h_source.html">odometry.h</a> の <a class="el" href="odometry_8h_source.html#l00010">10</a> 行目に定義があります。</p>
 
-<p class="reference">参照元 <a class="el" href="logger_8c_source.html#l00100">LOGGER_UpdateTarget()</a>, <a class="el" href="odometry_8c_source.html#l00026">ODOMETRY_CalculateInterval()</a>, <a class="el" href="servo_8c_source.html#l00139">SERVO_UpdateInterval()</a>.</p>
+<p class="reference">参照元 <a class="el" href="logger_8c_source.html#l00101">LOGGER_UpdateTarget()</a>, <a class="el" href="odometry_8c_source.html#l00026">ODOMETRY_CalculateInterval()</a>, <a class="el" href="servo_8c_source.html#l00139">SERVO_UpdateInterval()</a>.</p>
 
 </div>
 </div>
@@ -198,9 +221,9 @@ ODOMETRY 連携図</div>
 
 <p>[m] </p>
 
-<p class="definition"> <a class="el" href="odometry_8h_source.html">odometry.h</a> の <a class="el" href="odometry_8h_source.html#l00013">13</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="odometry_8h_source.html">odometry.h</a> の <a class="el" href="odometry_8h_source.html#l00014">14</a> 行目に定義があります。</p>
 
-<p class="reference">参照元 <a class="el" href="logger_8c_source.html#l00140">LOGGER_UpdateOdometry()</a>, <a class="el" href="logger_8c_source.html#l00100">LOGGER_UpdateTarget()</a>, <a class="el" href="odometry_8c_source.html#l00026">ODOMETRY_CalculateInterval()</a>, <a class="el" href="odometry_8c_source.html#l00070">ODOMETRY_ResetPos()</a>.</p>
+<p class="reference">参照元 <a class="el" href="logger_8c_source.html#l00143">LOGGER_UpdateOdometry()</a>, <a class="el" href="logger_8c_source.html#l00101">LOGGER_UpdateTarget()</a>, <a class="el" href="odometry_8c_source.html#l00026">ODOMETRY_CalculateInterval()</a>, <a class="el" href="odometry_8c_source.html#l00074">ODOMETRY_ResetPos()</a>.</p>
 
 </div>
 </div>
@@ -218,9 +241,9 @@ ODOMETRY 連携図</div>
 
 <p>[m] </p>
 
-<p class="definition"> <a class="el" href="odometry_8h_source.html">odometry.h</a> の <a class="el" href="odometry_8h_source.html#l00014">14</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="odometry_8h_source.html">odometry.h</a> の <a class="el" href="odometry_8h_source.html#l00015">15</a> 行目に定義があります。</p>
 
-<p class="reference">参照元 <a class="el" href="logger_8c_source.html#l00140">LOGGER_UpdateOdometry()</a>, <a class="el" href="logger_8c_source.html#l00100">LOGGER_UpdateTarget()</a>, <a class="el" href="odometry_8c_source.html#l00026">ODOMETRY_CalculateInterval()</a>, <a class="el" href="odometry_8c_source.html#l00070">ODOMETRY_ResetPos()</a>.</p>
+<p class="reference">参照元 <a class="el" href="logger_8c_source.html#l00143">LOGGER_UpdateOdometry()</a>, <a class="el" href="logger_8c_source.html#l00101">LOGGER_UpdateTarget()</a>, <a class="el" href="odometry_8c_source.html#l00026">ODOMETRY_CalculateInterval()</a>, <a class="el" href="odometry_8c_source.html#l00074">ODOMETRY_ResetPos()</a>.</p>
 
 </div>
 </div>

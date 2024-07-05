@@ -1,14 +1,14 @@
 <map id="App/Src/servo.c" name="App/Src/servo.c">
-<area shape="rect" id="node1" title=" " alt="" coords="363,5,486,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="327,5,450,32"/>
 <area shape="rect" id="node2" href="$servo_8h.html" title=" " alt="" coords="5,80,76,107"/>
 <area shape="rect" id="node3" title=" " alt="" coords="101,80,167,107"/>
 <area shape="rect" id="node4" title=" " alt="" coords="192,80,260,107"/>
-<area shape="rect" id="node5" title=" " alt="" coords="285,80,367,107"/>
-<area shape="rect" id="node6" href="$main_8h.html" title=": Header for main.c file. This file contains the common defines of the application." alt="" coords="391,80,458,107"/>
-<area shape="rect" id="node8" href="$sensor_8h.html" title=" " alt="" coords="483,80,559,107"/>
-<area shape="rect" id="node10" href="$odometry_8h.html" title=" " alt="" coords="583,80,677,107"/>
-<area shape="rect" id="node11" href="$pid_8h.html" title=" " alt="" coords="701,80,756,107"/>
-<area shape="rect" id="node12" href="$parameter__static_8h.html" title=" " alt="" coords="780,80,925,107"/>
-<area shape="rect" id="node7" title=" " alt="" coords="359,155,490,181"/>
-<area shape="rect" id="node9" title=" " alt="" coords="555,155,625,181"/>
+<area shape="rect" id="node5" title=" " alt="" coords="419,155,502,181"/>
+<area shape="rect" id="node6" href="$main_8h.html" title=": Header for main.c file. This file contains the common defines of the application." alt="" coords="285,80,351,107"/>
+<area shape="rect" id="node8" href="$sensor_8h.html" title=" " alt="" coords="545,80,621,107"/>
+<area shape="rect" id="node10" href="$odometry_8h.html" title=" " alt="" coords="427,80,521,107"/>
+<area shape="rect" id="node11" href="$pid_8h.html" title=" " alt="" coords="645,80,700,107"/>
+<area shape="rect" id="node12" href="$parameter__static_8h.html" title=" " alt="" coords="724,80,869,107"/>
+<area shape="rect" id="node7" title=" " alt="" coords="253,155,383,181"/>
+<area shape="rect" id="node9" title=" " alt="" coords="537,155,608,181"/>
 </map>
