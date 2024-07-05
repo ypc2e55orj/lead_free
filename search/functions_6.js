@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['gyro_5fgetyaw_587',['GYRO_GetYaw',['../sensor_8h.html#ad06e33bf7eaa70d78c6ab24ccb6a9ce3',1,'GYRO_GetYaw():&#160;sensor.c'],['../sensor_8c.html#ad06e33bf7eaa70d78c6ab24ccb6a9ce3',1,'GYRO_GetYaw():&#160;sensor.c']]],
-  ['gyro_5finit_588',['GYRO_Init',['../sensor_8c.html#a30661b3385e75411ed11f8318ac90e46',1,'sensor.c']]],
-  ['gyro_5fupdateyaw_589',['GYRO_UpdateYaw',['../sensor_8h.html#aaa87f34740c466ceb679fa4a37ddf072',1,'GYRO_UpdateYaw():&#160;sensor.c'],['../sensor_8c.html#aaa87f34740c466ceb679fa4a37ddf072',1,'GYRO_UpdateYaw():&#160;sensor.c']]]
+  ['fast_5fget_634',['FAST_Get',['../search_8h.html#a58d0f1210b7766ed0bd608fab0366488',1,'FAST_Get():&#160;search.c'],['../search_8c.html#a58d0f1210b7766ed0bd608fab0366488',1,'FAST_Get():&#160;search.c']]],
+  ['fast_5fstart_635',['FAST_Start',['../search_8h.html#a5d028f18e0b10a4ab3cb066476508dd3',1,'FAST_Start():&#160;search.c'],['../search_8c.html#a5d028f18e0b10a4ab3cb066476508dd3',1,'FAST_Start():&#160;search.c']]],
+  ['fast_5fstop_636',['FAST_Stop',['../search_8h.html#a99e70185aa59a099ec213e8d9d6897f2',1,'FAST_Stop():&#160;search.c'],['../search_8c.html#a99e70185aa59a099ec213e8d9d6897f2',1,'FAST_Stop():&#160;search.c']]],
+  ['fasttraceline_637',['FastTraceLine',['../app__main_8c.html#ae937e995b06f93817a1ab98734dcca2c',1,'app_main.c']]]
 ];

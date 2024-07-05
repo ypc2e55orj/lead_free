@@ -66,7 +66,10 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#func-members">関数</a>  </div>
+<a href="#define-members">マクロ定義</a> &#124;
+<a href="#enum-members">列挙型</a> &#124;
+<a href="#func-members">関数</a> &#124;
+<a href="#var-members">変数</a>  </div>
   <div class="headertitle">
 <div class="title">logger.c ファイル</div>  </div>
 </div><!--header-->
@@ -98,6 +101,49 @@ logger.c の依存先関係図:</div>
 </div>
 <p><a href="logger_8c_source.html">[ソースコード]</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+マクロ定義</h2></td></tr>
+<tr class="memitem:a203988d02ad608056ffc0f97025e645f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logger_8c.html#a203988d02ad608056ffc0f97025e645f">PARAMETER_STATIC_LOGGER_ENABLED</a>&#160;&#160;&#160;1</td></tr>
+<tr class="separator:a203988d02ad608056ffc0f97025e645f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+列挙型</h2></td></tr>
+<tr class="memitem:a8c740049983b6a96de6059f9c3232e49"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logger_8c.html#a8c740049983b6a96de6059f9c3232e49">LOGGER_MODE_SENSOR_ELEMENT</a> { <br />
+&#160;&#160;<a class="el" href="logger_8c.html#a8c740049983b6a96de6059f9c3232e49ad828f853b19aa56f58bc7f89d299db7e">LOGGER_MODE_SENSOR_ELEMENT_DUTY_RIGHT</a>
+, <a class="el" href="logger_8c.html#a8c740049983b6a96de6059f9c3232e49a65471aebda25afb8ab8eb54d1e0c8f43">LOGGER_MODE_SENSOR_ELEMENT_DUTY_LEFT</a>
+, <a class="el" href="logger_8c.html#a8c740049983b6a96de6059f9c3232e49a970bf635c4c36a3f6c878b13d9da3504">LOGGER_MODE_SENSOR_ELEMENT_RIGHT_OUT</a>
+, <a class="el" href="logger_8c.html#a8c740049983b6a96de6059f9c3232e49aef0daf4f9dc9a816a777d99feb7bb3aa">LOGGER_MODE_SENSOR_ELEMENT_RIGHT_IN</a>
+, <br />
+&#160;&#160;<a class="el" href="logger_8c.html#a8c740049983b6a96de6059f9c3232e49a7359d94873bcbf83e0f82a029f6af6c1">LOGGER_MODE_SENSOR_ELEMENT_LEFT_IN</a>
+, <a class="el" href="logger_8c.html#a8c740049983b6a96de6059f9c3232e49a2192c4561e9f5d8894c8bb77e3ca3315">LOGGER_MODE_SENSOR_ELEMENT_LEFT_OUT</a>
+, <a class="el" href="logger_8c.html#a8c740049983b6a96de6059f9c3232e49a28ede4d7bba00bcec3b4b1ee431f6642">NUM_LOGGER_MODE_SENSOR_ELEMENT</a>
+<br />
+ }</td></tr>
+<tr class="separator:a8c740049983b6a96de6059f9c3232e49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30f4d4ef1eb5f25904e32558418385b9"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logger_8c.html#a30f4d4ef1eb5f25904e32558418385b9">LOGGER_MODE_TARGET_ELEMENT</a> { <br />
+&#160;&#160;<a class="el" href="logger_8c.html#a30f4d4ef1eb5f25904e32558418385b9aba9533b5b22eae468825891aadb5c4fa">LOGGER_MODE_TARGET_ELEMENT_VELOCITY</a>
+, <a class="el" href="logger_8c.html#a30f4d4ef1eb5f25904e32558418385b9a2695783e8d4b935903f630e7ce1f594a">LOGGER_MODE_TARGET_ELEMENT_ANGULAR_VELOCITY</a>
+, <a class="el" href="logger_8c.html#a30f4d4ef1eb5f25904e32558418385b9abb8242acf0ed07644da3b572f99e9c71">LOGGER_MODE_TARGET_ELEMENT_DUTY_RIGHT</a>
+, <a class="el" href="logger_8c.html#a30f4d4ef1eb5f25904e32558418385b9ab55fa28f0e40c42451523605aebf9f06">LOGGER_MODE_TARGET_ELEMENT_DUTY_LEFT</a>
+, <br />
+&#160;&#160;<a class="el" href="logger_8c.html#a30f4d4ef1eb5f25904e32558418385b9a4b3b19156c9ddd0b21399ee005e61ebf">LOGGER_MODE_TARGET_ELEMENT_ODOMETRY_VELOCITY</a>
+, <a class="el" href="logger_8c.html#a30f4d4ef1eb5f25904e32558418385b9ac3cc8d44a6ba1f3eb6cdc637530ed4e1">LOGGER_MODE_TARGET_ELEMENT_ODOMETRY_LENGTH</a>
+, <a class="el" href="logger_8c.html#a30f4d4ef1eb5f25904e32558418385b9a680bf568a265e33730d8d89185f0dd0c">LOGGER_MODE_TARGET_ELEMENT_ODOMETRY_ANGULAR_VELOCITY</a>
+, <a class="el" href="logger_8c.html#a30f4d4ef1eb5f25904e32558418385b9ab39f3c1e700206a549c5740e48edd3ca">LOGGER_MODE_TARGET_ELEMENT_ODOMETRY_ANGLE</a>
+, <br />
+&#160;&#160;<a class="el" href="logger_8c.html#a30f4d4ef1eb5f25904e32558418385b9a53d2c8b5919800b0022a564d5165475d">LOGGER_MODE_TARGET_ELEMENT_ODOMETRY_X</a>
+, <a class="el" href="logger_8c.html#a30f4d4ef1eb5f25904e32558418385b9aca10e40b7b54001206fce82ac2b513e8">LOGGER_MODE_TARGET_ELEMENT_ODOMETRY_Y</a>
+, <a class="el" href="logger_8c.html#a30f4d4ef1eb5f25904e32558418385b9a17a5d2c870f8bd1545306ecd342c5b38">LOGGER_MODE_TARGET_ELEMENT_ODOMETRY_IS_APPROX_STRAIGHT</a>
+, <a class="el" href="logger_8c.html#a30f4d4ef1eb5f25904e32558418385b9ab6df48bf5ae297a767e47567e3ca0947">NUM_LOGGER_MODE_TARGET_ELEMENT</a>
+<br />
+ }</td></tr>
+<tr class="separator:a30f4d4ef1eb5f25904e32558418385b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac8d2c509219b68db4a2ce9cd3b0441a"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logger_8c.html#aac8d2c509219b68db4a2ce9cd3b0441a">LOGGER_MODE_ODOMETRY_ELEMENT</a> { <a class="el" href="logger_8c.html#aac8d2c509219b68db4a2ce9cd3b0441aa9f171df5c4e25c6062d2fd17d5281fd4">LOGGER_MODE_ODOMETRY_ELEMENT_X</a>
+, <a class="el" href="logger_8c.html#aac8d2c509219b68db4a2ce9cd3b0441aacc276323616bc7ca4f49b32e28b50966">LOGGER_MODE_ODOMETRY_ELEMENT_Y</a>
+, <a class="el" href="logger_8c.html#aac8d2c509219b68db4a2ce9cd3b0441aa57d49f81c6de99e527a0de45b9378d22">NUM_LOGGER_MODE_ODOMETRY_ELEMENT</a>
+ }</td></tr>
+<tr class="separator:aac8d2c509219b68db4a2ce9cd3b0441a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 関数</h2></td></tr>
 <tr class="memitem:a151edc08d024fd8c6f1143276c6875de"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logger_8c.html#a151edc08d024fd8c6f1143276c6875de">LOGGER_PrintHeaderSensor</a> ()</td></tr>
@@ -136,7 +182,119 @@ logger.c の依存先関係図:</div>
 <tr class="memitem:a7e1f6cceddb55ae4a35e23537e089d70"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logger_8c.html#a7e1f6cceddb55ae4a35e23537e089d70">LOGGER_Print</a> ()</td></tr>
 <tr class="memdesc:a7e1f6cceddb55ae4a35e23537e089d70"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pring log  <a href="logger_8c.html#a7e1f6cceddb55ae4a35e23537e089d70">[詳解]</a><br /></td></tr>
 <tr class="separator:a7e1f6cceddb55ae4a35e23537e089d70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+変数</h2></td></tr>
+<tr class="memitem:a9efbd28bbadcf184a3840be5618a5cb2"><td class="memItemLeft" align="right" valign="top">static int16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logger_8c.html#a9efbd28bbadcf184a3840be5618a5cb2">loggerBuffer</a> [<a class="el" href="parameter__static_8h.html#a9483c0ca433cfa6ec4cca9dd828eab79">PARAMETER_STATIC_LOGGER_BUFFER_SIZE</a>] = {}</td></tr>
+<tr class="memdesc:a9efbd28bbadcf184a3840be5618a5cb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">log buffer  <a href="logger_8c.html#a9efbd28bbadcf184a3840be5618a5cb2">[詳解]</a><br /></td></tr>
+<tr class="separator:a9efbd28bbadcf184a3840be5618a5cb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b7321bf20384ece076ad1732b1261a2"><td class="memItemLeft" align="right" valign="top">static uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logger_8c.html#a2b7321bf20384ece076ad1732b1261a2">loggerBufferIndex</a> = 0</td></tr>
+<tr class="memdesc:a2b7321bf20384ece076ad1732b1261a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">log index  <a href="logger_8c.html#a2b7321bf20384ece076ad1732b1261a2">[詳解]</a><br /></td></tr>
+<tr class="separator:a2b7321bf20384ece076ad1732b1261a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc0ebf668ccf0e581e2968caaa904f2e"><td class="memItemLeft" align="right" valign="top">static uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logger_8c.html#abc0ebf668ccf0e581e2968caaa904f2e">loggerFreqCountMax</a> = 0</td></tr>
+<tr class="memdesc:abc0ebf668ccf0e581e2968caaa904f2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">log interval count max  <a href="logger_8c.html#abc0ebf668ccf0e581e2968caaa904f2e">[詳解]</a><br /></td></tr>
+<tr class="separator:abc0ebf668ccf0e581e2968caaa904f2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d661e2af9e61b82a9f7badeba77f280"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="logger_8h.html#af5ec6072c032269d4011d55ec0f7f9be">LOGGER_MODE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logger_8c.html#a9d661e2af9e61b82a9f7badeba77f280">loggerMode</a> = 0</td></tr>
+<tr class="memdesc:a9d661e2af9e61b82a9f7badeba77f280"><td class="mdescLeft">&#160;</td><td class="mdescRight">log mode  <a href="logger_8c.html#a9d661e2af9e61b82a9f7badeba77f280">[詳解]</a><br /></td></tr>
+<tr class="separator:a9d661e2af9e61b82a9f7badeba77f280"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65c2347ef99ddcafbd64163e6ffdb82e"><td class="memItemLeft" align="right" valign="top">static uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logger_8c.html#a65c2347ef99ddcafbd64163e6ffdb82e">loggerModeElmNum</a> [<a class="el" href="logger_8h.html#af5ec6072c032269d4011d55ec0f7f9bea82ba2e3599d66e67fd4f4c2e566e9784">NUM_LOGGER_MODE</a>]</td></tr>
+<tr class="memdesc:a65c2347ef99ddcafbd64163e6ffdb82e"><td class="mdescLeft">&#160;</td><td class="mdescRight">mode element num  <a href="logger_8c.html#a65c2347ef99ddcafbd64163e6ffdb82e">[詳解]</a><br /></td></tr>
+<tr class="separator:a65c2347ef99ddcafbd64163e6ffdb82e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">マクロ定義詳解</h2>
+<a id="a203988d02ad608056ffc0f97025e645f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a203988d02ad608056ffc0f97025e645f">&#9670;&nbsp;</a></span>PARAMETER_STATIC_LOGGER_ENABLED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PARAMETER_STATIC_LOGGER_ENABLED&#160;&#160;&#160;1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="logger_8c_source.html">logger.c</a> の <a class="el" href="logger_8c_source.html#l00013">13</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<h2 class="groupheader">列挙型詳解</h2>
+<a id="aac8d2c509219b68db4a2ce9cd3b0441a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac8d2c509219b68db4a2ce9cd3b0441a">&#9670;&nbsp;</a></span>LOGGER_MODE_ODOMETRY_ELEMENT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="logger_8c.html#aac8d2c509219b68db4a2ce9cd3b0441a">LOGGER_MODE_ODOMETRY_ELEMENT</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="aac8d2c509219b68db4a2ce9cd3b0441aa9f171df5c4e25c6062d2fd17d5281fd4"></a>LOGGER_MODE_ODOMETRY_ELEMENT_X&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aac8d2c509219b68db4a2ce9cd3b0441aacc276323616bc7ca4f49b32e28b50966"></a>LOGGER_MODE_ODOMETRY_ELEMENT_Y&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aac8d2c509219b68db4a2ce9cd3b0441aa57d49f81c6de99e527a0de45b9378d22"></a>NUM_LOGGER_MODE_ODOMETRY_ELEMENT&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition"> <a class="el" href="logger_8c_source.html">logger.c</a> の <a class="el" href="logger_8c_source.html#l00042">42</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a8c740049983b6a96de6059f9c3232e49"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c740049983b6a96de6059f9c3232e49">&#9670;&nbsp;</a></span>LOGGER_MODE_SENSOR_ELEMENT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="logger_8c.html#a8c740049983b6a96de6059f9c3232e49">LOGGER_MODE_SENSOR_ELEMENT</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="a8c740049983b6a96de6059f9c3232e49ad828f853b19aa56f58bc7f89d299db7e"></a>LOGGER_MODE_SENSOR_ELEMENT_DUTY_RIGHT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a8c740049983b6a96de6059f9c3232e49a65471aebda25afb8ab8eb54d1e0c8f43"></a>LOGGER_MODE_SENSOR_ELEMENT_DUTY_LEFT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a8c740049983b6a96de6059f9c3232e49a970bf635c4c36a3f6c878b13d9da3504"></a>LOGGER_MODE_SENSOR_ELEMENT_RIGHT_OUT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a8c740049983b6a96de6059f9c3232e49aef0daf4f9dc9a816a777d99feb7bb3aa"></a>LOGGER_MODE_SENSOR_ELEMENT_RIGHT_IN&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a8c740049983b6a96de6059f9c3232e49a7359d94873bcbf83e0f82a029f6af6c1"></a>LOGGER_MODE_SENSOR_ELEMENT_LEFT_IN&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a8c740049983b6a96de6059f9c3232e49a2192c4561e9f5d8894c8bb77e3ca3315"></a>LOGGER_MODE_SENSOR_ELEMENT_LEFT_OUT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a8c740049983b6a96de6059f9c3232e49a28ede4d7bba00bcec3b4b1ee431f6642"></a>NUM_LOGGER_MODE_SENSOR_ELEMENT&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition"> <a class="el" href="logger_8c_source.html">logger.c</a> の <a class="el" href="logger_8c_source.html#l00015">15</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a30f4d4ef1eb5f25904e32558418385b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30f4d4ef1eb5f25904e32558418385b9">&#9670;&nbsp;</a></span>LOGGER_MODE_TARGET_ELEMENT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="logger_8c.html#a30f4d4ef1eb5f25904e32558418385b9">LOGGER_MODE_TARGET_ELEMENT</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="a30f4d4ef1eb5f25904e32558418385b9aba9533b5b22eae468825891aadb5c4fa"></a>LOGGER_MODE_TARGET_ELEMENT_VELOCITY&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a30f4d4ef1eb5f25904e32558418385b9a2695783e8d4b935903f630e7ce1f594a"></a>LOGGER_MODE_TARGET_ELEMENT_ANGULAR_VELOCITY&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a30f4d4ef1eb5f25904e32558418385b9abb8242acf0ed07644da3b572f99e9c71"></a>LOGGER_MODE_TARGET_ELEMENT_DUTY_RIGHT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a30f4d4ef1eb5f25904e32558418385b9ab55fa28f0e40c42451523605aebf9f06"></a>LOGGER_MODE_TARGET_ELEMENT_DUTY_LEFT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a30f4d4ef1eb5f25904e32558418385b9a4b3b19156c9ddd0b21399ee005e61ebf"></a>LOGGER_MODE_TARGET_ELEMENT_ODOMETRY_VELOCITY&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a30f4d4ef1eb5f25904e32558418385b9ac3cc8d44a6ba1f3eb6cdc637530ed4e1"></a>LOGGER_MODE_TARGET_ELEMENT_ODOMETRY_LENGTH&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a30f4d4ef1eb5f25904e32558418385b9a680bf568a265e33730d8d89185f0dd0c"></a>LOGGER_MODE_TARGET_ELEMENT_ODOMETRY_ANGULAR_VELOCITY&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a30f4d4ef1eb5f25904e32558418385b9ab39f3c1e700206a549c5740e48edd3ca"></a>LOGGER_MODE_TARGET_ELEMENT_ODOMETRY_ANGLE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a30f4d4ef1eb5f25904e32558418385b9a53d2c8b5919800b0022a564d5165475d"></a>LOGGER_MODE_TARGET_ELEMENT_ODOMETRY_X&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a30f4d4ef1eb5f25904e32558418385b9aca10e40b7b54001206fce82ac2b513e8"></a>LOGGER_MODE_TARGET_ELEMENT_ODOMETRY_Y&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a30f4d4ef1eb5f25904e32558418385b9a17a5d2c870f8bd1545306ecd342c5b38"></a>LOGGER_MODE_TARGET_ELEMENT_ODOMETRY_IS_APPROX_STRAIGHT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a30f4d4ef1eb5f25904e32558418385b9ab6df48bf5ae297a767e47567e3ca0947"></a>NUM_LOGGER_MODE_TARGET_ELEMENT&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition"> <a class="el" href="logger_8c_source.html">logger.c</a> の <a class="el" href="logger_8c_source.html#l00026">26</a> 行目に定義があります。</p>
+
+</div>
+</div>
 <h2 class="groupheader">関数詳解</h2>
 <a id="a5c31839f1b962339daaeb999d5caba50"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5c31839f1b962339daaeb999d5caba50">&#9670;&nbsp;</a></span>LOGGER_Clear()</h2>
@@ -155,18 +313,19 @@ logger.c の依存先関係図:</div>
 
 <p>Clear log </p>
 
-<p class="definition"> <a class="el" href="logger_8c_source.html">logger.c</a> の <a class="el" href="logger_8c_source.html#l00167">167</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="logger_8c_source.html">logger.c</a> の <a class="el" href="logger_8c_source.html#l00168">168</a> 行目に定義があります。</p>
 
-<p class="reference">参照元 <a class="el" href="app__main_8c_source.html#l00082">TraceLine()</a>.</p>
+<p class="reference">参照元 <a class="el" href="app__main_8c_source.html#l00135">FastTraceLine()</a>, <a class="el" href="app__main_8c_source.html#l00083">TraceLine()</a>.</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="logger_8c_a5c31839f1b962339daaeb999d5caba50_icgraph.png" border="0" usemap="#alogger_8c_a5c31839f1b962339daaeb999d5caba50_icgraph" alt=""/></div>
 <map name="alogger_8c_a5c31839f1b962339daaeb999d5caba50_icgraph" id="alogger_8c_a5c31839f1b962339daaeb999d5caba50_icgraph">
-<area shape="rect" title="Clear log" alt="" coords="373,5,491,32"/>
-<area shape="rect" href="app__main_8c.html#aba412806b10e230ad1f2aeb986d9b59c" title=" " alt="" coords="243,5,325,32"/>
-<area shape="rect" href="app__main_8h.html#a630544a7f0a2cc40d8a7fefab7e2fe70" title=" " alt="" coords="108,5,195,32"/>
-<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,5,60,32"/>
+<area shape="rect" title="Clear log" alt="" coords="400,31,517,57"/>
+<area shape="rect" href="app__main_8c.html#ae937e995b06f93817a1ab98734dcca2c" title=" " alt="" coords="243,5,352,32"/>
+<area shape="rect" href="app__main_8c.html#aba412806b10e230ad1f2aeb986d9b59c" title=" " alt="" coords="256,56,339,83"/>
+<area shape="rect" href="app__main_8h.html#a630544a7f0a2cc40d8a7fefab7e2fe70" title=" " alt="" coords="108,31,195,57"/>
+<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,31,60,57"/>
 </map>
 </div>
 
@@ -189,9 +348,9 @@ logger.c の依存先関係図:</div>
 
 <p>Pring log </p>
 
-<p class="definition"> <a class="el" href="logger_8c_source.html">logger.c</a> の <a class="el" href="logger_8c_source.html#l00252">252</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="logger_8c_source.html">logger.c</a> の <a class="el" href="logger_8c_source.html#l00253">253</a> 行目に定義があります。</p>
 
-<p class="reference">参照元 <a class="el" href="app__main_8c_source.html#l00144">app_main()</a>.</p>
+<p class="reference">参照元 <a class="el" href="app__main_8c_source.html#l00199">app_main()</a>.</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -241,9 +400,9 @@ logger.c の依存先関係図:</div>
 
 <p>Pring log (odometry mode) </p>
 
-<p class="definition"> <a class="el" href="logger_8c_source.html">logger.c</a> の <a class="el" href="logger_8c_source.html#l00154">154</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="logger_8c_source.html">logger.c</a> の <a class="el" href="logger_8c_source.html#l00155">155</a> 行目に定義があります。</p>
 
-<p class="reference">参照元 <a class="el" href="logger_8c_source.html#l00252">LOGGER_Print()</a>.</p>
+<p class="reference">参照元 <a class="el" href="logger_8c_source.html#l00253">LOGGER_Print()</a>.</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
@@ -283,9 +442,9 @@ logger.c の依存先関係図:</div>
 
 <p>Pring log (target mode) </p>
 
-<p class="definition"> <a class="el" href="logger_8c_source.html">logger.c</a> の <a class="el" href="logger_8c_source.html#l00067">67</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="logger_8c_source.html">logger.c</a> の <a class="el" href="logger_8c_source.html#l00068">68</a> 行目に定義があります。</p>
 
-<p class="reference">参照元 <a class="el" href="logger_8c_source.html#l00252">LOGGER_Print()</a>.</p>
+<p class="reference">参照元 <a class="el" href="logger_8c_source.html#l00253">LOGGER_Print()</a>.</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
@@ -325,9 +484,9 @@ logger.c の依存先関係図:</div>
 
 <p>Pring log (target mode) </p>
 
-<p class="definition"> <a class="el" href="logger_8c_source.html">logger.c</a> の <a class="el" href="logger_8c_source.html#l00121">121</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="logger_8c_source.html">logger.c</a> の <a class="el" href="logger_8c_source.html#l00122">122</a> 行目に定義があります。</p>
 
-<p class="reference">参照元 <a class="el" href="logger_8c_source.html#l00252">LOGGER_Print()</a>.</p>
+<p class="reference">参照元 <a class="el" href="logger_8c_source.html#l00253">LOGGER_Print()</a>.</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
@@ -360,18 +519,19 @@ logger.c の依存先関係図:</div>
 
 <p>Set logger mode </p>
 
-<p class="definition"> <a class="el" href="logger_8c_source.html">logger.c</a> の <a class="el" href="logger_8c_source.html#l00199">199</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="logger_8c_source.html">logger.c</a> の <a class="el" href="logger_8c_source.html#l00200">200</a> 行目に定義があります。</p>
 
-<p class="reference">参照元 <a class="el" href="app__main_8c_source.html#l00082">TraceLine()</a>.</p>
+<p class="reference">参照元 <a class="el" href="app__main_8c_source.html#l00135">FastTraceLine()</a>, <a class="el" href="app__main_8c_source.html#l00083">TraceLine()</a>.</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="logger_8c_a61e3dd9a86f60d48fa173874783c21e7_icgraph.png" border="0" usemap="#alogger_8c_a61e3dd9a86f60d48fa173874783c21e7_icgraph" alt=""/></div>
 <map name="alogger_8c_a61e3dd9a86f60d48fa173874783c21e7_icgraph" id="alogger_8c_a61e3dd9a86f60d48fa173874783c21e7_icgraph">
-<area shape="rect" title="Set logger mode" alt="" coords="373,5,513,32"/>
-<area shape="rect" href="app__main_8c.html#aba412806b10e230ad1f2aeb986d9b59c" title=" " alt="" coords="243,5,325,32"/>
-<area shape="rect" href="app__main_8h.html#a630544a7f0a2cc40d8a7fefab7e2fe70" title=" " alt="" coords="108,5,195,32"/>
-<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,5,60,32"/>
+<area shape="rect" title="Set logger mode" alt="" coords="400,31,540,57"/>
+<area shape="rect" href="app__main_8c.html#ae937e995b06f93817a1ab98734dcca2c" title=" " alt="" coords="243,5,352,32"/>
+<area shape="rect" href="app__main_8c.html#aba412806b10e230ad1f2aeb986d9b59c" title=" " alt="" coords="256,56,339,83"/>
+<area shape="rect" href="app__main_8h.html#a630544a7f0a2cc40d8a7fefab7e2fe70" title=" " alt="" coords="108,31,195,57"/>
+<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,31,60,57"/>
 </map>
 </div>
 
@@ -396,18 +556,19 @@ logger.c の依存先関係図:</div>
 <p>Set log frequency </p>
 <p>Start logger (Set log frequency) </p>
 
-<p class="definition"> <a class="el" href="logger_8c_source.html">logger.c</a> の <a class="el" href="logger_8c_source.html#l00177">177</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="logger_8c_source.html">logger.c</a> の <a class="el" href="logger_8c_source.html#l00178">178</a> 行目に定義があります。</p>
 
-<p class="reference">参照元 <a class="el" href="app__main_8c_source.html#l00082">TraceLine()</a>.</p>
+<p class="reference">参照元 <a class="el" href="app__main_8c_source.html#l00135">FastTraceLine()</a>, <a class="el" href="app__main_8c_source.html#l00083">TraceLine()</a>.</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="logger_8c_ac4ca8d13d67a1ea91843038349036a37_icgraph.png" border="0" usemap="#alogger_8c_ac4ca8d13d67a1ea91843038349036a37_icgraph" alt=""/></div>
 <map name="alogger_8c_ac4ca8d13d67a1ea91843038349036a37_icgraph" id="alogger_8c_ac4ca8d13d67a1ea91843038349036a37_icgraph">
-<area shape="rect" title="Set log frequency" alt="" coords="373,5,488,32"/>
-<area shape="rect" href="app__main_8c.html#aba412806b10e230ad1f2aeb986d9b59c" title=" " alt="" coords="243,5,325,32"/>
-<area shape="rect" href="app__main_8h.html#a630544a7f0a2cc40d8a7fefab7e2fe70" title=" " alt="" coords="108,5,195,32"/>
-<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,5,60,32"/>
+<area shape="rect" title="Set log frequency" alt="" coords="400,31,515,57"/>
+<area shape="rect" href="app__main_8c.html#ae937e995b06f93817a1ab98734dcca2c" title=" " alt="" coords="243,5,352,32"/>
+<area shape="rect" href="app__main_8c.html#aba412806b10e230ad1f2aeb986d9b59c" title=" " alt="" coords="256,56,339,83"/>
+<area shape="rect" href="app__main_8h.html#a630544a7f0a2cc40d8a7fefab7e2fe70" title=" " alt="" coords="108,31,195,57"/>
+<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,31,60,57"/>
 </map>
 </div>
 
@@ -430,18 +591,19 @@ logger.c の依存先関係図:</div>
 
 <p>Stop logger </p>
 
-<p class="definition"> <a class="el" href="logger_8c_source.html">logger.c</a> の <a class="el" href="logger_8c_source.html#l00190">190</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="logger_8c_source.html">logger.c</a> の <a class="el" href="logger_8c_source.html#l00191">191</a> 行目に定義があります。</p>
 
-<p class="reference">参照元 <a class="el" href="app__main_8c_source.html#l00082">TraceLine()</a>.</p>
+<p class="reference">参照元 <a class="el" href="app__main_8c_source.html#l00135">FastTraceLine()</a>, <a class="el" href="app__main_8c_source.html#l00083">TraceLine()</a>.</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="logger_8c_a0d4f8f61d58f134b09406cd04afcc4db_icgraph.png" border="0" usemap="#alogger_8c_a0d4f8f61d58f134b09406cd04afcc4db_icgraph" alt=""/></div>
 <map name="alogger_8c_a0d4f8f61d58f134b09406cd04afcc4db_icgraph" id="alogger_8c_a0d4f8f61d58f134b09406cd04afcc4db_icgraph">
-<area shape="rect" title="Stop logger" alt="" coords="373,5,485,32"/>
-<area shape="rect" href="app__main_8c.html#aba412806b10e230ad1f2aeb986d9b59c" title=" " alt="" coords="243,5,325,32"/>
-<area shape="rect" href="app__main_8h.html#a630544a7f0a2cc40d8a7fefab7e2fe70" title=" " alt="" coords="108,5,195,32"/>
-<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,5,60,32"/>
+<area shape="rect" title="Stop logger" alt="" coords="400,31,512,57"/>
+<area shape="rect" href="app__main_8c.html#ae937e995b06f93817a1ab98734dcca2c" title=" " alt="" coords="243,5,352,32"/>
+<area shape="rect" href="app__main_8c.html#aba412806b10e230ad1f2aeb986d9b59c" title=" " alt="" coords="256,56,339,83"/>
+<area shape="rect" href="app__main_8h.html#a630544a7f0a2cc40d8a7fefab7e2fe70" title=" " alt="" coords="108,31,195,57"/>
+<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,31,60,57"/>
 </map>
 </div>
 
@@ -464,9 +626,9 @@ logger.c の依存先関係図:</div>
 
 <p>Collect log </p>
 
-<p class="definition"> <a class="el" href="logger_8c_source.html">logger.c</a> の <a class="el" href="logger_8c_source.html#l00218">218</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="logger_8c_source.html">logger.c</a> の <a class="el" href="logger_8c_source.html#l00219">219</a> 行目に定義があります。</p>
 
-<p class="reference">参照元 <a class="el" href="interval_8c_source.html#l00021">HAL_TIM_PeriodElapsedCallback()</a>.</p>
+<p class="reference">参照元 <a class="el" href="interval_8c_source.html#l00022">HAL_TIM_PeriodElapsedCallback()</a>.</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -521,9 +683,9 @@ logger.c の依存先関係図:</div>
 
 <p>Collect log (odometry mode) </p>
 
-<p class="definition"> <a class="el" href="logger_8c_source.html">logger.c</a> の <a class="el" href="logger_8c_source.html#l00143">143</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="logger_8c_source.html">logger.c</a> の <a class="el" href="logger_8c_source.html#l00144">144</a> 行目に定義があります。</p>
 
-<p class="reference">参照元 <a class="el" href="logger_8c_source.html#l00218">LOGGER_Update()</a>.</p>
+<p class="reference">参照元 <a class="el" href="logger_8c_source.html#l00219">LOGGER_Update()</a>.</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -571,9 +733,9 @@ logger.c の依存先関係図:</div>
 
 <p>Collect log (sensor mode) </p>
 
-<p class="definition"> <a class="el" href="logger_8c_source.html">logger.c</a> の <a class="el" href="logger_8c_source.html#l00085">85</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="logger_8c_source.html">logger.c</a> の <a class="el" href="logger_8c_source.html#l00086">86</a> 行目に定義があります。</p>
 
-<p class="reference">参照元 <a class="el" href="logger_8c_source.html#l00218">LOGGER_Update()</a>.</p>
+<p class="reference">参照元 <a class="el" href="logger_8c_source.html#l00219">LOGGER_Update()</a>.</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -623,9 +785,9 @@ logger.c の依存先関係図:</div>
 
 <p>Collect log (target mode) </p>
 
-<p class="definition"> <a class="el" href="logger_8c_source.html">logger.c</a> の <a class="el" href="logger_8c_source.html#l00101">101</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="logger_8c_source.html">logger.c</a> の <a class="el" href="logger_8c_source.html#l00102">102</a> 行目に定義があります。</p>
 
-<p class="reference">参照元 <a class="el" href="logger_8c_source.html#l00218">LOGGER_Update()</a>.</p>
+<p class="reference">参照元 <a class="el" href="logger_8c_source.html#l00219">LOGGER_Update()</a>.</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -649,6 +811,158 @@ logger.c の依存先関係図:</div>
 <area shape="rect" href="interval_8c.html#a8a3b0ad512a6e6c6157440b68d395eac" title="timer interrupt TIM6: 2kHz" alt="" coords="5,5,240,32"/>
 </map>
 </div>
+
+</div>
+</div>
+<h2 class="groupheader">変数詳解</h2>
+<a id="a9efbd28bbadcf184a3840be5618a5cb2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9efbd28bbadcf184a3840be5618a5cb2">&#9670;&nbsp;</a></span>loggerBuffer</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int16_t loggerBuffer[<a class="el" href="parameter__static_8h.html#a9483c0ca433cfa6ec4cca9dd828eab79">PARAMETER_STATIC_LOGGER_BUFFER_SIZE</a>] = {}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>log buffer </p>
+
+<p class="definition"> <a class="el" href="logger_8c_source.html">logger.c</a> の <a class="el" href="logger_8c_source.html#l00050">50</a> 行目に定義があります。</p>
+
+<p class="reference">参照元 <a class="el" href="logger_8c_source.html#l00168">LOGGER_Clear()</a>, <a class="el" href="logger_8c_source.html#l00253">LOGGER_Print()</a>, <a class="el" href="logger_8c_source.html#l00144">LOGGER_UpdateOdometry()</a>, <a class="el" href="logger_8c_source.html#l00086">LOGGER_UpdateSensor()</a>, <a class="el" href="logger_8c_source.html#l00102">LOGGER_UpdateTarget()</a>.</p>
+
+</div>
+</div>
+<a id="a2b7321bf20384ece076ad1732b1261a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b7321bf20384ece076ad1732b1261a2">&#9670;&nbsp;</a></span>loggerBufferIndex</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t loggerBufferIndex = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>log index </p>
+
+<p class="definition"> <a class="el" href="logger_8c_source.html">logger.c</a> の <a class="el" href="logger_8c_source.html#l00052">52</a> 行目に定義があります。</p>
+
+<p class="reference">参照元 <a class="el" href="logger_8c_source.html#l00168">LOGGER_Clear()</a>, <a class="el" href="logger_8c_source.html#l00253">LOGGER_Print()</a>, <a class="el" href="logger_8c_source.html#l00219">LOGGER_Update()</a>, <a class="el" href="logger_8c_source.html#l00144">LOGGER_UpdateOdometry()</a>, <a class="el" href="logger_8c_source.html#l00086">LOGGER_UpdateSensor()</a>, <a class="el" href="logger_8c_source.html#l00102">LOGGER_UpdateTarget()</a>.</p>
+
+</div>
+</div>
+<a id="abc0ebf668ccf0e581e2968caaa904f2e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc0ebf668ccf0e581e2968caaa904f2e">&#9670;&nbsp;</a></span>loggerFreqCountMax</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t loggerFreqCountMax = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>log interval count max </p>
+
+<p class="definition"> <a class="el" href="logger_8c_source.html">logger.c</a> の <a class="el" href="logger_8c_source.html#l00054">54</a> 行目に定義があります。</p>
+
+<p class="reference">参照元 <a class="el" href="logger_8c_source.html#l00178">LOGGER_Start()</a>, <a class="el" href="logger_8c_source.html#l00191">LOGGER_Stop()</a>, <a class="el" href="logger_8c_source.html#l00219">LOGGER_Update()</a>.</p>
+
+</div>
+</div>
+<a id="a9d661e2af9e61b82a9f7badeba77f280"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d661e2af9e61b82a9f7badeba77f280">&#9670;&nbsp;</a></span>loggerMode</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="logger_8h.html#af5ec6072c032269d4011d55ec0f7f9be">LOGGER_MODE</a> loggerMode = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>log mode </p>
+
+<p class="definition"> <a class="el" href="logger_8c_source.html">logger.c</a> の <a class="el" href="logger_8c_source.html#l00056">56</a> 行目に定義があります。</p>
+
+<p class="reference">参照元 <a class="el" href="logger_8c_source.html#l00253">LOGGER_Print()</a>, <a class="el" href="logger_8c_source.html#l00200">LOGGER_SetMode()</a>, <a class="el" href="logger_8c_source.html#l00219">LOGGER_Update()</a>.</p>
+
+</div>
+</div>
+<a id="a65c2347ef99ddcafbd64163e6ffdb82e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65c2347ef99ddcafbd64163e6ffdb82e">&#9670;&nbsp;</a></span>loggerModeElmNum</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t loggerModeElmNum[<a class="el" href="logger_8h.html#af5ec6072c032269d4011d55ec0f7f9bea82ba2e3599d66e67fd4f4c2e566e9784">NUM_LOGGER_MODE</a>]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>初期値:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    [<a class="code" href="logger_8h.html#af5ec6072c032269d4011d55ec0f7f9bea1453e97c1e7cc4e605cb7440dd1efa11">LOGGER_MODE_TARGET</a>] = <a class="code" href="logger_8c.html#a30f4d4ef1eb5f25904e32558418385b9ab6df48bf5ae297a767e47567e3ca0947">NUM_LOGGER_MODE_TARGET_ELEMENT</a>,</div>
+<div class="line">    [<a class="code" href="logger_8h.html#af5ec6072c032269d4011d55ec0f7f9beac7d3362094c91de35fe95ba2640ee269">LOGGER_MODE_ODOMETRY</a>] = <a class="code" href="logger_8c.html#aac8d2c509219b68db4a2ce9cd3b0441aa57d49f81c6de99e527a0de45b9378d22">NUM_LOGGER_MODE_ODOMETRY_ELEMENT</a>,</div>
+<div class="line">    [<a class="code" href="logger_8h.html#af5ec6072c032269d4011d55ec0f7f9beac80b44a847741bb80d78d242c0bee14a">LOGGER_MODE_SENSOR</a>] = <a class="code" href="logger_8c.html#a8c740049983b6a96de6059f9c3232e49a28ede4d7bba00bcec3b4b1ee431f6642">NUM_LOGGER_MODE_SENSOR_ELEMENT</a>,</div>
+<div class="line">}</div>
+<div class="ttc" id="alogger_8c_html_a30f4d4ef1eb5f25904e32558418385b9ab6df48bf5ae297a767e47567e3ca0947"><div class="ttname"><a href="logger_8c.html#a30f4d4ef1eb5f25904e32558418385b9ab6df48bf5ae297a767e47567e3ca0947">NUM_LOGGER_MODE_TARGET_ELEMENT</a></div><div class="ttdeci">@ NUM_LOGGER_MODE_TARGET_ELEMENT</div><div class="ttdef"><b>Definition:</b> <a href="logger_8c_source.html#l00039">logger.c:39</a></div></div>
+<div class="ttc" id="alogger_8c_html_a8c740049983b6a96de6059f9c3232e49a28ede4d7bba00bcec3b4b1ee431f6642"><div class="ttname"><a href="logger_8c.html#a8c740049983b6a96de6059f9c3232e49a28ede4d7bba00bcec3b4b1ee431f6642">NUM_LOGGER_MODE_SENSOR_ELEMENT</a></div><div class="ttdeci">@ NUM_LOGGER_MODE_SENSOR_ELEMENT</div><div class="ttdef"><b>Definition:</b> <a href="logger_8c_source.html#l00023">logger.c:23</a></div></div>
+<div class="ttc" id="alogger_8c_html_aac8d2c509219b68db4a2ce9cd3b0441aa57d49f81c6de99e527a0de45b9378d22"><div class="ttname"><a href="logger_8c.html#aac8d2c509219b68db4a2ce9cd3b0441aa57d49f81c6de99e527a0de45b9378d22">NUM_LOGGER_MODE_ODOMETRY_ELEMENT</a></div><div class="ttdeci">@ NUM_LOGGER_MODE_ODOMETRY_ELEMENT</div><div class="ttdef"><b>Definition:</b> <a href="logger_8c_source.html#l00046">logger.c:46</a></div></div>
+<div class="ttc" id="alogger_8h_html_af5ec6072c032269d4011d55ec0f7f9bea1453e97c1e7cc4e605cb7440dd1efa11"><div class="ttname"><a href="logger_8h.html#af5ec6072c032269d4011d55ec0f7f9bea1453e97c1e7cc4e605cb7440dd1efa11">LOGGER_MODE_TARGET</a></div><div class="ttdeci">@ LOGGER_MODE_TARGET</div><div class="ttdef"><b>Definition:</b> <a href="logger_8h_source.html#l00009">logger.h:9</a></div></div>
+<div class="ttc" id="alogger_8h_html_af5ec6072c032269d4011d55ec0f7f9beac7d3362094c91de35fe95ba2640ee269"><div class="ttname"><a href="logger_8h.html#af5ec6072c032269d4011d55ec0f7f9beac7d3362094c91de35fe95ba2640ee269">LOGGER_MODE_ODOMETRY</a></div><div class="ttdeci">@ LOGGER_MODE_ODOMETRY</div><div class="ttdef"><b>Definition:</b> <a href="logger_8h_source.html#l00010">logger.h:10</a></div></div>
+<div class="ttc" id="alogger_8h_html_af5ec6072c032269d4011d55ec0f7f9beac80b44a847741bb80d78d242c0bee14a"><div class="ttname"><a href="logger_8h.html#af5ec6072c032269d4011d55ec0f7f9beac80b44a847741bb80d78d242c0bee14a">LOGGER_MODE_SENSOR</a></div><div class="ttdeci">@ LOGGER_MODE_SENSOR</div><div class="ttdef"><b>Definition:</b> <a href="logger_8h_source.html#l00011">logger.h:11</a></div></div>
+</div><!-- fragment -->
+<p>mode element num </p>
+
+<p class="definition"> <a class="el" href="logger_8c_source.html">logger.c</a> の <a class="el" href="logger_8c_source.html#l00058">58</a> 行目に定義があります。</p>
+
+<p class="reference">参照元 <a class="el" href="logger_8c_source.html#l00253">LOGGER_Print()</a>, <a class="el" href="logger_8c_source.html#l00219">LOGGER_Update()</a>.</p>
 
 </div>
 </div>

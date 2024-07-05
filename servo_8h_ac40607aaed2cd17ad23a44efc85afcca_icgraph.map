@@ -1,8 +1,12 @@
 <map id="SERVO_SetTargetAngularVelocity" name="SERVO_SetTargetAngularVelocity">
-<area shape="rect" id="node1" title="Set target angular velocity" alt="" coords="545,56,781,83"/>
-<area shape="rect" id="node2" href="$app__main_8c.html#ae947478c563efeb0546ca7c2dc247217" title=" " alt="" coords="373,5,497,32"/>
-<area shape="rect" id="node3" href="$app__main_8c.html#aba412806b10e230ad1f2aeb986d9b59c" title=" " alt="" coords="243,31,325,57"/>
-<area shape="rect" id="node6" href="$run_8h.html#aa99cd7e043851ce08f3fbd58ba75a945" title="Turn" alt="" coords="393,107,478,133"/>
-<area shape="rect" id="node4" href="$app__main_8h.html#a630544a7f0a2cc40d8a7fefab7e2fe70" title=" " alt="" coords="108,31,195,57"/>
-<area shape="rect" id="node5" href="$main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,31,60,57"/>
+<area shape="rect" id="node1" title="Set target angular velocity" alt="" coords="752,78,988,105"/>
+<area shape="rect" id="node2" href="$app__main_8c.html#ae947478c563efeb0546ca7c2dc247217" title=" " alt="" coords="569,28,693,54"/>
+<area shape="rect" id="node7" href="$run_8h.html#ac6a6acda81763df740e34538ab9e3dbd" title="Line feedback" alt="" coords="557,78,704,105"/>
+<area shape="rect" id="node10" href="$run_8h.html#aa99cd7e043851ce08f3fbd58ba75a945" title="Turn" alt="" coords="588,129,673,156"/>
+<area shape="rect" id="node3" href="$app__main_8c.html#ae937e995b06f93817a1ab98734dcca2c" title=" " alt="" coords="243,78,352,105"/>
+<area shape="rect" id="node6" href="$app__main_8c.html#aba412806b10e230ad1f2aeb986d9b59c" title=" " alt="" coords="413,28,496,54"/>
+<area shape="rect" id="node4" href="$app__main_8h.html#a630544a7f0a2cc40d8a7fefab7e2fe70" title=" " alt="" coords="108,78,195,105"/>
+<area shape="rect" id="node5" href="$main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,78,60,105"/>
+<area shape="rect" id="node8" href="$run_8h.html#ab51f5d38046671744984ff764c8949b9" title="Straight" alt="" coords="400,129,509,156"/>
+<area shape="rect" id="node9" href="$app__main_8c.html#ac8ec403b244267ecd7c29fd6620076e3" title=" " alt="" coords="257,129,338,156"/>
 </map>

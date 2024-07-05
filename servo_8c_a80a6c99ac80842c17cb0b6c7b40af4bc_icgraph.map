@@ -1,8 +1,9 @@
 <map id="MOTOR_Start" name="MOTOR_Start">
-<area shape="rect" id="node1" title="Start motors." alt="" coords="525,31,635,57"/>
-<area shape="rect" id="node2" href="$servo_8h.html#a1c520f57937bad54175d31da5f6414b6" title="Start servos" alt="" coords="373,31,477,57"/>
-<area shape="rect" id="node3" href="$app__main_8c.html#ac8ec403b244267ecd7c29fd6620076e3" title=" " alt="" coords="243,5,325,32"/>
-<area shape="rect" id="node6" href="$app__main_8c.html#aba412806b10e230ad1f2aeb986d9b59c" title=" " alt="" coords="243,56,325,83"/>
-<area shape="rect" id="node4" href="$app__main_8h.html#a630544a7f0a2cc40d8a7fefab7e2fe70" title=" " alt="" coords="108,31,195,57"/>
-<area shape="rect" id="node5" href="$main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,31,60,57"/>
+<area shape="rect" id="node1" title="Start motors." alt="" coords="552,56,661,83"/>
+<area shape="rect" id="node2" href="$servo_8h.html#a1c520f57937bad54175d31da5f6414b6" title="Start servos" alt="" coords="400,56,504,83"/>
+<area shape="rect" id="node3" href="$app__main_8c.html#ac8ec403b244267ecd7c29fd6620076e3" title=" " alt="" coords="257,5,338,32"/>
+<area shape="rect" id="node6" href="$app__main_8c.html#ae937e995b06f93817a1ab98734dcca2c" title=" " alt="" coords="243,56,352,83"/>
+<area shape="rect" id="node7" href="$app__main_8c.html#aba412806b10e230ad1f2aeb986d9b59c" title=" " alt="" coords="256,107,339,133"/>
+<area shape="rect" id="node4" href="$app__main_8h.html#a630544a7f0a2cc40d8a7fefab7e2fe70" title=" " alt="" coords="108,56,195,83"/>
+<area shape="rect" id="node5" href="$main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,56,60,83"/>
 </map>

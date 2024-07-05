@@ -1,7 +1,4 @@
 var searchData=
 [
-  ['odometry_5fcalculateinterval_662',['ODOMETRY_CalculateInterval',['../odometry_8h.html#aee99ad571b2d4e69be0793fd30c5e0da',1,'ODOMETRY_CalculateInterval():&#160;odometry.c'],['../odometry_8c.html#aee99ad571b2d4e69be0793fd30c5e0da',1,'ODOMETRY_CalculateInterval():&#160;odometry.c']]],
-  ['odometry_5fgetcurrent_663',['ODOMETRY_GetCurrent',['../odometry_8h.html#a458ba16e05623612c350b22cea48ffc3',1,'ODOMETRY_GetCurrent():&#160;odometry.c'],['../odometry_8c.html#a458ba16e05623612c350b22cea48ffc3',1,'ODOMETRY_GetCurrent():&#160;odometry.c']]],
-  ['odometry_5freset_664',['ODOMETRY_Reset',['../odometry_8h.html#a439ddae1dc13251f0ff183d7f967bb1f',1,'ODOMETRY_Reset():&#160;odometry.c'],['../odometry_8c.html#a439ddae1dc13251f0ff183d7f967bb1f',1,'ODOMETRY_Reset():&#160;odometry.c']]],
-  ['odometry_5fresetpos_665',['ODOMETRY_ResetPos',['../odometry_8h.html#a26e4f0eed4ff499514cd64fbd7530c1d',1,'ODOMETRY_ResetPos():&#160;odometry.c'],['../odometry_8c.html#a26e4f0eed4ff499514cd64fbd7530c1d',1,'ODOMETRY_ResetPos():&#160;odometry.c']]]
+  ['nmi_5fhandler_713',['NMI_Handler',['../stm32f3xx__it_8h.html#a6ad7a5e3ee69cb6db6a6b9111ba898bc',1,'NMI_Handler(void):&#160;stm32f3xx_it.c'],['../stm32f3xx__it_8c.html#a6ad7a5e3ee69cb6db6a6b9111ba898bc',1,'NMI_Handler(void):&#160;stm32f3xx_it.c']]]
 ];

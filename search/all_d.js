@@ -1,17 +1,12 @@
 var searchData=
 [
-  ['odometry_302',['odometry',['../odometry_8c.html#a898b9ebeecf9ee324257b447f04b485b',1,'odometry.c']]],
-  ['odometry_303',['ODOMETRY',['../structODOMETRY.html',1,'']]],
-  ['odometry_2ec_304',['odometry.c',['../odometry_8c.html',1,'']]],
-  ['odometry_2eh_305',['odometry.h',['../odometry_8h.html',1,'']]],
-  ['odometry_5fcalculateinterval_306',['ODOMETRY_CalculateInterval',['../odometry_8h.html#aee99ad571b2d4e69be0793fd30c5e0da',1,'ODOMETRY_CalculateInterval():&#160;odometry.c'],['../odometry_8c.html#aee99ad571b2d4e69be0793fd30c5e0da',1,'ODOMETRY_CalculateInterval():&#160;odometry.c']]],
-  ['odometry_5fgetcurrent_307',['ODOMETRY_GetCurrent',['../odometry_8h.html#a458ba16e05623612c350b22cea48ffc3',1,'ODOMETRY_GetCurrent():&#160;odometry.c'],['../odometry_8c.html#a458ba16e05623612c350b22cea48ffc3',1,'ODOMETRY_GetCurrent():&#160;odometry.c']]],
-  ['odometry_5fmask_5fvelocity_5fsamples_308',['ODOMETRY_MASK_VELOCITY_SAMPLES',['../odometry_8c.html#adc6ca37ee7caa97e2baa8ece67ea6573',1,'odometry.c']]],
-  ['odometry_5fmm_5fper_5fpulse_309',['ODOMETRY_MM_PER_PULSE',['../odometry_8c.html#a42033dcc3abd42d6bbd32970e5f60424',1,'odometry.c']]],
-  ['odometry_5freset_310',['ODOMETRY_Reset',['../odometry_8h.html#a439ddae1dc13251f0ff183d7f967bb1f',1,'ODOMETRY_Reset():&#160;odometry.c'],['../odometry_8c.html#a439ddae1dc13251f0ff183d7f967bb1f',1,'ODOMETRY_Reset():&#160;odometry.c']]],
-  ['odometry_5fresetpos_311',['ODOMETRY_ResetPos',['../odometry_8h.html#a26e4f0eed4ff499514cd64fbd7530c1d',1,'ODOMETRY_ResetPos():&#160;odometry.c'],['../odometry_8c.html#a26e4f0eed4ff499514cd64fbd7530c1d',1,'ODOMETRY_ResetPos():&#160;odometry.c']]],
-  ['odometryvelocitysamplehead_312',['odometryVelocitySampleHead',['../odometry_8c.html#ac2f4cb73f6a4ab1678954c006f052db7',1,'odometry.c']]],
-  ['odometryvelocitysamples_313',['odometryVelocitySamples',['../odometry_8c.html#adf69aa11dff4851f51ea8a1259d28136',1,'odometry.c']]],
-  ['odometryvelocitysampletail_314',['odometryVelocitySampleTail',['../odometry_8c.html#ac2a2dd7aba6054d0c1a50f12d2e04031',1,'odometry.c']]],
-  ['odometryvelocitysums_315',['odometryVelocitySums',['../odometry_8c.html#a006518ac26ef9abb852740998cd5e4ce',1,'odometry.c']]]
+  ['nmi_5fhandler_330',['NMI_Handler',['../stm32f3xx__it_8h.html#a6ad7a5e3ee69cb6db6a6b9111ba898bc',1,'NMI_Handler(void):&#160;stm32f3xx_it.c'],['../stm32f3xx__it_8c.html#a6ad7a5e3ee69cb6db6a6b9111ba898bc',1,'NMI_Handler(void):&#160;stm32f3xx_it.c']]],
+  ['num_5fadc1_331',['NUM_ADC1',['../sensor_8c.html#a06fc87d81c62e9abb8790b6e5713c55bab71aa73289648a1635a6b96e74c11d56',1,'sensor.c']]],
+  ['num_5fadc2_332',['NUM_ADC2',['../sensor_8c.html#adf764cbdea00d65edcd07bb9953ad2b7aebd7fe214babf2c5f94fda908c67c2d7',1,'sensor.c']]],
+  ['num_5flogger_5fmode_333',['NUM_LOGGER_MODE',['../logger_8h.html#af5ec6072c032269d4011d55ec0f7f9bea82ba2e3599d66e67fd4f4c2e566e9784',1,'logger.h']]],
+  ['num_5flogger_5fmode_5fodometry_5felement_334',['NUM_LOGGER_MODE_ODOMETRY_ELEMENT',['../logger_8c.html#aac8d2c509219b68db4a2ce9cd3b0441aa57d49f81c6de99e527a0de45b9378d22',1,'logger.c']]],
+  ['num_5flogger_5fmode_5fsensor_5felement_335',['NUM_LOGGER_MODE_SENSOR_ELEMENT',['../logger_8c.html#a8c740049983b6a96de6059f9c3232e49a28ede4d7bba00bcec3b4b1ee431f6642',1,'logger.c']]],
+  ['num_5flogger_5fmode_5ftarget_5felement_336',['NUM_LOGGER_MODE_TARGET_ELEMENT',['../logger_8c.html#a30f4d4ef1eb5f25904e32558418385b9ab6df48bf5ae297a767e47567e3ca0947',1,'logger.c']]],
+  ['num_5fparameters_337',['NUM_PARAMETERS',['../parameter_8h.html#ae80c74b7cac856ec6868587f85c47427',1,'parameter.h']]],
+  ['num_5fsensor_5fpos_338',['NUM_SENSOR_POS',['../sensor_8h.html#a78d269997aaee18405db7c81806d4c91a72bc30b41e130b5a733fa67f1f1db14b',1,'sensor.h']]]
 ];

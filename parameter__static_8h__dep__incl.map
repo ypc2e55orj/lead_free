@@ -1,9 +1,11 @@
 <map id="App/Inc/parameter_static.h" name="App/Inc/parameter_static.h">
-<area shape="rect" id="node1" title=" " alt="" coords="258,5,455,32"/>
-<area shape="rect" id="node2" href="$search_8h.html" title=" " alt="" coords="5,80,135,107"/>
-<area shape="rect" id="node4" href="$line_8c.html" title=" " alt="" coords="159,80,269,107"/>
-<area shape="rect" id="node5" href="$logger_8c.html" title=" " alt="" coords="293,80,420,107"/>
-<area shape="rect" id="node6" href="$odometry_8c.html" title=" " alt="" coords="445,80,591,107"/>
-<area shape="rect" id="node7" href="$servo_8c.html" title=" " alt="" coords="615,80,738,107"/>
-<area shape="rect" id="node3" href="$search_8c.html" title=" " alt="" coords="5,155,135,181"/>
+<area shape="rect" id="node1" title=" " alt="" coords="437,5,634,32"/>
+<area shape="rect" id="node2" href="$search_8h.html" title=" " alt="" coords="184,80,313,107"/>
+<area shape="rect" id="node6" href="$line_8c.html" title=" " alt="" coords="337,80,448,107"/>
+<area shape="rect" id="node7" href="$logger_8c.html" title=" " alt="" coords="472,80,599,107"/>
+<area shape="rect" id="node8" href="$odometry_8c.html" title=" " alt="" coords="623,80,770,107"/>
+<area shape="rect" id="node9" href="$servo_8c.html" title=" " alt="" coords="794,80,917,107"/>
+<area shape="rect" id="node3" href="$app__main_8c.html" title=" " alt="" coords="5,155,156,181"/>
+<area shape="rect" id="node4" href="$interval_8c.html" title=" " alt="" coords="181,155,317,181"/>
+<area shape="rect" id="node5" href="$search_8c.html" title=" " alt="" coords="341,155,471,181"/>
 </map>

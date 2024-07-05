@@ -1,11 +1,22 @@
 var searchData=
 [
-  ['max_747',['max',['../structLINE__CALIBRATE__MINMAX.html#a79516d2c0ed5c795395ab3f98d11b3aa',1,'LINE_CALIBRATE_MINMAX']]],
-  ['maxangularvelocity_748',['maxAngularVelocity',['../structPARAMETER.html#a88ec9c82614fb1c13dfedccd73f85f10',1,'PARAMETER']]],
-  ['maxvelocity_749',['maxVelocity',['../structPARAMETER.html#aa531a61151a195f4d50acef4a94eb8f4',1,'PARAMETER']]],
-  ['min_750',['min',['../structLINE__CALIBRATE__MINMAX.html#a3889550a4edb51cabd3a7286484af0de',1,'LINE_CALIBRATE_MINMAX']]],
-  ['minangularvelocity_751',['minAngularVelocity',['../structPARAMETER.html#a5d7dd1cbafcf2d47ee72f1c2d1d0881e',1,'PARAMETER']]],
-  ['minvelocity_752',['minVelocity',['../structPARAMETER.html#acc44f34714a74bd21a58a1ac9022e3d6',1,'PARAMETER']]],
-  ['motorleftduty_753',['motorLeftDuty',['../servo_8c.html#acdbaecd4a55fadb7a8650007f06821dd',1,'servo.c']]],
-  ['motorrightduty_754',['motorRightDuty',['../servo_8c.html#ad41876891bfb0b39dab49958d1ef4d78',1,'servo.c']]]
+  ['length_794',['length',['../structCOURSE.html#ae934a33252842b2691dbe5b0d8c1b944',1,'COURSE::length()'],['../structODOMETRY.html#ab07b557ed98a4f4fd9b224e5751ced01',1,'ODOMETRY::length()']]],
+  ['lineangularvelocity_795',['lineAngularVelocity',['../line_8c.html#a97d321621f4a510c16d591485e353c4a',1,'line.c']]],
+  ['lineangularvelocitypid_796',['lineAngularVelocityPid',['../structPARAMETER.html#a9ccb8dd196f52e6b5cd533364f854b36',1,'PARAMETER::lineAngularVelocityPid()'],['../line_8c.html#ac8ee8cf1902238791c1111b1f41d986a',1,'lineAngularVelocityPid():&#160;line.c']]],
+  ['lineenablefeedback_797',['lineEnableFeedback',['../line_8c.html#ab55101bf9e842434ea6e611568572b26',1,'line.c']]],
+  ['lineinerror_798',['lineInError',['../line_8c.html#a0f13ced5515f4e5fd54b6d847241df57',1,'line.c']]],
+  ['linemarkercalibratevalue_799',['lineMarkerCalibrateValue',['../line_8c.html#a11cfd0e8c0450595a78dde6501aa35e3',1,'line.c']]],
+  ['linemarkercalibrating_800',['lineMarkerCalibrating',['../line_8c.html#a8fcda043cbb24ef10e327f4b01551628',1,'line.c']]],
+  ['linemarkercurvaturestate_801',['lineMarkerCurvatureState',['../line_8c.html#af0a37a0b483e107fae86f3cfc6e91424',1,'line.c']]],
+  ['linemarkerstartgoalstate_802',['lineMarkerStartGoalState',['../line_8c.html#a958c91813405e996afcae452ab4a6d9d',1,'line.c']]],
+  ['linemarkervalue_803',['lineMarkerValue',['../line_8c.html#ae60b5cd8203113e7f2856f9cee37181e',1,'line.c']]],
+  ['lineoffsetin_804',['lineOffsetIn',['../structLINE__CALIBRATE.html#a346871a55816909c867b67454454bda6',1,'LINE_CALIBRATE']]],
+  ['lineoffsetout_805',['lineOffsetOut',['../structLINE__CALIBRATE.html#ae12e650858e10dc0bf9a99afe3d35260',1,'LINE_CALIBRATE']]],
+  ['lineouterror_806',['lineOutError',['../line_8c.html#a56c2e0bf5fbe8b599c311da175509b73',1,'line.c']]],
+  ['linestate_807',['lineState',['../line_8c.html#abf7048baf7952efe84e770bc66cdda60',1,'line.c']]],
+  ['loggerbuffer_808',['loggerBuffer',['../logger_8c.html#a9efbd28bbadcf184a3840be5618a5cb2',1,'logger.c']]],
+  ['loggerbufferindex_809',['loggerBufferIndex',['../logger_8c.html#a2b7321bf20384ece076ad1732b1261a2',1,'logger.c']]],
+  ['loggerfreqcountmax_810',['loggerFreqCountMax',['../logger_8c.html#abc0ebf668ccf0e581e2968caaa904f2e',1,'logger.c']]],
+  ['loggermode_811',['loggerMode',['../logger_8c.html#a9d661e2af9e61b82a9f7badeba77f280',1,'logger.c']]],
+  ['loggermodeelmnum_812',['loggerModeElmNum',['../logger_8c.html#a65c2347ef99ddcafbd64163e6ffdb82e',1,'logger.c']]]
 ];

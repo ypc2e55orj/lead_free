@@ -85,30 +85,33 @@ $(function() {
 <code>#include &quot;<a class="el" href="logger_8h_source.html">logger.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="run_8h_source.html">run.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="line_8h_source.html">line.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="search_8h_source.html">search.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 app_main.c の依存先関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="app__main_8c__incl.png" border="0" usemap="#aApp_2Src_2app__main_8c" alt=""/></div>
 <map name="aApp_2Src_2app__main_8c" id="aApp_2Src_2app__main_8c">
-<area shape="rect" title=" " alt="" coords="467,5,618,32"/>
+<area shape="rect" title=" " alt="" coords="535,5,686,32"/>
 <area shape="rect" href="app__main_8h.html" title=" " alt="" coords="5,80,104,107"/>
 <area shape="rect" title=" " alt="" coords="128,80,195,107"/>
-<area shape="rect" title=" " alt="" coords="198,155,266,181"/>
-<area shape="rect" title=" " alt="" coords="849,80,911,107"/>
-<area shape="rect" href="main_8h.html" title=": Header for main.c file. This file contains the common defines of the application." alt="" coords="936,80,1003,107"/>
-<area shape="rect" href="interval_8h.html" title=" " alt="" coords="421,155,505,181"/>
-<area shape="rect" href="sensor_8h.html" title=" " alt="" coords="529,155,605,181"/>
-<area shape="rect" href="odometry_8h.html" title=" " alt="" coords="630,80,725,107"/>
-<area shape="rect" href="servo_8h.html" title=" " alt="" coords="1027,80,1098,107"/>
-<area shape="rect" href="parameter_8h.html" title=" " alt="" coords="320,80,421,107"/>
-<area shape="rect" href="button_8h.html" title=" " alt="" coords="749,80,825,107"/>
-<area shape="rect" href="logger_8h.html" title=" " alt="" coords="99,155,173,181"/>
-<area shape="rect" href="run_8h.html" title=" " alt="" coords="1122,80,1177,107"/>
-<area shape="rect" href="line_8h.html" title=" " alt="" coords="547,80,605,107"/>
-<area shape="rect" title=" " alt="" coords="904,155,1035,181"/>
-<area shape="rect" title=" " alt="" coords="479,229,550,256"/>
-<area shape="rect" title=" " alt="" coords="736,155,819,181"/>
-<area shape="rect" href="pid_8h.html" title=" " alt="" coords="290,155,345,181"/>
+<area shape="rect" title=" " alt="" coords="237,155,305,181"/>
+<area shape="rect" title=" " alt="" coords="950,80,1013,107"/>
+<area shape="rect" href="main_8h.html" title=": Header for main.c file. This file contains the common defines of the application." alt="" coords="1037,80,1104,107"/>
+<area shape="rect" href="interval_8h.html" title=" " alt="" coords="129,155,213,181"/>
+<area shape="rect" href="sensor_8h.html" title=" " alt="" coords="679,155,755,181"/>
+<area shape="rect" href="odometry_8h.html" title=" " alt="" coords="831,80,926,107"/>
+<area shape="rect" href="servo_8h.html" title=" " alt="" coords="1129,80,1199,107"/>
+<area shape="rect" href="parameter_8h.html" title=" " alt="" coords="371,80,472,107"/>
+<area shape="rect" href="button_8h.html" title=" " alt="" coords="731,80,807,107"/>
+<area shape="rect" href="logger_8h.html" title=" " alt="" coords="29,155,104,181"/>
+<area shape="rect" href="run_8h.html" title=" " alt="" coords="1223,80,1278,107"/>
+<area shape="rect" href="line_8h.html" title=" " alt="" coords="648,80,707,107"/>
+<area shape="rect" href="search_8h.html" title=" " alt="" coords="496,80,573,107"/>
+<area shape="rect" title=" " alt="" coords="1005,155,1136,181"/>
+<area shape="rect" title=" " alt="" coords="437,229,507,256"/>
+<area shape="rect" title=" " alt="" coords="831,155,913,181"/>
+<area shape="rect" href="pid_8h.html" title=" " alt="" coords="329,155,383,181"/>
+<area shape="rect" href="parameter__static_8h.html" title=" " alt="" coords="510,155,655,181"/>
 </map>
 </div>
 </div>
@@ -124,6 +127,8 @@ app_main.c の依存先関係図:</div>
 <tr class="separator:ae947478c563efeb0546ca7c2dc247217"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aba412806b10e230ad1f2aeb986d9b59c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="app__main_8c.html#aba412806b10e230ad1f2aeb986d9b59c">TraceLine</a> ()</td></tr>
 <tr class="separator:aba412806b10e230ad1f2aeb986d9b59c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae937e995b06f93817a1ab98734dcca2c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="app__main_8c.html#ae937e995b06f93817a1ab98734dcca2c">FastTraceLine</a> ()</td></tr>
+<tr class="separator:ae937e995b06f93817a1ab98734dcca2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a630544a7f0a2cc40d8a7fefab7e2fe70"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="app__main_8c.html#a630544a7f0a2cc40d8a7fefab7e2fe70">app_main</a> (void)</td></tr>
 <tr class="separator:a630544a7f0a2cc40d8a7fefab7e2fe70"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -144,7 +149,7 @@ app_main.c の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="app__main_8c_source.html">app_main.c</a> の <a class="el" href="app__main_8c_source.html#l00144">144</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="app__main_8c_source.html">app_main.c</a> の <a class="el" href="app__main_8c_source.html#l00199">199</a> 行目に定義があります。</p>
 
 <p class="reference">参照元 <a class="el" href="main_8c_source.html#l00094">main()</a>.</p>
 <div class="dynheader">
@@ -152,56 +157,56 @@ app_main.c の依存先関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="app__main_8c_a630544a7f0a2cc40d8a7fefab7e2fe70_cgraph.png" border="0" usemap="#aapp__main_8c_a630544a7f0a2cc40d8a7fefab7e2fe70_cgraph" alt=""/></div>
 <map name="aapp__main_8c_a630544a7f0a2cc40d8a7fefab7e2fe70_cgraph" id="aapp__main_8c_a630544a7f0a2cc40d8a7fefab7e2fe70_cgraph">
-<area shape="rect" title=" " alt="" coords="5,1829,92,1856"/>
+<area shape="rect" title=" " alt="" coords="5,956,92,983"/>
 <area shape="rect" href="button_8h.html#a31be2fcf32ca6c71005fc5f648edab78" title="Get button 1" alt="" coords="368,5,503,32"/>
-<area shape="rect" href="button_8h.html#abf3f39cd196cf25080c0e5acfdf16993" title="Get button 1" alt="" coords="140,1829,275,1856"/>
-<area shape="rect" href="app__main_8c.html#ac8ec403b244267ecd7c29fd6620076e3" title=" " alt="" coords="167,411,248,437"/>
-<area shape="rect" href="interval_8h.html#a7f990ff62bbc126fa60a2c3a24532a5f" title="Buzzer" alt="" coords="646,1652,782,1679"/>
-<area shape="rect" href="interval_8h.html#a4d3d968b3af31f3b95de7c6e0e71d4f6" title="Start interval process" alt="" coords="146,1880,269,1907"/>
-<area shape="rect" href="logger_8h.html#a7e1f6cceddb55ae4a35e23537e089d70" title="Pring log" alt="" coords="151,1931,264,1957"/>
-<area shape="rect" href="parameter_8h.html#a4d8761c74e185fe13378d9624be30600" title="Initialize parameters" alt="" coords="143,1981,272,2008"/>
-<area shape="rect" href="sensor_8h.html#ad87c5be998b7e544525713b0ca25c3e3" title="Initialize sensors" alt="" coords="156,2032,259,2059"/>
-<area shape="rect" href="app__main_8c.html#aba412806b10e230ad1f2aeb986d9b59c" title=" " alt="" coords="166,1095,249,1121"/>
-<area shape="rect" href="app__main_8c.html#a9efdce133fda030ebb0c7793ffc03d14" title=" " alt="" coords="684,1196,744,1223"/>
-<area shape="rect" href="line_8h.html#ab38cfb64d9a0da68234a9dfaf17aaec0" title="Disable line feedback" alt="" coords="351,259,520,285"/>
-<area shape="rect" href="line_8h.html#a9b4a00b81ce1cb20833130786318e85e" title="Get calibration value" alt="" coords="365,157,505,184"/>
-<area shape="rect" href="line_8h.html#a8b86f6a9eab7b902eabfffdb81ce0ffb" title="Start sensor calibration (back)" alt="" coords="345,107,525,133"/>
-<area shape="rect" href="line_8h.html#ad38f2ac38d03c071b0a22bdb93583300" title="Start sensor calibration (forward)" alt="" coords="335,56,535,83"/>
-<area shape="rect" href="line_8h.html#ac2241ed9289106ee413b2a84faa7c1b0" title="Stop sensor calibration" alt="" coords="362,208,509,235"/>
-<area shape="rect" href="parameter_8h.html#a516dc6cce80e3f863aefb4e65b880053" title="Get current parameter" alt="" coords="370,563,501,589"/>
-<area shape="rect" href="run_8h.html#ab51f5d38046671744984ff764c8949b9" title="Straight" alt="" coords="381,411,490,437"/>
-<area shape="rect" href="servo_8h.html#a1c520f57937bad54175d31da5f6414b6" title="Start servos" alt="" coords="383,613,487,640"/>
-<area shape="rect" href="servo_8h.html#ad06676986fb4c97c7d94680f7bb059a2" title="Stop servos" alt="" coords="663,1247,765,1273"/>
-<area shape="rect" href="line_8c.html#a2fac48ee55eb99dbd94bdafb5fdb158a" title="Calculate sensor average" alt="" coords="619,179,809,221"/>
-<area shape="rect" href="line_8c.html#ab3af472291852b280b100925f5b9aa7a" title="Clear temporary" alt="" coords="598,107,830,133"/>
-<area shape="rect" href="odometry_8h.html#a458ba16e05623612c350b22cea48ffc3" title="Get current" alt="" coords="627,309,801,336"/>
-<area shape="rect" href="odometry_8h.html#a439ddae1dc13251f0ff183d7f967bb1f" title="Reset sums" alt="" coords="644,360,784,387"/>
-<area shape="rect" href="servo_8h.html#a1af12b4477ce75c5b8c5216a376d1aca" title="Get target velocity" alt="" coords="620,563,808,589"/>
-<area shape="rect" href="servo_8h.html#a8ee665f3ffbf3ff14a76584908892e2c" title="Reset servos" alt="" coords="659,411,769,437"/>
-<area shape="rect" href="servo_8h.html#ab9e6ac3e8dfa09cb2403c3092122ba3d" title="Set acceleration" alt="" coords="627,1145,801,1172"/>
-<area shape="rect" href="servo_8h.html#a7403dd9b206ea8feddb4e37efe76f7c2" title="Set target velocity" alt="" coords="627,765,801,792"/>
-<area shape="rect" href="servo_8h.html#a9f3f93599e5621878d49edbaf3547bd3" title="Set target velocity" alt="" coords="621,715,807,741"/>
-<area shape="rect" href="logger_8c.html#a0573780c843e18b8be11e33c9e5c9636" title="Pring log (odometry mode)" alt="" coords="323,1855,548,1881"/>
-<area shape="rect" href="logger_8c.html#a151edc08d024fd8c6f1143276c6875de" title="Pring log (target mode)" alt="" coords="333,1905,537,1932"/>
-<area shape="rect" href="logger_8c.html#a60212f9386e4ab4b170f430f85a95c5d" title="Pring log (target mode)" alt="" coords="335,1956,535,1983"/>
-<area shape="rect" href="sensor_8c.html#ab3f7e3afc0b46ed3410f806805b2328e" title="Initialize ADC" alt="" coords="396,2007,475,2033"/>
-<area shape="rect" href="sensor_8c.html#a0d5bbefe4e42fe2bf21a65184f63dbd8" title="Initialize encoders." alt="" coords="378,2057,493,2084"/>
-<area shape="rect" href="sensor_8c.html#a30661b3385e75411ed11f8318ac90e46" title="Initialize the gyro." alt="" coords="392,2108,479,2135"/>
-<area shape="rect" href="app__main_8c.html#ae947478c563efeb0546ca7c2dc247217" title=" " alt="" coords="373,1272,497,1299"/>
-<area shape="rect" href="servo_8h.html#a13092fcd663653ddb0efdcec39837117" title="Set angular acceleration" alt="" coords="601,1475,827,1501"/>
-<area shape="rect" href="servo_8h.html#ad583728c954f1fcbc475756fec5e5202" title="Set target angular velocity" alt="" coords="602,1576,826,1603"/>
-<area shape="rect" href="servo_8h.html#ac40607aaed2cd17ad23a44efc85afcca" title="Set target angular velocity" alt="" coords="596,1361,832,1388"/>
-<area shape="rect" href="line_8h.html#a73ea39c97531b32c2be5d18eb1b7981d" title="Enable line feedback" alt="" coords="353,968,517,995"/>
-<area shape="rect" href="line_8h.html#a1746c8257aa80aea4456d0e1e3058fcc" title="Get generated angular velocity" alt="" coords="344,1019,527,1045"/>
-<area shape="rect" href="line_8h.html#afcc55f4276815a243820a0eac422608b" title="Get curvature marker state" alt="" coords="346,1069,525,1096"/>
-<area shape="rect" href="line_8h.html#a57113586c6f12cca00281769dea96721" title="Reset start and goal marker state" alt="" coords="364,1120,507,1147"/>
-<area shape="rect" href="line_8h.html#ac53f215e5d20488835e1cb6b19bebe3d" title="Get start and goal marker state" alt="" coords="347,1373,523,1400"/>
-<area shape="rect" href="line_8h.html#a8c1a8019beab47b5f8306db41df7cfd9" title="Reset curvature marker state" alt="" coords="339,1525,532,1552"/>
-<area shape="rect" href="line_8h.html#a73029906d10d9afa817eb179126bbb97" title="Reset start and goal marker state" alt="" coords="340,1576,531,1603"/>
-<area shape="rect" href="logger_8h.html#a5c31839f1b962339daaeb999d5caba50" title="Clear log" alt="" coords="377,1677,494,1704"/>
-<area shape="rect" href="logger_8h.html#a61e3dd9a86f60d48fa173874783c21e7" title="Set logger mode" alt="" coords="365,816,505,843"/>
-<area shape="rect" href="logger_8h.html#ac4ca8d13d67a1ea91843038349036a37" title="Start logger (Set log frequency)" alt="" coords="378,867,493,893"/>
-<area shape="rect" href="logger_8h.html#a0d4f8f61d58f134b09406cd04afcc4db" title="Stop logger" alt="" coords="379,917,491,944"/>
+<area shape="rect" href="button_8h.html#abf3f39cd196cf25080c0e5acfdf16993" title="Get button 1" alt="" coords="140,284,275,311"/>
+<area shape="rect" href="app__main_8c.html#ac8ec403b244267ecd7c29fd6620076e3" title=" " alt="" coords="167,335,248,361"/>
+<area shape="rect" href="interval_8h.html#a7f990ff62bbc126fa60a2c3a24532a5f" title="Buzzer" alt="" coords="622,715,758,741"/>
+<area shape="rect" href="app__main_8c.html#ae937e995b06f93817a1ab98734dcca2c" title=" " alt="" coords="153,1297,262,1324"/>
+<area shape="rect" href="interval_8h.html#a4d3d968b3af31f3b95de7c6e0e71d4f6" title="Start interval process" alt="" coords="146,956,269,983"/>
+<area shape="rect" href="logger_8h.html#a7e1f6cceddb55ae4a35e23537e089d70" title="Pring log" alt="" coords="151,639,264,665"/>
+<area shape="rect" href="parameter_8h.html#a4d8761c74e185fe13378d9624be30600" title="Initialize parameters" alt="" coords="143,1348,272,1375"/>
+<area shape="rect" href="search_8h.html#acda88426fcd1b9045ae1aeb59b33da10" title="Print search stack" alt="" coords="151,1399,263,1425"/>
+<area shape="rect" href="sensor_8h.html#ad87c5be998b7e544525713b0ca25c3e3" title="Initialize sensors" alt="" coords="156,2513,259,2540"/>
+<area shape="rect" href="app__main_8c.html#aba412806b10e230ad1f2aeb986d9b59c" title=" " alt="" coords="166,1880,249,1907"/>
+<area shape="rect" href="app__main_8c.html#a9efdce133fda030ebb0c7793ffc03d14" title=" " alt="" coords="660,943,720,969"/>
+<area shape="rect" href="line_8h.html#ab38cfb64d9a0da68234a9dfaf17aaec0" title="Disable line feedback" alt="" coords="351,56,520,83"/>
+<area shape="rect" href="line_8h.html#a9b4a00b81ce1cb20833130786318e85e" title="Get calibration value" alt="" coords="365,107,505,133"/>
+<area shape="rect" href="line_8h.html#a8b86f6a9eab7b902eabfffdb81ce0ffb" title="Start sensor calibration (back)" alt="" coords="345,157,525,184"/>
+<area shape="rect" href="line_8h.html#ad38f2ac38d03c071b0a22bdb93583300" title="Start sensor calibration (forward)" alt="" coords="335,208,535,235"/>
+<area shape="rect" href="line_8h.html#ac2241ed9289106ee413b2a84faa7c1b0" title="Stop sensor calibration" alt="" coords="362,259,509,285"/>
+<area shape="rect" href="parameter_8h.html#a516dc6cce80e3f863aefb4e65b880053" title="Get current parameter" alt="" coords="625,791,755,817"/>
+<area shape="rect" href="run_8h.html#ab51f5d38046671744984ff764c8949b9" title="Straight" alt="" coords="381,917,490,944"/>
+<area shape="rect" href="servo_8h.html#a1c520f57937bad54175d31da5f6414b6" title="Start servos" alt="" coords="383,1120,487,1147"/>
+<area shape="rect" href="servo_8h.html#ad06676986fb4c97c7d94680f7bb059a2" title="Stop servos" alt="" coords="639,1804,741,1831"/>
+<area shape="rect" href="odometry_8h.html#a458ba16e05623612c350b22cea48ffc3" title="Get current" alt="" coords="603,892,777,919"/>
+<area shape="rect" href="servo_8h.html#a1af12b4477ce75c5b8c5216a376d1aca" title="Get target velocity" alt="" coords="596,993,784,1020"/>
+<area shape="rect" href="servo_8h.html#ab9e6ac3e8dfa09cb2403c3092122ba3d" title="Set acceleration" alt="" coords="603,1272,777,1299"/>
+<area shape="rect" href="servo_8h.html#a7403dd9b206ea8feddb4e37efe76f7c2" title="Set target velocity" alt="" coords="603,1323,777,1349"/>
+<area shape="rect" href="servo_8h.html#a9f3f93599e5621878d49edbaf3547bd3" title="Set target velocity" alt="" coords="597,1221,783,1248"/>
+<area shape="rect" href="app__main_8c.html#ae947478c563efeb0546ca7c2dc247217" title=" " alt="" coords="373,2235,497,2261"/>
+<area shape="rect" href="search_8h.html#a58d0f1210b7766ed0bd608fab0366488" title="Get search data" alt="" coords="394,968,477,995"/>
+<area shape="rect" href="search_8h.html#a5d028f18e0b10a4ab3cb066476508dd3" title="Start fast" alt="" coords="390,1019,481,1045"/>
+<area shape="rect" href="search_8h.html#a99e70185aa59a099ec213e8d9d6897f2" title="Stop fast" alt="" coords="391,1069,480,1096"/>
+<area shape="rect" href="line_8h.html#a73ea39c97531b32c2be5d18eb1b7981d" title="Enable line feedback" alt="" coords="353,1627,517,1653"/>
+<area shape="rect" href="line_8h.html#afcc55f4276815a243820a0eac422608b" title="Get curvature marker state" alt="" coords="346,1677,525,1704"/>
+<area shape="rect" href="line_8h.html#a57113586c6f12cca00281769dea96721" title="Reset start and goal marker state" alt="" coords="364,1779,507,1805"/>
+<area shape="rect" href="line_8h.html#ac53f215e5d20488835e1cb6b19bebe3d" title="Get start and goal marker state" alt="" coords="347,1829,523,1856"/>
+<area shape="rect" href="line_8h.html#a8c1a8019beab47b5f8306db41df7cfd9" title="Reset curvature marker state" alt="" coords="339,1880,532,1907"/>
+<area shape="rect" href="line_8h.html#a73029906d10d9afa817eb179126bbb97" title="Reset start and goal marker state" alt="" coords="340,1931,531,1957"/>
+<area shape="rect" href="logger_8h.html#a5c31839f1b962339daaeb999d5caba50" title="Clear log" alt="" coords="377,1981,494,2008"/>
+<area shape="rect" href="logger_8h.html#a61e3dd9a86f60d48fa173874783c21e7" title="Set logger mode" alt="" coords="365,1424,505,1451"/>
+<area shape="rect" href="logger_8h.html#ac4ca8d13d67a1ea91843038349036a37" title="Start logger (Set log frequency)" alt="" coords="378,1475,493,1501"/>
+<area shape="rect" href="logger_8h.html#a0d4f8f61d58f134b09406cd04afcc4db" title="Stop logger" alt="" coords="379,1525,491,1552"/>
+<area shape="rect" href="odometry_8h.html#a439ddae1dc13251f0ff183d7f967bb1f" title="Reset sums" alt="" coords="365,1576,505,1603"/>
+<area shape="rect" href="parameter_8h.html#a3615e58f1cb023ebdb5fd9b000bbcdd7" title="Set parameter index" alt="" coords="353,1171,518,1197"/>
+<area shape="rect" href="run_8h.html#ac6a6acda81763df740e34538ab9e3dbd" title="Line feedback" alt="" coords="362,1728,509,1755"/>
+<area shape="rect" href="logger_8c.html#a0573780c843e18b8be11e33c9e5c9636" title="Pring log (odometry mode)" alt="" coords="323,613,548,640"/>
+<area shape="rect" href="logger_8c.html#a151edc08d024fd8c6f1143276c6875de" title="Pring log (target mode)" alt="" coords="333,664,537,691"/>
+<area shape="rect" href="logger_8c.html#a60212f9386e4ab4b170f430f85a95c5d" title="Pring log (target mode)" alt="" coords="335,563,535,589"/>
+<area shape="rect" href="sensor_8c.html#ab3f7e3afc0b46ed3410f806805b2328e" title="Initialize ADC" alt="" coords="396,2539,475,2565"/>
+<area shape="rect" href="sensor_8c.html#a0d5bbefe4e42fe2bf21a65184f63dbd8" title="Initialize encoders." alt="" coords="378,2589,493,2616"/>
+<area shape="rect" href="sensor_8c.html#a30661b3385e75411ed11f8318ac90e46" title="Initialize the gyro." alt="" coords="392,2488,479,2515"/>
 </map>
 </div>
 <div class="dynheader">
@@ -232,9 +237,9 @@ app_main.c の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="app__main_8c_source.html">app_main.c</a> の <a class="el" href="app__main_8c_source.html#l00030">30</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="app__main_8c_source.html">app_main.c</a> の <a class="el" href="app__main_8c_source.html#l00031">31</a> 行目に定義があります。</p>
 
-<p class="reference">参照元 <a class="el" href="app__main_8c_source.html#l00144">app_main()</a>.</p>
+<p class="reference">参照元 <a class="el" href="app__main_8c_source.html#l00199">app_main()</a>.</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -246,26 +251,30 @@ app_main.c の依存先関係図:</div>
 <area shape="rect" href="interval_8h.html#a7f990ff62bbc126fa60a2c3a24532a5f" title="Buzzer" alt="" coords="167,107,303,133"/>
 <area shape="rect" href="line_8h.html#ab38cfb64d9a0da68234a9dfaf17aaec0" title="Disable line feedback" alt="" coords="150,157,319,184"/>
 <area shape="rect" href="line_8h.html#a9b4a00b81ce1cb20833130786318e85e" title="Get calibration value" alt="" coords="165,208,305,235"/>
-<area shape="rect" href="line_8h.html#a8b86f6a9eab7b902eabfffdb81ce0ffb" title="Start sensor calibration (back)" alt="" coords="145,259,325,285"/>
+<area shape="rect" href="line_8h.html#a8b86f6a9eab7b902eabfffdb81ce0ffb" title="Start sensor calibration (back)" alt="" coords="145,309,325,336"/>
 <area shape="rect" href="line_8h.html#ad38f2ac38d03c071b0a22bdb93583300" title="Start sensor calibration (forward)" alt="" coords="135,360,335,387"/>
-<area shape="rect" href="line_8h.html#ac2241ed9289106ee413b2a84faa7c1b0" title="Stop sensor calibration" alt="" coords="161,309,308,336"/>
-<area shape="rect" href="parameter_8h.html#a516dc6cce80e3f863aefb4e65b880053" title="Get current parameter" alt="" coords="169,411,300,437"/>
-<area shape="rect" href="run_8h.html#ab51f5d38046671744984ff764c8949b9" title="Straight" alt="" coords="180,487,289,513"/>
-<area shape="rect" href="servo_8h.html#a1c520f57937bad54175d31da5f6414b6" title="Start servos" alt="" coords="183,701,287,728"/>
-<area shape="rect" href="servo_8h.html#ad06676986fb4c97c7d94680f7bb059a2" title="Stop servos" alt="" coords="183,752,286,779"/>
-<area shape="rect" href="line_8c.html#a2fac48ee55eb99dbd94bdafb5fdb158a" title="Calculate sensor average" alt="" coords="403,230,594,271"/>
-<area shape="rect" href="line_8c.html#ab3af472291852b280b100925f5b9aa7a" title="Clear temporary" alt="" coords="383,296,615,323"/>
-<area shape="rect" href="odometry_8h.html#a458ba16e05623612c350b22cea48ffc3" title="Get current" alt="" coords="411,397,586,424"/>
-<area shape="rect" href="odometry_8h.html#a439ddae1dc13251f0ff183d7f967bb1f" title="Reset sums" alt="" coords="429,448,569,475"/>
-<area shape="rect" href="servo_8h.html#a1af12b4477ce75c5b8c5216a376d1aca" title="Get target velocity" alt="" coords="405,499,593,525"/>
-<area shape="rect" href="servo_8h.html#a8ee665f3ffbf3ff14a76584908892e2c" title="Reset servos" alt="" coords="443,549,554,576"/>
-<area shape="rect" href="servo_8h.html#ab9e6ac3e8dfa09cb2403c3092122ba3d" title="Set acceleration" alt="" coords="411,600,586,627"/>
-<area shape="rect" href="servo_8h.html#a7403dd9b206ea8feddb4e37efe76f7c2" title="Set target velocity" alt="" coords="411,651,586,677"/>
-<area shape="rect" href="servo_8h.html#a9f3f93599e5621878d49edbaf3547bd3" title="Set target velocity" alt="" coords="405,347,592,373"/>
-<area shape="rect" href="pid_8h.html#ad6d10faa2923f3e15e1af2473337b271" title="Reset PID" alt="" coords="663,651,751,677"/>
-<area shape="rect" href="servo_8c.html#a80a6c99ac80842c17cb0b6c7b40af4bc" title="Start motors." alt="" coords="444,701,553,728"/>
-<area shape="rect" href="servo_8c.html#a8ee665f3ffbf3ff14a76584908892e2c" title="Reset servos" alt="" coords="443,752,554,779"/>
-<area shape="rect" href="servo_8c.html#ae0e9456ef1224869ca7cc4a8d72d99e8" title="Stop motors" alt="" coords="445,803,552,829"/>
+<area shape="rect" href="line_8h.html#ac2241ed9289106ee413b2a84faa7c1b0" title="Stop sensor calibration" alt="" coords="161,259,308,285"/>
+<area shape="rect" href="parameter_8h.html#a516dc6cce80e3f863aefb4e65b880053" title="Get current parameter" alt="" coords="715,436,846,463"/>
+<area shape="rect" href="run_8h.html#ab51f5d38046671744984ff764c8949b9" title="Straight" alt="" coords="180,588,289,615"/>
+<area shape="rect" href="servo_8h.html#a1c520f57937bad54175d31da5f6414b6" title="Start servos" alt="" coords="183,816,287,843"/>
+<area shape="rect" href="servo_8h.html#ad06676986fb4c97c7d94680f7bb059a2" title="Stop servos" alt="" coords="183,867,286,893"/>
+<area shape="rect" href="line_8c.html#a2fac48ee55eb99dbd94bdafb5fdb158a" title="Calculate sensor average" alt="" coords="403,251,594,293"/>
+<area shape="rect" href="line_8c.html#ab3af472291852b280b100925f5b9aa7a" title="Clear temporary" alt="" coords="383,317,615,344"/>
+<area shape="rect" href="odometry_8h.html#a458ba16e05623612c350b22cea48ffc3" title="Get current" alt="" coords="411,664,586,691"/>
+<area shape="rect" href="run_8c.html#ac6a6acda81763df740e34538ab9e3dbd" title="Feedback line" alt="" coords="425,613,572,640"/>
+<area shape="rect" href="servo_8h.html#a1af12b4477ce75c5b8c5216a376d1aca" title="Get target velocity" alt="" coords="405,715,593,741"/>
+<area shape="rect" href="servo_8h.html#a8ee665f3ffbf3ff14a76584908892e2c" title="Reset servos" alt="" coords="443,765,554,792"/>
+<area shape="rect" href="servo_8h.html#ab9e6ac3e8dfa09cb2403c3092122ba3d" title="Set acceleration" alt="" coords="411,461,586,488"/>
+<area shape="rect" href="servo_8h.html#a7403dd9b206ea8feddb4e37efe76f7c2" title="Set target velocity" alt="" coords="411,512,586,539"/>
+<area shape="rect" href="servo_8h.html#a9f3f93599e5621878d49edbaf3547bd3" title="Set target velocity" alt="" coords="405,563,592,589"/>
+<area shape="rect" href="line_8h.html#a1746c8257aa80aea4456d0e1e3058fcc" title="Get generated angular velocity" alt="" coords="689,588,872,615"/>
+<area shape="rect" href="servo_8h.html#a13092fcd663653ddb0efdcec39837117" title="Set angular acceleration" alt="" coords="668,639,893,665"/>
+<area shape="rect" href="servo_8h.html#ad583728c954f1fcbc475756fec5e5202" title="Set target angular velocity" alt="" coords="669,689,893,716"/>
+<area shape="rect" href="servo_8h.html#ac40607aaed2cd17ad23a44efc85afcca" title="Set target angular velocity" alt="" coords="663,537,899,564"/>
+<area shape="rect" href="pid_8h.html#ad6d10faa2923f3e15e1af2473337b271" title="Reset PID" alt="" coords="737,816,825,843"/>
+<area shape="rect" href="servo_8c.html#a80a6c99ac80842c17cb0b6c7b40af4bc" title="Start motors." alt="" coords="444,816,553,843"/>
+<area shape="rect" href="servo_8c.html#a8ee665f3ffbf3ff14a76584908892e2c" title="Reset servos" alt="" coords="443,867,554,893"/>
+<area shape="rect" href="servo_8c.html#ae0e9456ef1224869ca7cc4a8d72d99e8" title="Stop motors" alt="" coords="445,917,552,944"/>
 </map>
 </div>
 <div class="dynheader">
@@ -297,20 +306,21 @@ app_main.c の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="app__main_8c_source.html">app_main.c</a> の <a class="el" href="app__main_8c_source.html#l00022">22</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="app__main_8c_source.html">app_main.c</a> の <a class="el" href="app__main_8c_source.html#l00023">23</a> 行目に定義があります。</p>
 
-<p class="reference">参照元 <a class="el" href="app__main_8c_source.html#l00030">Calibrate()</a>, <a class="el" href="app__main_8c_source.html#l00064">EmergencyStop()</a>.</p>
+<p class="reference">参照元 <a class="el" href="app__main_8c_source.html#l00031">Calibrate()</a>, <a class="el" href="app__main_8c_source.html#l00065">EmergencyStop()</a>.</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="app__main_8c_a9efdce133fda030ebb0c7793ffc03d14_icgraph.png" border="0" usemap="#aapp__main_8c_a9efdce133fda030ebb0c7793ffc03d14_icgraph" alt=""/></div>
 <map name="aapp__main_8c_a9efdce133fda030ebb0c7793ffc03d14_icgraph" id="aapp__main_8c_a9efdce133fda030ebb0c7793ffc03d14_icgraph">
-<area shape="rect" title=" " alt="" coords="545,31,605,57"/>
-<area shape="rect" href="app__main_8c.html#ac8ec403b244267ecd7c29fd6620076e3" title=" " alt="" coords="243,5,325,32"/>
-<area shape="rect" href="app__main_8c.html#ae947478c563efeb0546ca7c2dc247217" title=" " alt="" coords="373,56,497,83"/>
-<area shape="rect" href="app__main_8h.html#a630544a7f0a2cc40d8a7fefab7e2fe70" title=" " alt="" coords="108,31,195,57"/>
-<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,31,60,57"/>
-<area shape="rect" href="app__main_8c.html#aba412806b10e230ad1f2aeb986d9b59c" title=" " alt="" coords="243,56,325,83"/>
+<area shape="rect" title=" " alt="" coords="572,31,632,57"/>
+<area shape="rect" href="app__main_8c.html#ac8ec403b244267ecd7c29fd6620076e3" title=" " alt="" coords="421,5,503,32"/>
+<area shape="rect" href="app__main_8c.html#ae947478c563efeb0546ca7c2dc247217" title=" " alt="" coords="400,56,524,83"/>
+<area shape="rect" href="app__main_8h.html#a630544a7f0a2cc40d8a7fefab7e2fe70" title=" " alt="" coords="108,56,195,83"/>
+<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,56,60,83"/>
+<area shape="rect" href="app__main_8c.html#ae937e995b06f93817a1ab98734dcca2c" title=" " alt="" coords="243,56,352,83"/>
+<area shape="rect" href="app__main_8c.html#aba412806b10e230ad1f2aeb986d9b59c" title=" " alt="" coords="256,107,339,133"/>
 </map>
 </div>
 
@@ -331,9 +341,9 @@ app_main.c の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="app__main_8c_source.html">app_main.c</a> の <a class="el" href="app__main_8c_source.html#l00064">64</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="app__main_8c_source.html">app_main.c</a> の <a class="el" href="app__main_8c_source.html#l00065">65</a> 行目に定義があります。</p>
 
-<p class="reference">参照元 <a class="el" href="app__main_8c_source.html#l00082">TraceLine()</a>.</p>
+<p class="reference">参照元 <a class="el" href="app__main_8c_source.html#l00135">FastTraceLine()</a>, <a class="el" href="app__main_8c_source.html#l00083">TraceLine()</a>.</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -359,8 +369,86 @@ app_main.c の依存先関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="app__main_8c_ae947478c563efeb0546ca7c2dc247217_icgraph.png" border="0" usemap="#aapp__main_8c_ae947478c563efeb0546ca7c2dc247217_icgraph" alt=""/></div>
 <map name="aapp__main_8c_ae947478c563efeb0546ca7c2dc247217_icgraph" id="aapp__main_8c_ae947478c563efeb0546ca7c2dc247217_icgraph">
-<area shape="rect" title=" " alt="" coords="373,5,497,32"/>
-<area shape="rect" href="app__main_8c.html#aba412806b10e230ad1f2aeb986d9b59c" title=" " alt="" coords="243,5,325,32"/>
+<area shape="rect" title=" " alt="" coords="400,31,524,57"/>
+<area shape="rect" href="app__main_8c.html#ae937e995b06f93817a1ab98734dcca2c" title=" " alt="" coords="243,5,352,32"/>
+<area shape="rect" href="app__main_8c.html#aba412806b10e230ad1f2aeb986d9b59c" title=" " alt="" coords="256,56,339,83"/>
+<area shape="rect" href="app__main_8h.html#a630544a7f0a2cc40d8a7fefab7e2fe70" title=" " alt="" coords="108,31,195,57"/>
+<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,31,60,57"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae937e995b06f93817a1ab98734dcca2c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae937e995b06f93817a1ab98734dcca2c">&#9670;&nbsp;</a></span>FastTraceLine()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FastTraceLine </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="app__main_8c_source.html">app_main.c</a> の <a class="el" href="app__main_8c_source.html#l00135">135</a> 行目に定義があります。</p>
+
+<p class="reference">参照元 <a class="el" href="app__main_8c_source.html#l00199">app_main()</a>.</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="app__main_8c_ae937e995b06f93817a1ab98734dcca2c_cgraph.png" border="0" usemap="#aapp__main_8c_ae937e995b06f93817a1ab98734dcca2c_cgraph" alt=""/></div>
+<map name="aapp__main_8c_ae937e995b06f93817a1ab98734dcca2c_cgraph" id="aapp__main_8c_ae937e995b06f93817a1ab98734dcca2c_cgraph">
+<area shape="rect" title=" " alt="" coords="5,695,115,722"/>
+<area shape="rect" href="app__main_8c.html#ae947478c563efeb0546ca7c2dc247217" title=" " alt="" coords="197,189,321,215"/>
+<area shape="rect" href="interval_8h.html#a7f990ff62bbc126fa60a2c3a24532a5f" title="Buzzer" alt="" coords="430,87,566,114"/>
+<area shape="rect" href="servo_8h.html#ab9e6ac3e8dfa09cb2403c3092122ba3d" title="Set acceleration" alt="" coords="411,391,585,418"/>
+<area shape="rect" href="servo_8h.html#a7403dd9b206ea8feddb4e37efe76f7c2" title="Set target velocity" alt="" coords="411,442,585,469"/>
+<area shape="rect" href="servo_8h.html#a9f3f93599e5621878d49edbaf3547bd3" title="Set target velocity" alt="" coords="405,493,591,519"/>
+<area shape="rect" href="servo_8h.html#ad06676986fb4c97c7d94680f7bb059a2" title="Stop servos" alt="" coords="447,138,549,165"/>
+<area shape="rect" href="search_8h.html#a58d0f1210b7766ed0bd608fab0366488" title="Get search data" alt="" coords="218,341,301,367"/>
+<area shape="rect" href="search_8h.html#a5d028f18e0b10a4ab3cb066476508dd3" title="Start fast" alt="" coords="214,391,305,418"/>
+<area shape="rect" href="search_8h.html#a99e70185aa59a099ec213e8d9d6897f2" title="Stop fast" alt="" coords="215,442,304,469"/>
+<area shape="rect" href="line_8h.html#a73ea39c97531b32c2be5d18eb1b7981d" title="Enable line feedback" alt="" coords="676,62,840,89"/>
+<area shape="rect" href="line_8h.html#afcc55f4276815a243820a0eac422608b" title="Get curvature marker state" alt="" coords="170,543,349,570"/>
+<area shape="rect" href="line_8h.html#a57113586c6f12cca00281769dea96721" title="Reset start and goal marker state" alt="" coords="188,594,331,621"/>
+<area shape="rect" href="line_8h.html#ac53f215e5d20488835e1cb6b19bebe3d" title="Get start and goal marker state" alt="" coords="171,645,347,671"/>
+<area shape="rect" href="line_8h.html#a8c1a8019beab47b5f8306db41df7cfd9" title="Reset curvature marker state" alt="" coords="163,695,356,722"/>
+<area shape="rect" href="line_8h.html#a73029906d10d9afa817eb179126bbb97" title="Reset start and goal marker state" alt="" coords="164,746,355,773"/>
+<area shape="rect" href="logger_8h.html#a5c31839f1b962339daaeb999d5caba50" title="Clear log" alt="" coords="201,797,318,823"/>
+<area shape="rect" href="logger_8h.html#a61e3dd9a86f60d48fa173874783c21e7" title="Set logger mode" alt="" coords="189,847,329,874"/>
+<area shape="rect" href="logger_8h.html#ac4ca8d13d67a1ea91843038349036a37" title="Start logger (Set log frequency)" alt="" coords="202,898,317,925"/>
+<area shape="rect" href="logger_8h.html#a0d4f8f61d58f134b09406cd04afcc4db" title="Stop logger" alt="" coords="203,949,315,975"/>
+<area shape="rect" href="odometry_8h.html#a458ba16e05623612c350b22cea48ffc3" title="Get current" alt="" coords="411,999,585,1026"/>
+<area shape="rect" href="odometry_8h.html#a439ddae1dc13251f0ff183d7f967bb1f" title="Reset sums" alt="" coords="189,1050,329,1077"/>
+<area shape="rect" href="parameter_8h.html#a516dc6cce80e3f863aefb4e65b880053" title="Get current parameter" alt="" coords="693,1151,823,1178"/>
+<area shape="rect" href="parameter_8h.html#a3615e58f1cb023ebdb5fd9b000bbcdd7" title="Set parameter index" alt="" coords="177,1151,342,1178"/>
+<area shape="rect" href="run_8h.html#ac6a6acda81763df740e34538ab9e3dbd" title="Line feedback" alt="" coords="425,1151,571,1178"/>
+<area shape="rect" href="run_8h.html#ab51f5d38046671744984ff764c8949b9" title="Straight" alt="" coords="205,999,314,1026"/>
+<area shape="rect" href="servo_8h.html#a1af12b4477ce75c5b8c5216a376d1aca" title="Get target velocity" alt="" coords="404,1050,592,1077"/>
+<area shape="rect" href="servo_8h.html#a1c520f57937bad54175d31da5f6414b6" title="Start servos" alt="" coords="207,1101,311,1127"/>
+<area shape="rect" href="app__main_8c.html#a9efdce133fda030ebb0c7793ffc03d14" title=" " alt="" coords="468,189,528,215"/>
+<area shape="rect" href="servo_8h.html#a13092fcd663653ddb0efdcec39837117" title="Set angular acceleration" alt="" coords="645,949,871,975"/>
+<area shape="rect" href="servo_8h.html#ad583728c954f1fcbc475756fec5e5202" title="Set target angular velocity" alt="" coords="646,898,870,925"/>
+<area shape="rect" href="servo_8h.html#ac40607aaed2cd17ad23a44efc85afcca" title="Set target angular velocity" alt="" coords="640,999,876,1026"/>
+<area shape="rect" href="servo_8c.html#ae0e9456ef1224869ca7cc4a8d72d99e8" title="Stop motors" alt="" coords="705,138,811,165"/>
+<area shape="rect" href="servo_8c.html#a8ee665f3ffbf3ff14a76584908892e2c" title="Reset servos" alt="" coords="703,353,813,379"/>
+<area shape="rect" href="pid_8h.html#ad6d10faa2923f3e15e1af2473337b271" title="Reset PID" alt="" coords="924,353,1012,379"/>
+<area shape="rect" href="line_8h.html#a1746c8257aa80aea4456d0e1e3058fcc" title="Get generated angular velocity" alt="" coords="667,1075,849,1102"/>
+<area shape="rect" href="run_8c.html#ac6a6acda81763df740e34538ab9e3dbd" title="Feedback line" alt="" coords="425,949,571,975"/>
+<area shape="rect" href="servo_8h.html#a8ee665f3ffbf3ff14a76584908892e2c" title="Reset servos" alt="" coords="703,657,813,683"/>
+<area shape="rect" href="servo_8c.html#a80a6c99ac80842c17cb0b6c7b40af4bc" title="Start motors." alt="" coords="443,1101,553,1127"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="app__main_8c_ae937e995b06f93817a1ab98734dcca2c_icgraph.png" border="0" usemap="#aapp__main_8c_ae937e995b06f93817a1ab98734dcca2c_icgraph" alt=""/></div>
+<map name="aapp__main_8c_ae937e995b06f93817a1ab98734dcca2c_icgraph" id="aapp__main_8c_ae937e995b06f93817a1ab98734dcca2c_icgraph">
+<area shape="rect" title=" " alt="" coords="243,5,352,32"/>
 <area shape="rect" href="app__main_8h.html#a630544a7f0a2cc40d8a7fefab7e2fe70" title=" " alt="" coords="108,5,195,32"/>
 <area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,5,60,32"/>
 </map>
@@ -383,45 +471,49 @@ app_main.c の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="app__main_8c_source.html">app_main.c</a> の <a class="el" href="app__main_8c_source.html#l00082">82</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="app__main_8c_source.html">app_main.c</a> の <a class="el" href="app__main_8c_source.html#l00083">83</a> 行目に定義があります。</p>
 
-<p class="reference">参照元 <a class="el" href="app__main_8c_source.html#l00144">app_main()</a>.</p>
+<p class="reference">参照元 <a class="el" href="app__main_8c_source.html#l00199">app_main()</a>.</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="app__main_8c_aba412806b10e230ad1f2aeb986d9b59c_cgraph.png" border="0" usemap="#aapp__main_8c_aba412806b10e230ad1f2aeb986d9b59c_cgraph" alt=""/></div>
 <map name="aapp__main_8c_aba412806b10e230ad1f2aeb986d9b59c_cgraph" id="aapp__main_8c_aba412806b10e230ad1f2aeb986d9b59c_cgraph">
-<area shape="rect" title=" " alt="" coords="5,624,88,651"/>
-<area shape="rect" href="app__main_8c.html#ae947478c563efeb0546ca7c2dc247217" title=" " alt="" coords="171,219,295,246"/>
+<area shape="rect" title=" " alt="" coords="5,599,88,625"/>
+<area shape="rect" href="app__main_8c.html#ae947478c563efeb0546ca7c2dc247217" title=" " alt="" coords="171,219,295,245"/>
 <area shape="rect" href="interval_8h.html#a7f990ff62bbc126fa60a2c3a24532a5f" title="Buzzer" alt="" coords="427,16,563,43"/>
-<area shape="rect" href="servo_8h.html#ab9e6ac3e8dfa09cb2403c3092122ba3d" title="Set acceleration" alt="" coords="408,67,583,94"/>
-<area shape="rect" href="servo_8h.html#a13092fcd663653ddb0efdcec39837117" title="Set angular acceleration" alt="" coords="383,118,608,144"/>
-<area shape="rect" href="servo_8h.html#ad583728c954f1fcbc475756fec5e5202" title="Set target angular velocity" alt="" coords="383,168,607,195"/>
-<area shape="rect" href="servo_8h.html#a7403dd9b206ea8feddb4e37efe76f7c2" title="Set target velocity" alt="" coords="408,270,583,296"/>
-<area shape="rect" href="servo_8h.html#ac40607aaed2cd17ad23a44efc85afcca" title="Set target angular velocity" alt="" coords="377,320,613,347"/>
-<area shape="rect" href="servo_8h.html#a9f3f93599e5621878d49edbaf3547bd3" title="Set target velocity" alt="" coords="402,371,589,398"/>
-<area shape="rect" href="servo_8h.html#ad06676986fb4c97c7d94680f7bb059a2" title="Stop servos" alt="" coords="444,422,547,448"/>
-<area shape="rect" href="line_8h.html#a73ea39c97531b32c2be5d18eb1b7981d" title="Enable line feedback" alt="" coords="661,548,825,575"/>
-<area shape="rect" href="line_8h.html#a1746c8257aa80aea4456d0e1e3058fcc" title="Get generated angular velocity" alt="" coords="141,574,324,600"/>
-<area shape="rect" href="line_8h.html#afcc55f4276815a243820a0eac422608b" title="Get curvature marker state" alt="" coords="143,624,322,651"/>
-<area shape="rect" href="line_8h.html#a57113586c6f12cca00281769dea96721" title="Reset start and goal marker state" alt="" coords="161,675,304,702"/>
-<area shape="rect" href="line_8h.html#ac53f215e5d20488835e1cb6b19bebe3d" title="Get start and goal marker state" alt="" coords="145,726,321,752"/>
-<area shape="rect" href="line_8h.html#a8c1a8019beab47b5f8306db41df7cfd9" title="Reset curvature marker state" alt="" coords="136,776,329,803"/>
-<area shape="rect" href="line_8h.html#a73029906d10d9afa817eb179126bbb97" title="Reset start and goal marker state" alt="" coords="137,827,328,854"/>
-<area shape="rect" href="logger_8h.html#a5c31839f1b962339daaeb999d5caba50" title="Clear log" alt="" coords="174,878,291,904"/>
-<area shape="rect" href="logger_8h.html#a61e3dd9a86f60d48fa173874783c21e7" title="Set logger mode" alt="" coords="163,928,303,955"/>
-<area shape="rect" href="logger_8h.html#ac4ca8d13d67a1ea91843038349036a37" title="Start logger (Set log frequency)" alt="" coords="175,979,290,1006"/>
-<area shape="rect" href="logger_8h.html#a0d4f8f61d58f134b09406cd04afcc4db" title="Stop logger" alt="" coords="177,1030,289,1056"/>
-<area shape="rect" href="odometry_8h.html#a458ba16e05623612c350b22cea48ffc3" title="Get current" alt="" coords="145,1080,320,1107"/>
-<area shape="rect" href="odometry_8h.html#a439ddae1dc13251f0ff183d7f967bb1f" title="Reset sums" alt="" coords="163,1131,303,1158"/>
-<area shape="rect" href="parameter_8h.html#a516dc6cce80e3f863aefb4e65b880053" title="Get current parameter" alt="" coords="167,1182,298,1208"/>
-<area shape="rect" href="servo_8h.html#a1af12b4477ce75c5b8c5216a376d1aca" title="Get target velocity" alt="" coords="139,1232,327,1259"/>
-<area shape="rect" href="servo_8h.html#a1c520f57937bad54175d31da5f6414b6" title="Start servos" alt="" coords="181,472,285,499"/>
-<area shape="rect" href="app__main_8c.html#a9efdce133fda030ebb0c7793ffc03d14" title=" " alt="" coords="465,219,525,246"/>
-<area shape="rect" href="servo_8c.html#ae0e9456ef1224869ca7cc4a8d72d99e8" title="Stop motors" alt="" coords="690,422,797,448"/>
-<area shape="rect" href="servo_8c.html#a8ee665f3ffbf3ff14a76584908892e2c" title="Reset servos" alt="" coords="688,472,799,499"/>
-<area shape="rect" href="pid_8h.html#ad6d10faa2923f3e15e1af2473337b271" title="Reset PID" alt="" coords="873,523,961,550"/>
-<area shape="rect" href="servo_8c.html#a80a6c99ac80842c17cb0b6c7b40af4bc" title="Start motors." alt="" coords="441,523,550,550"/>
+<area shape="rect" href="servo_8h.html#ab9e6ac3e8dfa09cb2403c3092122ba3d" title="Set acceleration" alt="" coords="408,67,583,93"/>
+<area shape="rect" href="servo_8h.html#a7403dd9b206ea8feddb4e37efe76f7c2" title="Set target velocity" alt="" coords="408,117,583,144"/>
+<area shape="rect" href="servo_8h.html#a9f3f93599e5621878d49edbaf3547bd3" title="Set target velocity" alt="" coords="402,168,589,195"/>
+<area shape="rect" href="servo_8h.html#ad06676986fb4c97c7d94680f7bb059a2" title="Stop servos" alt="" coords="444,269,547,296"/>
+<area shape="rect" href="line_8h.html#a73ea39c97531b32c2be5d18eb1b7981d" title="Enable line feedback" alt="" coords="661,1105,825,1132"/>
+<area shape="rect" href="line_8h.html#afcc55f4276815a243820a0eac422608b" title="Get curvature marker state" alt="" coords="143,371,322,397"/>
+<area shape="rect" href="line_8h.html#a57113586c6f12cca00281769dea96721" title="Reset start and goal marker state" alt="" coords="161,421,304,448"/>
+<area shape="rect" href="line_8h.html#ac53f215e5d20488835e1cb6b19bebe3d" title="Get start and goal marker state" alt="" coords="145,472,321,499"/>
+<area shape="rect" href="line_8h.html#a8c1a8019beab47b5f8306db41df7cfd9" title="Reset curvature marker state" alt="" coords="136,523,329,549"/>
+<area shape="rect" href="line_8h.html#a73029906d10d9afa817eb179126bbb97" title="Reset start and goal marker state" alt="" coords="137,573,328,600"/>
+<area shape="rect" href="logger_8h.html#a5c31839f1b962339daaeb999d5caba50" title="Clear log" alt="" coords="174,624,291,651"/>
+<area shape="rect" href="logger_8h.html#a61e3dd9a86f60d48fa173874783c21e7" title="Set logger mode" alt="" coords="163,675,303,701"/>
+<area shape="rect" href="logger_8h.html#ac4ca8d13d67a1ea91843038349036a37" title="Start logger (Set log frequency)" alt="" coords="175,725,290,752"/>
+<area shape="rect" href="logger_8h.html#a0d4f8f61d58f134b09406cd04afcc4db" title="Stop logger" alt="" coords="177,776,289,803"/>
+<area shape="rect" href="odometry_8h.html#a458ba16e05623612c350b22cea48ffc3" title="Get current" alt="" coords="145,827,320,853"/>
+<area shape="rect" href="odometry_8h.html#a439ddae1dc13251f0ff183d7f967bb1f" title="Reset sums" alt="" coords="163,877,303,904"/>
+<area shape="rect" href="parameter_8h.html#a516dc6cce80e3f863aefb4e65b880053" title="Get current parameter" alt="" coords="430,700,561,727"/>
+<area shape="rect" href="run_8h.html#ac6a6acda81763df740e34538ab9e3dbd" title="Line feedback" alt="" coords="159,320,306,347"/>
+<area shape="rect" href="search_8h.html#a0ad204516f4d001eb513218f77a0ec21" title=" " alt="" coords="176,1029,289,1056"/>
+<area shape="rect" href="search_8h.html#a6b9266ab4761ab786bd180ee0394e412" title=" " alt="" coords="177,1080,288,1107"/>
+<area shape="rect" href="servo_8h.html#a1af12b4477ce75c5b8c5216a376d1aca" title="Get target velocity" alt="" coords="139,1131,327,1157"/>
+<area shape="rect" href="servo_8h.html#a1c520f57937bad54175d31da5f6414b6" title="Start servos" alt="" coords="181,979,285,1005"/>
+<area shape="rect" href="app__main_8c.html#a9efdce133fda030ebb0c7793ffc03d14" title=" " alt="" coords="465,219,525,245"/>
+<area shape="rect" href="servo_8h.html#a13092fcd663653ddb0efdcec39837117" title="Set angular acceleration" alt="" coords="383,421,608,448"/>
+<area shape="rect" href="servo_8h.html#ad583728c954f1fcbc475756fec5e5202" title="Set target angular velocity" alt="" coords="383,320,607,347"/>
+<area shape="rect" href="servo_8h.html#ac40607aaed2cd17ad23a44efc85afcca" title="Set target angular velocity" alt="" coords="377,371,613,397"/>
+<area shape="rect" href="servo_8c.html#ae0e9456ef1224869ca7cc4a8d72d99e8" title="Stop motors" alt="" coords="690,269,797,296"/>
+<area shape="rect" href="servo_8c.html#a8ee665f3ffbf3ff14a76584908892e2c" title="Reset servos" alt="" coords="688,979,799,1005"/>
+<area shape="rect" href="pid_8h.html#ad6d10faa2923f3e15e1af2473337b271" title="Reset PID" alt="" coords="873,1080,961,1107"/>
+<area shape="rect" href="line_8h.html#a1746c8257aa80aea4456d0e1e3058fcc" title="Get generated angular velocity" alt="" coords="404,472,587,499"/>
+<area shape="rect" href="search_8c.html#a82e640449c74d7a6fedd641658a15c7d" title=" " alt="" coords="436,1029,555,1056"/>
+<area shape="rect" href="servo_8c.html#a80a6c99ac80842c17cb0b6c7b40af4bc" title="Start motors." alt="" coords="441,928,550,955"/>
 </map>
 </div>
 <div class="dynheader">

@@ -1,12 +1,13 @@
 <map id="SERVO_Reset" name="SERVO_Reset">
-<area shape="rect" id="node1" title="Reset servos" alt="" coords="703,81,813,108"/>
-<area shape="rect" id="node2" href="$run_8h.html#ab51f5d38046671744984ff764c8949b9" title="Straight" alt="" coords="545,5,655,32"/>
-<area shape="rect" id="node6" href="$run_8h.html#aa99cd7e043851ce08f3fbd58ba75a945" title="Turn" alt="" coords="557,157,643,184"/>
-<area shape="rect" id="node7" href="$servo_8h.html#a1c520f57937bad54175d31da5f6414b6" title="Start servos" alt="" coords="548,56,652,83"/>
-<area shape="rect" id="node9" href="$servo_8h.html#ad06676986fb4c97c7d94680f7bb059a2" title="Stop servos" alt="" coords="549,107,651,133"/>
-<area shape="rect" id="node3" href="$app__main_8c.html#ac8ec403b244267ecd7c29fd6620076e3" title=" " alt="" coords="395,5,476,32"/>
-<area shape="rect" id="node4" href="$app__main_8h.html#a630544a7f0a2cc40d8a7fefab7e2fe70" title=" " alt="" coords="108,56,195,83"/>
-<area shape="rect" id="node5" href="$main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,56,60,83"/>
-<area shape="rect" id="node8" href="$app__main_8c.html#aba412806b10e230ad1f2aeb986d9b59c" title=" " alt="" coords="243,81,325,108"/>
-<area shape="rect" id="node10" href="$app__main_8c.html#ae947478c563efeb0546ca7c2dc247217" title=" " alt="" coords="373,107,497,133"/>
+<area shape="rect" id="node1" title="Reset servos" alt="" coords="723,132,833,159"/>
+<area shape="rect" id="node2" href="$run_8h.html#ab51f5d38046671744984ff764c8949b9" title="Straight" alt="" coords="407,5,517,32"/>
+<area shape="rect" id="node7" href="$run_8h.html#aa99cd7e043851ce08f3fbd58ba75a945" title="Turn" alt="" coords="581,208,666,235"/>
+<area shape="rect" id="node8" href="$servo_8h.html#a1c520f57937bad54175d31da5f6414b6" title="Start servos" alt="" coords="410,107,514,133"/>
+<area shape="rect" id="node10" href="$servo_8h.html#ad06676986fb4c97c7d94680f7bb059a2" title="Stop servos" alt="" coords="572,157,675,184"/>
+<area shape="rect" id="node3" href="$app__main_8c.html#ac8ec403b244267ecd7c29fd6620076e3" title=" " alt="" coords="257,69,338,96"/>
+<area shape="rect" id="node6" href="$app__main_8c.html#ae937e995b06f93817a1ab98734dcca2c" title=" " alt="" coords="243,132,352,159"/>
+<area shape="rect" id="node4" href="$app__main_8h.html#a630544a7f0a2cc40d8a7fefab7e2fe70" title=" " alt="" coords="108,132,195,159"/>
+<area shape="rect" id="node5" href="$main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,132,60,159"/>
+<area shape="rect" id="node9" href="$app__main_8c.html#aba412806b10e230ad1f2aeb986d9b59c" title=" " alt="" coords="256,183,339,209"/>
+<area shape="rect" id="node11" href="$app__main_8c.html#ae947478c563efeb0546ca7c2dc247217" title=" " alt="" coords="400,208,524,235"/>
 </map>

@@ -1,8 +1,11 @@
 var searchData=
 [
-  ['odometry_755',['odometry',['../odometry_8c.html#a898b9ebeecf9ee324257b447f04b485b',1,'odometry.c']]],
-  ['odometryvelocitysamplehead_756',['odometryVelocitySampleHead',['../odometry_8c.html#ac2f4cb73f6a4ab1678954c006f052db7',1,'odometry.c']]],
-  ['odometryvelocitysamples_757',['odometryVelocitySamples',['../odometry_8c.html#adf69aa11dff4851f51ea8a1259d28136',1,'odometry.c']]],
-  ['odometryvelocitysampletail_758',['odometryVelocitySampleTail',['../odometry_8c.html#ac2a2dd7aba6054d0c1a50f12d2e04031',1,'odometry.c']]],
-  ['odometryvelocitysums_759',['odometryVelocitySums',['../odometry_8c.html#a006518ac26ef9abb852740998cd5e4ce',1,'odometry.c']]]
+  ['max_813',['max',['../structLINE__CALIBRATE__MINMAX.html#a79516d2c0ed5c795395ab3f98d11b3aa',1,'LINE_CALIBRATE_MINMAX']]],
+  ['maxangularvelocity_814',['maxAngularVelocity',['../structPARAMETER.html#a88ec9c82614fb1c13dfedccd73f85f10',1,'PARAMETER']]],
+  ['maxvelocity_815',['maxVelocity',['../structPARAMETER.html#aa531a61151a195f4d50acef4a94eb8f4',1,'PARAMETER']]],
+  ['min_816',['min',['../structLINE__CALIBRATE__MINMAX.html#a3889550a4edb51cabd3a7286484af0de',1,'LINE_CALIBRATE_MINMAX']]],
+  ['minangularvelocity_817',['minAngularVelocity',['../structPARAMETER.html#a5d7dd1cbafcf2d47ee72f1c2d1d0881e',1,'PARAMETER']]],
+  ['minvelocity_818',['minVelocity',['../structPARAMETER.html#acc44f34714a74bd21a58a1ac9022e3d6',1,'PARAMETER']]],
+  ['motorleftduty_819',['motorLeftDuty',['../servo_8c.html#acdbaecd4a55fadb7a8650007f06821dd',1,'servo.c']]],
+  ['motorrightduty_820',['motorRightDuty',['../servo_8c.html#ad41876891bfb0b39dab49958d1ef4d78',1,'servo.c']]]
 ];
