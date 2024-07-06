@@ -11,7 +11,7 @@
 
 /* Parameter 0 ---------------------------------------------------------------*/
 #define PARAMETER_0_MIN_VELOCITY 0.01f // [m/s]
-#define PARAMETER_0_MAX_VELOCITY 0.65f  // [m/s]
+#define PARAMETER_0_MAX_VELOCITY 0.4f  // [m/s]
 #define PARAMETER_0_ACCELERATION 1.0f  // [m/ss]
 #define PARAMETER_0_VELOCITY_PID_KP 10.0f
 #define PARAMETER_0_VELOCITY_PID_KI 0.5f
@@ -44,9 +44,9 @@
 #define PARAMETER_1_LINE_ANGULAR_VELOCITY_PID_KD 0.0f
 
 /* Parameter 2 ---------------------------------------------------------------*/
-#define PARAMETER_2_MIN_VELOCITY 0.5f // [m/s]
+#define PARAMETER_2_MIN_VELOCITY 0.65f // [m/s]
 #define PARAMETER_2_MAX_VELOCITY 0.9f  // [m/s]
-#define PARAMETER_2_ACCELERATION 0.5f  // [m/ss]
+#define PARAMETER_2_ACCELERATION 1.0f  // [m/ss]
 #define PARAMETER_2_VELOCITY_PID_KP 10.0f
 #define PARAMETER_2_VELOCITY_PID_KI 0.5f
 #define PARAMETER_2_VELOCITY_PID_KD 0.1f

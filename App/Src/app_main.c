@@ -146,7 +146,7 @@ void FastTraceLine()
   LINE_ResetStartGoalState();
   LINE_ResetCurvatureState();
   SERVO_SetTargetVelocity(0.0f);
-  SERVO_SetMaxVelocity(param->maxVelocity);
+  SERVO_SetMaxVelocity(param->minVelocity);
   SERVO_Start(param->velocityPid, param->angularVelocityPid);
   SERVO_SetAcceleration(param->acceleration);
   FAST_Start();
@@ -155,7 +155,7 @@ void FastTraceLine()
     if (LINE_GetStartGoalState() == STARTGOAL_MARKER_START_PASSED)
     {
       INTERVAL_Buzzer(50);
-      LOGGER_Start(100);
+      LOGGER_Start(10);
     }
     if (LINE_GetCurvatureState() == CURVATURE_MARKER_PASSED)
     {
@@ -167,30 +167,37 @@ void FastTraceLine()
       return;
     }
 
-    // マーカーを読むまで待つ
-    if (LINE_GetStartGoalState() == STARTGOAL_MARKER_GOAL_WAITING)
+    if (LINE_GetCurvatureState() == CURVATURE_MARKER_PASSED ||
+        LINE_GetStartGoalState() == STARTGOAL_MARKER_START_PASSED)
     {
-      while (LINE_GetCurvatureState() == CURVATURE_MARKER_WAITING ||
-             LINE_GetCurvatureState() == CURVATURE_MARKER_PASSING ||
-             LINE_GetCurvatureState() == CURVATURE_MARKER_PASSED)
-        RUN_LineFeedback();
+      const COURSE *course = FAST_Get();
+      if (course != NULL && course->pattern == COURSE_PATTERN_STRAIGHT)
+      {
+        float straightLength = course->length - 0.1;
+        float accelLength = RUN_CalculateAccelLength(param->acceleration, param->maxVelocity, param->minVelocity);
+        if (accelLength > straightLength)
+        {
+          RUN_LineFeedback();
+        }
+        else
+        {
+          RUN_Straight(RUN_DIRECTION_FORWARD, straightLength, param->acceleration, param->minVelocity, param->maxVelocity, param->minVelocity);
+        }
+      }
+      if (LINE_GetCurvatureState() == CURVATURE_MARKER_PASSED)
+      {
+        while (LINE_GetCurvatureState() == CURVATURE_MARKER_PASSED)
+          RUN_LineFeedback();
+      }
+      if (LINE_GetStartGoalState() == STARTGOAL_MARKER_START_PASSED)
+      {
+        while (LINE_GetStartGoalState() == STARTGOAL_MARKER_START_PASSED)
+          RUN_LineFeedback();
+      }
     }
     else
     {
-      while (LINE_GetStartGoalState() == STARTGOAL_MARKER_START_WAITING ||
-             LINE_GetStartGoalState() == STARTGOAL_MARKER_START_PASSING ||
-             LINE_GetStartGoalState() == STARTGOAL_MARKER_GOAL_PASSED)
-        RUN_LineFeedback();
-    }
-    const COURSE *course = FAST_Get();
-    if (course != NULL && course->pattern == COURSE_PATTERN_STRAIGHT)
-    {
-      float straightLength = course->length - 0.05;
-      float accelLength = RUN_CalculateAccelLength(param->acceleration, param->maxVelocity, param->minVelocity);
-      if (accelLength < straightLength)
-      {
-        RUN_Straight(RUN_DIRECTION_FORWARD, straightLength, param->acceleration, param->minVelocity, param->maxVelocity, param->minVelocity);
-      }
+      RUN_LineFeedback();
     }
   }
   FAST_Stop();
