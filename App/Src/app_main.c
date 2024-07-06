@@ -134,7 +134,6 @@ void TraceLine()
 
 void FastTraceLine()
 {
-  PARAMETER_SetIndex(2);
   const PARAMETER *param = PARAMETER_Get();
   const ODOMETRY *odom = ODOMETRY_GetCurrent();
 
@@ -155,7 +154,7 @@ void FastTraceLine()
     if (LINE_GetStartGoalState() == STARTGOAL_MARKER_START_PASSED)
     {
       INTERVAL_Buzzer(50);
-      LOGGER_Start(10);
+      LOGGER_Start(20);
     }
     if (LINE_GetCurvatureState() == CURVATURE_MARKER_PASSED)
     {
@@ -232,20 +231,29 @@ void app_main(void)
     {
       while (BUTTON_GetSw1())
         ;
+      PARAMETER_SetIndex(0);
       TraceLine();
 
-      while (!BUTTON_GetSw1())
+      while (!BUTTON_GetSw1() && !BUTTON_GetSw2())
         ;
-      INTERVAL_Buzzer(50);
-      SEARCH_Print();
-      LOGGER_Print();
-      INTERVAL_Buzzer(50);
+      if (BUTTON_GetSw1())
+      {
+        while (BUTTON_GetSw1())
+          ;
+        PARAMETER_SetIndex(2);
+        FastTraceLine();
+      }
+      else if (BUTTON_GetSw2())
+      {
+        while (BUTTON_GetSw2())
+          ;
+        PARAMETER_SetIndex(1);
+        TraceLine();
+        break;
+      }
     }
     if (BUTTON_GetSw2())
     {
-      while (BUTTON_GetSw2())
-        ;
-      FastTraceLine();
       while (!BUTTON_GetSw2())
         ;
       INTERVAL_Buzzer(50);
