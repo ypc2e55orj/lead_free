@@ -13,6 +13,10 @@ typedef enum
  */
 void RUN_LineFeedback();
 /**
+ * @brief Calculate accel length
+ */
+float RUN_CalculateAccelLength(float accel, float maxVelo, float endVelo);
+/**
  * @brief Straight
  */
 void RUN_Straight(RUN_DIRECTION dir, float length, float accel, float minVelo, float maxVelo, float endVelo);

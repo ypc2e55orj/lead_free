@@ -25,6 +25,17 @@ void RUN_LineFeedback()
 }
 
 /**
+ * @brief Calculate accel length
+ */
+float RUN_CalculateAccelLength(float accel, float maxVelo, float endVelo)
+{
+  float tarVelo = *SERVO_GetTargetVelocity();
+  float accelLength = (maxVelo * maxVelo - tarVelo * tarVelo) / (2.0f * accel);
+  float decelLength = (maxVelo * maxVelo - endVelo * endVelo) / (2.0f * accel);
+  return accelLength + decelLength;
+}
+
+/**
  * @brief Straight
  */
 void RUN_Straight(RUN_DIRECTION dir, float length, float accel, float minVelo, float maxVelo, float endVelo)
