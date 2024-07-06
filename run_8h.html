@@ -99,6 +99,9 @@ $(function() {
 <tr class="memitem:ac6a6acda81763df740e34538ab9e3dbd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="run_8h.html#ac6a6acda81763df740e34538ab9e3dbd">RUN_LineFeedback</a> ()</td></tr>
 <tr class="memdesc:ac6a6acda81763df740e34538ab9e3dbd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Line feedback  <a href="run_8h.html#ac6a6acda81763df740e34538ab9e3dbd">[詳解]</a><br /></td></tr>
 <tr class="separator:ac6a6acda81763df740e34538ab9e3dbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7985cae8f986bf35211ee549cac140e6"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="run_8h.html#a7985cae8f986bf35211ee549cac140e6">RUN_CalculateAccelLength</a> (float accel, float maxVelo, float endVelo)</td></tr>
+<tr class="memdesc:a7985cae8f986bf35211ee549cac140e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate accel length  <a href="run_8h.html#a7985cae8f986bf35211ee549cac140e6">[詳解]</a><br /></td></tr>
+<tr class="separator:a7985cae8f986bf35211ee549cac140e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab51f5d38046671744984ff764c8949b9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="run_8h.html#ab51f5d38046671744984ff764c8949b9">RUN_Straight</a> (<a class="el" href="run_8h.html#ae27fca7d0199c44b81a225e4f7b5e52c">RUN_DIRECTION</a> dir, float length, float accel, float minVelo, float maxVelo, float endVelo)</td></tr>
 <tr class="memdesc:ab51f5d38046671744984ff764c8949b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Straight  <a href="run_8h.html#ab51f5d38046671744984ff764c8949b9">[詳解]</a><br /></td></tr>
 <tr class="separator:ab51f5d38046671744984ff764c8949b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -130,6 +133,66 @@ $(function() {
 </div>
 </div>
 <h2 class="groupheader">関数詳解</h2>
+<a id="a7985cae8f986bf35211ee549cac140e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7985cae8f986bf35211ee549cac140e6">&#9670;&nbsp;</a></span>RUN_CalculateAccelLength()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float RUN_CalculateAccelLength </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>accel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>maxVelo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>endVelo</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calculate accel length </p>
+
+<p class="definition"> <a class="el" href="run_8c_source.html">run.c</a> の <a class="el" href="run_8c_source.html#l00030">30</a> 行目に定義があります。</p>
+
+<p class="reference">参照元 <a class="el" href="app__main_8c_source.html#l00135">FastTraceLine()</a>.</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="run_8h_a7985cae8f986bf35211ee549cac140e6_cgraph.png" border="0" usemap="#arun_8h_a7985cae8f986bf35211ee549cac140e6_cgraph" alt=""/></div>
+<map name="arun_8h_a7985cae8f986bf35211ee549cac140e6_cgraph" id="arun_8h_a7985cae8f986bf35211ee549cac140e6_cgraph">
+<area shape="rect" title="Calculate accel length" alt="" coords="5,5,204,32"/>
+<area shape="rect" href="servo_8h.html#a1af12b4477ce75c5b8c5216a376d1aca" title="Get target velocity" alt="" coords="252,5,440,32"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="run_8h_a7985cae8f986bf35211ee549cac140e6_icgraph.png" border="0" usemap="#arun_8h_a7985cae8f986bf35211ee549cac140e6_icgraph" alt=""/></div>
+<map name="arun_8h_a7985cae8f986bf35211ee549cac140e6_icgraph" id="arun_8h_a7985cae8f986bf35211ee549cac140e6_icgraph">
+<area shape="rect" title="Calculate accel length" alt="" coords="400,5,599,32"/>
+<area shape="rect" href="app__main_8c.html#ae937e995b06f93817a1ab98734dcca2c" title=" " alt="" coords="243,5,352,32"/>
+<area shape="rect" href="app__main_8h.html#a630544a7f0a2cc40d8a7fefab7e2fe70" title=" " alt="" coords="108,5,195,32"/>
+<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,5,60,32"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="ac6a6acda81763df740e34538ab9e3dbd"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac6a6acda81763df740e34538ab9e3dbd">&#9670;&nbsp;</a></span>RUN_LineFeedback()</h2>
 
@@ -150,7 +213,7 @@ $(function() {
 
 <p class="definition"> <a class="el" href="run_8c_source.html">run.c</a> の <a class="el" href="run_8c_source.html#l00017">17</a> 行目に定義があります。</p>
 
-<p class="reference">参照元 <a class="el" href="app__main_8c_source.html#l00135">FastTraceLine()</a>, <a class="el" href="run_8c_source.html#l00030">RUN_Straight()</a>, <a class="el" href="app__main_8c_source.html#l00083">TraceLine()</a>.</p>
+<p class="reference">参照元 <a class="el" href="app__main_8c_source.html#l00135">FastTraceLine()</a>, <a class="el" href="run_8c_source.html#l00041">RUN_Straight()</a>, <a class="el" href="app__main_8c_source.html#l00083">TraceLine()</a>.</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -233,7 +296,7 @@ $(function() {
 
 <p>Straight </p>
 
-<p class="definition"> <a class="el" href="run_8c_source.html">run.c</a> の <a class="el" href="run_8c_source.html#l00030">30</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="run_8c_source.html">run.c</a> の <a class="el" href="run_8c_source.html#l00041">41</a> 行目に定義があります。</p>
 
 <p class="reference">参照元 <a class="el" href="app__main_8c_source.html#l00031">Calibrate()</a>, <a class="el" href="app__main_8c_source.html#l00135">FastTraceLine()</a>.</p>
 <div class="dynheader">
@@ -324,7 +387,7 @@ $(function() {
 
 <p>Turn </p>
 
-<p class="definition"> <a class="el" href="run_8c_source.html">run.c</a> の <a class="el" href="run_8c_source.html#l00069">69</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="run_8c_source.html">run.c</a> の <a class="el" href="run_8c_source.html#l00080">80</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">

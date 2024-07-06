@@ -1,12 +1,13 @@
 <map id="SERVO_GetTargetVelocity" name="SERVO_GetTargetVelocity">
-<area shape="rect" id="node1" title="Get target velocity" alt="" coords="788,81,976,108"/>
-<area shape="rect" id="node2" href="$app__main_8c.html#ae937e995b06f93817a1ab98734dcca2c" title=" " alt="" coords="401,56,511,83"/>
-<area shape="rect" id="node5" href="$logger_8c.html#ab8bf05edb97b9869366578c6e6b09052" title="Collect log (target mode)" alt="" coords="569,5,740,32"/>
-<area shape="rect" id="node8" href="$run_8h.html#ab51f5d38046671744984ff764c8949b9" title="Straight" alt="" coords="600,107,709,133"/>
-<area shape="rect" id="node10" href="$app__main_8c.html#aba412806b10e230ad1f2aeb986d9b59c" title=" " alt="" coords="613,157,696,184"/>
-<area shape="rect" id="node3" href="$app__main_8h.html#a630544a7f0a2cc40d8a7fefab7e2fe70" title=" " alt="" coords="182,107,269,133"/>
-<area shape="rect" id="node4" href="$main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,107,60,133"/>
+<area shape="rect" id="node1" title="Get target velocity" alt="" coords="816,107,1004,133"/>
+<area shape="rect" id="node2" href="$app__main_8c.html#ae937e995b06f93817a1ab98734dcca2c" title=" " alt="" coords="401,107,511,133"/>
+<area shape="rect" id="node5" href="$logger_8c.html#ab8bf05edb97b9869366578c6e6b09052" title="Collect log (target mode)" alt="" coords="583,5,754,32"/>
+<area shape="rect" id="node8" href="$run_8h.html#a7985cae8f986bf35211ee549cac140e6" title="Calculate accel length" alt="" coords="569,107,768,133"/>
+<area shape="rect" id="node9" href="$run_8h.html#ab51f5d38046671744984ff764c8949b9" title="Straight" alt="" coords="614,157,723,184"/>
+<area shape="rect" id="node11" href="$app__main_8c.html#aba412806b10e230ad1f2aeb986d9b59c" title=" " alt="" coords="415,208,497,235"/>
+<area shape="rect" id="node3" href="$app__main_8h.html#a630544a7f0a2cc40d8a7fefab7e2fe70" title=" " alt="" coords="182,157,269,184"/>
+<area shape="rect" id="node4" href="$main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,157,60,184"/>
 <area shape="rect" id="node6" href="$logger_8h.html#a618b83ee39826975a831eec2e21355b0" title="Collect log" alt="" coords="391,5,521,32"/>
 <area shape="rect" id="node7" href="$interval_8c.html#a8a3b0ad512a6e6c6157440b68d395eac" title="timer interrupt TIM6: 2kHz" alt="" coords="108,5,343,32"/>
-<area shape="rect" id="node9" href="$app__main_8c.html#ac8ec403b244267ecd7c29fd6620076e3" title=" " alt="" coords="415,107,497,133"/>
+<area shape="rect" id="node10" href="$app__main_8c.html#ac8ec403b244267ecd7c29fd6620076e3" title=" " alt="" coords="415,157,497,184"/>
 </map>
